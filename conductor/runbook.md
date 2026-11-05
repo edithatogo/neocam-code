@@ -22,7 +22,7 @@ ruff `select = ["ALL"]` with preview rules; ty `all = "error"` plus `--error-on-
 ```
 python -m quality.cli --profile quick
 uv run --frozen --group assurance --extra tabular --extra research --extra reporting \
-  python -m quality.cli --profile full --evidence-version v40
+  python -m quality.cli --profile full --evidence-version v41
 ```
 Ordering rule — the artifact re-seal must be the **last** mutation before acceptance:
 ```

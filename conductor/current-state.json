@@ -30,7 +30,7 @@
   "public_original_archival_complete": false,
   "acceptance_at_source_freeze": {
     "state": "full_local_and_hosted_pending",
-    "expected_full_receipt": "verification/v40/full/receipt.json",
+    "expected_full_receipt": "verification/v41/full/receipt.json",
     "full_local_assurance": false,
     "hosted_main_assurance_verified": false,
     "mutation_score": null,
@@ -38,7 +38,7 @@
     "source_import_commit": "de0066ea3323cab8458ba45cb363bf05798104c9"
   },
   "source_and_security": {
-    "receipt": "verification/v40/security-receipt.json",
+    "receipt": "verification/v41/security-receipt.json",
     "python_files": 160,
     "native_rules": 378,
     "controls": 22,

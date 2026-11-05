@@ -100,7 +100,7 @@
     "tests/test_mutation_pathways_sensitivity.py": "618a670303caa081f2cf38a8ab9828c90a9824b290264c212520ab186532df5f",
     "tests/test_mutation_statewide.py": "07b398318e4fd42000e2bb098d21a9827ba45582bb56bc8706c4a6f0af44ffc1",
     "tests/test_native_integrity.py": "22c8f129169968a51e9ee828bfce3d774f746c1d2c9dacefccb1438abccb9bd0",
-    "tests/test_privacy_scan.py": "1313b81565e0c59fb5a01e969e13fa329c609cca13d532b5dbdb9c745a1a1bd4",
+    "tests/test_privacy_scan.py": "faf1b37f38329f45401ec5d83f66ab9494a5daac73fe099cd876795bc2049b5b",
     "tests/test_quality_gates.py": "e45b867db14798f3611108369615afdb605c1bdf29d613d98f8704de46c866d0",
     "tests/test_quality_integration.py": "c36ddeef35befa19df6599b69b72d65eb81f455c51074b0a8ed839e3b91588ed",
     "tests/test_receipt_clock.py": "923dbd4b3bf14cd32ed6e10437ec7955931a34a3f2e4e780d28107b2d9e0658a",
@@ -1586,6 +1586,15 @@
       "source_sha256": "61467aec22730ea996d2e55e0e043310c5becc4ed6322776ad80b778e40c5d92",
       "disposition": "reviewed_false_positive_or_style_suggestion",
       "reason": "Reviewed argument-list subprocess execution with shell disabled. Executables and plans originate from the fixed assurance/build/test commands or the scanner module allowlist. No shell-string execution is present in these exact reviewed source bytes."
+    },
+    {
+      "rule": "python.lang.security.audit.dangerous-subprocess-use-audit.dangerous-subprocess-use-audit",
+      "path": "tests/test_privacy_scan.py",
+      "start": 116,
+      "end": 118,
+      "source_sha256": "faf1b37f38329f45401ec5d83f66ab9494a5daac73fe099cd876795bc2049b5b",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "The test resolves the qualified Git executable, passes only fixed ls-files and -z arguments with a controlled repository cwd, and uses the default disabled shell. No shell string or untrusted command argument is present. This inventory oracle requires every tracked file to be accounted for by the privacy scan."
     }
   ]
 }

@@ -8,6 +8,8 @@ reported by the very gate the tests exercise.
 from __future__ import annotations
 
 import json
+import shutil
+import subprocess  # ruff: ignore[suspicious-subprocess-import] -- exact read-only Git inventory for the real-checkout coverage oracle
 import sys
 import zipfile
 import zlib
@@ -20,6 +22,7 @@ from quality.cli import gates_for_profile
 from quality.privacy import Allowance
 
 if TYPE_CHECKING:
+    from collections.abc import Iterator
     from pathlib import Path
 
 # Assembled rather than literal, for the reason in the module docstring.
@@ -92,14 +95,32 @@ def test_identifier_findings_name_the_field_and_never_the_value(tmp_path: Path) 
         assert value not in body
 
 
-def test_the_real_repository_tree_passes_without_exemptions() -> None:
+def test_the_real_repository_tree_passes_without_exemptions(monkeypatch: pytest.MonkeyPatch) -> None:
+    visited: set[str] = set()
+    original_files = privacy.repository_files
+
+    def observed_files(root: Path) -> Iterator[Path]:
+        for path in original_files(root):
+            visited.add(path.relative_to(root).as_posix())
+            yield path
+
+    monkeypatch.setattr(privacy, "repository_files", observed_files)
     report = privacy.scan_repository(privacy.ROOT)
     assert report.findings == ()
     assert report.unused_exemptions == ()
     assert report.exemptions == ()
     assert privacy.ALLOWANCES == ()
     assert report.passed is True
-    assert report.scanned_files > 1000
+    executable = shutil.which("git")
+    assert executable is not None, "The real-checkout assurance oracle requires Git"
+    tracked_output = subprocess.check_output(  # ruff: ignore[subprocess-without-shell-equals-true] -- resolved Git, fixed read-only arguments, no shell or user-provided values
+        [executable, "ls-files", "-z"], cwd=privacy.ROOT
+    )
+    tracked = tracked_output.decode().split("\0")
+    expected = {name for name in tracked if name and (privacy.ROOT / name).is_file()}
+    assert {"data/parameters.json", "quality/privacy.py", "tests/test_privacy_scan.py"} <= expected
+    assert expected <= visited
+    assert report.scanned_files + len(report.not_scanned) == len(visited)
 
 
 def test_documented_identifier_columns_are_reported(tmp_path: Path) -> None:

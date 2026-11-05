@@ -20,7 +20,7 @@ uv run --frozen python -m quality.artifacts verify --output outputs/reproduction
 Use a new output directory for each scientific rerun. Then run the complete acceptance profile:
 
 ```sh
-uv run --frozen --group assurance --extra tabular --extra research --extra reporting python -m quality.cli --profile full --evidence-version v40
+uv run --frozen --group assurance --extra tabular --extra research --extra reporting python -m quality.cli --profile full --evidence-version v41
 ```
 
 The imported code snapshot is pending its own acceptance. Historical scientific tables are retained as numerical fixtures, while private source attributions use explicit source-withheld identifiers. The complete original provenance remains private.

@@ -1,0 +1,54 @@
+{
+  "protected_files": [
+    {
+      "path": "data/parameters.json",
+      "byte_identical": true,
+      "source_projection_only": false
+    },
+    {
+      "path": "data/births_queensland_2022.csv",
+      "byte_identical": true,
+      "source_projection_only": false
+    },
+    {
+      "path": "data/site_classification.json",
+      "byte_identical": true,
+      "source_projection_only": false
+    },
+    {
+      "path": "data/population_totals.json",
+      "byte_identical": true,
+      "source_projection_only": false
+    },
+    {
+      "path": "evidence/sources.csv",
+      "byte_identical": false,
+      "source_projection_only": true
+    },
+    {
+      "path": "evidence/parameter_register.csv",
+      "byte_identical": false,
+      "source_projection_only": true
+    },
+    {
+      "path": "evidence/literature_parameter_map.csv",
+      "byte_identical": true,
+      "source_projection_only": false
+    },
+    {
+      "path": "evidence/search_log.md",
+      "byte_identical": true,
+      "source_projection_only": false
+    },
+    {
+      "path": "evidence/transport_mode_comparison.csv",
+      "byte_identical": true,
+      "source_projection_only": false
+    }
+  ],
+  "unchanged": 7,
+  "projected": 2,
+  "numeric_cells_verified": 34,
+  "unreviewed_changes": 0,
+  "protection_removed": false
+}
