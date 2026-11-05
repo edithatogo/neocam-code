@@ -16,13 +16,13 @@ broader access. Preserve native-operation and authentication ownership.
 Use CPython 3.15.1 for qualification. NumPy handles model draws. Voiage 3.1.0 supplies EVPI and perspective decisions. Its runtime includes PyArrow, Polars, SciPy and scikit-learn. Polars is the only permitted DataFrame engine. Declared inputs flow through `src.configuration.load_configuration`; `data/v6/spec.json` is a reference snapshot, not a live configuration input. No new clinical parameter, learned model, orchestrator or output path.
 
 ## Strictness and quality settings
-ruff `select = ["ALL"]` with preview rules; ty `all = "error"` plus `--error-on-warning`; basedpyright `all` with experimental features, blanket `# type: ignore` banned, ignore comments must name their rule; pytest strict markers/config, warnings-as-errors and `xfail_strict`. No global lint ignore beyond the two documented formatter conflicts, no type-checker baseline file, no lowered threshold. The mutation floor is 90% and currently measures 99.52% (1,244/1,250).
+ruff `select = ["ALL"]` with preview rules; ty `all = "error"` plus `--error-on-warning`; basedpyright `all` with experimental features, blanket `# type: ignore` banned, ignore comments must name their rule; pytest strict markers/config, warnings-as-errors and `xfail_strict`. No global lint ignore beyond the two documented formatter conflicts, no type-checker baseline file, no lowered threshold. The mutation floor is 90%. Read the mutation result from the exact-commit full receipt; historical scores do not qualify this separate code snapshot.
 
 ## Reproduction
 ```
 python -m quality.cli --profile quick
 uv run --frozen --group assurance --extra tabular --extra research --extra reporting \
-  python -m quality.cli --profile full --evidence-version v13
+  python -m quality.cli --profile full --evidence-version v40
 ```
 Ordering rule — the artifact re-seal must be the **last** mutation before acceptance:
 ```
