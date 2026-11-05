@@ -1,0 +1,89 @@
+.worktrees/
+__pycache__/
+*.pyc
+outputs/rendered/
+outputs/memo_render/
+outputs/slides_render/
+outputs/*_montage.png
+outputs/workbook_preview.png
+.coverage
+.pytest_cache/
+outputs/v2/qa_*/
+outputs/v2/Panda_Vision_CHHHS_presentation_v2/
+outputs/v2/*contact*.png
+outputs/v2/slides_final_*.png
+outputs/v2/workbook_preview.png
+.venv
+.tools
+.uv-cache/
+.ruff_cache/
+.hypothesis/
+.gremlins_cache/
+coverage/
+coverage.json
+coverage.xml
+htmlcov/
+.basedpyright/
+
+.feedback-cache/
+.testmondata*
+outputs/v4/qa*/
+outputs/v4/slide_render/
+
+# Archive of source zips (large, should not be committed)
+archive/
+
+# macOS metadata
+.DS_Store
+
+# Local build artifacts
+build/
+*.egg-info/
+
+# Local agent/runtime scratch (not project source)
+.opencode/
+
+# Local secrets and credentials (never commit; defaults are intentionally broad)
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+credentials*
+*credential*
+*secret*
+*token*
+id_rsa*
+id_ed25519*
+.aws/
+.netrc
+
+# Editor and OS scratch
+.vscode/
+.idea/
+*.swp
+*.swo
+*.tmp
+*.bak
+
+# Tooling caches (local only; evidence/verification/outputs stay tracked)
+.mypy_cache/
+.pytype/
+.tox/
+.nox/
+.ipynb_checkpoints/
+
+# Confidential local clinical sources and derived patient data
+.local-evidence/
+.private/
+**/data/incoming/
+**/data/staging/
+**/data/derived/
+*.xlsx
+*.xls
+*.xlsm
+*.parquet
+*.jsonl
+*.duckdb
+*.duckdb.wal
