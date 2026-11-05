@@ -1,0 +1,26 @@
+{
+  "HAY2020": {
+    "doi": "10.1016/j.acap.2020.02.013",
+    "file": "PIIS187628592030070X.pdf",
+    "sha256": "6042704a871891286f98ffd3fc1176996208b3410895a0c91d2c6eac301fb95b",
+    "bytes": 158619
+  },
+  "ARM2012": {
+    "doi": "10.1258/jtt.2012.gth101",
+    "file": "armfield-et-al-2012-the-costs-and-potential-savings-of-telemedicine-for-acute-care-neonatal-consultation-preliminary.pdf",
+    "sha256": "bcc1d65e6a4ecee497b6579b4cfa7d08f26bca70eb29b6493e6f088382845428",
+    "bytes": 66152
+  },
+  "YOO2022": {
+    "doi": "10.1016/j.jpeds.2021.11.076",
+    "file": "PIIS0022347621012257.pdf",
+    "sha256": "fcbbf2b3de2fb5e0cfadb03a3cfeef9d0d34eef39979bac4b3f152014bcf0a28",
+    "bytes": 461582
+  },
+  "THAO2022": {
+    "doi": "10.1089/tmj.2021.0527",
+    "file": "thao-et-al-2022-modeling-the-cost-of-teleneonatology-from-the-health-system-perspective.pdf",
+    "sha256": "b3e1b6d98fa820f62186ebd349e11f942965fab3597412d13d2c0a3dbda12064",
+    "bytes": 254521
+  }
+}

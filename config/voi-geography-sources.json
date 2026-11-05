@@ -1,0 +1,261 @@
+{
+  "facility_source": "https://www.arcgis.com/home/item.html?id=5117420fd9104753a2f5c6d130553a14",
+  "retrieved": "2026-11-03",
+  "facility_attribution": "State of Queensland (Department of Resources) 2024",
+  "facility_reuse": "Item licenseInfo states no use limitations",
+  "facility_response_sha256": "05c736f1d59b5d9fa822c7f03fd1202556402d5f8796772612d5612f61d08755",
+  "facility_matches": [
+    {
+      "site": "Atherton",
+      "facility": "Atherton Hospital",
+      "verified": true,
+      "objectid": 318
+    },
+    {
+      "site": "Babinda",
+      "facility": "Babinda Multi Purpose Health Centre",
+      "verified": true,
+      "objectid": 376
+    },
+    {
+      "site": "Bamaga",
+      "facility": "Bamaga Hospital",
+      "verified": true,
+      "objectid": 846
+    },
+    {
+      "site": "Beaudesert",
+      "facility": "Beaudesert Hospital",
+      "verified": true,
+      "objectid": 77
+    },
+    {
+      "site": "Bundaberg Base",
+      "facility": "Bundaberg Hospital",
+      "verified": true,
+      "objectid": 374
+    },
+    {
+      "site": "Caboolture",
+      "facility": "Caboolture Hospital",
+      "verified": true,
+      "objectid": 211
+    },
+    {
+      "site": "Cairns",
+      "facility": "Cairns Hospital",
+      "verified": true,
+      "objectid": 286
+    },
+    {
+      "site": "Charleville",
+      "facility": "Charleville Hospital",
+      "verified": true,
+      "objectid": 302
+    },
+    {
+      "site": "Cooktown",
+      "facility": "Cooktown Multipurpose Health Service",
+      "verified": true,
+      "objectid": 840
+    },
+    {
+      "site": "Emerald",
+      "facility": "Emerald Hospital",
+      "verified": true,
+      "objectid": 375
+    },
+    {
+      "site": "Gladstone",
+      "facility": "Gladstone Hospital",
+      "verified": true,
+      "objectid": 350
+    },
+    {
+      "site": "Goondiwindi",
+      "facility": "Goondiwindi Hospital",
+      "verified": true,
+      "objectid": 116
+    },
+    {
+      "site": "Gordonvale",
+      "facility": "Gordonvale Memorial Hospital",
+      "verified": true,
+      "objectid": 124
+    },
+    {
+      "site": "Gympie",
+      "facility": "Gympie Hospital",
+      "verified": true,
+      "objectid": 184
+    },
+    {
+      "site": "Herberton",
+      "facility": "Herberton Hospital",
+      "verified": true,
+      "objectid": 75
+    },
+    {
+      "site": "Hervey Bay",
+      "facility": "Hervey Bay Hospital",
+      "verified": true,
+      "objectid": 349
+    },
+    {
+      "site": "Innisfail",
+      "facility": "Innisfail Hospital",
+      "verified": true,
+      "objectid": 316
+    },
+    {
+      "site": "Ipswich",
+      "facility": "Ipswich Hospital",
+      "verified": true,
+      "objectid": 174
+    },
+    {
+      "site": "Kingaroy",
+      "facility": "Kingaroy Hospital",
+      "verified": true,
+      "objectid": 127
+    },
+    {
+      "site": "Logan",
+      "facility": "Logan Hospital",
+      "verified": true,
+      "objectid": 290
+    },
+    {
+      "site": "Longreach",
+      "facility": "Longreach Hospital",
+      "verified": true,
+      "objectid": 200
+    },
+    {
+      "site": "Mackay Base",
+      "facility": "Mackay Base Hospital",
+      "verified": true,
+      "objectid": 132
+    },
+    {
+      "site": "Mareeba",
+      "facility": "Mareeba Hospital",
+      "verified": true,
+      "objectid": 304,
+      "name_normalisation": "trim trailing source whitespace; coordinate match within 0.0001 degrees"
+    },
+    {
+      "site": "Mossman",
+      "facility": "Mossman Multi Purpose Health Service",
+      "verified": true,
+      "objectid": 43
+    },
+    {
+      "site": "Mount Isa",
+      "facility": "Mount Isa Hospital",
+      "verified": true,
+      "objectid": 72
+    },
+    {
+      "site": "Proserpine",
+      "facility": "Proserpine Hospital",
+      "verified": true,
+      "objectid": 86
+    },
+    {
+      "site": "Redcliffe",
+      "facility": "Redcliffe Hospital",
+      "verified": true,
+      "objectid": 259
+    },
+    {
+      "site": "Redland",
+      "facility": "Redland Hospital",
+      "verified": true,
+      "objectid": 334
+    },
+    {
+      "site": "Rockhampton",
+      "facility": "Rockhampton Hospital",
+      "verified": true,
+      "objectid": 351
+    },
+    {
+      "site": "Roma",
+      "facility": "Roma Hospital",
+      "verified": true,
+      "objectid": 84
+    },
+    {
+      "site": "St George",
+      "facility": "St George Hospital",
+      "verified": true,
+      "objectid": 178
+    },
+    {
+      "site": "Stanthorpe",
+      "facility": "Stanthorpe Hospital",
+      "verified": true,
+      "objectid": 201
+    },
+    {
+      "site": "Sunshine Coast University",
+      "facility": "Sunshine Coast University Hospital",
+      "verified": true,
+      "objectid": 335
+    },
+    {
+      "site": "Thursday Island",
+      "facility": "Thursday Island Hospital",
+      "verified": true,
+      "objectid": 835
+    },
+    {
+      "site": "Toowoomba",
+      "facility": "Toowoomba Hospital",
+      "verified": true,
+      "objectid": 85
+    },
+    {
+      "site": "Tully",
+      "facility": "Tully Hospital",
+      "verified": true,
+      "objectid": 123
+    },
+    {
+      "site": "Warwick",
+      "facility": "Warwick Hospital",
+      "verified": true,
+      "objectid": 133
+    },
+    {
+      "site": "Weipa",
+      "facility": "Weipa Integrated Health Service",
+      "verified": true,
+      "objectid": 836
+    },
+    {
+      "site": "Ayr",
+      "facility": "Ayr Health Service",
+      "verified": true,
+      "objectid": 340
+    },
+    {
+      "site": "Dalby",
+      "facility": "Dalby  Hospital",
+      "verified": true,
+      "objectid": 342
+    },
+    {
+      "site": "Ingham",
+      "facility": "Ingham Health Service",
+      "verified": true,
+      "objectid": 354
+    }
+  ],
+  "unresolved_locality": "Yarrabah Emergency Service; no point assigned",
+  "boundary_source": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_50m_admin_1_states_provinces.geojson",
+  "boundary_reuse": "Natural Earth public domain; https://www.naturalearthdata.com/about/terms-of-use/",
+  "boundary_attribution": "Made with Natural Earth",
+  "boundary_sha256": "9b04d2d9342354757fc055d72b81b20c0f333219397b30707dfa3ec1de78dc23"
+}

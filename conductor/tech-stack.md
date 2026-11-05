@@ -1,0 +1,4 @@
+# Technical stack and scope
+Python, NumPy and standard-library CSV/JSON remain the model stack; Polars is the only permitted DataFrame engine. No runtime dependency was added by v13. Report/plot and assurance dependencies remain separate in pyproject.toml. A genuine resolved lock and installed pinned environment remain required; target declarations are not installation evidence.
+The single executable harness remains quality.cli; no new CI or mutation framework. The v13 exact mixed-policy evaluator reuses identical site groups only inside one call and never reuses persisted acceptance evidence.
+Pinned Conductor implement/review workflows were read from edithatogo/conductor-next at137c1e41ff9c1dc75ff277b9582460a0bd8c4768. Local skill adapters and provenance are retained. Actual submodule checkout and Conductor CLI execution are not claimed. The review is the same assistant acting as reviewer, not independent clinical or software validation.

@@ -1,0 +1,17 @@
+{
+  "id": "panda-vision-v2-statewide-assurance",
+  "status": "in_progress",
+  "created": "2026-10-27",
+  "branch": "conductor/panda-vision-v2-statewide-assurance",
+  "parent": "panda-vision-model-v1",
+  "blocked": [
+    "container external DNS",
+    "hosted CI not connected to a specified project remote",
+    "Conductor submodule working tree not populated",
+    "latest dependency installation and hash lock unresolved"
+  ],
+  "design_authority": "current user instructions",
+  "implementation": "locally complete",
+  "release": "blocked",
+  "verification": "75 tests;96% core branch coverage;online gates not executed"
+}

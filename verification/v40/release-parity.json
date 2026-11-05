@@ -1,0 +1,256 @@
+{
+  "numeric_source_ast_identical": true,
+  "active_artifacts": [
+    {
+      "path": "outputs/v13-primary/allocation_two_way.csv",
+      "byte_identical": true,
+      "numerical_content_identical": true
+    },
+    {
+      "path": "outputs/v13-primary/chhhs_prototype_uncertain_perspectives.npz",
+      "byte_identical": true,
+      "numerical_content_identical": true
+    },
+    {
+      "path": "outputs/v13-primary/chhhs_reference_perspectives.npz",
+      "byte_identical": true,
+      "numerical_content_identical": true
+    },
+    {
+      "path": "outputs/v13-primary/chhhs_tchhs_prototype_uncertain_perspectives.npz",
+      "byte_identical": true,
+      "numerical_content_identical": true
+    },
+    {
+      "path": "outputs/v13-primary/chhhs_tchhs_reference_perspectives.npz",
+      "byte_identical": true,
+      "numerical_content_identical": true
+    },
+    {
+      "path": "outputs/v13-primary/current_report.html",
+      "byte_identical": true,
+      "numerical_content_identical": true
+    },
+    {
+      "path": "outputs/v13-primary/current_report.md",
+      "byte_identical": true,
+      "numerical_content_identical": true
+    },
+    {
+      "path": "outputs/v13-primary/current_report.pdf",
+      "byte_identical": true,
+      "numerical_content_identical": true
+    },
+    {
+      "path": "outputs/v13-primary/deterministic.csv",
+      "byte_identical": true,
+      "numerical_content_identical": true
+    },
+    {
+      "path": "outputs/v13-primary/established_options.csv",
+      "byte_identical": true,
+      "numerical_content_identical": true
+    },
+    {
+      "path": "outputs/v13-primary/figures/mixed_estate_capital.png",
+      "byte_identical": true,
+      "numerical_content_identical": true
+    },
+    {
+      "path": "outputs/v13-primary/figures/mixed_estate_capital.svg",
+      "byte_identical": true,
+      "numerical_content_identical": true
+    },
+    {
+      "path": "outputs/v13-primary/figures/resource_intervals.png",
+      "byte_identical": true,
+      "numerical_content_identical": true
+    },
+    {
+      "path": "outputs/v13-primary/figures/resource_intervals.svg",
+      "byte_identical": true,
+      "numerical_content_identical": true
+    },
+    {
+      "path": "outputs/v13-primary/figures/utility_correction.png",
+      "byte_identical": true,
+      "numerical_content_identical": true
+    },
+    {
+      "path": "outputs/v13-primary/figures/utility_correction.svg",
+      "byte_identical": true,
+      "numerical_content_identical": true
+    },
+    {
+      "path": "outputs/v13-primary/health_thresholds.csv",
+      "byte_identical": true,
+      "numerical_content_identical": true
+    },
+    {
+      "path": "outputs/v13-primary/mixed_estate_budget.csv",
+      "byte_identical": true,
+      "numerical_content_identical": true
+    },
+    {
+      "path": "outputs/v13-primary/pilot_prototype_uncertain_perspectives.npz",
+      "byte_identical": true,
+      "numerical_content_identical": true
+    },
+    {
+      "path": "outputs/v13-primary/pilot_reference_perspectives.npz",
+      "byte_identical": true,
+      "numerical_content_identical": true
+    },
+    {
+      "path": "outputs/v13-primary/prior_predictive.csv",
+      "byte_identical": true,
+      "numerical_content_identical": true
+    },
+    {
+      "path": "outputs/v13-primary/psa_perspectives.csv",
+      "byte_identical": true,
+      "numerical_content_identical": true
+    },
+    {
+      "path": "outputs/v13-primary/reconciliation.csv",
+      "byte_identical": true,
+      "numerical_content_identical": true
+    },
+    {
+      "path": "outputs/v13-primary/regional_roster.csv",
+      "byte_identical": true,
+      "numerical_content_identical": true
+    },
+    {
+      "path": "outputs/v13-primary/resolved_inputs.json",
+      "byte_identical": true,
+      "numerical_content_identical": true
+    },
+    {
+      "path": "outputs/v13-primary/results.json",
+      "byte_identical": true,
+      "numerical_content_identical": true
+    },
+    {
+      "path": "outputs/v13-primary/spokes_prototype_uncertain_perspectives.npz",
+      "byte_identical": true,
+      "numerical_content_identical": true
+    },
+    {
+      "path": "outputs/v13-primary/spokes_reference_perspectives.npz",
+      "byte_identical": true,
+      "numerical_content_identical": true
+    },
+    {
+      "path": "outputs/v13-primary/structural_scenarios.csv",
+      "byte_identical": true,
+      "numerical_content_identical": true
+    },
+    {
+      "path": "outputs/v13-primary/utility_bridge_scenarios.csv",
+      "byte_identical": true,
+      "numerical_content_identical": true
+    },
+    {
+      "path": "outputs/v13-primary/value_of_perspective.csv",
+      "byte_identical": true,
+      "numerical_content_identical": true
+    },
+    {
+      "path": "outputs/v13-refinements/checks.csv",
+      "byte_identical": true,
+      "numerical_content_identical": true
+    },
+    {
+      "path": "outputs/v13-refinements/eligibility.csv",
+      "byte_identical": false,
+      "numerical_content_identical": true
+    },
+    {
+      "path": "outputs/v13-refinements/figures/contact_denominator.png",
+      "byte_identical": true,
+      "numerical_content_identical": true
+    },
+    {
+      "path": "outputs/v13-refinements/figures/contact_denominator.svg",
+      "byte_identical": true,
+      "numerical_content_identical": true
+    },
+    {
+      "path": "outputs/v13-refinements/figures/estate_purchases.png",
+      "byte_identical": true,
+      "numerical_content_identical": true
+    },
+    {
+      "path": "outputs/v13-refinements/figures/estate_purchases.svg",
+      "byte_identical": true,
+      "numerical_content_identical": true
+    },
+    {
+      "path": "outputs/v13-refinements/figures/regional_policy_costs.png",
+      "byte_identical": true,
+      "numerical_content_identical": true
+    },
+    {
+      "path": "outputs/v13-refinements/figures/regional_policy_costs.svg",
+      "byte_identical": true,
+      "numerical_content_identical": true
+    },
+    {
+      "path": "outputs/v13-refinements/policy_assignments.csv",
+      "byte_identical": true,
+      "numerical_content_identical": true
+    },
+    {
+      "path": "outputs/v13-refinements/policy_budget.csv",
+      "byte_identical": true,
+      "numerical_content_identical": true
+    },
+    {
+      "path": "outputs/v13-refinements/policy_deterministic.csv",
+      "byte_identical": true,
+      "numerical_content_identical": true
+    },
+    {
+      "path": "outputs/v13-refinements/policy_predictive.csv",
+      "byte_identical": true,
+      "numerical_content_identical": true
+    },
+    {
+      "path": "outputs/v13-refinements/policy_psa.csv",
+      "byte_identical": true,
+      "numerical_content_identical": true
+    },
+    {
+      "path": "outputs/v13-refinements/policy_rankings.csv",
+      "byte_identical": true,
+      "numerical_content_identical": true
+    },
+    {
+      "path": "outputs/v13-refinements/refinements_report.md",
+      "byte_identical": true,
+      "numerical_content_identical": true
+    },
+    {
+      "path": "outputs/v13-refinements/resolved_inputs.json",
+      "byte_identical": true,
+      "numerical_content_identical": true
+    },
+    {
+      "path": "outputs/v13-refinements/results.json",
+      "byte_identical": true,
+      "numerical_content_identical": true
+    },
+    {
+      "path": "outputs/v13-refinements/review_packet.json",
+      "byte_identical": true,
+      "numerical_content_identical": true
+    }
+  ],
+  "active_artifacts_count": 49,
+  "byte_identical_count": 48,
+  "verified_numeric_cells_in_changed_csv": 0,
+  "restricted_reference_matches": [],
+  "binary_inventory_count": 105,
+  "publication_authorised": false
+}

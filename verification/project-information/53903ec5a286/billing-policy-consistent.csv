@@ -1,0 +1,9 @@
+years,grid_points_per_dimension,policy_before,perfect_cash_information,fixed_wing_capture_information,road_rotary_capture_information,possible_policy_after,liability_rule
+3,101,telephone,211.5877821207085,0.0,0.0,telephone|retain_pilot_expand_obsbot,fixed-wing referring HHS known; cash capture independent uniform scenarios
+5,101,telephone,5886.876470735629,0.0,5162.479595840163,telephone|retain_pilot_expand_obsbot,fixed-wing referring HHS known; cash capture independent uniform scenarios
+3,201,telephone,211.74924673804455,0.0,0.0,telephone|retain_pilot_expand_obsbot,fixed-wing referring HHS known; cash capture independent uniform scenarios
+5,201,telephone,5887.415323479516,0.0,5163.871189991512,telephone|retain_pilot_expand_obsbot,fixed-wing referring HHS known; cash capture independent uniform scenarios
+3,401,telephone,211.78938699322833,0.0,0.0,telephone|retain_pilot_expand_obsbot,fixed-wing referring HHS known; cash capture independent uniform scenarios
+5,401,telephone,5887.55335399186,0.0,5163.788840142259,telephone|retain_pilot_expand_obsbot,fixed-wing referring HHS known; cash capture independent uniform scenarios
+3,801,telephone,211.79962217577358,0.0,0.0,telephone|retain_pilot_expand_obsbot,fixed-wing referring HHS known; cash capture independent uniform scenarios
+5,801,telephone,5887.587846738115,0.0,5163.887644158395,telephone|retain_pilot_expand_obsbot,fixed-wing referring HHS known; cash capture independent uniform scenarios

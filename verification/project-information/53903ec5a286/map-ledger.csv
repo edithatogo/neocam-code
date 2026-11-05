@@ -1,0 +1,349 @@
+portfolio,policy,conditional_policy,site,strategy,site_id,eligibility,longitude,latitude,coordinate_status
+pilot,telephone,False,Atherton,telephone,1,reported_operation,145.483617911,-17.2663688854645,verified_facility
+pilot,telephone,False,Innisfail,telephone,20,reported_operation,146.030073659,-17.5189738334577,verified_facility
+pilot,telephone,False,Mareeba,telephone,26,reported_operation,145.424528565,-16.9869204054721,verified_facility
+pilot,retain_pilot_only,False,Atherton,panda,1,reported_operation,145.483617911,-17.2663688854645,verified_facility
+pilot,retain_pilot_only,False,Innisfail,panda,20,reported_operation,146.030073659,-17.5189738334577,verified_facility
+pilot,retain_pilot_only,False,Mareeba,panda,26,reported_operation,145.424528565,-16.9869204054721,verified_facility
+chhhs,telephone,False,Cairns,telephone,8,reported_operation,145.768107093,-16.9123567184742,verified_facility
+chhhs,telephone,False,Atherton,telephone,1,reported_operation,145.483617911,-17.2663688854645,verified_facility
+chhhs,telephone,False,Mareeba,telephone,26,reported_operation,145.424528565,-16.9869204054721,verified_facility
+chhhs,telephone,False,Innisfail,telephone,20,reported_operation,146.030073659,-17.5189738334577,verified_facility
+chhhs,telephone,False,Tully,telephone,39,reported_operation,145.923671175,-17.9269714064467,verified_facility
+chhhs,telephone,False,Mossman,telephone,27,reported_operation,145.36817632,-16.4639164984865,verified_facility
+chhhs,telephone,False,Babinda,telephone,3,reported_operation,145.918789501,-17.3431582994625,verified_facility
+chhhs,telephone,False,Gordonvale,telephone,15,reported_operation,145.786223285,-17.0871527044694,verified_facility
+chhhs,telephone,False,Herberton,telephone,17,reported_operation,145.38047835,-17.3802225584614,verified_facility
+chhhs,telephone,False,Yarrabah Emergency Service,telephone,42,reported_operation,,,unresolved_locality
+chhhs,retain_pilot_only,False,Cairns,telephone,8,reported_operation,145.768107093,-16.9123567184742,verified_facility
+chhhs,retain_pilot_only,False,Atherton,panda,1,reported_operation,145.483617911,-17.2663688854645,verified_facility
+chhhs,retain_pilot_only,False,Mareeba,panda,26,reported_operation,145.424528565,-16.9869204054721,verified_facility
+chhhs,retain_pilot_only,False,Innisfail,panda,20,reported_operation,146.030073659,-17.5189738334577,verified_facility
+chhhs,retain_pilot_only,False,Tully,telephone,39,reported_operation,145.923671175,-17.9269714064467,verified_facility
+chhhs,retain_pilot_only,False,Mossman,telephone,27,reported_operation,145.36817632,-16.4639164984865,verified_facility
+chhhs,retain_pilot_only,False,Babinda,telephone,3,reported_operation,145.918789501,-17.3431582994625,verified_facility
+chhhs,retain_pilot_only,False,Gordonvale,telephone,15,reported_operation,145.786223285,-17.0871527044694,verified_facility
+chhhs,retain_pilot_only,False,Herberton,telephone,17,reported_operation,145.38047835,-17.3802225584614,verified_facility
+chhhs,retain_pilot_only,False,Yarrabah Emergency Service,telephone,42,reported_operation,,,unresolved_locality
+chhhs,retain_pilot_expand_panda,True,Cairns,panda,8,hypothetical,145.768107093,-16.9123567184742,verified_facility
+chhhs,retain_pilot_expand_panda,True,Atherton,panda,1,reported_operation,145.483617911,-17.2663688854645,verified_facility
+chhhs,retain_pilot_expand_panda,True,Mareeba,panda,26,reported_operation,145.424528565,-16.9869204054721,verified_facility
+chhhs,retain_pilot_expand_panda,True,Innisfail,panda,20,reported_operation,146.030073659,-17.5189738334577,verified_facility
+chhhs,retain_pilot_expand_panda,True,Tully,panda,39,hypothetical,145.923671175,-17.9269714064467,verified_facility
+chhhs,retain_pilot_expand_panda,True,Mossman,panda,27,hypothetical,145.36817632,-16.4639164984865,verified_facility
+chhhs,retain_pilot_expand_panda,True,Babinda,panda,3,hypothetical,145.918789501,-17.3431582994625,verified_facility
+chhhs,retain_pilot_expand_panda,True,Gordonvale,panda,15,hypothetical,145.786223285,-17.0871527044694,verified_facility
+chhhs,retain_pilot_expand_panda,True,Herberton,panda,17,hypothetical,145.38047835,-17.3802225584614,verified_facility
+chhhs,retain_pilot_expand_panda,True,Yarrabah Emergency Service,panda,42,hypothetical,,,unresolved_locality
+chhhs,retain_pilot_expand_obsbot,True,Cairns,obsbot,8,hypothetical,145.768107093,-16.9123567184742,verified_facility
+chhhs,retain_pilot_expand_obsbot,True,Atherton,panda,1,reported_operation,145.483617911,-17.2663688854645,verified_facility
+chhhs,retain_pilot_expand_obsbot,True,Mareeba,panda,26,reported_operation,145.424528565,-16.9869204054721,verified_facility
+chhhs,retain_pilot_expand_obsbot,True,Innisfail,panda,20,reported_operation,146.030073659,-17.5189738334577,verified_facility
+chhhs,retain_pilot_expand_obsbot,True,Tully,obsbot,39,hypothetical,145.923671175,-17.9269714064467,verified_facility
+chhhs,retain_pilot_expand_obsbot,True,Mossman,obsbot,27,hypothetical,145.36817632,-16.4639164984865,verified_facility
+chhhs,retain_pilot_expand_obsbot,True,Babinda,obsbot,3,hypothetical,145.918789501,-17.3431582994625,verified_facility
+chhhs,retain_pilot_expand_obsbot,True,Gordonvale,obsbot,15,hypothetical,145.786223285,-17.0871527044694,verified_facility
+chhhs,retain_pilot_expand_obsbot,True,Herberton,obsbot,17,hypothetical,145.38047835,-17.3802225584614,verified_facility
+chhhs,retain_pilot_expand_obsbot,True,Yarrabah Emergency Service,obsbot,42,hypothetical,,,unresolved_locality
+chhhs,retain_pilot_expand_mobile,True,Cairns,mobile,8,hypothetical,145.768107093,-16.9123567184742,verified_facility
+chhhs,retain_pilot_expand_mobile,True,Atherton,panda,1,reported_operation,145.483617911,-17.2663688854645,verified_facility
+chhhs,retain_pilot_expand_mobile,True,Mareeba,panda,26,reported_operation,145.424528565,-16.9869204054721,verified_facility
+chhhs,retain_pilot_expand_mobile,True,Innisfail,panda,20,reported_operation,146.030073659,-17.5189738334577,verified_facility
+chhhs,retain_pilot_expand_mobile,True,Tully,mobile,39,hypothetical,145.923671175,-17.9269714064467,verified_facility
+chhhs,retain_pilot_expand_mobile,True,Mossman,mobile,27,hypothetical,145.36817632,-16.4639164984865,verified_facility
+chhhs,retain_pilot_expand_mobile,True,Babinda,mobile,3,hypothetical,145.918789501,-17.3431582994625,verified_facility
+chhhs,retain_pilot_expand_mobile,True,Gordonvale,mobile,15,hypothetical,145.786223285,-17.0871527044694,verified_facility
+chhhs,retain_pilot_expand_mobile,True,Herberton,mobile,17,hypothetical,145.38047835,-17.3802225584614,verified_facility
+chhhs,retain_pilot_expand_mobile,True,Yarrabah Emergency Service,mobile,42,hypothetical,,,unresolved_locality
+chhhs,retain_pilot_expand_fixed,True,Cairns,fixed,8,hypothetical,145.768107093,-16.9123567184742,verified_facility
+chhhs,retain_pilot_expand_fixed,True,Atherton,panda,1,reported_operation,145.483617911,-17.2663688854645,verified_facility
+chhhs,retain_pilot_expand_fixed,True,Mareeba,panda,26,reported_operation,145.424528565,-16.9869204054721,verified_facility
+chhhs,retain_pilot_expand_fixed,True,Innisfail,panda,20,reported_operation,146.030073659,-17.5189738334577,verified_facility
+chhhs,retain_pilot_expand_fixed,True,Tully,fixed,39,hypothetical,145.923671175,-17.9269714064467,verified_facility
+chhhs,retain_pilot_expand_fixed,True,Mossman,fixed,27,hypothetical,145.36817632,-16.4639164984865,verified_facility
+chhhs,retain_pilot_expand_fixed,True,Babinda,fixed,3,hypothetical,145.918789501,-17.3431582994625,verified_facility
+chhhs,retain_pilot_expand_fixed,True,Gordonvale,fixed,15,hypothetical,145.786223285,-17.0871527044694,verified_facility
+chhhs,retain_pilot_expand_fixed,True,Herberton,fixed,17,hypothetical,145.38047835,-17.3802225584614,verified_facility
+chhhs,retain_pilot_expand_fixed,True,Yarrabah Emergency Service,fixed,42,hypothetical,,,unresolved_locality
+chhhs_tchhs,telephone,False,Cairns,telephone,8,reported_operation,145.768107093,-16.9123567184742,verified_facility
+chhhs_tchhs,telephone,False,Atherton,telephone,1,reported_operation,145.483617911,-17.2663688854645,verified_facility
+chhhs_tchhs,telephone,False,Mareeba,telephone,26,reported_operation,145.424528565,-16.9869204054721,verified_facility
+chhhs_tchhs,telephone,False,Innisfail,telephone,20,reported_operation,146.030073659,-17.5189738334577,verified_facility
+chhhs_tchhs,telephone,False,Tully,telephone,39,reported_operation,145.923671175,-17.9269714064467,verified_facility
+chhhs_tchhs,telephone,False,Mossman,telephone,27,reported_operation,145.36817632,-16.4639164984865,verified_facility
+chhhs_tchhs,telephone,False,Babinda,telephone,3,reported_operation,145.918789501,-17.3431582994625,verified_facility
+chhhs_tchhs,telephone,False,Gordonvale,telephone,15,reported_operation,145.786223285,-17.0871527044694,verified_facility
+chhhs_tchhs,telephone,False,Herberton,telephone,17,reported_operation,145.38047835,-17.3802225584614,verified_facility
+chhhs_tchhs,telephone,False,Yarrabah Emergency Service,telephone,42,reported_operation,,,unresolved_locality
+chhhs_tchhs,telephone,False,Cooktown,telephone,10,reported_operation,145.250417884,-15.4777325815141,verified_facility
+chhhs_tchhs,telephone,False,Weipa,telephone,41,reported_operation,141.867232487,-12.6409172775965,verified_facility
+chhhs_tchhs,telephone,False,Thursday Island,telephone,37,reported_operation,142.210968907,-10.5880759666587,verified_facility
+chhhs_tchhs,telephone,False,Bamaga,telephone,4,reported_operation,142.384955318,-10.8941942706493,verified_facility
+chhhs_tchhs,retain_pilot_only,False,Cairns,telephone,8,reported_operation,145.768107093,-16.9123567184742,verified_facility
+chhhs_tchhs,retain_pilot_only,False,Atherton,panda,1,reported_operation,145.483617911,-17.2663688854645,verified_facility
+chhhs_tchhs,retain_pilot_only,False,Mareeba,panda,26,reported_operation,145.424528565,-16.9869204054721,verified_facility
+chhhs_tchhs,retain_pilot_only,False,Innisfail,panda,20,reported_operation,146.030073659,-17.5189738334577,verified_facility
+chhhs_tchhs,retain_pilot_only,False,Tully,telephone,39,reported_operation,145.923671175,-17.9269714064467,verified_facility
+chhhs_tchhs,retain_pilot_only,False,Mossman,telephone,27,reported_operation,145.36817632,-16.4639164984865,verified_facility
+chhhs_tchhs,retain_pilot_only,False,Babinda,telephone,3,reported_operation,145.918789501,-17.3431582994625,verified_facility
+chhhs_tchhs,retain_pilot_only,False,Gordonvale,telephone,15,reported_operation,145.786223285,-17.0871527044694,verified_facility
+chhhs_tchhs,retain_pilot_only,False,Herberton,telephone,17,reported_operation,145.38047835,-17.3802225584614,verified_facility
+chhhs_tchhs,retain_pilot_only,False,Yarrabah Emergency Service,telephone,42,reported_operation,,,unresolved_locality
+chhhs_tchhs,retain_pilot_only,False,Cooktown,telephone,10,reported_operation,145.250417884,-15.4777325815141,verified_facility
+chhhs_tchhs,retain_pilot_only,False,Weipa,telephone,41,reported_operation,141.867232487,-12.6409172775965,verified_facility
+chhhs_tchhs,retain_pilot_only,False,Thursday Island,telephone,37,reported_operation,142.210968907,-10.5880759666587,verified_facility
+chhhs_tchhs,retain_pilot_only,False,Bamaga,telephone,4,reported_operation,142.384955318,-10.8941942706493,verified_facility
+chhhs_tchhs,retain_pilot_expand_panda,True,Cairns,panda,8,hypothetical,145.768107093,-16.9123567184742,verified_facility
+chhhs_tchhs,retain_pilot_expand_panda,True,Atherton,panda,1,reported_operation,145.483617911,-17.2663688854645,verified_facility
+chhhs_tchhs,retain_pilot_expand_panda,True,Mareeba,panda,26,reported_operation,145.424528565,-16.9869204054721,verified_facility
+chhhs_tchhs,retain_pilot_expand_panda,True,Innisfail,panda,20,reported_operation,146.030073659,-17.5189738334577,verified_facility
+chhhs_tchhs,retain_pilot_expand_panda,True,Tully,panda,39,hypothetical,145.923671175,-17.9269714064467,verified_facility
+chhhs_tchhs,retain_pilot_expand_panda,True,Mossman,panda,27,hypothetical,145.36817632,-16.4639164984865,verified_facility
+chhhs_tchhs,retain_pilot_expand_panda,True,Babinda,panda,3,hypothetical,145.918789501,-17.3431582994625,verified_facility
+chhhs_tchhs,retain_pilot_expand_panda,True,Gordonvale,panda,15,hypothetical,145.786223285,-17.0871527044694,verified_facility
+chhhs_tchhs,retain_pilot_expand_panda,True,Herberton,panda,17,hypothetical,145.38047835,-17.3802225584614,verified_facility
+chhhs_tchhs,retain_pilot_expand_panda,True,Yarrabah Emergency Service,panda,42,hypothetical,,,unresolved_locality
+chhhs_tchhs,retain_pilot_expand_panda,True,Cooktown,panda,10,hypothetical,145.250417884,-15.4777325815141,verified_facility
+chhhs_tchhs,retain_pilot_expand_panda,True,Weipa,panda,41,hypothetical,141.867232487,-12.6409172775965,verified_facility
+chhhs_tchhs,retain_pilot_expand_panda,True,Thursday Island,panda,37,hypothetical,142.210968907,-10.5880759666587,verified_facility
+chhhs_tchhs,retain_pilot_expand_panda,True,Bamaga,panda,4,hypothetical,142.384955318,-10.8941942706493,verified_facility
+chhhs_tchhs,retain_pilot_expand_obsbot,True,Cairns,obsbot,8,hypothetical,145.768107093,-16.9123567184742,verified_facility
+chhhs_tchhs,retain_pilot_expand_obsbot,True,Atherton,panda,1,reported_operation,145.483617911,-17.2663688854645,verified_facility
+chhhs_tchhs,retain_pilot_expand_obsbot,True,Mareeba,panda,26,reported_operation,145.424528565,-16.9869204054721,verified_facility
+chhhs_tchhs,retain_pilot_expand_obsbot,True,Innisfail,panda,20,reported_operation,146.030073659,-17.5189738334577,verified_facility
+chhhs_tchhs,retain_pilot_expand_obsbot,True,Tully,obsbot,39,hypothetical,145.923671175,-17.9269714064467,verified_facility
+chhhs_tchhs,retain_pilot_expand_obsbot,True,Mossman,obsbot,27,hypothetical,145.36817632,-16.4639164984865,verified_facility
+chhhs_tchhs,retain_pilot_expand_obsbot,True,Babinda,obsbot,3,hypothetical,145.918789501,-17.3431582994625,verified_facility
+chhhs_tchhs,retain_pilot_expand_obsbot,True,Gordonvale,obsbot,15,hypothetical,145.786223285,-17.0871527044694,verified_facility
+chhhs_tchhs,retain_pilot_expand_obsbot,True,Herberton,obsbot,17,hypothetical,145.38047835,-17.3802225584614,verified_facility
+chhhs_tchhs,retain_pilot_expand_obsbot,True,Yarrabah Emergency Service,obsbot,42,hypothetical,,,unresolved_locality
+chhhs_tchhs,retain_pilot_expand_obsbot,True,Cooktown,obsbot,10,hypothetical,145.250417884,-15.4777325815141,verified_facility
+chhhs_tchhs,retain_pilot_expand_obsbot,True,Weipa,obsbot,41,hypothetical,141.867232487,-12.6409172775965,verified_facility
+chhhs_tchhs,retain_pilot_expand_obsbot,True,Thursday Island,obsbot,37,hypothetical,142.210968907,-10.5880759666587,verified_facility
+chhhs_tchhs,retain_pilot_expand_obsbot,True,Bamaga,obsbot,4,hypothetical,142.384955318,-10.8941942706493,verified_facility
+chhhs_tchhs,retain_pilot_expand_mobile,True,Cairns,mobile,8,hypothetical,145.768107093,-16.9123567184742,verified_facility
+chhhs_tchhs,retain_pilot_expand_mobile,True,Atherton,panda,1,reported_operation,145.483617911,-17.2663688854645,verified_facility
+chhhs_tchhs,retain_pilot_expand_mobile,True,Mareeba,panda,26,reported_operation,145.424528565,-16.9869204054721,verified_facility
+chhhs_tchhs,retain_pilot_expand_mobile,True,Innisfail,panda,20,reported_operation,146.030073659,-17.5189738334577,verified_facility
+chhhs_tchhs,retain_pilot_expand_mobile,True,Tully,mobile,39,hypothetical,145.923671175,-17.9269714064467,verified_facility
+chhhs_tchhs,retain_pilot_expand_mobile,True,Mossman,mobile,27,hypothetical,145.36817632,-16.4639164984865,verified_facility
+chhhs_tchhs,retain_pilot_expand_mobile,True,Babinda,mobile,3,hypothetical,145.918789501,-17.3431582994625,verified_facility
+chhhs_tchhs,retain_pilot_expand_mobile,True,Gordonvale,mobile,15,hypothetical,145.786223285,-17.0871527044694,verified_facility
+chhhs_tchhs,retain_pilot_expand_mobile,True,Herberton,mobile,17,hypothetical,145.38047835,-17.3802225584614,verified_facility
+chhhs_tchhs,retain_pilot_expand_mobile,True,Yarrabah Emergency Service,mobile,42,hypothetical,,,unresolved_locality
+chhhs_tchhs,retain_pilot_expand_mobile,True,Cooktown,mobile,10,hypothetical,145.250417884,-15.4777325815141,verified_facility
+chhhs_tchhs,retain_pilot_expand_mobile,True,Weipa,mobile,41,hypothetical,141.867232487,-12.6409172775965,verified_facility
+chhhs_tchhs,retain_pilot_expand_mobile,True,Thursday Island,mobile,37,hypothetical,142.210968907,-10.5880759666587,verified_facility
+chhhs_tchhs,retain_pilot_expand_mobile,True,Bamaga,mobile,4,hypothetical,142.384955318,-10.8941942706493,verified_facility
+chhhs_tchhs,retain_pilot_expand_fixed,True,Cairns,fixed,8,hypothetical,145.768107093,-16.9123567184742,verified_facility
+chhhs_tchhs,retain_pilot_expand_fixed,True,Atherton,panda,1,reported_operation,145.483617911,-17.2663688854645,verified_facility
+chhhs_tchhs,retain_pilot_expand_fixed,True,Mareeba,panda,26,reported_operation,145.424528565,-16.9869204054721,verified_facility
+chhhs_tchhs,retain_pilot_expand_fixed,True,Innisfail,panda,20,reported_operation,146.030073659,-17.5189738334577,verified_facility
+chhhs_tchhs,retain_pilot_expand_fixed,True,Tully,fixed,39,hypothetical,145.923671175,-17.9269714064467,verified_facility
+chhhs_tchhs,retain_pilot_expand_fixed,True,Mossman,fixed,27,hypothetical,145.36817632,-16.4639164984865,verified_facility
+chhhs_tchhs,retain_pilot_expand_fixed,True,Babinda,fixed,3,hypothetical,145.918789501,-17.3431582994625,verified_facility
+chhhs_tchhs,retain_pilot_expand_fixed,True,Gordonvale,fixed,15,hypothetical,145.786223285,-17.0871527044694,verified_facility
+chhhs_tchhs,retain_pilot_expand_fixed,True,Herberton,fixed,17,hypothetical,145.38047835,-17.3802225584614,verified_facility
+chhhs_tchhs,retain_pilot_expand_fixed,True,Yarrabah Emergency Service,fixed,42,hypothetical,,,unresolved_locality
+chhhs_tchhs,retain_pilot_expand_fixed,True,Cooktown,fixed,10,hypothetical,145.250417884,-15.4777325815141,verified_facility
+chhhs_tchhs,retain_pilot_expand_fixed,True,Weipa,fixed,41,hypothetical,141.867232487,-12.6409172775965,verified_facility
+chhhs_tchhs,retain_pilot_expand_fixed,True,Thursday Island,fixed,37,hypothetical,142.210968907,-10.5880759666587,verified_facility
+chhhs_tchhs,retain_pilot_expand_fixed,True,Bamaga,fixed,4,hypothetical,142.384955318,-10.8941942706493,verified_facility
+spokes,telephone,False,Atherton,telephone,1,reported_operation,145.483617911,-17.2663688854645,verified_facility
+spokes,telephone,False,Ayr,telephone,2,reported_operation,147.409112301,-19.5643818734039,verified_facility
+spokes,telephone,False,Beaudesert,telephone,5,reported_operation,153.002419124,-27.9851546682175,verified_facility
+spokes,telephone,False,Bundaberg Base,telephone,6,reported_operation,152.334120231,-24.8690000802794,verified_facility
+spokes,telephone,False,Caboolture,telephone,7,reported_operation,152.964034829,-27.0806176662346,verified_facility
+spokes,telephone,False,Cairns,telephone,8,reported_operation,145.768107093,-16.9123567184742,verified_facility
+spokes,telephone,False,Charleville,telephone,9,reported_operation,146.23905856,-26.4108827622477,verified_facility
+spokes,telephone,False,Dalby,telephone,11,reported_operation,151.27644411,-27.1661692352329,verified_facility
+spokes,telephone,False,Emerald,telephone,12,reported_operation,148.154827183,-23.515143125309,verified_facility
+spokes,telephone,False,Gladstone,telephone,13,reported_operation,151.248967684,-23.8501296293015,verified_facility
+spokes,telephone,False,Goondiwindi,telephone,14,reported_operation,150.30213246,-28.5479229852073,verified_facility
+spokes,telephone,False,Gympie,telephone,16,reported_operation,152.658176627,-26.1842628582522,verified_facility
+spokes,telephone,False,Hervey Bay,telephone,18,reported_operation,152.820917138,-25.2986850802704,verified_facility
+spokes,telephone,False,Ingham,telephone,19,reported_operation,146.1638716,-18.6521916824275,verified_facility
+spokes,telephone,False,Innisfail,telephone,20,reported_operation,146.030073659,-17.5189738334577,verified_facility
+spokes,telephone,False,Ipswich,telephone,21,reported_operation,152.759220211,-27.6191776602243,verified_facility
+spokes,telephone,False,Kingaroy,telephone,22,reported_operation,151.838820756,-26.5322299182453,verified_facility
+spokes,telephone,False,Logan,telephone,23,reported_operation,153.14141775,-27.6699864972234,verified_facility
+spokes,telephone,False,Longreach,telephone,24,reported_operation,144.260793995,-23.4388172373107,verified_facility
+spokes,telephone,False,Mackay Base,telephone,25,reported_operation,149.154927958,-21.1468547143644,verified_facility
+spokes,telephone,False,Mareeba,telephone,26,reported_operation,145.424528565,-16.9869204054721,verified_facility
+spokes,telephone,False,Mount Isa,telephone,28,reported_operation,139.494092817,-20.7306764913746,verified_facility
+spokes,telephone,False,Proserpine,telephone,29,reported_operation,148.584886386,-20.4002732943829,verified_facility
+spokes,telephone,False,Redcliffe,telephone,30,reported_operation,153.104386237,-27.2280547022317,verified_facility
+spokes,telephone,False,Redland,telephone,31,reported_operation,153.251496776,-27.5403431452258,verified_facility
+spokes,telephone,False,Rockhampton,telephone,32,reported_operation,150.49494912,-23.379983864312,verified_facility
+spokes,telephone,False,Roma,telephone,33,reported_operation,148.775548204,-26.5685338632445,verified_facility
+spokes,telephone,False,St George,telephone,34,reported_operation,148.592796619,-28.0274154972168,verified_facility
+spokes,telephone,False,Stanthorpe,telephone,35,reported_operation,151.928444672,-28.6609075182053,verified_facility
+spokes,telephone,False,Sunshine Coast University,telephone,36,reported_operation,153.113346724,-26.747004547241,verified_facility
+spokes,telephone,False,Thursday Island,telephone,37,reported_operation,142.210968907,-10.5880759666587,verified_facility
+spokes,telephone,False,Toowoomba,telephone,38,reported_operation,151.944202208,-27.5696530422252,verified_facility
+spokes,telephone,False,Warwick,telephone,40,reported_operation,152.017279022,-28.2243589112132,verified_facility
+spokes,retain_pilot_only,False,Atherton,panda,1,reported_operation,145.483617911,-17.2663688854645,verified_facility
+spokes,retain_pilot_only,False,Ayr,telephone,2,reported_operation,147.409112301,-19.5643818734039,verified_facility
+spokes,retain_pilot_only,False,Beaudesert,telephone,5,reported_operation,153.002419124,-27.9851546682175,verified_facility
+spokes,retain_pilot_only,False,Bundaberg Base,telephone,6,reported_operation,152.334120231,-24.8690000802794,verified_facility
+spokes,retain_pilot_only,False,Caboolture,telephone,7,reported_operation,152.964034829,-27.0806176662346,verified_facility
+spokes,retain_pilot_only,False,Cairns,telephone,8,reported_operation,145.768107093,-16.9123567184742,verified_facility
+spokes,retain_pilot_only,False,Charleville,telephone,9,reported_operation,146.23905856,-26.4108827622477,verified_facility
+spokes,retain_pilot_only,False,Dalby,telephone,11,reported_operation,151.27644411,-27.1661692352329,verified_facility
+spokes,retain_pilot_only,False,Emerald,telephone,12,reported_operation,148.154827183,-23.515143125309,verified_facility
+spokes,retain_pilot_only,False,Gladstone,telephone,13,reported_operation,151.248967684,-23.8501296293015,verified_facility
+spokes,retain_pilot_only,False,Goondiwindi,telephone,14,reported_operation,150.30213246,-28.5479229852073,verified_facility
+spokes,retain_pilot_only,False,Gympie,telephone,16,reported_operation,152.658176627,-26.1842628582522,verified_facility
+spokes,retain_pilot_only,False,Hervey Bay,telephone,18,reported_operation,152.820917138,-25.2986850802704,verified_facility
+spokes,retain_pilot_only,False,Ingham,telephone,19,reported_operation,146.1638716,-18.6521916824275,verified_facility
+spokes,retain_pilot_only,False,Innisfail,panda,20,reported_operation,146.030073659,-17.5189738334577,verified_facility
+spokes,retain_pilot_only,False,Ipswich,telephone,21,reported_operation,152.759220211,-27.6191776602243,verified_facility
+spokes,retain_pilot_only,False,Kingaroy,telephone,22,reported_operation,151.838820756,-26.5322299182453,verified_facility
+spokes,retain_pilot_only,False,Logan,telephone,23,reported_operation,153.14141775,-27.6699864972234,verified_facility
+spokes,retain_pilot_only,False,Longreach,telephone,24,reported_operation,144.260793995,-23.4388172373107,verified_facility
+spokes,retain_pilot_only,False,Mackay Base,telephone,25,reported_operation,149.154927958,-21.1468547143644,verified_facility
+spokes,retain_pilot_only,False,Mareeba,panda,26,reported_operation,145.424528565,-16.9869204054721,verified_facility
+spokes,retain_pilot_only,False,Mount Isa,telephone,28,reported_operation,139.494092817,-20.7306764913746,verified_facility
+spokes,retain_pilot_only,False,Proserpine,telephone,29,reported_operation,148.584886386,-20.4002732943829,verified_facility
+spokes,retain_pilot_only,False,Redcliffe,telephone,30,reported_operation,153.104386237,-27.2280547022317,verified_facility
+spokes,retain_pilot_only,False,Redland,telephone,31,reported_operation,153.251496776,-27.5403431452258,verified_facility
+spokes,retain_pilot_only,False,Rockhampton,telephone,32,reported_operation,150.49494912,-23.379983864312,verified_facility
+spokes,retain_pilot_only,False,Roma,telephone,33,reported_operation,148.775548204,-26.5685338632445,verified_facility
+spokes,retain_pilot_only,False,St George,telephone,34,reported_operation,148.592796619,-28.0274154972168,verified_facility
+spokes,retain_pilot_only,False,Stanthorpe,telephone,35,reported_operation,151.928444672,-28.6609075182053,verified_facility
+spokes,retain_pilot_only,False,Sunshine Coast University,telephone,36,reported_operation,153.113346724,-26.747004547241,verified_facility
+spokes,retain_pilot_only,False,Thursday Island,telephone,37,reported_operation,142.210968907,-10.5880759666587,verified_facility
+spokes,retain_pilot_only,False,Toowoomba,telephone,38,reported_operation,151.944202208,-27.5696530422252,verified_facility
+spokes,retain_pilot_only,False,Warwick,telephone,40,reported_operation,152.017279022,-28.2243589112132,verified_facility
+spokes,retain_pilot_expand_panda,True,Atherton,panda,1,reported_operation,145.483617911,-17.2663688854645,verified_facility
+spokes,retain_pilot_expand_panda,True,Ayr,panda,2,hypothetical,147.409112301,-19.5643818734039,verified_facility
+spokes,retain_pilot_expand_panda,True,Beaudesert,panda,5,hypothetical,153.002419124,-27.9851546682175,verified_facility
+spokes,retain_pilot_expand_panda,True,Bundaberg Base,panda,6,hypothetical,152.334120231,-24.8690000802794,verified_facility
+spokes,retain_pilot_expand_panda,True,Caboolture,panda,7,hypothetical,152.964034829,-27.0806176662346,verified_facility
+spokes,retain_pilot_expand_panda,True,Cairns,panda,8,hypothetical,145.768107093,-16.9123567184742,verified_facility
+spokes,retain_pilot_expand_panda,True,Charleville,panda,9,hypothetical,146.23905856,-26.4108827622477,verified_facility
+spokes,retain_pilot_expand_panda,True,Dalby,panda,11,hypothetical,151.27644411,-27.1661692352329,verified_facility
+spokes,retain_pilot_expand_panda,True,Emerald,panda,12,hypothetical,148.154827183,-23.515143125309,verified_facility
+spokes,retain_pilot_expand_panda,True,Gladstone,panda,13,hypothetical,151.248967684,-23.8501296293015,verified_facility
+spokes,retain_pilot_expand_panda,True,Goondiwindi,panda,14,hypothetical,150.30213246,-28.5479229852073,verified_facility
+spokes,retain_pilot_expand_panda,True,Gympie,panda,16,hypothetical,152.658176627,-26.1842628582522,verified_facility
+spokes,retain_pilot_expand_panda,True,Hervey Bay,panda,18,hypothetical,152.820917138,-25.2986850802704,verified_facility
+spokes,retain_pilot_expand_panda,True,Ingham,panda,19,hypothetical,146.1638716,-18.6521916824275,verified_facility
+spokes,retain_pilot_expand_panda,True,Innisfail,panda,20,reported_operation,146.030073659,-17.5189738334577,verified_facility
+spokes,retain_pilot_expand_panda,True,Ipswich,panda,21,hypothetical,152.759220211,-27.6191776602243,verified_facility
+spokes,retain_pilot_expand_panda,True,Kingaroy,panda,22,hypothetical,151.838820756,-26.5322299182453,verified_facility
+spokes,retain_pilot_expand_panda,True,Logan,panda,23,hypothetical,153.14141775,-27.6699864972234,verified_facility
+spokes,retain_pilot_expand_panda,True,Longreach,panda,24,hypothetical,144.260793995,-23.4388172373107,verified_facility
+spokes,retain_pilot_expand_panda,True,Mackay Base,panda,25,hypothetical,149.154927958,-21.1468547143644,verified_facility
+spokes,retain_pilot_expand_panda,True,Mareeba,panda,26,reported_operation,145.424528565,-16.9869204054721,verified_facility
+spokes,retain_pilot_expand_panda,True,Mount Isa,panda,28,hypothetical,139.494092817,-20.7306764913746,verified_facility
+spokes,retain_pilot_expand_panda,True,Proserpine,panda,29,hypothetical,148.584886386,-20.4002732943829,verified_facility
+spokes,retain_pilot_expand_panda,True,Redcliffe,panda,30,hypothetical,153.104386237,-27.2280547022317,verified_facility
+spokes,retain_pilot_expand_panda,True,Redland,panda,31,hypothetical,153.251496776,-27.5403431452258,verified_facility
+spokes,retain_pilot_expand_panda,True,Rockhampton,panda,32,hypothetical,150.49494912,-23.379983864312,verified_facility
+spokes,retain_pilot_expand_panda,True,Roma,panda,33,hypothetical,148.775548204,-26.5685338632445,verified_facility
+spokes,retain_pilot_expand_panda,True,St George,panda,34,hypothetical,148.592796619,-28.0274154972168,verified_facility
+spokes,retain_pilot_expand_panda,True,Stanthorpe,panda,35,hypothetical,151.928444672,-28.6609075182053,verified_facility
+spokes,retain_pilot_expand_panda,True,Sunshine Coast University,panda,36,hypothetical,153.113346724,-26.747004547241,verified_facility
+spokes,retain_pilot_expand_panda,True,Thursday Island,panda,37,hypothetical,142.210968907,-10.5880759666587,verified_facility
+spokes,retain_pilot_expand_panda,True,Toowoomba,panda,38,hypothetical,151.944202208,-27.5696530422252,verified_facility
+spokes,retain_pilot_expand_panda,True,Warwick,panda,40,hypothetical,152.017279022,-28.2243589112132,verified_facility
+spokes,retain_pilot_expand_obsbot,True,Atherton,panda,1,reported_operation,145.483617911,-17.2663688854645,verified_facility
+spokes,retain_pilot_expand_obsbot,True,Ayr,obsbot,2,hypothetical,147.409112301,-19.5643818734039,verified_facility
+spokes,retain_pilot_expand_obsbot,True,Beaudesert,obsbot,5,hypothetical,153.002419124,-27.9851546682175,verified_facility
+spokes,retain_pilot_expand_obsbot,True,Bundaberg Base,obsbot,6,hypothetical,152.334120231,-24.8690000802794,verified_facility
+spokes,retain_pilot_expand_obsbot,True,Caboolture,obsbot,7,hypothetical,152.964034829,-27.0806176662346,verified_facility
+spokes,retain_pilot_expand_obsbot,True,Cairns,obsbot,8,hypothetical,145.768107093,-16.9123567184742,verified_facility
+spokes,retain_pilot_expand_obsbot,True,Charleville,obsbot,9,hypothetical,146.23905856,-26.4108827622477,verified_facility
+spokes,retain_pilot_expand_obsbot,True,Dalby,obsbot,11,hypothetical,151.27644411,-27.1661692352329,verified_facility
+spokes,retain_pilot_expand_obsbot,True,Emerald,obsbot,12,hypothetical,148.154827183,-23.515143125309,verified_facility
+spokes,retain_pilot_expand_obsbot,True,Gladstone,obsbot,13,hypothetical,151.248967684,-23.8501296293015,verified_facility
+spokes,retain_pilot_expand_obsbot,True,Goondiwindi,obsbot,14,hypothetical,150.30213246,-28.5479229852073,verified_facility
+spokes,retain_pilot_expand_obsbot,True,Gympie,obsbot,16,hypothetical,152.658176627,-26.1842628582522,verified_facility
+spokes,retain_pilot_expand_obsbot,True,Hervey Bay,obsbot,18,hypothetical,152.820917138,-25.2986850802704,verified_facility
+spokes,retain_pilot_expand_obsbot,True,Ingham,obsbot,19,hypothetical,146.1638716,-18.6521916824275,verified_facility
+spokes,retain_pilot_expand_obsbot,True,Innisfail,panda,20,reported_operation,146.030073659,-17.5189738334577,verified_facility
+spokes,retain_pilot_expand_obsbot,True,Ipswich,obsbot,21,hypothetical,152.759220211,-27.6191776602243,verified_facility
+spokes,retain_pilot_expand_obsbot,True,Kingaroy,obsbot,22,hypothetical,151.838820756,-26.5322299182453,verified_facility
+spokes,retain_pilot_expand_obsbot,True,Logan,obsbot,23,hypothetical,153.14141775,-27.6699864972234,verified_facility
+spokes,retain_pilot_expand_obsbot,True,Longreach,obsbot,24,hypothetical,144.260793995,-23.4388172373107,verified_facility
+spokes,retain_pilot_expand_obsbot,True,Mackay Base,obsbot,25,hypothetical,149.154927958,-21.1468547143644,verified_facility
+spokes,retain_pilot_expand_obsbot,True,Mareeba,panda,26,reported_operation,145.424528565,-16.9869204054721,verified_facility
+spokes,retain_pilot_expand_obsbot,True,Mount Isa,obsbot,28,hypothetical,139.494092817,-20.7306764913746,verified_facility
+spokes,retain_pilot_expand_obsbot,True,Proserpine,obsbot,29,hypothetical,148.584886386,-20.4002732943829,verified_facility
+spokes,retain_pilot_expand_obsbot,True,Redcliffe,obsbot,30,hypothetical,153.104386237,-27.2280547022317,verified_facility
+spokes,retain_pilot_expand_obsbot,True,Redland,obsbot,31,hypothetical,153.251496776,-27.5403431452258,verified_facility
+spokes,retain_pilot_expand_obsbot,True,Rockhampton,obsbot,32,hypothetical,150.49494912,-23.379983864312,verified_facility
+spokes,retain_pilot_expand_obsbot,True,Roma,obsbot,33,hypothetical,148.775548204,-26.5685338632445,verified_facility
+spokes,retain_pilot_expand_obsbot,True,St George,obsbot,34,hypothetical,148.592796619,-28.0274154972168,verified_facility
+spokes,retain_pilot_expand_obsbot,True,Stanthorpe,obsbot,35,hypothetical,151.928444672,-28.6609075182053,verified_facility
+spokes,retain_pilot_expand_obsbot,True,Sunshine Coast University,obsbot,36,hypothetical,153.113346724,-26.747004547241,verified_facility
+spokes,retain_pilot_expand_obsbot,True,Thursday Island,obsbot,37,hypothetical,142.210968907,-10.5880759666587,verified_facility
+spokes,retain_pilot_expand_obsbot,True,Toowoomba,obsbot,38,hypothetical,151.944202208,-27.5696530422252,verified_facility
+spokes,retain_pilot_expand_obsbot,True,Warwick,obsbot,40,hypothetical,152.017279022,-28.2243589112132,verified_facility
+spokes,retain_pilot_expand_mobile,True,Atherton,panda,1,reported_operation,145.483617911,-17.2663688854645,verified_facility
+spokes,retain_pilot_expand_mobile,True,Ayr,mobile,2,hypothetical,147.409112301,-19.5643818734039,verified_facility
+spokes,retain_pilot_expand_mobile,True,Beaudesert,mobile,5,hypothetical,153.002419124,-27.9851546682175,verified_facility
+spokes,retain_pilot_expand_mobile,True,Bundaberg Base,mobile,6,hypothetical,152.334120231,-24.8690000802794,verified_facility
+spokes,retain_pilot_expand_mobile,True,Caboolture,mobile,7,hypothetical,152.964034829,-27.0806176662346,verified_facility
+spokes,retain_pilot_expand_mobile,True,Cairns,mobile,8,hypothetical,145.768107093,-16.9123567184742,verified_facility
+spokes,retain_pilot_expand_mobile,True,Charleville,mobile,9,hypothetical,146.23905856,-26.4108827622477,verified_facility
+spokes,retain_pilot_expand_mobile,True,Dalby,mobile,11,hypothetical,151.27644411,-27.1661692352329,verified_facility
+spokes,retain_pilot_expand_mobile,True,Emerald,mobile,12,hypothetical,148.154827183,-23.515143125309,verified_facility
+spokes,retain_pilot_expand_mobile,True,Gladstone,mobile,13,hypothetical,151.248967684,-23.8501296293015,verified_facility
+spokes,retain_pilot_expand_mobile,True,Goondiwindi,mobile,14,hypothetical,150.30213246,-28.5479229852073,verified_facility
+spokes,retain_pilot_expand_mobile,True,Gympie,mobile,16,hypothetical,152.658176627,-26.1842628582522,verified_facility
+spokes,retain_pilot_expand_mobile,True,Hervey Bay,mobile,18,hypothetical,152.820917138,-25.2986850802704,verified_facility
+spokes,retain_pilot_expand_mobile,True,Ingham,mobile,19,hypothetical,146.1638716,-18.6521916824275,verified_facility
+spokes,retain_pilot_expand_mobile,True,Innisfail,panda,20,reported_operation,146.030073659,-17.5189738334577,verified_facility
+spokes,retain_pilot_expand_mobile,True,Ipswich,mobile,21,hypothetical,152.759220211,-27.6191776602243,verified_facility
+spokes,retain_pilot_expand_mobile,True,Kingaroy,mobile,22,hypothetical,151.838820756,-26.5322299182453,verified_facility
+spokes,retain_pilot_expand_mobile,True,Logan,mobile,23,hypothetical,153.14141775,-27.6699864972234,verified_facility
+spokes,retain_pilot_expand_mobile,True,Longreach,mobile,24,hypothetical,144.260793995,-23.4388172373107,verified_facility
+spokes,retain_pilot_expand_mobile,True,Mackay Base,mobile,25,hypothetical,149.154927958,-21.1468547143644,verified_facility
+spokes,retain_pilot_expand_mobile,True,Mareeba,panda,26,reported_operation,145.424528565,-16.9869204054721,verified_facility
+spokes,retain_pilot_expand_mobile,True,Mount Isa,mobile,28,hypothetical,139.494092817,-20.7306764913746,verified_facility
+spokes,retain_pilot_expand_mobile,True,Proserpine,mobile,29,hypothetical,148.584886386,-20.4002732943829,verified_facility
+spokes,retain_pilot_expand_mobile,True,Redcliffe,mobile,30,hypothetical,153.104386237,-27.2280547022317,verified_facility
+spokes,retain_pilot_expand_mobile,True,Redland,mobile,31,hypothetical,153.251496776,-27.5403431452258,verified_facility
+spokes,retain_pilot_expand_mobile,True,Rockhampton,mobile,32,hypothetical,150.49494912,-23.379983864312,verified_facility
+spokes,retain_pilot_expand_mobile,True,Roma,mobile,33,hypothetical,148.775548204,-26.5685338632445,verified_facility
+spokes,retain_pilot_expand_mobile,True,St George,mobile,34,hypothetical,148.592796619,-28.0274154972168,verified_facility
+spokes,retain_pilot_expand_mobile,True,Stanthorpe,mobile,35,hypothetical,151.928444672,-28.6609075182053,verified_facility
+spokes,retain_pilot_expand_mobile,True,Sunshine Coast University,mobile,36,hypothetical,153.113346724,-26.747004547241,verified_facility
+spokes,retain_pilot_expand_mobile,True,Thursday Island,mobile,37,hypothetical,142.210968907,-10.5880759666587,verified_facility
+spokes,retain_pilot_expand_mobile,True,Toowoomba,mobile,38,hypothetical,151.944202208,-27.5696530422252,verified_facility
+spokes,retain_pilot_expand_mobile,True,Warwick,mobile,40,hypothetical,152.017279022,-28.2243589112132,verified_facility
+spokes,retain_pilot_expand_fixed,True,Atherton,panda,1,reported_operation,145.483617911,-17.2663688854645,verified_facility
+spokes,retain_pilot_expand_fixed,True,Ayr,fixed,2,hypothetical,147.409112301,-19.5643818734039,verified_facility
+spokes,retain_pilot_expand_fixed,True,Beaudesert,fixed,5,hypothetical,153.002419124,-27.9851546682175,verified_facility
+spokes,retain_pilot_expand_fixed,True,Bundaberg Base,fixed,6,hypothetical,152.334120231,-24.8690000802794,verified_facility
+spokes,retain_pilot_expand_fixed,True,Caboolture,fixed,7,hypothetical,152.964034829,-27.0806176662346,verified_facility
+spokes,retain_pilot_expand_fixed,True,Cairns,fixed,8,hypothetical,145.768107093,-16.9123567184742,verified_facility
+spokes,retain_pilot_expand_fixed,True,Charleville,fixed,9,hypothetical,146.23905856,-26.4108827622477,verified_facility
+spokes,retain_pilot_expand_fixed,True,Dalby,fixed,11,hypothetical,151.27644411,-27.1661692352329,verified_facility
+spokes,retain_pilot_expand_fixed,True,Emerald,fixed,12,hypothetical,148.154827183,-23.515143125309,verified_facility
+spokes,retain_pilot_expand_fixed,True,Gladstone,fixed,13,hypothetical,151.248967684,-23.8501296293015,verified_facility
+spokes,retain_pilot_expand_fixed,True,Goondiwindi,fixed,14,hypothetical,150.30213246,-28.5479229852073,verified_facility
+spokes,retain_pilot_expand_fixed,True,Gympie,fixed,16,hypothetical,152.658176627,-26.1842628582522,verified_facility
+spokes,retain_pilot_expand_fixed,True,Hervey Bay,fixed,18,hypothetical,152.820917138,-25.2986850802704,verified_facility
+spokes,retain_pilot_expand_fixed,True,Ingham,fixed,19,hypothetical,146.1638716,-18.6521916824275,verified_facility
+spokes,retain_pilot_expand_fixed,True,Innisfail,panda,20,reported_operation,146.030073659,-17.5189738334577,verified_facility
+spokes,retain_pilot_expand_fixed,True,Ipswich,fixed,21,hypothetical,152.759220211,-27.6191776602243,verified_facility
+spokes,retain_pilot_expand_fixed,True,Kingaroy,fixed,22,hypothetical,151.838820756,-26.5322299182453,verified_facility
+spokes,retain_pilot_expand_fixed,True,Logan,fixed,23,hypothetical,153.14141775,-27.6699864972234,verified_facility
+spokes,retain_pilot_expand_fixed,True,Longreach,fixed,24,hypothetical,144.260793995,-23.4388172373107,verified_facility
+spokes,retain_pilot_expand_fixed,True,Mackay Base,fixed,25,hypothetical,149.154927958,-21.1468547143644,verified_facility
+spokes,retain_pilot_expand_fixed,True,Mareeba,panda,26,reported_operation,145.424528565,-16.9869204054721,verified_facility
+spokes,retain_pilot_expand_fixed,True,Mount Isa,fixed,28,hypothetical,139.494092817,-20.7306764913746,verified_facility
+spokes,retain_pilot_expand_fixed,True,Proserpine,fixed,29,hypothetical,148.584886386,-20.4002732943829,verified_facility
+spokes,retain_pilot_expand_fixed,True,Redcliffe,fixed,30,hypothetical,153.104386237,-27.2280547022317,verified_facility
+spokes,retain_pilot_expand_fixed,True,Redland,fixed,31,hypothetical,153.251496776,-27.5403431452258,verified_facility
+spokes,retain_pilot_expand_fixed,True,Rockhampton,fixed,32,hypothetical,150.49494912,-23.379983864312,verified_facility
+spokes,retain_pilot_expand_fixed,True,Roma,fixed,33,hypothetical,148.775548204,-26.5685338632445,verified_facility
+spokes,retain_pilot_expand_fixed,True,St George,fixed,34,hypothetical,148.592796619,-28.0274154972168,verified_facility
+spokes,retain_pilot_expand_fixed,True,Stanthorpe,fixed,35,hypothetical,151.928444672,-28.6609075182053,verified_facility
+spokes,retain_pilot_expand_fixed,True,Sunshine Coast University,fixed,36,hypothetical,153.113346724,-26.747004547241,verified_facility
+spokes,retain_pilot_expand_fixed,True,Thursday Island,fixed,37,hypothetical,142.210968907,-10.5880759666587,verified_facility
+spokes,retain_pilot_expand_fixed,True,Toowoomba,fixed,38,hypothetical,151.944202208,-27.5696530422252,verified_facility
+spokes,retain_pilot_expand_fixed,True,Warwick,fixed,40,hypothetical,152.017279022,-28.2243589112132,verified_facility

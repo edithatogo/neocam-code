@@ -1,0 +1,14 @@
+{
+  "id": "neonatology-article-contract",
+  "status": "implementation_complete",
+  "external_acceptance": false,
+  "worktree": "/Volumes/PortableSSD/Neocam-manuscript-recovery.G9575o/information",
+  "branch": "codex/neonatology-preparation-completion",
+  "scope": "editorial implementation and author review; submission acceptance separate",
+  "four_independent_reviews": "pending",
+  "fiscal_evidence": "open",
+  "archive_receipt": "verification/v13/manuscript-preparation/terminal-verification.json",
+  "terminal_record": "verification/v13/manuscript-preparation/final-packet-assurance.json",
+  "independent_reviews_pending": 4,
+  "archive_state": "implementation_archived"
+}

@@ -1,0 +1,13 @@
+{
+  "id": "mixed-policy-fiscal-allocation",
+  "status": "open_pending_fiscal_evidence",
+  "external_acceptance": false,
+  "reconciled_on": "2026-11-03",
+  "implementation": "evidence_boundary_reconciled",
+  "archive_eligible": false,
+  "worktree": "/Volumes/PortableSSD/Neocam-manuscript-recovery.G9575o/fiscal",
+  "branch": "codex/fiscal-evidence-reconciliation",
+  "independent_reviews_pending": 4,
+  "evidence_search": "bounded_sharepoint_and_local_search_2026-11-03",
+  "assurance_target": "verification/v21/full/receipt.json"
+}

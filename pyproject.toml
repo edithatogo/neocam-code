@@ -1,0 +1,188 @@
+[project]
+name = "panda-vision-evaluation"
+version = "7.0.0"
+description = "Preliminary neonatal economic model with explicit evidence and developer assurance"
+license = "Apache-2.0"
+license-files = ["LICENSE", "NOTICE"]
+requires-python = ">=3.15.1,<3.16"
+dependencies = ["numpy==2.5.4", "voiage==3.1.0"]
+
+[project.optional-dependencies]
+# No dataframe package is needed for the small CSV model. This extra provides
+# an independent tabular reconciliation; Polars is the only supported engine.
+tabular = ["polars==2.1.0"]
+# Observed reporting environment, not claimed latest or transitively locked.
+reporting = ["python-docx==1.2.0", "python-pptx==1.0.2", "reportlab==5.1.0", "matplotlib==3.11.2"]
+# Offline explanatory sensitivity tools, not required by the exact model kernel.
+research = ["scipy==1.18.1", "scikit-learn==1.9.1"]
+
+[dependency-groups]
+test = ["pytest==9.2.0", "coverage==7.17.0"]
+assurance = [
+  {include-group = "test"},
+  "ruff==0.17.3",
+  "ty==0.0.95",
+  "basedpyright==1.40.2",
+  "hypothesis==6.170.14",
+  "pytest-gremlins==1.13.1",
+  "scalene==2.4.0",
+  "pip-audit==2.10.1",
+  "uv==0.13.6",
+  "prek==0.5.9",
+  "zizmor==1.31.1",
+  "pytest-socket==0.8.1",
+  "pydantic==2.14.2",
+  "pytest-timeout==2.4.0",
+  "pytest-randomly==5.0.0",
+  "time-machine==3.6.0",
+]
+
+feedback = ["pytest-testmon==2.2.0", "pytest-xdist==3.8.0"]
+
+[tool.uv]
+package = false
+# Do not refresh resolutions during ordinary CI. uv.lock must be generated
+# in an explicit maintenance step and reviewed, then frozen-sync everywhere.
+default-groups = ["test"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+# No test may reach the network (pytest-socket); the ordinary suite, the
+# hypothesis gate, gremlins and testmon all inherit this through addopts.
+# The guards load through normal pytest plugin autoload. NOTE: the historical
+# ordinary-suite control PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 is now incompatible with
+# this addopts (it turns --disable-socket into an unrecognised argument and pytest
+# exits non-zero) -- a loud failure, never a silent loss of the guard. Naming the
+# plugins with -p instead was tested and is not usable: "-p socket" collides with
+# coverage's own stdlib `socket` import under `coverage run`, and "-p pytest_socket"
+# double-registers when autoload also loads the same plugin.
+# pytest-randomly shuffles test order and reseeds random/numpy/faker per test; the
+# printed --randomly-seed replays any failing order exactly.
+addopts = "--strict-markers --strict-config --disable-socket"
+# Every test is bounded (pytest-timeout). Re-measured with --durations=20 after the
+# concurrent additions: the slowest real test is 13.80 s
+# (tests/test_privacy_scan.py::test_the_real_repository_tree_passes_without_exemptions);
+# the next slowest is 1.01 s. 120 s is ~8.7x headroom for a loaded CI runner while a
+# genuine hang is still caught far inside the 50-minute CI budget and inside gremlins'
+# own 1800 s gate. The signal method raises a KeyboardInterrupt-shaped failure so
+# teardown stays clean.
+timeout = 120
+timeout_method = "signal"
+filterwarnings = ["error"]
+# No expected-failure marks may silently rot: an XPASS is a failure.
+xfail_strict = true
+# pytest's numbered tmp directories are swept on exit; under the mutation gate's two
+# workers that cleanup raced (an unclosed-scandir ResourceWarning escalated by
+# filterwarnings=error, plus an rm_rf race) and produced spurious `Error` mutants, which
+# the mutation gate treats as failures regardless of score. Nothing here inspects a
+# previous run's tmp directories, so retaining none removes the race and the warning.
+tmp_path_retention_policy = "none"
+
+[tool.coverage.run]
+# Coverage 7.17.0 ALREADY selects the experimental sys.monitoring core by default
+# on Python 3.12+ here (verified: with `core` unset, Core tracer_class=SysMonitor),
+# so this line makes the effective core explicit rather than switching it: sysmon
+# and ctrace produced byte-identical coverage (identical per-file
+# covered/missing/branch summaries), so the measured "default vs sysmon" times were
+# the same core twice. Kept explicit because sysmon disables DYNAMIC CONTEXTS:
+# pytest-testmon's switch_context() raises CoverageWarning(no-sysmon-context), and
+# with filterwarnings=error that aborts `python -m quality.feedback --mode tests`.
+# testmon builds its Coverage with config_file=False, so only an environment
+# override reaches it: COVERAGE_CORE=ctrace restores the incremental path.
+core = "sysmon"
+branch = true
+source = ["src", "quality"]
+# The optional tools are executed by their dedicated full gates, not asserted
+# covered by the ordinary unit suite. List scope exclusions explicitly.
+omit = ["quality/hypothesis_properties.py", "quality/polars_probe.py", "quality/profile_workload.py"]
+
+[tool.coverage.report]
+show_missing = true
+fail_under = 90
+precision = 2
+
+[tool.ruff]
+required-version = "==0.17.3"
+target-version = "py315"
+line-length = 120
+preview = true
+unsafe-fixes = false
+# Enabled prose/lint scopes stay authoritative; vendored skill payloads and
+# generated trees are excluded rather than restyled. `.agents/skills/**` ships
+# third-party and project skill scripts whose own style is not this repo's surface.
+extend-exclude = ["extensions", ".venv", ".tools", "outputs", "verification", ".agents/skills"]
+
+[tool.ruff.lint]
+select = ["ALL"]
+explicit-preview-rules = false
+# Only documented formatter conflicts are disabled globally.
+ignore = ["missing-trailing-comma", "single-line-implicit-string-concatenation"]
+
+[tool.ruff.lint.per-file-ignores]
+# Assertions and literal expected values are deliberate in tests.
+"tests/*.py" = [
+  "assert",
+  "magic-value-comparison",
+  # Tests are not a public API. Documenting and annotating every test, fixture
+  # and double is churn with no consumer; behaviour is covered by the suite itself.
+  "undocumented-public-function",
+  "undocumented-public-module",
+  "undocumented-public-package",
+  "missing-type-function-argument",
+  "missing-return-type-undocumented-public-function",
+  "missing-return-type-private-function",
+  "unused-function-argument",
+  "unused-lambda-argument",
+  "private-member-access",
+  "import-private-name",
+  "implicit-namespace-package",
+]
+"quality/hypothesis_properties.py" = ["assert", "magic-value-comparison"]
+# Project-owned code uses the repository Apache-2.0 licence.
+# Existing per-file copyright notices are retained.
+"**/*.py" = ["missing-copyright-notice"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.ruff.format]
+preview = true
+docstring-code-format = true
+quote-style = "double"
+
+[tool.ty.environment]
+python-version = "3.15"
+
+[tool.ty.src]
+include = ["src", "quality", "tests", "scripts/run_v2.py", "scripts/verify.py", "scripts/analyse_v5.py", "scripts/analyse_v6.py", "scripts/analyse_v7.py", "scripts/build_current_report.py", "scripts/plot_current.py", "scripts/analyse_refinements.py", "scripts/plot_refinements.py", "scripts/registry_joint.py", "scripts/information_provenance.py", "scripts/information_geography.py", "scripts/information_summary.py", "scripts/fiscal_information.py", "scripts/registry_cache.py"]
+
+[tool.ty.rules]
+all = "error"
+
+[tool.basedpyright]
+include = ["src", "quality", "tests", "scripts/run_v2.py", "scripts/verify.py", "scripts/analyse_v5.py", "scripts/analyse_v6.py", "scripts/analyse_v7.py", "scripts/build_current_report.py", "scripts/plot_current.py", "scripts/analyse_refinements.py", "scripts/plot_refinements.py", "scripts/registry_joint.py", "scripts/information_provenance.py", "scripts/information_geography.py", "scripts/information_summary.py", "scripts/fiscal_information.py", "scripts/registry_cache.py"]
+pythonVersion = "3.15"
+pythonPlatform = "All"
+typeCheckingMode = "all"
+failOnWarnings = true
+strictListInference = true
+strictDictionaryInference = true
+strictSetInference = true
+strictGenericNarrowing = true
+# Experimental language semantics are enabled deliberately: this repository tracks the
+# newest interpreter and wants the newest checks, not a conservative default.
+enableExperimentalFeatures = true
+# A blanket `# type: ignore` is never acceptable; suppressions must name their rule.
+enableTypeIgnoreComments = false
+reportIgnoreCommentWithoutRule = true
+reportUnnecessaryTypeIgnoreComment = true
+deprecateTypingAliases = true
+
+[tool.pytest-gremlins]
+paths = ["src/activity.py", "src/deployment.py", "src/configuration.py", "src/equipment.py", "src/audit_v7.py", "src/perspectives_v7.py", "src/portfolios_v7.py", "src/pathways_v6.py", "src/statewide.py", "src/strategies.py", "src/sensitivity.py", "quality/contracts.py", "quality/assurance.py"]
+operators = ["comparison", "arithmetic", "boolean", "boundary", "return"]
+report = ["console", "html", "json"]
+cache = false
+workers = 2
+max_pardons = 0
+max-pardons-pct = 0.0

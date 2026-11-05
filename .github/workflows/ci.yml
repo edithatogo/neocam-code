@@ -1,0 +1,90 @@
+name: Lean model and developer assurance
+on:
+  pull_request:
+  push:
+    branches: [main, master]
+  schedule:
+    - cron: '0 20 * * 0'
+  workflow_dispatch:
+  workflow_call:
+permissions:
+  contents: read
+concurrency:
+  group: panda-assurance-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+jobs:
+  assurance:
+    name: Full assurance suite
+    runs-on: ubuntu-24.04
+    timeout-minutes: 50
+    outputs:
+      digest: ${{ steps.upload.outputs.artifact-digest }}
+    steps:
+      - name: Harden the runner (audit egress)
+        uses: step-security/harden-runner@46b06cea07f9e64621fdf066ba77ac6915163d43 # v2.22.3
+        with:
+          egress-policy: audit
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+          submodules: true
+      - uses: astral-sh/setup-uv@68559e99cc807c1eb7e9238fd43a15bba460eec2 # v10.3.3
+        with:
+          version: '0.13.6'
+          python-version: '3.15.1'
+          # Package cache only on trusted non-PR events; never cache a virtualenv or acceptance receipt.
+          enable-cache: ${{ github.event_name != 'pull_request' }}
+          cache-dependency-glob: uv.lock
+      - name: Select declared evidence version
+        run: jq -er '"EVIDENCE_VERSION=" + (.evidence_version | select(test("^v[1-9][0-9]*$")))' config/assurance.json >> "$GITHUB_ENV"
+      - name: Require reviewed, current lock and install frozen dependencies
+        run: |
+          test -f uv.lock
+          uv lock --check
+          uv sync --frozen --group assurance --extra tabular --extra research --extra reporting
+          uv run --frozen --no-sync python -m quality.bootstrap
+      - name: PR assurance (one covered suite)
+        if: github.event_name == 'pull_request'
+        run: uv run --frozen --no-sync python -m quality.cli --profile pr --evidence-version "$EVIDENCE_VERSION"
+      - name: Full fresh acceptance (trusted push, scheduled, manual or reusable)
+        if: github.event_name != 'pull_request'
+        run: uv run --frozen --no-sync python -m quality.cli --profile full --evidence-version "$EVIDENCE_VERSION"
+      - name: Retain only verification evidence, not corporate templates
+        id: upload
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: assurance-${{ github.sha }}
+          path: |
+            verification/${{ env.EVIDENCE_VERSION }}/pr/
+            verification/${{ env.EVIDENCE_VERSION }}/full/
+            verification/${{ env.EVIDENCE_VERSION }}/coverage.json
+            verification/${{ env.EVIDENCE_VERSION }}/scalene.json
+            verification/${{ env.EVIDENCE_VERSION }}/gitleaks-*.json
+            verification/${{ env.EVIDENCE_VERSION }}/pip-audit.json
+            verification/${{ env.EVIDENCE_VERSION }}/sbom.json
+            coverage/gremlins/
+          if-no-files-found: error
+          retention-days: 14
+  attest:
+    name: Sign the uploaded assurance archive
+    needs: assurance
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    permissions:
+      contents: read
+      id-token: write  # request a short-lived signing identity
+      attestations: write  # record provenance for the uploaded archive
+    steps:
+      - name: Harden the runner (audit egress)
+        uses: step-security/harden-runner@46b06cea07f9e64621fdf066ba77ac6915163d43 # v2.22.3
+        with:
+          egress-policy: audit
+      - name: Attest verification-evidence provenance (SLSA)
+        uses: actions/attest-build-provenance@4d101475d8b20a2381f78447822ac1eab6504dd8 # v4.2.2
+        with:
+          subject-name: assurance-${{ github.sha }}.zip
+          subject-digest: sha256:${{ needs.assurance.outputs.digest }}
+

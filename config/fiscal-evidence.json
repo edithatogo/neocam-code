@@ -1,0 +1,111 @@
+{
+  "version": 2,
+  "verified_on": "2026-11-03",
+  "scope": "Evidence classification only; frozen numerical inputs and scenario weights unchanged",
+  "source": {
+    "id": "QH-HSD-005-v4",
+    "url": "https://www.health.qld.gov.au/system-governance/policies-standards/health-service-directives/retrieval-services",
+    "locators": [
+      "Principles: Efficiency",
+      "Outcomes: Hospital and Health Services shall",
+      "Scope"
+    ],
+    "local_copy": "External ClinicalResearchEvidence vault, Neocam/local-evidence/fiscal-20261103/QH-HSD-005-web-readback.json (tool readback; original HTML request returned 403)",
+    "readback_sha256": "52089ba6d2bd7f340ac72f5ac73bd9b671d362f5e68d0c338cba57973ddbf540"
+  },
+  "fixed_wing_rule": {
+    "payer": "referring_hhs",
+    "requires": [
+      "referral_accepted",
+      "asset_tasked"
+    ],
+    "effective_from": "2026-06-19",
+    "scope": "Qualifying RSQ-coordinated fixed-wing assets under statewide arrangements; not an all-mode tariff",
+    "excluded_rsq_costs": [
+      "clinical_coordination",
+      "rsq_medical_staff"
+    ],
+    "marginal_cash_capture": null,
+    "historical_application_verified": false
+  },
+  "scenario_default": "CHHHS payment remains an explicit financing assumption for the combined-mode CHHHS model; wider portfolios require referring-HHS allocation",
+  "unconditional_fiscal_reporting": false,
+  "external_acceptance": false,
+  "independent_reviews_pending": [
+    "reviewer_1",
+    "reviewer_2",
+    "reviewer_3",
+    "reviewer_4"
+  ],
+  "unresolved": [
+    {
+      "id": "capital",
+      "needed": "Asset owner, purchasing budget, replacement and grant terms by site"
+    },
+    {
+      "id": "local_programme",
+      "needed": "Employing budget and incremental cash for readiness, training and workflow"
+    },
+    {
+      "id": "hub",
+      "needed": "Hub agreement, recharge and funded staffing capacity"
+    },
+    {
+      "id": "origin_care",
+      "needed": "Origin budget attribution and marginal cash released"
+    },
+    {
+      "id": "receiving_care",
+      "needed": "Destination, settlement and marginal cash released"
+    },
+    {
+      "id": "road_rotary",
+      "needed": "Mode-specific liable budget, charging unit and included team/escort/ground legs"
+    },
+    {
+      "id": "cash_capture",
+      "needed": "Aggregate charged units and avoided invoice, fixed availability, cancellation and tasking terms"
+    },
+    {
+      "id": "family",
+      "needed": "Applicable subsidy eligibility, payer and out-of-pocket share"
+    },
+    {
+      "id": "government",
+      "needed": "Marginal inter-HHS, state and Commonwealth funding response"
+    },
+    {
+      "id": "historical_terms",
+      "needed": "Version and effective dates applicable to modelled historical activity"
+    }
+  ],
+  "supporting_sources": [
+    {
+      "id": "RSQ-GM001-v2",
+      "version_date": "2025-01-10",
+      "locator": "p.11, Invoicing and revenue recovery; pp.11-12, Information and system management",
+      "sha256": "02466ad7d3d9ce55eece54410e6d54f811b6c9e8b0202e62b7d8485ec98bbd00",
+      "local_copy": "External evidence vault: fiscal-search-20261103/RSQ-Overview-GM001.pdf",
+      "finding": "Sending/referring service responsible for RFDS and air-ambulance transport costs; RSQ GaP manages invoicing/revenue recovery and cost allocation. No tariff, marginal cash fraction or invoice reconciliation supplied.",
+      "evidence_class": "internal administrative guidance; not a billing ledger"
+    },
+    {
+      "id": "RSQ-GF001-v2",
+      "version_date": "2026-07-24",
+      "locator": "section 6 p.7; Contract management meetings p.12",
+      "sha256": "2693ce5ef794df7f9f4de2563614fc7800abc3154a640850b7ea1c3e1d7650e8",
+      "local_copy": "External evidence vault: fiscal-search-20261103/RSQ-Governance-Framework-GF001.pdf",
+      "finding": "Financial and contractual deliverables overseen within RSQ governance; contract management meetings oversee provider delivery and contract terms. No prices or reconciliation supplied.",
+      "evidence_class": "internal governance framework; not a billing ledger"
+    }
+  ],
+  "search_update": {
+    "date": "2026-11-03",
+    "sharepoint_queries": 15,
+    "unique_results_inspected_by_metadata": 514,
+    "search_limits": "Permission-trimmed index; several broad queries capped at 100. Negative Path filters returned excluded-site hits and were not relied on. No claim of exhaustive tenant or filesystem coverage.",
+    "local_scope": "Filename discovery in Documents and Downloads; CloudStorage filename search returned no matching documents. Retained non-patient RSQ source text inspected. Patient extracts not searched.",
+    "result": "No applicable charging schedule or aggregate transport invoice reconciliation identified in this bounded search.",
+    "numerical_inputs_changed": false
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "cases": 33,
+  "exact_error_lists_match": true,
+  "scope": "original versus refactored portable evidence checker",
+  "existing_rejection_contract_preserved": true
+}

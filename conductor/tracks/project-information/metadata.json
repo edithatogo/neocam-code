@@ -1,0 +1,15 @@
+{
+  "id": "project-information",
+  "status": "implementation_complete",
+  "external_acceptance": false,
+  "independent_reviews_pending": 4,
+  "fiscal_evidence": "open",
+  "implementation_scope": "project-wide information source and geographical decisions",
+  "branch": "codex/neonatology-preparation-completion",
+  "worktree": "/Volumes/PortableSSD/Neocam-manuscript-recovery.G9575o/information",
+  "archive_state": "implementation_archived",
+  "archive_receipt": "verification/v13/manuscript-preparation/terminal-verification.json",
+  "archive_rule": "Archive implementation when all 32 local gates and the terminal artifact/document verification pass for this fingerprint. Keep the folder and external acceptance open.",
+  "review": "same_assistant_conductor_review",
+  "terminal_record": "verification/v13/manuscript-preparation/final-packet-assurance.json"
+}

@@ -1,0 +1,26 @@
+name: Manual release-candidate evidence only
+on:
+  workflow_dispatch:
+concurrency:
+  group: panda-release-gate
+  cancel-in-progress: false
+permissions:
+  contents: read
+jobs:
+  verified-candidate:
+    name: Reusable full assurance
+    permissions:
+      contents: read
+      id-token: write  # request a short-lived signing identity
+      attestations: write  # record provenance for the uploaded archive
+    uses: ./.github/workflows/ci.yml  # zizmor: ignore[self-repository] -- pinned actionlint 1.7.12 (latest release) does not yet parse '$/...'
+  review-boundary:
+    name: Review boundary record
+    needs: verified-candidate
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Keep human evidence and privacy review separate
+        run: |
+          echo 'All required jobs ran against this candidate SHA.'
+          echo 'No deployment or publication is performed by this workflow.'
+          echo 'Clinical, evidence and privacy review remain separate decisions.'
