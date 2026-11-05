@@ -1,8 +1,11 @@
 {
   "id": "code-release-preparation",
-  "status": "in_progress",
+  "status": "completed",
   "created": "2026-11-05",
-  "branch": "codex/clean-code-release",
+  "branch": "codex/code-release-closeout",
   "independent_reviews_pending": 4,
-  "fiscal_evidence": "open"
+  "fiscal_evidence": "open",
+  "archived": "2026-11-05",
+  "accepted_commit": "3d69e04ea0d320ef7d2eb3143d20f0bdf1d06eb8",
+  "hosted_full_run": 41959741259
 }

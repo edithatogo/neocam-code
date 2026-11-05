@@ -44,6 +44,6 @@ Link: [track plan](tracks/mixed-policy-fiscal-allocation/). Fiscal shares await 
 
 Terminal local evidence is in `verification/v13/manuscript-preparation/terminal-verification.json` and `final-packet-assurance.json`. Hosted assurance on the merged commit is a separate delivery gate. The fiscal allocation track remains active.
 
-## Separate private code release — 5 November 2026
+## Separate code release — 5 November 2026
 
-In progress: [code-release-preparation](tracks/code-release-preparation/plan.md). Original research repository retained privately; publication not authorised. Four independent reviews pending; fiscal evidence open.
+[x] Archived implementation: [code-release-preparation](tracks/code-release-preparation/plan.md). PR #1 merged as `3d69e04`; all 32 exact-main gates, receipt log digests, archive digest and cryptographic attestation verified (run 41959741259). The code repository is public with explicit owner approval; the original research repository and its open PR #3 remain private. Documentation closeout receives separate exact-main verification. Four independent reviews remain pending; fiscal evidence remains open.
