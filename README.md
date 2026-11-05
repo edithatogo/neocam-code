@@ -10,6 +10,15 @@ The code import will be reviewed in a separate pull request. No clinical approva
 
 Read [the runbook](conductor/runbook.md) and [code release contract](docs/code-release-contract.md). Use the frozen Python 3.15.1 environment. NumPy supplies numerical arrays, voiage 3.1.0 supplies information values, and Polars is the only permitted DataFrame engine. Pandas and xarray are excluded.
 
+The model can be reproduced without the withheld institutional Office templates:
+
+```sh
+uv run --frozen --extra tabular --extra research --extra reporting python -m scripts.reproduce --output outputs/reproduction
+uv run --frozen python -m quality.artifacts verify --output outputs/reproduction
+```
+
+Use a new output directory for each scientific rerun. Then run the complete acceptance profile:
+
 ```sh
 uv run --frozen --group assurance --extra tabular --extra research --extra reporting python -m quality.cli --profile full --evidence-version v40
 ```

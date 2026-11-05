@@ -6,14 +6,67 @@
     "code-release-preparation"
   ],
   "branch": "codex/clean-code-release",
-  "parent_commit": "22fee8c",
+  "remote_branch": "codex/clean-code-release",
+  "remote": "edithatogo/neocam-code",
+  "remote_origin": "https://github.com/edithatogo/neocam-code.git",
+  "remote_visibility": "private",
+  "remote_visibility_decision": "Separate private code repository authorised; public visibility not authorised.",
+  "remote_pr": null,
+  "remote_pr_state": "not_opened",
   "release_ready": false,
+  "public_visibility_authorised": false,
   "independent_validation": false,
-  "review": "Pinned conductor-review protocol, same-assistant author review; external records pending",
+  "independent_reviews_pending": 4,
+  "fiscal_evidence": "open",
+  "review": "Same-assistant software/source review; all four independent clinical reviews remain pending.",
+  "design_authority": "conductor/v14-design.md",
   "analysis": "outputs/v13-primary/results.json",
-  "receipt": "verification/v13/manuscript-preparation/terminal-verification.json",
+  "refinement_analysis": "outputs/v13-refinements/results.json",
+  "current_outputs": [
+    "outputs/v13-primary",
+    "outputs/v13-refinements"
+  ],
   "source_manifest": "sources/manifest.json",
   "public_original_archival_complete": false,
+  "acceptance_at_source_freeze": {
+    "state": "full_local_and_hosted_pending",
+    "expected_full_receipt": "verification/v40/full/receipt.json",
+    "full_local_assurance": false,
+    "hosted_main_assurance_verified": false,
+    "mutation_score": null,
+    "historical_acceptance_inherited": false,
+    "source_import_commit": "de0066ea3323cab8458ba45cb363bf05798104c9"
+  },
+  "source_and_security": {
+    "receipt": "verification/v40/security-receipt.json",
+    "python_files": 160,
+    "native_rules": 378,
+    "controls": 22,
+    "unreviewed_findings": 0,
+    "scanner_errors": 0,
+    "review_kind": "same-assistant exact-source software review; not independent clinical approval"
+  },
+  "voi_engine": {
+    "version": "3.1.0",
+    "runtime": "verified Python 3.15.1; NumPy and Polars; pandas/xarray absent",
+    "upstream_acceptance": "Historical release records remain in the private research repository; no hosted acceptance is inherited here."
+  },
+  "publication_boundary": {
+    "fresh_git_root": true,
+    "private_sources": "Withheld; stable L001 identifier and complete mapping retained privately.",
+    "numerical_parity": "49 active analysis artifacts numerically unchanged; 48 byte-identical; one source-label-only CSV change.",
+    "patient_files": "Outside repositories; not imported.",
+    "clinical_packet": "Outside this repository; original author Word edit preserved unchanged.",
+    "historical_receipts": "Original software logs remain private; retained scientific tables are numerical fixtures."
+  },
+  "prior_research_repository": {
+    "remote": "edithatogo/neocam",
+    "visibility": "private",
+    "pr": 3,
+    "state": "open_unmerged",
+    "head": "2d4c69e94ff13c8fb9255acedc7f68645a06e34f",
+    "retained_separately": true
+  },
   "known_limitations": [
     "artifact manifests and the source register pin calculation inputs (now excluding derived build artefacts), so any source edit invalidates a previous seal and the re-seal must be the last mutation before acceptance",
     "historical/missing denominators and current capability/routing",
@@ -23,102 +76,5 @@
     "Haynes measures transfer within 24 hours. Applying the association to eventual transfer is an extrapolation.",
     "four government originals verified in a separate local archive; source bytes excluded from the public repository"
   ],
-  "next_acceptance": "Qualify this fresh code snapshot, guarded push, protected PR, full hosted main receipt and attestation; publication remains a separate explicit decision.",
-  "remote": "edithatogo/neocam-code",
-  "remote_visibility": "private",
-  "remote_visibility_decision": "Separate private code repository authorised 5 November 2026; public visibility not authorised.",
-  "remote_origin": "https://github.com/edithatogo/neocam-code.git",
-  "remote_pr": null,
-  "remote_branch": "codex/neonatology-preparation-completion",
-  "tracks_reconciled": 22,
-  "reconciled_remote_source_commit": "afd6c96456326f77f1f0f50a899c7495b632d609",
-  "reconciled_remote_updates": [
-    "cb01184fafe688c8a1cdfbbece60cff35f2eb90c",
-    "3021017be5349faa4ea2cdcbdef89a4e37865b6d"
-  ],
-  "current_outputs": [
-    "outputs/v13-primary",
-    "outputs/v13-refinements"
-  ],
-  "remote_written_in_this_turn": false,
-  "remote_write_blocker": null,
-  "primary_results_change": "Reference default unchanged; new conditional contact/policy scenarios added",
-  "refinement_analysis": "outputs/v13-refinements/results.json",
-  "design_authority": "conductor/v14-design.md",
-  "mutation_score": {
-    "value": 99.44,
-    "zapped": 1241,
-    "total": 1248,
-    "survived": 7,
-    "timeout": 0,
-    "error": 0,
-    "pardoned": 0
-  },
-  "voi_engine": {
-    "target": "edithatogo/voiage",
-    "state": "merged_verified",
-    "detail": "Voiage 3.1.0 is pinned and frozen on Python 3.15.1. The runtime excludes pandas and xarray.",
-    "hosted_receipt": "verification/voiage/hosted-41386713617/receipt.json"
-  },
-  "local_government_originals_receipt": "verification/v14/evidence-clinical/originals.json",
-  "remote_pr_state": "not_opened",
-  "review_packet": "verification/reviewer-freeze-20261102/review_packet.json",
-  "project_information": {
-    "implementation": "complete",
-    "archive": "receipt_bound",
-    "receipt": "verification/v23/full/receipt.json",
-    "terminal_verification": "verification/v13/project-information/acceptance.json",
-    "external_acceptance": false,
-    "independent_reviews_pending": 4,
-    "fiscal_evidence": "open"
-  },
-  "manuscript_preparation": {
-    "implementation": "in_progress",
-    "external_acceptance": false,
-    "receipt": "verification/v23/full/receipt.json",
-    "terminal_verification": "verification/v13/manuscript-preparation/acceptance.json",
-    "independent_reviews_pending": 4,
-    "fiscal_evidence": "open"
-  },
-  "implementation_archived_tracks": [
-    "project-information",
-    "neonatology-article-contract"
-  ],
-  "independent_reviews_pending": 4,
-  "fiscal_evidence": "open",
-  "security_delivery": {
-    "state": "fresh_code_snapshot_qualification_pending",
-    "repository_private": true,
-    "four_independent_reviews": "pending",
-    "fiscal_evidence": "open",
-    "storage_cleanup": "Three approved sm-govt-nz attachments deleted after exact-hash and ZIP backup verification; 939695701 bytes freed. Billing usage update pending.",
-    "native_github_secret_scanning": "disabled",
-    "branch_protection": "required checks, administrators enforced, force push/deletion blocked",
-    "free_static_security": "Stable OpenGrep 1.33.1 native core and Bandit 1.9.4, 378 pinned rules, 22 controls, exact-source review closure. Semgrep CLI and native trials and the interfile alpha were rejected; no advisory exceptions or warning suppression.",
-    "scope_and_limits": "docs/security-and-information-layout.md"
-  },
-  "public_release_candidate": {
-    "state": "source_and_security_qualified_final_full_pending",
-    "public_visibility_authorised": false,
-    "canonical_private_repository_unchanged": true,
-    "historical_receipts": "Excluded old software logs; retained analysis tables are fixtures, not new acceptance.",
-    "clinical_reviews_pending": 4,
-    "fiscal_evidence": "open",
-    "numeric_parity": "49 active artifacts numerically unchanged; 48 byte-identical; one eligibility table changes only a withheld source label"
-  },
-  "legacy_private_delivery": {
-    "remote_import": "Historical delivery at 8180947 is preserved; current remote main is 8ac4e8a9dabb22101695d2983be3a2c86cb0201c. PR #3 remains open.",
-    "remote_verified_incremental_commit": "5a3c34f2d819494cfa9110bc5ea4f1234264a4bd",
-    "hosted_environment_check": {
-      "run_id": 41369751061,
-      "conclusion": "success",
-      "executed_steps_reported": 32,
-      "gates_passed": 32,
-      "gates_failed": 0,
-      "source_commit": "818094709f9dd9edab7aeaef60d9daeb7f2a0d63",
-      "detail": "All 32 gates passed locally and on GitHub at the same commit. Archive signature and digest verified."
-    },
-    "hosted_receipt": "verification/v14/delivery/hosted-full.json",
-    "delivery_source_commit": "818094709f9dd9edab7aeaef60d9daeb7f2a0d63"
-  }
+  "next_acceptance": "Complete full local assurance on the final sealed commit, guarded private upload, protected PR checks, then exact merged-main full receipt and attestation. Visibility requires a separate explicit approval."
 }
