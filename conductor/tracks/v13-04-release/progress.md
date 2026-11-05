@@ -1,0 +1,23 @@
+# Execution ledger
+4.1: Active contact/mixed-policy Hypothesis definitions enter the mandatory gate; the package itself is unavailable, so no generative execution is claimed. Artifact inputs include new drivers/validator; current-release verification now consumes both declared primary and supplemental output paths.
+4.2: Conductor review applied the actual pinned review protocol in author mode. Findings fixed: review packets previously bound only config, current artifact CLI still hardcoded old release, duplicate policies inflated representation, falsey untyped activity silently defaulted, and avoidable repeated full-kernel evaluation. Tests reproduced these issues. Six-policy/38-array/128-draw results are bit-for-bit identical before and after ephemeral group reuse. No persisted selection cache added. Two timed-out candidate analyses are retained as incomplete; final20,000-draw run completed480policy scenarios.
+4.3: Lock/native/submodule/push commands attempted and DNS failures recorded. Connector discovery now exposes read/search actions only; no write or PR update in this session. Final local assurance and restored-package records will be appended under handoff/verification after source freeze. External acceptance remains open; no false finished-track claim for publication or full migration.
+
+Review follow-up: corrected stale current-state references to v12 and a non-executable placeholder in task4.3. The completed pre-final-context assurance reached31gates:8passed,22blocked,1failed,676tests. Its receipt is preserved separately. This is a documentation correction before the last source freeze; the final run must use this updated snapshot. Context updates do not change the sealed analytical source manifest or any calculation.
+
+2026-10-30 delivery session (4.3.c–4.3.f partial evidence):
+- Dependencies refreshed to upstream latest (7 pins; reportlab 5.1.0 major, matplotlib 3.11.2, pytest 9.2.0, ty 0.0.95, hypothesis 6.170.14, pytest-gremlins 1.13.1, prek 0.5.9); genuine uv.lock committed after network resolution; validate_lock clean; evidence register reviewed 2026-10-30; quick profile green (commits 2771fd2, 8ec6a5c).
+- Gitleaks pre-push full-history gate added; commit hooks pinned to pre-commit stage; hooks installed via prek (5de6912).quality/hooks.py brought to the enforced lint standard.
+- Remote rewired to GitHub; branch conductor/neocam-v13-decision-refinements pushed (tip 5de6912) with expected-head check, read-back match and clean git fsck; PR creation refused on unrelated histories; PR #3 untouched (verification/v13/delivery-2026-10-30/push-branch.txt).
+- 4.3.c gates re-attempted with working network: submodule pinned checkout succeeds (137c1e41), quality.bootstrap installs all three pinned native tools, gitleaks/Vale/actionlint/zizmor executed clean (native-tools.txt, submodule.txt) → native-tools and conductor-checkout blockers set complete in conductor/blockers-v13.json.
+- Hosted CI dispatched on the branch (run 41063979096): failure, 0 executed steps, logs unavailable — runner-side blocker persists (hosted-ci.txt).
+- Manual editable push receipts for 4.3.d/4.3.e unchanged here; frozen-fingerprint comparison and bundle restore reruns remain the next executable block before final assurance.
+Next executable command: uv sync --frozen --group assurance --extra tabular && python -m quality.cli --profile full --evidence-version v13
+
+2026-10-31 hosted-assurance resolution:
+- Root cause of all prior hosted failures (0 executed steps) was private-repo runner allocation, per owner diagnosis. Repo made public after clean secret/PHI scans; secret scanning and push protection enabled at the same time.
+- ci.yml run 41074874950 on f8e3e96 executed for real: compatibility 3.14 and 3.15 both PASSED; full assurance ran all 31 gates -> 25 passed, 5 failed, 1 blocked. Prior local receipt (ff0182d) was 8 passed/22 blocked/1 failed because tools were absent locally.
+- Remaining failures are pre-existing repo-wide debt: ruff_lint, ruff_format, ty, basedpyright (quality/analysis_checks.py and peers) and mutation_score 69.78% < 90%. locked_versions is blocked because ci.yml syncs '--extra tabular --extra research' but not '--extra reporting'.
+- Hosted artifacts retained at verification/v13/hosted-41074874950/; narrative at verification/v13/delivery-2026-10-30/hosted-ci.txt. Next executable command: either add --extra reporting to the CI sync line, or clear the lint/type/mutation debt.
+
+

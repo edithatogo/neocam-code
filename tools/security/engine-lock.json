@@ -1,0 +1,24 @@
+{
+  "version": "1.33.1",
+  "source_repository": "https://github.com/opengrep/opengrep",
+  "source_commit": "092c80faa0817840228349f93eff12a50fb9cf6b",
+  "distribution": "Unchanged stable native OpenGrep core only, with upstream LGPL licence. No Python scanner CLI or its dependency graph.",
+  "platforms": {
+    "darwin-arm64": {
+      "url": "https://github.com/opengrep/opengrep/releases/download/v1.33.1/opengrep-core_osx_aarch64.tar.gz",
+      "archive_sha256": "cce019aba35ba0c79f74b22fc9e2f8562ca651d76d5a04d7dcc440f967e45930",
+      "files_sha256": {
+        "opengrep-core": "db74ac70c0fa96f853594359fef8255dff82b9331cb07d67015c5438764d9684",
+        "LICENSE": "20c17d8b8c48a600800dfd14f95d5cb9ff47066a9641ddeab48dc54aec96e331"
+      }
+    },
+    "linux-x86_64": {
+      "url": "https://github.com/opengrep/opengrep/releases/download/v1.33.1/opengrep-core_linux_x86.tar.gz",
+      "archive_sha256": "1a78593c369cd58a8545a1dfb2ce548139f028a1af4ea7d08bc5ce8385cde243",
+      "files_sha256": {
+        "opengrep-core": "76aedaf02c5757fea4e6a0b257cb8e79cd9d04589b2b8fb9c808b2a77ad046bf",
+        "LICENSE": "20c17d8b8c48a600800dfd14f95d5cb9ff47066a9641ddeab48dc54aec96e331"
+      }
+    }
+  }
+}

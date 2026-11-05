@@ -1,0 +1,61 @@
+site,policy,site_net
+Cairns,telephone,0.0
+Cairns,retain_pilot_only,0.0
+Cairns,retain_pilot_expand_panda,-10883.829047823088
+Cairns,retain_pilot_expand_obsbot,-9613.467658117614
+Cairns,retain_pilot_expand_mobile,-18967.946982312475
+Cairns,retain_pilot_expand_fixed,-19429.89657856901
+Atherton,telephone,0.0
+Atherton,retain_pilot_only,-2737.0053225141132
+Atherton,retain_pilot_expand_panda,-2737.0053225141132
+Atherton,retain_pilot_expand_obsbot,-2737.0053225141132
+Atherton,retain_pilot_expand_mobile,-2737.0053225141132
+Atherton,retain_pilot_expand_fixed,-2737.0053225141132
+Mareeba,telephone,0.0
+Mareeba,retain_pilot_only,-2737.0053225141132
+Mareeba,retain_pilot_expand_panda,-2737.0053225141132
+Mareeba,retain_pilot_expand_obsbot,-2737.0053225141132
+Mareeba,retain_pilot_expand_mobile,-2737.0053225141132
+Mareeba,retain_pilot_expand_fixed,-2737.0053225141132
+Innisfail,telephone,0.0
+Innisfail,retain_pilot_only,-2737.0053225141132
+Innisfail,retain_pilot_expand_panda,-2737.0053225141132
+Innisfail,retain_pilot_expand_obsbot,-2737.0053225141132
+Innisfail,retain_pilot_expand_mobile,-2737.0053225141132
+Innisfail,retain_pilot_expand_fixed,-2737.0053225141132
+Tully,telephone,0.0
+Tully,retain_pilot_only,0.0
+Tully,retain_pilot_expand_panda,-3746.414647949348
+Tully,retain_pilot_expand_obsbot,-2476.053258243873
+Tully,retain_pilot_expand_mobile,-11830.532582438733
+Tully,retain_pilot_expand_fixed,-12292.482178695269
+Mossman,telephone,0.0
+Mossman,retain_pilot_only,0.0
+Mossman,retain_pilot_expand_panda,-3784.943200715198
+Mossman,retain_pilot_expand_obsbot,-2514.5818110097234
+Mossman,retain_pilot_expand_mobile,-11869.061135204583
+Mossman,retain_pilot_expand_fixed,-12331.01073146112
+Babinda,telephone,0.0
+Babinda,retain_pilot_only,0.0
+Babinda,retain_pilot_expand_panda,-3746.414647949348
+Babinda,retain_pilot_expand_obsbot,-2476.053258243873
+Babinda,retain_pilot_expand_mobile,-11830.532582438733
+Babinda,retain_pilot_expand_fixed,-12292.482178695269
+Gordonvale,telephone,0.0
+Gordonvale,retain_pilot_only,0.0
+Gordonvale,retain_pilot_expand_panda,-3746.414647949348
+Gordonvale,retain_pilot_expand_obsbot,-2476.053258243873
+Gordonvale,retain_pilot_expand_mobile,-11830.532582438733
+Gordonvale,retain_pilot_expand_fixed,-12292.482178695269
+Herberton,telephone,0.0
+Herberton,retain_pilot_only,0.0
+Herberton,retain_pilot_expand_panda,-3746.414647949348
+Herberton,retain_pilot_expand_obsbot,-2476.053258243873
+Herberton,retain_pilot_expand_mobile,-11830.532582438733
+Herberton,retain_pilot_expand_fixed,-12292.482178695269
+Yarrabah Emergency Service,telephone,0.0
+Yarrabah Emergency Service,retain_pilot_only,0.0
+Yarrabah Emergency Service,retain_pilot_expand_panda,-3797.7860516371484
+Yarrabah Emergency Service,retain_pilot_expand_obsbot,-2527.4246619316737
+Yarrabah Emergency Service,retain_pilot_expand_mobile,-11881.903986126534
+Yarrabah Emergency Service,retain_pilot_expand_fixed,-12343.85358238307

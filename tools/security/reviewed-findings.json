@@ -1,0 +1,1600 @@
+{
+  "review": "same-assistant source review; withheld citation labels, preserved AST/numerics and excluded legacy drivers",
+  "date": "2026-11-05",
+  "source_sha256": {
+    ".agents/skills/maintaining-lean-ci/scripts/__init__.py": "aff7817058e53e53d1287da0b3217c09b6f4ddf6c3650cf62092fa2643f981c5",
+    ".agents/skills/maintaining-lean-ci/scripts/audit_evidence.py": "ed6f0e22415f0f30826296f4aebad6d0639585f3816bac989845fcb860d8684d",
+    "quality/__init__.py": "265b73f6851f26e5176bfea496692c7e0353f5199627bd2a7887fc60d08126b0",
+    "quality/analysis_checks.py": "97f42085b65515e6ebf35edb34178ace3701a7f78666229908d6f60704b8b166",
+    "quality/artifacts.py": "917a3362b4a601830294d37bce04b1f21894814017004007ab5845630ec7e801",
+    "quality/assurance.py": "2048e682fca424ba152d8de78257047fe80bee938d2eb13b1f9935b3137e909e",
+    "quality/benchmark.py": "a39673d30087ec060c3ef9480ad1ae61e78984f48d97c0855d8115e6fbc558ec",
+    "quality/bootstrap.py": "d41eee13df1986b037d9b328ccde4343bbbdd5acc6649c1329f181c3179903b6",
+    "quality/checks.py": "0976d67860af4d2e5e3ea9627cccd304d6bf4e3c0cc210a4aa5cc33c1d35fae3",
+    "quality/cli.py": "21d5116a35e6876bf694f862a20f5f846d5fc22512d34fca467df28367cedf3f",
+    "quality/clinical_review.py": "fc1837cf25ef591fd48f654aa9a7acb9f61669635a6b7819a2142dc633cd483e",
+    "quality/contracts.py": "cb5c746e2ec52535e1402fadc8fda9017df33185d01285e44ef7296df1b259a0",
+    "quality/dependency_snapshot.py": "7e5b192540364bce44cddb3ddcabf676de0f4ed7fddba29e012730abfc2a7d8f",
+    "quality/feedback.py": "260e31ad7467914a7a135b7aa6f412a57fac7a7a0264d0d5af4acb2a66e72049",
+    "quality/hooks.py": "1254f7b57244d1e9114f7715b42ce3c15252616a6b604e73f029b9e38da0b038",
+    "quality/hypothesis_properties.py": "3046bc83d6fca2f75c8f02253bb0f775d423764e6674023c236ebc6d655b046a",
+    "quality/polars_probe.py": "99bd8250ee3a061299d18aae0b3b227eeb2912d2bd6b876c3f3bfa2b17d369d5",
+    "quality/privacy.py": "4744f6f0a7e802154d5653ddaab48886c4b024c11c3cfb2915e288dea319793e",
+    "quality/profile_workload.py": "c51273848ac49498b2a286b230385fc746d1f9929ae06b470b06203a29fb09e2",
+    "quality/source_archive.py": "c070e0d940d6c860c2f99f5fe802ba6f876c9cdfa19515f83f86aef234f257cb",
+    "scripts/analyse_refinements.py": "0377877847171cc1ddebd18fa7637c2155b1380185dbe688b86388155965beb4",
+    "scripts/analyse_v5.py": "ca4afed14649096ee6dda1aaa6922a0a074b4c27c511827e0556bc9d11dbadb3",
+    "scripts/analyse_v6.py": "27ca85e53f461a8da4bdb4715d5d78ee440dabda8f9835e6dc881f48e409f3f4",
+    "scripts/analyse_v7.py": "6e9e8ddfcc9b349108e2185a61467ae884d07db6273a6358b83bd99bf5b1abf5",
+    "scripts/archive_sources_v7.py": "64337e551f5cddb4cadbf205c34d0e90342b71d409518863fd3e3ed4c8e05f7c",
+    "scripts/audit_v7.py": "87039b79f35f940d96bb8cc48f556445cb66149aa18aea95b459859a67e54fc3",
+    "scripts/billing_information.py": "55eceb616f17251f5570e359e762d68320e2390746d099b61869b80f0dc6c75f",
+    "scripts/build_current_report.py": "0e20db2f4e93d1105bf32371031518323d2e44adad8835656fe4c4cc7881fae5",
+    "scripts/build_documents_v4.py": "14e5d2af7fc2e6a8ce343e2fd55b215b8c597fa6da062e11b9ee3761c89a1b5d",
+    "scripts/build_documents_v5.py": "88d3d7bae8356ae671fa6f8559b36f9d77d1d61ac2e5b89b7d1327c439c963e1",
+    "scripts/build_documents_v6.py": "3acd932caddb4bc0f0039d8a6e2765fe11c421cf8b874593b6925861c56341d4",
+    "scripts/build_documents_v7.py": "aa073d6114e984efadcbe6f9bd1f9846a8a6b47fa12cf6df650cac9efb50e8a5",
+    "scripts/build_memo.py": "36b32e6508a99dd31674622536da4562b0582babf86f70517fb57e67e8bb90fe",
+    "scripts/build_reports_v2.py": "b37983f60ed18d230acca90762bb64bea9653057e8d9d4253e63ea7a0b8fdb5a",
+    "scripts/build_workbook.py": "1ff03b523f05fe6c74545d1562d964c0a760dfe6c78baa00c540caa43a154744",
+    "scripts/build_workbook_v2.py": "f6fc59ed02a71c8b2c2522c885ca4138ed385b7c1b0a9117474f4e2f72d183d6",
+    "scripts/build_workbook_v4.py": "3e72c55ba35a7b538669ff560b5fb43ba3bc8c6c03d8aefa75cc4f17ea4a9a11",
+    "scripts/build_workbook_v5.py": "75aba9f9baf457b73700bea1bce7061bdeb198a0e81e79ea0fd7aef79924b2ba",
+    "scripts/build_workbook_v6.py": "07131100ab842884eea34fe0e3caad26f010f2f44a034ea6ca6e80c4dfd06e6b",
+    "scripts/build_workbook_v7.py": "a03d98f59e90cdbe0b2c74fd3e8ef0cffbde4c42b2fba4643240b6ebedcb0881",
+    "scripts/complete_analysis_v4.py": "f7277a7a1b8de61f159255508e29ecae3cdeb3f5487fb8852e9fa2fc1e22bcd0",
+    "scripts/document_metadata.py": "fb00a99b09234e525f81d4bb46f887a3ff319d0c903979be2db37da35de393c1",
+    "scripts/document_v6_evidence.py": "b8c3619b777ae6687626bdc812071e97dc73784bfede1521cbd999b0e1a1416a",
+    "scripts/fiscal_information.py": "0a78071b456aa0054caf777797256cb9bb82fae327ea05b5f551f156713a886a",
+    "scripts/group_information.py": "b8f14d392c6b05647f95d2445d527015a0cd7ee549632a2dcd1c68b520244667",
+    "scripts/information_cache.py": "a05418dd9253f72326f15df37487b085c84f4a9b4696289ad95e74b7884f15d5",
+    "scripts/information_figures.py": "268d43c8ec5ec65ce8b8b2c7a4914243cc52cbb7e2a2ec1e912efc02a48d79ce",
+    "scripts/information_geography.py": "e0bd7d47302d89bcd5da03e837f9cb955e2a453c0d32ed6dca11133924a4da6a",
+    "scripts/information_provenance.py": "4f80ea50a18b434a49fe0add90ec34a8e1d90197e041e1d0617405c612133bf6",
+    "scripts/information_summary.py": "cb30ed665236e6e1045e92f988472de758b111f812b0cc18f1eacf189b68ac17",
+    "scripts/manuscript_information.py": "8ef1344b824b4bc37158907e9ed16b64396db31291c878a27484d5322a461915",
+    "scripts/package_v4.py": "49959676978e0a8256c164ce52fa137a9590d667ee39a33b8d6db3e4083bc506",
+    "scripts/plot_current.py": "d1a88a827651cc7ea89e0337c2d14bb104059785d5d15ba62e3148c0f3fe15b6",
+    "scripts/plot_refinements.py": "a28cddfaafa0b063099e81261807e75958fc016677b451fc0a4145615ad6cf31",
+    "scripts/plot_v5.py": "b4acd37f501df3645553c8e64c989f6c6ce62d0af6e99462f7c59d4746c983ce",
+    "scripts/plot_v6.py": "7572dafc28441c2c70636156fa29acf207ab999a73cb56c0678e2b36168b5658",
+    "scripts/plot_v7.py": "11d6959b2ce6c17ddb8c2af90b4a28a6f5829be9bafe6ead6d0288b58e980b87",
+    "scripts/project_information.py": "750a532fba60aa9df76b91520a477a3067e9216f9ea8d9122894f1804efee61d",
+    "scripts/registry_billing.py": "af8f8f1ed212dfc5df2c21d0a65476b95d0f9bb06641dfbb5f5457a5f108837d",
+    "scripts/registry_cache.py": "d85a21da448a8fefc96fb1c47b0893739c7ee098a2493f9e7f413cf6062d7048",
+    "scripts/registry_design.py": "ccea9cea7dad2db0a1ec9f6160ea83df24f691ff8972954d04817f25a62d3ca9",
+    "scripts/registry_joint.py": "ad18e385a9d82ef307d35174bebabdedf25e796e420223c999ed3f724a6c4946",
+    "scripts/reproduce.py": "ae96a102225f271ccebc18b29635df94b868415109bda96f05710930e1c5876d",
+    "scripts/run_v2.py": "31bf93d4336471270ed70a3b1b6e4e4c7cbcd34a066e2e8876e1352f54c253d0",
+    "scripts/verify.py": "ee110c1fe7a90bdeffad609bff870b6fd84c90a4312d6593686ee4167cb1bc80",
+    "sources/retrieve_originals.py": "8360a6b6d6cd788b2c41f8eb58476b820a09425f64e95e4cf1aa47427a18306d",
+    "src/__init__.py": "9ca6f4df7117e338063fcf7ee01bf0464a7a7d9133f667c99064fae2b4851691",
+    "src/activity.py": "d526a3d97621e6103d5b270228fc9ec635221a6befd9a30f9976e81825076a02",
+    "src/audit_v7.py": "a759b985e715855b1636182840aaa7d2332bb19e2072ba85a99091195833ce21",
+    "src/configuration.py": "793d89a81653232d9b7c5b5ec40f51c6ad7c516c5fab6bbb62b2b73424e09806",
+    "src/deployment.py": "5de0bd737d754ef7bc11934f1c9fd7415b2d3920071ff10b93ae3f8cd6ae3dda",
+    "src/equipment.py": "155c0d1c6bfd055df9497cb299a574cf79c23a01805af0d2a83f676e57a36538",
+    "src/panda_model.py": "4e5c5835a2e31a3c1fea776c7c2af3fb50470e83e11ac0d7837af2cb5de431d6",
+    "src/pathways_v6.py": "1e9c5cef180a0b587e67e1efb3587882711e2d9a766951386313c97ce0c57bc8",
+    "src/perspectives_v7.py": "8c8e2a74b680e2304a17cb0b9ede92640cb514d037a5e4bf55f491fd9660ee20",
+    "src/portfolios_v7.py": "1b3abb78733e17d55d74a510acd0659d80d219cd4298604653a6e4134a8bfdf1",
+    "src/sensitivity.py": "f9eaa10141742ddf3a851c506eecc2043cdc82c846a82b4f5ecb554d91f9a889",
+    "src/statewide.py": "6cd572dbbe67d82b37ca3710947e912db3770f30784604c23445b366149516b4",
+    "src/strategies.py": "56df5a9e1b25d6b0c642671c765342457ef02a2bdd10b082a159c5cd4c8d13f1",
+    "tests/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "tests/test_assurance_scope.py": "2cfeb6009c21ee040409f9ae814737aae0907715a9219f80826dbff39cb46116",
+    "tests/test_assurance_v3.py": "4b873e8eca5068863ad6351a10934f62e03cbbad39b10a45ba32f4349957af75",
+    "tests/test_contract_adversaries.py": "c4d0859c14be15ee19293e82384ea65534995da4d75fbb8bb2a91a9b8ac8df59",
+    "tests/test_dependency_snapshot.py": "1ba9994713078066478eed59ed458bfefd4291ad3ebddc9aa292050d3e4958ec",
+    "tests/test_doctest_examples.py": "01fd267dc5429215d7af556f772a9bd4d4f2db764aed865f0443f2c1647c6c11",
+    "tests/test_document_metadata.py": "f4242f7ded60bbc0dbb124c802f45d614172bba09c04139be550018c3803e985",
+    "tests/test_fiscal_evidence_contract.py": "c479596cc373482b771b8e04e2cfe0b964d6e252504783b32dc4bff4a625bfdc",
+    "tests/test_fiscal_information.py": "799271ff093892ea8f2b9c348b0396731dfec085a603b5698082de5e9f16754d",
+    "tests/test_incremental_feedback.py": "c6be04efc74e278b6efb248351d8946ec4c367341455b3a11db18244a785d1ac",
+    "tests/test_information_cache.py": "eb98072e4feab8d033d6a94a68a6664215f0cf8ffa686e7ad90dcf4653b61893",
+    "tests/test_information_geography.py": "c79b2897918f7fd5ae0425a54221d1ba22099507cc148f023826f80b8a9df03d",
+    "tests/test_information_provenance.py": "e9b798dc65eecb2365023537720f1f82f52308456148eefc937fce46da32a6a8",
+    "tests/test_model.py": "fd001cc30e4c7e65ffa5656c9911f022a9e0656d2d14b889e708d31dcd808077",
+    "tests/test_mutation_audit_harness.py": "b7d589e9d2b48279895b94744ad44abe07482780124c0946287582cdf432dab2",
+    "tests/test_mutation_deployment_portfolios_strategies.py": "f12e2cb35ed8a94ddda950b10bc2d5c0c9a5600e0b45a7459b5faa63b71c8698",
+    "tests/test_mutation_pathways_sensitivity.py": "618a670303caa081f2cf38a8ab9828c90a9824b290264c212520ab186532df5f",
+    "tests/test_mutation_statewide.py": "07b398318e4fd42000e2bb098d21a9827ba45582bb56bc8706c4a6f0af44ffc1",
+    "tests/test_native_integrity.py": "22c8f129169968a51e9ee828bfce3d774f746c1d2c9dacefccb1438abccb9bd0",
+    "tests/test_privacy_scan.py": "faf1b37f38329f45401ec5d83f66ab9494a5daac73fe099cd876795bc2049b5b",
+    "tests/test_quality_gates.py": "e45b867db14798f3611108369615afdb605c1bdf29d613d98f8704de46c866d0",
+    "tests/test_quality_integration.py": "c36ddeef35befa19df6599b69b72d65eb81f455c51074b0a8ed839e3b91588ed",
+    "tests/test_receipt_clock.py": "923dbd4b3bf14cd32ed6e10437ec7955931a34a3f2e4e780d28107b2d9e0658a",
+    "tests/test_registry_billing_timing.py": "3c6757e5da0c980c7a1460dcaad3162a1712836fee5f7a60dde56b7903065a20",
+    "tests/test_registry_cache.py": "3c1534242ff57c5a6983ae7c0c29bc7d80323cf292a70718f05e4ba3dc3d502d",
+    "tests/test_registry_information.py": "c48fdfae87937a27b18a8e3759b61313bd8ecbab527176416c4eb0c96c592773",
+    "tests/test_registry_joint.py": "fe012a625053c8314b79b86cb7b087d163eb9d9ef0e8587a548c2d826201ff03",
+    "tests/test_reportlab_document.py": "c3110ca2175c72c27ae538ae5d50ce295bc43ef00892b5461e3dde1c71d58d99",
+    "tests/test_security_engine_archive.py": "748a52bc40c998c3ebb6a56c233c0897448b0b86ce963d5dec5d4545fac6ffe6",
+    "tests/test_security_positive_controls.py": "f340d25d6bb9a7925881466fd46cd7f85eef5c08b610e17ec92e954f702035ae",
+    "tests/test_security_python_projection.py": "358405711e3ebb76b13b416ffd1c5bfde74fa83b0487cf32620b4983a4b54579",
+    "tests/test_security_rule_integrity.py": "860eee7c89c2947b2e815253c7ef06881333f689a1b0ea5a903e38b51fe59f95",
+    "tests/test_security_rule_inventory.py": "53b53fcfd2e6a6cb23116495a1305afa20ba785064be397f6f49a76921a2e72c",
+    "tests/test_security_scanner_diagnostics.py": "98d7b31ba39d16bd657e7971cf967054a06c2255f881121db68bae17d670577a",
+    "tests/test_security_source_review.py": "48aed6e424ef431e487a9ff64ce9d25761307e2beb558f35c93fe9cacc2d73b3",
+    "tests/test_security_tool_fingerprint.py": "c6038e0698f16abf904b2fe860587b23cf8a85095c1632a1f509f93144a627bd",
+    "tests/test_toolchain_contracts.py": "d7054c8f08008db921a60a698e76adf546fc4ed2f2e08e46fe84c977a084437a",
+    "tests/test_v10_reconciliation.py": "66ccb3b50fa0b340b891b9ece203655ffbaaeed3b14825c84410c979edee5233",
+    "tests/test_v10_source_evidence.py": "f2b9a8caca65d004a199bbdda02ede85f51cf7aac18640116253d5bea0c8807a",
+    "tests/test_v11_feedback.py": "d4c75907a8f6bb1d5111b219b1bca61f8f5ff4f6a8630bb8a5bc34219c0d165f",
+    "tests/test_v11_manifest.py": "2aa5f8a683c6687fea9ca1ffabe0ed1977a00bd4f63f3f03b86e58778bdaebf7",
+    "tests/test_v11_native_security.py": "db77204918f6941d1dfa180e448826d5d8eb24dc4d4f1c8e7006473afa3c11fd",
+    "tests/test_v12_active_properties.py": "b5825809ffaa894e86e4dcc2745b116d090446940ddde1a5c7569361101aad82",
+    "tests/test_v12_artifacts.py": "a3eb23d537ef5bc6ce3866ff6873a9c840fc569e0e2c06757f802d4257c67b26",
+    "tests/test_v12_configuration.py": "b1b3f0ff9fed3f90527a4c8eeff17d795bc83aad8c8751464667e54735b1f25c",
+    "tests/test_v12_estate.py": "98b06ebc8a66655246bd87a5da2ca821fecb27106d873b172c9b38739520b9db",
+    "tests/test_v12_pipeline.py": "998aff65910899095557ab489246861121405b3d5023af8b9963489c70035931",
+    "tests/test_v12_report.py": "7555ee70c5df13dd41ec23ec669f12c6579f1cb1967d9d02cde728dd32164950",
+    "tests/test_v13_activity.py": "09193d09eca4c68e6ae105b8f053d998c52a1049d77850f6c96f736212dc1492",
+    "tests/test_v13_deployment.py": "001acb96fd19869df2e9359a50e62e96262b7bca95f5d497085938b34a229ce4",
+    "tests/test_v13_pipeline.py": "b5460320bcfd8ef7eda3011bce055faf356ce9bda0edcfd2c22e387d30aa9d19",
+    "tests/test_v13_review.py": "be73fd9bbdf5e0a5f75cb9abe235d5951b55de690e9368f90510fb0b0cf46ff9",
+    "tests/test_v2.py": "f59b38b456e7a7a0a06283c1d6a22fe4e44d592ff16efe413047f17762a29b85",
+    "tests/test_v3_regressions.py": "8451c5c63eac4aa2a4c349b1ee43a009817cf93ce7b31d2f130af4d93aeb5771",
+    "tests/test_v4_analysis_checks.py": "41a8863c3a19b8688b1294ff305a237fec7c75be28b37bb35656045e1315b6c2",
+    "tests/test_v4_benchmark.py": "20dcd984229e86e60aa5af343887539f663be3d51de8ba2400e0bdd2c7749a3f",
+    "tests/test_v4_config.py": "cc0067d843b2f9968b9cd05a2a5dde847338b9a989e0f9919793d0a77be30914",
+    "tests/test_v4_feedback.py": "e4f6a628c20ba68a73b204a599149e82c050d1c4e19010569364ded5cecd1e6e",
+    "tests/test_v4_hooks.py": "b552c6cac042261c83442492562a89662540f2b491fd08ddca70078ea79cdfc2",
+    "tests/test_v4_profiles.py": "3c7881ebe49ece077de5f67654d852bc59ad6e026447ffb610e208acc72a6f8f",
+    "tests/test_v4_skill.py": "bc68a2dbae3dc5c8c6757e534d9d07939880ccfd8d03adb9962148cf3e210e8f",
+    "tests/test_v5_analysis_integrity.py": "347fe8a287da6af5a0a837721d448e26bfdace378b041696495a88acb890344c",
+    "tests/test_v5_assurance_scope.py": "cce8eb7526453a6ca6f72e1813d3fc1a643416ee78be7a5a430fcbb5c0970892",
+    "tests/test_v5_sensitivity.py": "e62bc304dd848b448618a9318ba1cbe49e42861bebd5a066f80a9dcb38b09868",
+    "tests/test_v5_strategies.py": "076bdb757fcf309574d383bd43b3022486c56b9515a2d33f586d1576286044d6",
+    "tests/test_v6_assurance_scope.py": "7e17b194da02773d75a65dd651ae8d15958dba13935b1b6199788675f261357b",
+    "tests/test_v6_documentation_contract.py": "03f469686cd3ffb8a4275abcd3c5b0ad2e81ee6c7c5853a36ccea7435ae76ce1",
+    "tests/test_v6_pathways.py": "016e8899ad9506b369c7ac351ba65d26b6905b5e0d111779bbf653f5c5b7c99a",
+    "tests/test_v6_validation.py": "f1e60e98363f6af81065a9ac96dca35c8aa320a1bcf3d8a0eec4b73f504e18a9",
+    "tests/test_v7_analysis_contracts.py": "44755fcd3107b523614327f4754405aeeb0b0275cb33992c1e20e7cf06fdfb2e",
+    "tests/test_v7_perspectives.py": "4514ad9b9890843b1f47594b7329d9a42bf75d2c8144c8aaef4060e78408b5dd",
+    "tests/test_v7_regional.py": "e899e84b06709b777f783eea7a4840f85e23860b2543aba76866f5fa147aedab",
+    "tests/test_v7_review_repairs.py": "c3eebed7943ba9bdecf72d8d041f8898f7e789789ef5c07b7211475a9ca78ad0",
+    "tests/test_v7_sampling_health.py": "ce14aee391d45a319f6d1c8ddde7cf9de7ffcaf462bde108027e1160ba5f11df",
+    "tests/test_v7_source_archive.py": "55c7afe2ddc7d594e6bd7aa932bf6fa7ac25b5bed3c9bb53d962e4c36b217c3b",
+    "tests/test_v8_assurance.py": "ddd3d459193a9d672257d39f1388e78d8bb9a6d33dcc56e3a6f831486af77276",
+    "tests/test_v9_contracts.py": "7b9472bb639d5ef246dcccf3a70b4ea1abcbbe50fae1c588d5ff336562a56bc3",
+    "tests/test_word_heading_fonts.py": "e68c4ca481d67d0c817d36e89a7e9605c1efef2bc450365bf1a110e367511e71",
+    "tools/security/check.py": "61467aec22730ea996d2e55e0e043310c5becc4ed6322776ad80b778e40c5d92",
+    "tools/security/install_engine.py": "9e6f65f4ac4b620e4cfd27c5c3173e5382446836bdc411cfdca6e176adc5cb58",
+    "tools/security/prepare_rules.py": "846fc7801ae9c8d5f1b1aedf2b2211f58d37793f468b89e15ed7918920660c3e"
+  },
+  "policy": "All rules execute. New findings and changes to reviewed source bytes fail. Medium/high-confidence security findings cannot be adjudicated by this inventory. No scanner suppression comments are honoured.",
+  "findings": [
+    {
+      "rule": "python.lang.security.audit.dangerous-subprocess-use-audit.dangerous-subprocess-use-audit",
+      "path": "quality/assurance.py",
+      "start": 122,
+      "end": 132,
+      "source_sha256": "2048e682fca424ba152d8de78257047fe80bee938d2eb13b1f9935b3137e909e",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "Reviewed argument-list subprocess execution with shell disabled. Executables and plans originate from the fixed assurance/build/test commands or the scanner module allowlist. No shell-string execution is present in these exact reviewed source bytes."
+    },
+    {
+      "rule": "python.lang.security.audit.dangerous-subprocess-use-audit.dangerous-subprocess-use-audit",
+      "path": "quality/benchmark.py",
+      "start": 104,
+      "end": 106,
+      "source_sha256": "a39673d30087ec060c3ef9480ad1ae61e78984f48d97c0855d8115e6fbc558ec",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "Reviewed argument-list subprocess execution with shell disabled. Executables and plans originate from the fixed assurance/build/test commands or the scanner module allowlist. No shell-string execution is present in these exact reviewed source bytes."
+    },
+    {
+      "rule": "python.lang.security.audit.dangerous-subprocess-use-audit.dangerous-subprocess-use-audit",
+      "path": "quality/checks.py",
+      "start": 187,
+      "end": 189,
+      "source_sha256": "0976d67860af4d2e5e3ea9627cccd304d6bf4e3c0cc210a4aa5cc33c1d35fae3",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "Reviewed argument-list subprocess execution with shell disabled. Executables and plans originate from the fixed assurance/build/test commands or the scanner module allowlist. No shell-string execution is present in these exact reviewed source bytes."
+    },
+    {
+      "rule": "python.lang.security.audit.dangerous-subprocess-use-audit.dangerous-subprocess-use-audit",
+      "path": "quality/feedback.py",
+      "start": 225,
+      "end": 227,
+      "source_sha256": "260e31ad7467914a7a135b7aa6f412a57fac7a7a0264d0d5af4acb2a66e72049",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "Reviewed argument-list subprocess execution with shell disabled. Executables and plans originate from the fixed assurance/build/test commands or the scanner module allowlist. No shell-string execution is present in these exact reviewed source bytes."
+    },
+    {
+      "rule": "python.lang.security.audit.dangerous-subprocess-use-audit.dangerous-subprocess-use-audit",
+      "path": "quality/hooks.py",
+      "start": 74,
+      "end": 74,
+      "source_sha256": "1254f7b57244d1e9114f7715b42ce3c15252616a6b604e73f029b9e38da0b038",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "Reviewed argument-list subprocess execution with shell disabled. Executables and plans originate from the fixed assurance/build/test commands or the scanner module allowlist. No shell-string execution is present in these exact reviewed source bytes."
+    },
+    {
+      "rule": "python.lang.security.audit.regex-dos.regex_dos",
+      "path": "quality/privacy.py",
+      "start": 156,
+      "end": 451,
+      "source_sha256": "4744f6f0a7e802154d5653ddaab48886c4b024c11c3cfb2915e288dea319793e",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "The email recognizer bounds local and label lengths. Dot-delimited labels disambiguate the repeated group. Adversarial malformed-address timings are retained in the privacy qualification receipt."
+    },
+    {
+      "rule": "python.lang.security.audit.regex-dos.regex_dos",
+      "path": "quality/privacy.py",
+      "start": 156,
+      "end": 606,
+      "source_sha256": "4744f6f0a7e802154d5653ddaab48886c4b024c11c3cfb2915e288dea319793e",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "The email recognizer bounds local and label lengths. Dot-delimited labels disambiguate the repeated group. Adversarial malformed-address timings are retained in the privacy qualification receipt."
+    },
+    {
+      "rule": "python.lang.security.audit.non-literal-import.non-literal-import",
+      "path": "scripts/analyse_v5.py",
+      "start": 230,
+      "end": 230,
+      "source_sha256": "ca4afed14649096ee6dda1aaa6922a0a074b4c27c511827e0556bc9d11dbadb3",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "Optional analysis dependencies and doctest modules come from fixed module-name lists in these exact source bytes. These calls do not import a name from a request or external data record."
+    },
+    {
+      "rule": "python.lang.security.use-defusedcsv.use-defusedcsv",
+      "path": "scripts/archive_sources_v7.py",
+      "start": 22,
+      "end": 22,
+      "source_sha256": "64337e551f5cddb4cadbf205c34d0e90342b71d409518863fd3e3ed4c8e05f7c",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "These exact frozen-model/evidence writers emit controlled numeric model results, source-register rows or internal evidence labels. They are not an unrestricted spreadsheet export endpoint. The clinical Excel companion also disables string-to-formula conversion."
+    },
+    {
+      "rule": "python.lang.security.audit.dangerous-subprocess-use-audit.dangerous-subprocess-use-audit",
+      "path": "scripts/audit_v7.py",
+      "start": 243,
+      "end": 249,
+      "source_sha256": "87039b79f35f940d96bb8cc48f556445cb66149aa18aea95b459859a67e54fc3",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "Reviewed argument-list subprocess execution with shell disabled. Executables and plans originate from the fixed assurance/build/test commands or the scanner module allowlist. No shell-string execution is present in these exact reviewed source bytes."
+    },
+    {
+      "rule": "python.lang.security.audit.dangerous-subprocess-use-audit.dangerous-subprocess-use-audit",
+      "path": "scripts/build_current_report.py",
+      "start": 564,
+      "end": 564,
+      "source_sha256": "0e20db2f4e93d1105bf32371031518323d2e44adad8835656fe4c4cc7881fae5",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "Reviewed argument-list subprocess execution with shell disabled. Executables and plans originate from the fixed assurance/build/test commands or the scanner module allowlist. No shell-string execution is present in these exact reviewed source bytes."
+    },
+    {
+      "rule": "python.lang.correctness.common-mistakes.string-concat-in-list.string-concat-in-list",
+      "path": "scripts/build_documents_v4.py",
+      "start": 109,
+      "end": 112,
+      "source_sha256": "14e5d2af7fc2e6a8ce343e2fd55b215b8c597fa6da062e11b9ee3761c89a1b5d",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "Adjacent literals intentionally form a single report paragraph within parentheses. Existing Ruff formatting and model/report tests qualify this construction."
+    },
+    {
+      "rule": "python.lang.correctness.common-mistakes.string-concat-in-list.string-concat-in-list",
+      "path": "scripts/build_documents_v4.py",
+      "start": 117,
+      "end": 121,
+      "source_sha256": "14e5d2af7fc2e6a8ce343e2fd55b215b8c597fa6da062e11b9ee3761c89a1b5d",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "Adjacent literals intentionally form a single report paragraph within parentheses. Existing Ruff formatting and model/report tests qualify this construction."
+    },
+    {
+      "rule": "python.lang.correctness.common-mistakes.string-concat-in-list.string-concat-in-list",
+      "path": "scripts/build_documents_v4.py",
+      "start": 126,
+      "end": 130,
+      "source_sha256": "14e5d2af7fc2e6a8ce343e2fd55b215b8c597fa6da062e11b9ee3761c89a1b5d",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "Adjacent literals intentionally form a single report paragraph within parentheses. Existing Ruff formatting and model/report tests qualify this construction."
+    },
+    {
+      "rule": "python.lang.correctness.common-mistakes.string-concat-in-list.string-concat-in-list",
+      "path": "scripts/build_documents_v4.py",
+      "start": 131,
+      "end": 134,
+      "source_sha256": "14e5d2af7fc2e6a8ce343e2fd55b215b8c597fa6da062e11b9ee3761c89a1b5d",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "Adjacent literals intentionally form a single report paragraph within parentheses. Existing Ruff formatting and model/report tests qualify this construction."
+    },
+    {
+      "rule": "python.lang.correctness.common-mistakes.string-concat-in-list.string-concat-in-list",
+      "path": "scripts/build_documents_v4.py",
+      "start": 135,
+      "end": 138,
+      "source_sha256": "14e5d2af7fc2e6a8ce343e2fd55b215b8c597fa6da062e11b9ee3761c89a1b5d",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "Adjacent literals intentionally form a single report paragraph within parentheses. Existing Ruff formatting and model/report tests qualify this construction."
+    },
+    {
+      "rule": "python.lang.correctness.common-mistakes.string-concat-in-list.string-concat-in-list",
+      "path": "scripts/build_documents_v4.py",
+      "start": 139,
+      "end": 142,
+      "source_sha256": "14e5d2af7fc2e6a8ce343e2fd55b215b8c597fa6da062e11b9ee3761c89a1b5d",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "Adjacent literals intentionally form a single report paragraph within parentheses. Existing Ruff formatting and model/report tests qualify this construction."
+    },
+    {
+      "rule": "python.lang.correctness.common-mistakes.string-concat-in-list.string-concat-in-list",
+      "path": "scripts/build_documents_v4.py",
+      "start": 143,
+      "end": 146,
+      "source_sha256": "14e5d2af7fc2e6a8ce343e2fd55b215b8c597fa6da062e11b9ee3761c89a1b5d",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "Adjacent literals intentionally form a single report paragraph within parentheses. Existing Ruff formatting and model/report tests qualify this construction."
+    },
+    {
+      "rule": "python.lang.correctness.common-mistakes.string-concat-in-list.string-concat-in-list",
+      "path": "scripts/build_documents_v4.py",
+      "start": 147,
+      "end": 151,
+      "source_sha256": "14e5d2af7fc2e6a8ce343e2fd55b215b8c597fa6da062e11b9ee3761c89a1b5d",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "Adjacent literals intentionally form a single report paragraph within parentheses. Existing Ruff formatting and model/report tests qualify this construction."
+    },
+    {
+      "rule": "python.lang.maintainability.return.return-not-in-function",
+      "path": "scripts/build_documents_v4.py",
+      "start": 271,
+      "end": 271,
+      "source_sha256": "14e5d2af7fc2e6a8ce343e2fd55b215b8c597fa6da062e11b9ee3761c89a1b5d",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "The reported expression is a valid Python lambda within the enclosing function or callback. Native Python parsing and tests succeed. This upstream rule produces a false positive for these exact expressions."
+    },
+    {
+      "rule": "python.lang.maintainability.return.return-not-in-function",
+      "path": "scripts/build_documents_v4.py",
+      "start": 283,
+      "end": 283,
+      "source_sha256": "14e5d2af7fc2e6a8ce343e2fd55b215b8c597fa6da062e11b9ee3761c89a1b5d",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "The reported expression is a valid Python lambda within the enclosing function or callback. Native Python parsing and tests succeed. This upstream rule produces a false positive for these exact expressions."
+    },
+    {
+      "rule": "python.lang.correctness.common-mistakes.string-concat-in-list.string-concat-in-list",
+      "path": "scripts/build_documents_v5.py",
+      "start": 97,
+      "end": 101,
+      "source_sha256": "88d3d7bae8356ae671fa6f8559b36f9d77d1d61ac2e5b89b7d1327c439c963e1",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "Adjacent literals intentionally form a single report paragraph within parentheses. Existing Ruff formatting and model/report tests qualify this construction."
+    },
+    {
+      "rule": "python.lang.correctness.common-mistakes.string-concat-in-list.string-concat-in-list",
+      "path": "scripts/build_documents_v5.py",
+      "start": 107,
+      "end": 110,
+      "source_sha256": "88d3d7bae8356ae671fa6f8559b36f9d77d1d61ac2e5b89b7d1327c439c963e1",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "Adjacent literals intentionally form a single report paragraph within parentheses. Existing Ruff formatting and model/report tests qualify this construction."
+    },
+    {
+      "rule": "python.lang.correctness.common-mistakes.string-concat-in-list.string-concat-in-list",
+      "path": "scripts/build_documents_v5.py",
+      "start": 111,
+      "end": 114,
+      "source_sha256": "88d3d7bae8356ae671fa6f8559b36f9d77d1d61ac2e5b89b7d1327c439c963e1",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "Adjacent literals intentionally form a single report paragraph within parentheses. Existing Ruff formatting and model/report tests qualify this construction."
+    },
+    {
+      "rule": "python.lang.correctness.common-mistakes.string-concat-in-list.string-concat-in-list",
+      "path": "scripts/build_documents_v5.py",
+      "start": 115,
+      "end": 118,
+      "source_sha256": "88d3d7bae8356ae671fa6f8559b36f9d77d1d61ac2e5b89b7d1327c439c963e1",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "Adjacent literals intentionally form a single report paragraph within parentheses. Existing Ruff formatting and model/report tests qualify this construction."
+    },
+    {
+      "rule": "python.lang.correctness.common-mistakes.string-concat-in-list.string-concat-in-list",
+      "path": "scripts/build_documents_v5.py",
+      "start": 119,
+      "end": 122,
+      "source_sha256": "88d3d7bae8356ae671fa6f8559b36f9d77d1d61ac2e5b89b7d1327c439c963e1",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "Adjacent literals intentionally form a single report paragraph within parentheses. Existing Ruff formatting and model/report tests qualify this construction."
+    },
+    {
+      "rule": "python.lang.correctness.common-mistakes.string-concat-in-list.string-concat-in-list",
+      "path": "scripts/build_documents_v5.py",
+      "start": 123,
+      "end": 126,
+      "source_sha256": "88d3d7bae8356ae671fa6f8559b36f9d77d1d61ac2e5b89b7d1327c439c963e1",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "Adjacent literals intentionally form a single report paragraph within parentheses. Existing Ruff formatting and model/report tests qualify this construction."
+    },
+    {
+      "rule": "python.lang.correctness.common-mistakes.string-concat-in-list.string-concat-in-list",
+      "path": "scripts/build_documents_v5.py",
+      "start": 127,
+      "end": 131,
+      "source_sha256": "88d3d7bae8356ae671fa6f8559b36f9d77d1d61ac2e5b89b7d1327c439c963e1",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "Adjacent literals intentionally form a single report paragraph within parentheses. Existing Ruff formatting and model/report tests qualify this construction."
+    },
+    {
+      "rule": "python.lang.correctness.common-mistakes.string-concat-in-list.string-concat-in-list",
+      "path": "scripts/build_documents_v5.py",
+      "start": 443,
+      "end": 446,
+      "source_sha256": "88d3d7bae8356ae671fa6f8559b36f9d77d1d61ac2e5b89b7d1327c439c963e1",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "Adjacent literals intentionally form a single report paragraph within parentheses. Existing Ruff formatting and model/report tests qualify this construction."
+    },
+    {
+      "rule": "python.lang.correctness.common-mistakes.string-concat-in-list.string-concat-in-list",
+      "path": "scripts/build_documents_v5.py",
+      "start": 450,
+      "end": 453,
+      "source_sha256": "88d3d7bae8356ae671fa6f8559b36f9d77d1d61ac2e5b89b7d1327c439c963e1",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "Adjacent literals intentionally form a single report paragraph within parentheses. Existing Ruff formatting and model/report tests qualify this construction."
+    },
+    {
+      "rule": "python.lang.correctness.common-mistakes.string-concat-in-list.string-concat-in-list",
+      "path": "scripts/build_documents_v5.py",
+      "start": 461,
+      "end": 465,
+      "source_sha256": "88d3d7bae8356ae671fa6f8559b36f9d77d1d61ac2e5b89b7d1327c439c963e1",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "Adjacent literals intentionally form a single report paragraph within parentheses. Existing Ruff formatting and model/report tests qualify this construction."
+    },
+    {
+      "rule": "python.lang.correctness.common-mistakes.string-concat-in-list.string-concat-in-list",
+      "path": "scripts/build_documents_v6.py",
+      "start": 97,
+      "end": 100,
+      "source_sha256": "3acd932caddb4bc0f0039d8a6e2765fe11c421cf8b874593b6925861c56341d4",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "Adjacent literals intentionally form a single report paragraph within parentheses. Existing Ruff formatting and model/report tests qualify this construction."
+    },
+    {
+      "rule": "python.lang.correctness.common-mistakes.string-concat-in-list.string-concat-in-list",
+      "path": "scripts/build_documents_v6.py",
+      "start": 104,
+      "end": 107,
+      "source_sha256": "3acd932caddb4bc0f0039d8a6e2765fe11c421cf8b874593b6925861c56341d4",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "Adjacent literals intentionally form a single report paragraph within parentheses. Existing Ruff formatting and model/report tests qualify this construction."
+    },
+    {
+      "rule": "python.lang.correctness.common-mistakes.string-concat-in-list.string-concat-in-list",
+      "path": "scripts/build_documents_v6.py",
+      "start": 112,
+      "end": 117,
+      "source_sha256": "3acd932caddb4bc0f0039d8a6e2765fe11c421cf8b874593b6925861c56341d4",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "Adjacent literals intentionally form a single report paragraph within parentheses. Existing Ruff formatting and model/report tests qualify this construction."
+    },
+    {
+      "rule": "python.lang.correctness.common-mistakes.string-concat-in-list.string-concat-in-list",
+      "path": "scripts/build_documents_v6.py",
+      "start": 118,
+      "end": 122,
+      "source_sha256": "3acd932caddb4bc0f0039d8a6e2765fe11c421cf8b874593b6925861c56341d4",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "Adjacent literals intentionally form a single report paragraph within parentheses. Existing Ruff formatting and model/report tests qualify this construction."
+    },
+    {
+      "rule": "python.lang.correctness.common-mistakes.string-concat-in-list.string-concat-in-list",
+      "path": "scripts/build_documents_v6.py",
+      "start": 123,
+      "end": 127,
+      "source_sha256": "3acd932caddb4bc0f0039d8a6e2765fe11c421cf8b874593b6925861c56341d4",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "Adjacent literals intentionally form a single report paragraph within parentheses. Existing Ruff formatting and model/report tests qualify this construction."
+    },
+    {
+      "rule": "python.lang.correctness.common-mistakes.string-concat-in-list.string-concat-in-list",
+      "path": "scripts/build_documents_v6.py",
+      "start": 128,
+      "end": 131,
+      "source_sha256": "3acd932caddb4bc0f0039d8a6e2765fe11c421cf8b874593b6925861c56341d4",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "Adjacent literals intentionally form a single report paragraph within parentheses. Existing Ruff formatting and model/report tests qualify this construction."
+    },
+    {
+      "rule": "python.lang.correctness.common-mistakes.string-concat-in-list.string-concat-in-list",
+      "path": "scripts/build_documents_v6.py",
+      "start": 132,
+      "end": 135,
+      "source_sha256": "3acd932caddb4bc0f0039d8a6e2765fe11c421cf8b874593b6925861c56341d4",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "Adjacent literals intentionally form a single report paragraph within parentheses. Existing Ruff formatting and model/report tests qualify this construction."
+    },
+    {
+      "rule": "python.lang.correctness.common-mistakes.string-concat-in-list.string-concat-in-list",
+      "path": "scripts/build_documents_v6.py",
+      "start": 136,
+      "end": 140,
+      "source_sha256": "3acd932caddb4bc0f0039d8a6e2765fe11c421cf8b874593b6925861c56341d4",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "Adjacent literals intentionally form a single report paragraph within parentheses. Existing Ruff formatting and model/report tests qualify this construction."
+    },
+    {
+      "rule": "python.lang.correctness.common-mistakes.string-concat-in-list.string-concat-in-list",
+      "path": "scripts/build_documents_v6.py",
+      "start": 533,
+      "end": 536,
+      "source_sha256": "3acd932caddb4bc0f0039d8a6e2765fe11c421cf8b874593b6925861c56341d4",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "Adjacent literals intentionally form a single report paragraph within parentheses. Existing Ruff formatting and model/report tests qualify this construction."
+    },
+    {
+      "rule": "python.lang.correctness.common-mistakes.string-concat-in-list.string-concat-in-list",
+      "path": "scripts/build_documents_v6.py",
+      "start": 540,
+      "end": 543,
+      "source_sha256": "3acd932caddb4bc0f0039d8a6e2765fe11c421cf8b874593b6925861c56341d4",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "Adjacent literals intentionally form a single report paragraph within parentheses. Existing Ruff formatting and model/report tests qualify this construction."
+    },
+    {
+      "rule": "python.lang.correctness.common-mistakes.string-concat-in-list.string-concat-in-list",
+      "path": "scripts/build_documents_v6.py",
+      "start": 547,
+      "end": 552,
+      "source_sha256": "3acd932caddb4bc0f0039d8a6e2765fe11c421cf8b874593b6925861c56341d4",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "Adjacent literals intentionally form a single report paragraph within parentheses. Existing Ruff formatting and model/report tests qualify this construction."
+    },
+    {
+      "rule": "python.lang.correctness.common-mistakes.string-concat-in-list.string-concat-in-list",
+      "path": "scripts/build_documents_v7.py",
+      "start": 117,
+      "end": 120,
+      "source_sha256": "aa073d6114e984efadcbe6f9bd1f9846a8a6b47fa12cf6df650cac9efb50e8a5",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "Adjacent literals intentionally form a single report paragraph within parentheses. Existing Ruff formatting and model/report tests qualify this construction."
+    },
+    {
+      "rule": "python.lang.correctness.common-mistakes.string-concat-in-list.string-concat-in-list",
+      "path": "scripts/build_documents_v7.py",
+      "start": 124,
+      "end": 127,
+      "source_sha256": "aa073d6114e984efadcbe6f9bd1f9846a8a6b47fa12cf6df650cac9efb50e8a5",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "Adjacent literals intentionally form a single report paragraph within parentheses. Existing Ruff formatting and model/report tests qualify this construction."
+    },
+    {
+      "rule": "python.lang.correctness.common-mistakes.string-concat-in-list.string-concat-in-list",
+      "path": "scripts/build_documents_v7.py",
+      "start": 131,
+      "end": 134,
+      "source_sha256": "aa073d6114e984efadcbe6f9bd1f9846a8a6b47fa12cf6df650cac9efb50e8a5",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "Adjacent literals intentionally form a single report paragraph within parentheses. Existing Ruff formatting and model/report tests qualify this construction."
+    },
+    {
+      "rule": "python.lang.correctness.common-mistakes.string-concat-in-list.string-concat-in-list",
+      "path": "scripts/build_documents_v7.py",
+      "start": 139,
+      "end": 142,
+      "source_sha256": "aa073d6114e984efadcbe6f9bd1f9846a8a6b47fa12cf6df650cac9efb50e8a5",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "Adjacent literals intentionally form a single report paragraph within parentheses. Existing Ruff formatting and model/report tests qualify this construction."
+    },
+    {
+      "rule": "python.lang.correctness.common-mistakes.string-concat-in-list.string-concat-in-list",
+      "path": "scripts/build_documents_v7.py",
+      "start": 143,
+      "end": 147,
+      "source_sha256": "aa073d6114e984efadcbe6f9bd1f9846a8a6b47fa12cf6df650cac9efb50e8a5",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "Adjacent literals intentionally form a single report paragraph within parentheses. Existing Ruff formatting and model/report tests qualify this construction."
+    },
+    {
+      "rule": "python.lang.correctness.common-mistakes.string-concat-in-list.string-concat-in-list",
+      "path": "scripts/build_documents_v7.py",
+      "start": 148,
+      "end": 152,
+      "source_sha256": "aa073d6114e984efadcbe6f9bd1f9846a8a6b47fa12cf6df650cac9efb50e8a5",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "Adjacent literals intentionally form a single report paragraph within parentheses. Existing Ruff formatting and model/report tests qualify this construction."
+    },
+    {
+      "rule": "python.lang.correctness.common-mistakes.string-concat-in-list.string-concat-in-list",
+      "path": "scripts/build_documents_v7.py",
+      "start": 153,
+      "end": 157,
+      "source_sha256": "aa073d6114e984efadcbe6f9bd1f9846a8a6b47fa12cf6df650cac9efb50e8a5",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "Adjacent literals intentionally form a single report paragraph within parentheses. Existing Ruff formatting and model/report tests qualify this construction."
+    },
+    {
+      "rule": "python.lang.correctness.common-mistakes.string-concat-in-list.string-concat-in-list",
+      "path": "scripts/build_documents_v7.py",
+      "start": 158,
+      "end": 162,
+      "source_sha256": "aa073d6114e984efadcbe6f9bd1f9846a8a6b47fa12cf6df650cac9efb50e8a5",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "Adjacent literals intentionally form a single report paragraph within parentheses. Existing Ruff formatting and model/report tests qualify this construction."
+    },
+    {
+      "rule": "python.lang.correctness.common-mistakes.string-concat-in-list.string-concat-in-list",
+      "path": "scripts/build_documents_v7.py",
+      "start": 163,
+      "end": 166,
+      "source_sha256": "aa073d6114e984efadcbe6f9bd1f9846a8a6b47fa12cf6df650cac9efb50e8a5",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "Adjacent literals intentionally form a single report paragraph within parentheses. Existing Ruff formatting and model/report tests qualify this construction."
+    },
+    {
+      "rule": "python.lang.correctness.common-mistakes.string-concat-in-list.string-concat-in-list",
+      "path": "scripts/build_documents_v7.py",
+      "start": 331,
+      "end": 334,
+      "source_sha256": "aa073d6114e984efadcbe6f9bd1f9846a8a6b47fa12cf6df650cac9efb50e8a5",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "Adjacent literals intentionally form a single report paragraph within parentheses. Existing Ruff formatting and model/report tests qualify this construction."
+    },
+    {
+      "rule": "python.lang.correctness.common-mistakes.string-concat-in-list.string-concat-in-list",
+      "path": "scripts/build_documents_v7.py",
+      "start": 338,
+      "end": 342,
+      "source_sha256": "aa073d6114e984efadcbe6f9bd1f9846a8a6b47fa12cf6df650cac9efb50e8a5",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "Adjacent literals intentionally form a single report paragraph within parentheses. Existing Ruff formatting and model/report tests qualify this construction."
+    },
+    {
+      "rule": "python.lang.correctness.common-mistakes.string-concat-in-list.string-concat-in-list",
+      "path": "scripts/build_documents_v7.py",
+      "start": 346,
+      "end": 349,
+      "source_sha256": "aa073d6114e984efadcbe6f9bd1f9846a8a6b47fa12cf6df650cac9efb50e8a5",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "Adjacent literals intentionally form a single report paragraph within parentheses. Existing Ruff formatting and model/report tests qualify this construction."
+    },
+    {
+      "rule": "python.lang.correctness.common-mistakes.string-concat-in-list.string-concat-in-list",
+      "path": "scripts/build_documents_v7.py",
+      "start": 353,
+      "end": 356,
+      "source_sha256": "aa073d6114e984efadcbe6f9bd1f9846a8a6b47fa12cf6df650cac9efb50e8a5",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "Adjacent literals intentionally form a single report paragraph within parentheses. Existing Ruff formatting and model/report tests qualify this construction."
+    },
+    {
+      "rule": "python.lang.correctness.common-mistakes.string-concat-in-list.string-concat-in-list",
+      "path": "scripts/build_documents_v7.py",
+      "start": 425,
+      "end": 428,
+      "source_sha256": "aa073d6114e984efadcbe6f9bd1f9846a8a6b47fa12cf6df650cac9efb50e8a5",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "Adjacent literals intentionally form a single report paragraph within parentheses. Existing Ruff formatting and model/report tests qualify this construction."
+    },
+    {
+      "rule": "python.lang.correctness.common-mistakes.string-concat-in-list.string-concat-in-list",
+      "path": "scripts/build_documents_v7.py",
+      "start": 432,
+      "end": 435,
+      "source_sha256": "aa073d6114e984efadcbe6f9bd1f9846a8a6b47fa12cf6df650cac9efb50e8a5",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "Adjacent literals intentionally form a single report paragraph within parentheses. Existing Ruff formatting and model/report tests qualify this construction."
+    },
+    {
+      "rule": "python.lang.correctness.common-mistakes.string-concat-in-list.string-concat-in-list",
+      "path": "scripts/build_documents_v7.py",
+      "start": 439,
+      "end": 443,
+      "source_sha256": "aa073d6114e984efadcbe6f9bd1f9846a8a6b47fa12cf6df650cac9efb50e8a5",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "Adjacent literals intentionally form a single report paragraph within parentheses. Existing Ruff formatting and model/report tests qualify this construction."
+    },
+    {
+      "rule": "python.lang.correctness.common-mistakes.string-concat-in-list.string-concat-in-list",
+      "path": "scripts/build_documents_v7.py",
+      "start": 447,
+      "end": 451,
+      "source_sha256": "aa073d6114e984efadcbe6f9bd1f9846a8a6b47fa12cf6df650cac9efb50e8a5",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "Adjacent literals intentionally form a single report paragraph within parentheses. Existing Ruff formatting and model/report tests qualify this construction."
+    },
+    {
+      "rule": "python.lang.correctness.common-mistakes.string-concat-in-list.string-concat-in-list",
+      "path": "scripts/build_documents_v7.py",
+      "start": 455,
+      "end": 458,
+      "source_sha256": "aa073d6114e984efadcbe6f9bd1f9846a8a6b47fa12cf6df650cac9efb50e8a5",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "Adjacent literals intentionally form a single report paragraph within parentheses. Existing Ruff formatting and model/report tests qualify this construction."
+    },
+    {
+      "rule": "python.lang.correctness.common-mistakes.string-concat-in-list.string-concat-in-list",
+      "path": "scripts/build_documents_v7.py",
+      "start": 462,
+      "end": 466,
+      "source_sha256": "aa073d6114e984efadcbe6f9bd1f9846a8a6b47fa12cf6df650cac9efb50e8a5",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "Adjacent literals intentionally form a single report paragraph within parentheses. Existing Ruff formatting and model/report tests qualify this construction."
+    },
+    {
+      "rule": "python.lang.correctness.common-mistakes.string-concat-in-list.string-concat-in-list",
+      "path": "scripts/build_documents_v7.py",
+      "start": 470,
+      "end": 474,
+      "source_sha256": "aa073d6114e984efadcbe6f9bd1f9846a8a6b47fa12cf6df650cac9efb50e8a5",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "Adjacent literals intentionally form a single report paragraph within parentheses. Existing Ruff formatting and model/report tests qualify this construction."
+    },
+    {
+      "rule": "python.lang.correctness.common-mistakes.string-concat-in-list.string-concat-in-list",
+      "path": "scripts/build_documents_v7.py",
+      "start": 549,
+      "end": 552,
+      "source_sha256": "aa073d6114e984efadcbe6f9bd1f9846a8a6b47fa12cf6df650cac9efb50e8a5",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "Adjacent literals intentionally form a single report paragraph within parentheses. Existing Ruff formatting and model/report tests qualify this construction."
+    },
+    {
+      "rule": "python.lang.correctness.common-mistakes.string-concat-in-list.string-concat-in-list",
+      "path": "scripts/build_documents_v7.py",
+      "start": 556,
+      "end": 560,
+      "source_sha256": "aa073d6114e984efadcbe6f9bd1f9846a8a6b47fa12cf6df650cac9efb50e8a5",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "Adjacent literals intentionally form a single report paragraph within parentheses. Existing Ruff formatting and model/report tests qualify this construction."
+    },
+    {
+      "rule": "python.lang.correctness.common-mistakes.string-concat-in-list.string-concat-in-list",
+      "path": "scripts/build_documents_v7.py",
+      "start": 564,
+      "end": 568,
+      "source_sha256": "aa073d6114e984efadcbe6f9bd1f9846a8a6b47fa12cf6df650cac9efb50e8a5",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "Adjacent literals intentionally form a single report paragraph within parentheses. Existing Ruff formatting and model/report tests qualify this construction."
+    },
+    {
+      "rule": "python.lang.correctness.common-mistakes.string-concat-in-list.string-concat-in-list",
+      "path": "scripts/build_documents_v7.py",
+      "start": 572,
+      "end": 575,
+      "source_sha256": "aa073d6114e984efadcbe6f9bd1f9846a8a6b47fa12cf6df650cac9efb50e8a5",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "Adjacent literals intentionally form a single report paragraph within parentheses. Existing Ruff formatting and model/report tests qualify this construction."
+    },
+    {
+      "rule": "python.lang.correctness.common-mistakes.string-concat-in-list.string-concat-in-list",
+      "path": "scripts/build_documents_v7.py",
+      "start": 631,
+      "end": 634,
+      "source_sha256": "aa073d6114e984efadcbe6f9bd1f9846a8a6b47fa12cf6df650cac9efb50e8a5",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "Adjacent literals intentionally form a single report paragraph within parentheses. Existing Ruff formatting and model/report tests qualify this construction."
+    },
+    {
+      "rule": "python.lang.correctness.common-mistakes.string-concat-in-list.string-concat-in-list",
+      "path": "scripts/build_documents_v7.py",
+      "start": 638,
+      "end": 642,
+      "source_sha256": "aa073d6114e984efadcbe6f9bd1f9846a8a6b47fa12cf6df650cac9efb50e8a5",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "Adjacent literals intentionally form a single report paragraph within parentheses. Existing Ruff formatting and model/report tests qualify this construction."
+    },
+    {
+      "rule": "python.lang.correctness.common-mistakes.string-concat-in-list.string-concat-in-list",
+      "path": "scripts/build_documents_v7.py",
+      "start": 646,
+      "end": 649,
+      "source_sha256": "aa073d6114e984efadcbe6f9bd1f9846a8a6b47fa12cf6df650cac9efb50e8a5",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "Adjacent literals intentionally form a single report paragraph within parentheses. Existing Ruff formatting and model/report tests qualify this construction."
+    },
+    {
+      "rule": "python.lang.correctness.common-mistakes.string-concat-in-list.string-concat-in-list",
+      "path": "scripts/build_documents_v7.py",
+      "start": 653,
+      "end": 656,
+      "source_sha256": "aa073d6114e984efadcbe6f9bd1f9846a8a6b47fa12cf6df650cac9efb50e8a5",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "Adjacent literals intentionally form a single report paragraph within parentheses. Existing Ruff formatting and model/report tests qualify this construction."
+    },
+    {
+      "rule": "python.lang.correctness.common-mistakes.string-concat-in-list.string-concat-in-list",
+      "path": "scripts/build_documents_v7.py",
+      "start": 660,
+      "end": 663,
+      "source_sha256": "aa073d6114e984efadcbe6f9bd1f9846a8a6b47fa12cf6df650cac9efb50e8a5",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "Adjacent literals intentionally form a single report paragraph within parentheses. Existing Ruff formatting and model/report tests qualify this construction."
+    },
+    {
+      "rule": "python.lang.correctness.common-mistakes.string-concat-in-list.string-concat-in-list",
+      "path": "scripts/build_documents_v7.py",
+      "start": 667,
+      "end": 670,
+      "source_sha256": "aa073d6114e984efadcbe6f9bd1f9846a8a6b47fa12cf6df650cac9efb50e8a5",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "Adjacent literals intentionally form a single report paragraph within parentheses. Existing Ruff formatting and model/report tests qualify this construction."
+    },
+    {
+      "rule": "python.lang.correctness.common-mistakes.string-concat-in-list.string-concat-in-list",
+      "path": "scripts/build_documents_v7.py",
+      "start": 674,
+      "end": 677,
+      "source_sha256": "aa073d6114e984efadcbe6f9bd1f9846a8a6b47fa12cf6df650cac9efb50e8a5",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "Adjacent literals intentionally form a single report paragraph within parentheses. Existing Ruff formatting and model/report tests qualify this construction."
+    },
+    {
+      "rule": "python.lang.correctness.common-mistakes.string-concat-in-list.string-concat-in-list",
+      "path": "scripts/build_documents_v7.py",
+      "start": 681,
+      "end": 685,
+      "source_sha256": "aa073d6114e984efadcbe6f9bd1f9846a8a6b47fa12cf6df650cac9efb50e8a5",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "Adjacent literals intentionally form a single report paragraph within parentheses. Existing Ruff formatting and model/report tests qualify this construction."
+    },
+    {
+      "rule": "python.lang.correctness.common-mistakes.string-concat-in-list.string-concat-in-list",
+      "path": "scripts/build_documents_v7.py",
+      "start": 689,
+      "end": 692,
+      "source_sha256": "aa073d6114e984efadcbe6f9bd1f9846a8a6b47fa12cf6df650cac9efb50e8a5",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "Adjacent literals intentionally form a single report paragraph within parentheses. Existing Ruff formatting and model/report tests qualify this construction."
+    },
+    {
+      "rule": "python.lang.correctness.common-mistakes.string-concat-in-list.string-concat-in-list",
+      "path": "scripts/build_documents_v7.py",
+      "start": 696,
+      "end": 699,
+      "source_sha256": "aa073d6114e984efadcbe6f9bd1f9846a8a6b47fa12cf6df650cac9efb50e8a5",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "Adjacent literals intentionally form a single report paragraph within parentheses. Existing Ruff formatting and model/report tests qualify this construction."
+    },
+    {
+      "rule": "python.lang.correctness.common-mistakes.string-concat-in-list.string-concat-in-list",
+      "path": "scripts/build_documents_v7.py",
+      "start": 703,
+      "end": 707,
+      "source_sha256": "aa073d6114e984efadcbe6f9bd1f9846a8a6b47fa12cf6df650cac9efb50e8a5",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "Adjacent literals intentionally form a single report paragraph within parentheses. Existing Ruff formatting and model/report tests qualify this construction."
+    },
+    {
+      "rule": "python.lang.correctness.common-mistakes.string-concat-in-list.string-concat-in-list",
+      "path": "scripts/build_documents_v7.py",
+      "start": 711,
+      "end": 714,
+      "source_sha256": "aa073d6114e984efadcbe6f9bd1f9846a8a6b47fa12cf6df650cac9efb50e8a5",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "Adjacent literals intentionally form a single report paragraph within parentheses. Existing Ruff formatting and model/report tests qualify this construction."
+    },
+    {
+      "rule": "python.lang.correctness.common-mistakes.string-concat-in-list.string-concat-in-list",
+      "path": "scripts/build_workbook.py",
+      "start": 125,
+      "end": 128,
+      "source_sha256": "1ff03b523f05fe6c74545d1562d964c0a760dfe6c78baa00c540caa43a154744",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "Adjacent literals intentionally form a single report paragraph within parentheses. Existing Ruff formatting and model/report tests qualify this construction."
+    },
+    {
+      "rule": "python.lang.correctness.common-mistakes.string-concat-in-list.string-concat-in-list",
+      "path": "scripts/build_workbook.py",
+      "start": 138,
+      "end": 142,
+      "source_sha256": "1ff03b523f05fe6c74545d1562d964c0a760dfe6c78baa00c540caa43a154744",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "Adjacent literals intentionally form a single report paragraph within parentheses. Existing Ruff formatting and model/report tests qualify this construction."
+    },
+    {
+      "rule": "python.lang.correctness.common-mistakes.string-concat-in-list.string-concat-in-list",
+      "path": "scripts/build_workbook.py",
+      "start": 152,
+      "end": 155,
+      "source_sha256": "1ff03b523f05fe6c74545d1562d964c0a760dfe6c78baa00c540caa43a154744",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "Adjacent literals intentionally form a single report paragraph within parentheses. Existing Ruff formatting and model/report tests qualify this construction."
+    },
+    {
+      "rule": "python.lang.correctness.common-mistakes.string-concat-in-list.string-concat-in-list",
+      "path": "scripts/build_workbook.py",
+      "start": 172,
+      "end": 178,
+      "source_sha256": "1ff03b523f05fe6c74545d1562d964c0a760dfe6c78baa00c540caa43a154744",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "Adjacent literals intentionally form a single report paragraph within parentheses. Existing Ruff formatting and model/report tests qualify this construction."
+    },
+    {
+      "rule": "python.lang.correctness.common-mistakes.string-concat-in-list.string-concat-in-list",
+      "path": "scripts/build_workbook.py",
+      "start": 424,
+      "end": 430,
+      "source_sha256": "1ff03b523f05fe6c74545d1562d964c0a760dfe6c78baa00c540caa43a154744",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "Adjacent literals intentionally form a single report paragraph within parentheses. Existing Ruff formatting and model/report tests qualify this construction."
+    },
+    {
+      "rule": "python.lang.correctness.common-mistakes.string-concat-in-list.string-concat-in-list",
+      "path": "scripts/build_workbook.py",
+      "start": 481,
+      "end": 486,
+      "source_sha256": "1ff03b523f05fe6c74545d1562d964c0a760dfe6c78baa00c540caa43a154744",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "Adjacent literals intentionally form a single report paragraph within parentheses. Existing Ruff formatting and model/report tests qualify this construction."
+    },
+    {
+      "rule": "python.lang.correctness.common-mistakes.string-concat-in-list.string-concat-in-list",
+      "path": "scripts/build_workbook.py",
+      "start": 544,
+      "end": 549,
+      "source_sha256": "1ff03b523f05fe6c74545d1562d964c0a760dfe6c78baa00c540caa43a154744",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "Adjacent literals intentionally form a single report paragraph within parentheses. Existing Ruff formatting and model/report tests qualify this construction."
+    },
+    {
+      "rule": "python.lang.correctness.common-mistakes.string-concat-in-list.string-concat-in-list",
+      "path": "scripts/build_workbook.py",
+      "start": 619,
+      "end": 627,
+      "source_sha256": "1ff03b523f05fe6c74545d1562d964c0a760dfe6c78baa00c540caa43a154744",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "Adjacent literals intentionally form a single report paragraph within parentheses. Existing Ruff formatting and model/report tests qualify this construction."
+    },
+    {
+      "rule": "python.lang.correctness.common-mistakes.string-concat-in-list.string-concat-in-list",
+      "path": "scripts/build_workbook.py",
+      "start": 680,
+      "end": 685,
+      "source_sha256": "1ff03b523f05fe6c74545d1562d964c0a760dfe6c78baa00c540caa43a154744",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "Adjacent literals intentionally form a single report paragraph within parentheses. Existing Ruff formatting and model/report tests qualify this construction."
+    },
+    {
+      "rule": "python.lang.correctness.common-mistakes.string-concat-in-list.string-concat-in-list",
+      "path": "scripts/build_workbook.py",
+      "start": 763,
+      "end": 766,
+      "source_sha256": "1ff03b523f05fe6c74545d1562d964c0a760dfe6c78baa00c540caa43a154744",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "Adjacent literals intentionally form a single report paragraph within parentheses. Existing Ruff formatting and model/report tests qualify this construction."
+    },
+    {
+      "rule": "python.lang.correctness.common-mistakes.string-concat-in-list.string-concat-in-list",
+      "path": "scripts/build_workbook_v2.py",
+      "start": 288,
+      "end": 291,
+      "source_sha256": "f6fc59ed02a71c8b2c2522c885ca4138ed385b7c1b0a9117474f4e2f72d183d6",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "Adjacent literals intentionally form a single report paragraph within parentheses. Existing Ruff formatting and model/report tests qualify this construction."
+    },
+    {
+      "rule": "python.lang.correctness.common-mistakes.string-concat-in-list.string-concat-in-list",
+      "path": "scripts/build_workbook_v2.py",
+      "start": 298,
+      "end": 303,
+      "source_sha256": "f6fc59ed02a71c8b2c2522c885ca4138ed385b7c1b0a9117474f4e2f72d183d6",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "Adjacent literals intentionally form a single report paragraph within parentheses. Existing Ruff formatting and model/report tests qualify this construction."
+    },
+    {
+      "rule": "python.sh.security.string-concat.string-concat",
+      "path": "scripts/build_workbook_v4.py",
+      "start": 65,
+      "end": 65,
+      "source_sha256": "3e72c55ba35a7b538669ff560b5fb43ba3bc8c6c03d8aefa75cc4f17ea4a9a11",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "The variable sh is a workbook worksheet, not the sh shell-execution library. Reviewed calls format spreadsheet ranges, merge cells and add cell labels. These modules do not import the sh library."
+    },
+    {
+      "rule": "python.sh.security.string-concat.string-concat",
+      "path": "scripts/build_workbook_v4.py",
+      "start": 72,
+      "end": 72,
+      "source_sha256": "3e72c55ba35a7b538669ff560b5fb43ba3bc8c6c03d8aefa75cc4f17ea4a9a11",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "The variable sh is a workbook worksheet, not the sh shell-execution library. Reviewed calls format spreadsheet ranges, merge cells and add cell labels. These modules do not import the sh library."
+    },
+    {
+      "rule": "python.lang.correctness.common-mistakes.string-concat-in-list.string-concat-in-list",
+      "path": "scripts/build_workbook_v4.py",
+      "start": 107,
+      "end": 110,
+      "source_sha256": "3e72c55ba35a7b538669ff560b5fb43ba3bc8c6c03d8aefa75cc4f17ea4a9a11",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "Adjacent literals intentionally form a single report paragraph within parentheses. Existing Ruff formatting and model/report tests qualify this construction."
+    },
+    {
+      "rule": "python.lang.correctness.common-mistakes.string-concat-in-list.string-concat-in-list",
+      "path": "scripts/build_workbook_v4.py",
+      "start": 128,
+      "end": 131,
+      "source_sha256": "3e72c55ba35a7b538669ff560b5fb43ba3bc8c6c03d8aefa75cc4f17ea4a9a11",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "Adjacent literals intentionally form a single report paragraph within parentheses. Existing Ruff formatting and model/report tests qualify this construction."
+    },
+    {
+      "rule": "python.lang.correctness.common-mistakes.string-concat-in-list.string-concat-in-list",
+      "path": "scripts/build_workbook_v4.py",
+      "start": 234,
+      "end": 237,
+      "source_sha256": "3e72c55ba35a7b538669ff560b5fb43ba3bc8c6c03d8aefa75cc4f17ea4a9a11",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "Adjacent literals intentionally form a single report paragraph within parentheses. Existing Ruff formatting and model/report tests qualify this construction."
+    },
+    {
+      "rule": "python.lang.correctness.common-mistakes.string-concat-in-list.string-concat-in-list",
+      "path": "scripts/build_workbook_v4.py",
+      "start": 242,
+      "end": 245,
+      "source_sha256": "3e72c55ba35a7b538669ff560b5fb43ba3bc8c6c03d8aefa75cc4f17ea4a9a11",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "Adjacent literals intentionally form a single report paragraph within parentheses. Existing Ruff formatting and model/report tests qualify this construction."
+    },
+    {
+      "rule": "python.sh.security.string-concat.string-concat",
+      "path": "scripts/build_workbook_v5.py",
+      "start": 63,
+      "end": 63,
+      "source_sha256": "75aba9f9baf457b73700bea1bce7061bdeb198a0e81e79ea0fd7aef79924b2ba",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "The variable sh is a workbook worksheet, not the sh shell-execution library. Reviewed calls format spreadsheet ranges, merge cells and add cell labels. These modules do not import the sh library."
+    },
+    {
+      "rule": "python.sh.security.string-concat.string-concat",
+      "path": "scripts/build_workbook_v5.py",
+      "start": 65,
+      "end": 65,
+      "source_sha256": "75aba9f9baf457b73700bea1bce7061bdeb198a0e81e79ea0fd7aef79924b2ba",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "The variable sh is a workbook worksheet, not the sh shell-execution library. Reviewed calls format spreadsheet ranges, merge cells and add cell labels. These modules do not import the sh library."
+    },
+    {
+      "rule": "python.sh.security.string-concat.string-concat",
+      "path": "scripts/build_workbook_v5.py",
+      "start": 66,
+      "end": 66,
+      "source_sha256": "75aba9f9baf457b73700bea1bce7061bdeb198a0e81e79ea0fd7aef79924b2ba",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "The variable sh is a workbook worksheet, not the sh shell-execution library. Reviewed calls format spreadsheet ranges, merge cells and add cell labels. These modules do not import the sh library."
+    },
+    {
+      "rule": "python.sh.security.string-concat.string-concat",
+      "path": "scripts/build_workbook_v5.py",
+      "start": 67,
+      "end": 67,
+      "source_sha256": "75aba9f9baf457b73700bea1bce7061bdeb198a0e81e79ea0fd7aef79924b2ba",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "The variable sh is a workbook worksheet, not the sh shell-execution library. Reviewed calls format spreadsheet ranges, merge cells and add cell labels. These modules do not import the sh library."
+    },
+    {
+      "rule": "python.sh.security.string-concat.string-concat",
+      "path": "scripts/build_workbook_v5.py",
+      "start": 68,
+      "end": 68,
+      "source_sha256": "75aba9f9baf457b73700bea1bce7061bdeb198a0e81e79ea0fd7aef79924b2ba",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "The variable sh is a workbook worksheet, not the sh shell-execution library. Reviewed calls format spreadsheet ranges, merge cells and add cell labels. These modules do not import the sh library."
+    },
+    {
+      "rule": "python.sh.security.string-concat.string-concat",
+      "path": "scripts/build_workbook_v5.py",
+      "start": 76,
+      "end": 76,
+      "source_sha256": "75aba9f9baf457b73700bea1bce7061bdeb198a0e81e79ea0fd7aef79924b2ba",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "The variable sh is a workbook worksheet, not the sh shell-execution library. Reviewed calls format spreadsheet ranges, merge cells and add cell labels. These modules do not import the sh library."
+    },
+    {
+      "rule": "python.sh.security.string-concat.string-concat",
+      "path": "scripts/build_workbook_v5.py",
+      "start": 77,
+      "end": 77,
+      "source_sha256": "75aba9f9baf457b73700bea1bce7061bdeb198a0e81e79ea0fd7aef79924b2ba",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "The variable sh is a workbook worksheet, not the sh shell-execution library. Reviewed calls format spreadsheet ranges, merge cells and add cell labels. These modules do not import the sh library."
+    },
+    {
+      "rule": "python.sh.security.string-concat.string-concat",
+      "path": "scripts/build_workbook_v5.py",
+      "start": 156,
+      "end": 156,
+      "source_sha256": "75aba9f9baf457b73700bea1bce7061bdeb198a0e81e79ea0fd7aef79924b2ba",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "The variable sh is a workbook worksheet, not the sh shell-execution library. Reviewed calls format spreadsheet ranges, merge cells and add cell labels. These modules do not import the sh library."
+    },
+    {
+      "rule": "python.sh.security.string-concat.string-concat",
+      "path": "scripts/build_workbook_v5.py",
+      "start": 157,
+      "end": 157,
+      "source_sha256": "75aba9f9baf457b73700bea1bce7061bdeb198a0e81e79ea0fd7aef79924b2ba",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "The variable sh is a workbook worksheet, not the sh shell-execution library. Reviewed calls format spreadsheet ranges, merge cells and add cell labels. These modules do not import the sh library."
+    },
+    {
+      "rule": "python.sh.security.string-concat.string-concat",
+      "path": "scripts/build_workbook_v5.py",
+      "start": 208,
+      "end": 208,
+      "source_sha256": "75aba9f9baf457b73700bea1bce7061bdeb198a0e81e79ea0fd7aef79924b2ba",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "The variable sh is a workbook worksheet, not the sh shell-execution library. Reviewed calls format spreadsheet ranges, merge cells and add cell labels. These modules do not import the sh library."
+    },
+    {
+      "rule": "python.sh.security.string-concat.string-concat",
+      "path": "scripts/build_workbook_v5.py",
+      "start": 209,
+      "end": 209,
+      "source_sha256": "75aba9f9baf457b73700bea1bce7061bdeb198a0e81e79ea0fd7aef79924b2ba",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "The variable sh is a workbook worksheet, not the sh shell-execution library. Reviewed calls format spreadsheet ranges, merge cells and add cell labels. These modules do not import the sh library."
+    },
+    {
+      "rule": "python.sh.security.string-concat.string-concat",
+      "path": "scripts/build_workbook_v6.py",
+      "start": 66,
+      "end": 66,
+      "source_sha256": "07131100ab842884eea34fe0e3caad26f010f2f44a034ea6ca6e80c4dfd06e6b",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "The variable sh is a workbook worksheet, not the sh shell-execution library. Reviewed calls format spreadsheet ranges, merge cells and add cell labels. These modules do not import the sh library."
+    },
+    {
+      "rule": "python.sh.security.string-concat.string-concat",
+      "path": "scripts/build_workbook_v6.py",
+      "start": 68,
+      "end": 68,
+      "source_sha256": "07131100ab842884eea34fe0e3caad26f010f2f44a034ea6ca6e80c4dfd06e6b",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "The variable sh is a workbook worksheet, not the sh shell-execution library. Reviewed calls format spreadsheet ranges, merge cells and add cell labels. These modules do not import the sh library."
+    },
+    {
+      "rule": "python.sh.security.string-concat.string-concat",
+      "path": "scripts/build_workbook_v6.py",
+      "start": 69,
+      "end": 69,
+      "source_sha256": "07131100ab842884eea34fe0e3caad26f010f2f44a034ea6ca6e80c4dfd06e6b",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "The variable sh is a workbook worksheet, not the sh shell-execution library. Reviewed calls format spreadsheet ranges, merge cells and add cell labels. These modules do not import the sh library."
+    },
+    {
+      "rule": "python.sh.security.string-concat.string-concat",
+      "path": "scripts/build_workbook_v6.py",
+      "start": 70,
+      "end": 70,
+      "source_sha256": "07131100ab842884eea34fe0e3caad26f010f2f44a034ea6ca6e80c4dfd06e6b",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "The variable sh is a workbook worksheet, not the sh shell-execution library. Reviewed calls format spreadsheet ranges, merge cells and add cell labels. These modules do not import the sh library."
+    },
+    {
+      "rule": "python.sh.security.string-concat.string-concat",
+      "path": "scripts/build_workbook_v6.py",
+      "start": 71,
+      "end": 71,
+      "source_sha256": "07131100ab842884eea34fe0e3caad26f010f2f44a034ea6ca6e80c4dfd06e6b",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "The variable sh is a workbook worksheet, not the sh shell-execution library. Reviewed calls format spreadsheet ranges, merge cells and add cell labels. These modules do not import the sh library."
+    },
+    {
+      "rule": "python.sh.security.string-concat.string-concat",
+      "path": "scripts/build_workbook_v6.py",
+      "start": 79,
+      "end": 79,
+      "source_sha256": "07131100ab842884eea34fe0e3caad26f010f2f44a034ea6ca6e80c4dfd06e6b",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "The variable sh is a workbook worksheet, not the sh shell-execution library. Reviewed calls format spreadsheet ranges, merge cells and add cell labels. These modules do not import the sh library."
+    },
+    {
+      "rule": "python.sh.security.string-concat.string-concat",
+      "path": "scripts/build_workbook_v6.py",
+      "start": 80,
+      "end": 80,
+      "source_sha256": "07131100ab842884eea34fe0e3caad26f010f2f44a034ea6ca6e80c4dfd06e6b",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "The variable sh is a workbook worksheet, not the sh shell-execution library. Reviewed calls format spreadsheet ranges, merge cells and add cell labels. These modules do not import the sh library."
+    },
+    {
+      "rule": "python.sh.security.string-concat.string-concat",
+      "path": "scripts/build_workbook_v6.py",
+      "start": 85,
+      "end": 85,
+      "source_sha256": "07131100ab842884eea34fe0e3caad26f010f2f44a034ea6ca6e80c4dfd06e6b",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "The variable sh is a workbook worksheet, not the sh shell-execution library. Reviewed calls format spreadsheet ranges, merge cells and add cell labels. These modules do not import the sh library."
+    },
+    {
+      "rule": "python.sh.security.string-concat.string-concat",
+      "path": "scripts/build_workbook_v6.py",
+      "start": 189,
+      "end": 189,
+      "source_sha256": "07131100ab842884eea34fe0e3caad26f010f2f44a034ea6ca6e80c4dfd06e6b",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "The variable sh is a workbook worksheet, not the sh shell-execution library. Reviewed calls format spreadsheet ranges, merge cells and add cell labels. These modules do not import the sh library."
+    },
+    {
+      "rule": "python.sh.security.string-concat.string-concat",
+      "path": "scripts/build_workbook_v6.py",
+      "start": 190,
+      "end": 190,
+      "source_sha256": "07131100ab842884eea34fe0e3caad26f010f2f44a034ea6ca6e80c4dfd06e6b",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "The variable sh is a workbook worksheet, not the sh shell-execution library. Reviewed calls format spreadsheet ranges, merge cells and add cell labels. These modules do not import the sh library."
+    },
+    {
+      "rule": "python.sh.security.string-concat.string-concat",
+      "path": "scripts/build_workbook_v6.py",
+      "start": 235,
+      "end": 235,
+      "source_sha256": "07131100ab842884eea34fe0e3caad26f010f2f44a034ea6ca6e80c4dfd06e6b",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "The variable sh is a workbook worksheet, not the sh shell-execution library. Reviewed calls format spreadsheet ranges, merge cells and add cell labels. These modules do not import the sh library."
+    },
+    {
+      "rule": "python.sh.security.string-concat.string-concat",
+      "path": "scripts/build_workbook_v6.py",
+      "start": 236,
+      "end": 236,
+      "source_sha256": "07131100ab842884eea34fe0e3caad26f010f2f44a034ea6ca6e80c4dfd06e6b",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "The variable sh is a workbook worksheet, not the sh shell-execution library. Reviewed calls format spreadsheet ranges, merge cells and add cell labels. These modules do not import the sh library."
+    },
+    {
+      "rule": "python.sh.security.string-concat.string-concat",
+      "path": "scripts/build_workbook_v6.py",
+      "start": 237,
+      "end": 237,
+      "source_sha256": "07131100ab842884eea34fe0e3caad26f010f2f44a034ea6ca6e80c4dfd06e6b",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "The variable sh is a workbook worksheet, not the sh shell-execution library. Reviewed calls format spreadsheet ranges, merge cells and add cell labels. These modules do not import the sh library."
+    },
+    {
+      "rule": "python.sh.security.string-concat.string-concat",
+      "path": "scripts/build_workbook_v6.py",
+      "start": 238,
+      "end": 238,
+      "source_sha256": "07131100ab842884eea34fe0e3caad26f010f2f44a034ea6ca6e80c4dfd06e6b",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "The variable sh is a workbook worksheet, not the sh shell-execution library. Reviewed calls format spreadsheet ranges, merge cells and add cell labels. These modules do not import the sh library."
+    },
+    {
+      "rule": "python.sh.security.string-concat.string-concat",
+      "path": "scripts/build_workbook_v7.py",
+      "start": 66,
+      "end": 66,
+      "source_sha256": "a03d98f59e90cdbe0b2c74fd3e8ef0cffbde4c42b2fba4643240b6ebedcb0881",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "The variable sh is a workbook worksheet, not the sh shell-execution library. Reviewed calls format spreadsheet ranges, merge cells and add cell labels. These modules do not import the sh library."
+    },
+    {
+      "rule": "python.sh.security.string-concat.string-concat",
+      "path": "scripts/build_workbook_v7.py",
+      "start": 68,
+      "end": 68,
+      "source_sha256": "a03d98f59e90cdbe0b2c74fd3e8ef0cffbde4c42b2fba4643240b6ebedcb0881",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "The variable sh is a workbook worksheet, not the sh shell-execution library. Reviewed calls format spreadsheet ranges, merge cells and add cell labels. These modules do not import the sh library."
+    },
+    {
+      "rule": "python.sh.security.string-concat.string-concat",
+      "path": "scripts/build_workbook_v7.py",
+      "start": 69,
+      "end": 69,
+      "source_sha256": "a03d98f59e90cdbe0b2c74fd3e8ef0cffbde4c42b2fba4643240b6ebedcb0881",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "The variable sh is a workbook worksheet, not the sh shell-execution library. Reviewed calls format spreadsheet ranges, merge cells and add cell labels. These modules do not import the sh library."
+    },
+    {
+      "rule": "python.sh.security.string-concat.string-concat",
+      "path": "scripts/build_workbook_v7.py",
+      "start": 70,
+      "end": 70,
+      "source_sha256": "a03d98f59e90cdbe0b2c74fd3e8ef0cffbde4c42b2fba4643240b6ebedcb0881",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "The variable sh is a workbook worksheet, not the sh shell-execution library. Reviewed calls format spreadsheet ranges, merge cells and add cell labels. These modules do not import the sh library."
+    },
+    {
+      "rule": "python.sh.security.string-concat.string-concat",
+      "path": "scripts/build_workbook_v7.py",
+      "start": 71,
+      "end": 71,
+      "source_sha256": "a03d98f59e90cdbe0b2c74fd3e8ef0cffbde4c42b2fba4643240b6ebedcb0881",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "The variable sh is a workbook worksheet, not the sh shell-execution library. Reviewed calls format spreadsheet ranges, merge cells and add cell labels. These modules do not import the sh library."
+    },
+    {
+      "rule": "python.sh.security.string-concat.string-concat",
+      "path": "scripts/build_workbook_v7.py",
+      "start": 79,
+      "end": 79,
+      "source_sha256": "a03d98f59e90cdbe0b2c74fd3e8ef0cffbde4c42b2fba4643240b6ebedcb0881",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "The variable sh is a workbook worksheet, not the sh shell-execution library. Reviewed calls format spreadsheet ranges, merge cells and add cell labels. These modules do not import the sh library."
+    },
+    {
+      "rule": "python.sh.security.string-concat.string-concat",
+      "path": "scripts/build_workbook_v7.py",
+      "start": 80,
+      "end": 80,
+      "source_sha256": "a03d98f59e90cdbe0b2c74fd3e8ef0cffbde4c42b2fba4643240b6ebedcb0881",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "The variable sh is a workbook worksheet, not the sh shell-execution library. Reviewed calls format spreadsheet ranges, merge cells and add cell labels. These modules do not import the sh library."
+    },
+    {
+      "rule": "python.sh.security.string-concat.string-concat",
+      "path": "scripts/build_workbook_v7.py",
+      "start": 85,
+      "end": 85,
+      "source_sha256": "a03d98f59e90cdbe0b2c74fd3e8ef0cffbde4c42b2fba4643240b6ebedcb0881",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "The variable sh is a workbook worksheet, not the sh shell-execution library. Reviewed calls format spreadsheet ranges, merge cells and add cell labels. These modules do not import the sh library."
+    },
+    {
+      "rule": "python.sh.security.string-concat.string-concat",
+      "path": "scripts/build_workbook_v7.py",
+      "start": 215,
+      "end": 215,
+      "source_sha256": "a03d98f59e90cdbe0b2c74fd3e8ef0cffbde4c42b2fba4643240b6ebedcb0881",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "The variable sh is a workbook worksheet, not the sh shell-execution library. Reviewed calls format spreadsheet ranges, merge cells and add cell labels. These modules do not import the sh library."
+    },
+    {
+      "rule": "python.sh.security.string-concat.string-concat",
+      "path": "scripts/build_workbook_v7.py",
+      "start": 216,
+      "end": 216,
+      "source_sha256": "a03d98f59e90cdbe0b2c74fd3e8ef0cffbde4c42b2fba4643240b6ebedcb0881",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "The variable sh is a workbook worksheet, not the sh shell-execution library. Reviewed calls format spreadsheet ranges, merge cells and add cell labels. These modules do not import the sh library."
+    },
+    {
+      "rule": "python.lang.security.use-defusedcsv.use-defusedcsv",
+      "path": "scripts/document_v6_evidence.py",
+      "start": 122,
+      "end": 122,
+      "source_sha256": "b8c3619b777ae6687626bdc812071e97dc73784bfede1521cbd999b0e1a1416a",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "These exact frozen-model/evidence writers emit controlled numeric model results, source-register rows or internal evidence labels. They are not an unrestricted spreadsheet export endpoint. The clinical Excel companion also disables string-to-formula conversion."
+    },
+    {
+      "rule": "python.lang.security.use-defusedcsv.use-defusedcsv",
+      "path": "scripts/document_v6_evidence.py",
+      "start": 362,
+      "end": 362,
+      "source_sha256": "b8c3619b777ae6687626bdc812071e97dc73784bfede1521cbd999b0e1a1416a",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "These exact frozen-model/evidence writers emit controlled numeric model results, source-register rows or internal evidence labels. They are not an unrestricted spreadsheet export endpoint. The clinical Excel companion also disables string-to-formula conversion."
+    },
+    {
+      "rule": "python.lang.security.use-defusedcsv.use-defusedcsv",
+      "path": "scripts/group_information.py",
+      "start": 93,
+      "end": 93,
+      "source_sha256": "b8f14d392c6b05647f95d2445d527015a0cd7ee549632a2dcd1c68b520244667",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "These exact frozen-model/evidence writers emit controlled numeric model results, source-register rows or internal evidence labels. They are not an unrestricted spreadsheet export endpoint. The clinical Excel companion also disables string-to-formula conversion."
+    },
+    {
+      "rule": "python.lang.correctness.common-mistakes.string-concat-in-list.string-concat-in-list",
+      "path": "scripts/information_figures.py",
+      "start": 233,
+      "end": 236,
+      "source_sha256": "268d43c8ec5ec65ce8b8b2c7a4914243cc52cbb7e2a2ec1e912efc02a48d79ce",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "Adjacent literals intentionally form a single report paragraph within parentheses. Existing Ruff formatting and model/report tests qualify this construction."
+    },
+    {
+      "rule": "python.lang.maintainability.return.return-not-in-function",
+      "path": "scripts/plot_v5.py",
+      "start": 68,
+      "end": 68,
+      "source_sha256": "b4acd37f501df3645553c8e64c989f6c6ce62d0af6e99462f7c59d4746c983ce",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "The reported expression is a valid Python lambda within the enclosing function or callback. Native Python parsing and tests succeed. This upstream rule produces a false positive for these exact expressions."
+    },
+    {
+      "rule": "python.lang.maintainability.return.return-not-in-function",
+      "path": "scripts/plot_v5.py",
+      "start": 136,
+      "end": 136,
+      "source_sha256": "b4acd37f501df3645553c8e64c989f6c6ce62d0af6e99462f7c59d4746c983ce",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "The reported expression is a valid Python lambda within the enclosing function or callback. Native Python parsing and tests succeed. This upstream rule produces a false positive for these exact expressions."
+    },
+    {
+      "rule": "python.lang.maintainability.return.return-not-in-function",
+      "path": "scripts/plot_v5.py",
+      "start": 225,
+      "end": 225,
+      "source_sha256": "b4acd37f501df3645553c8e64c989f6c6ce62d0af6e99462f7c59d4746c983ce",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "The reported expression is a valid Python lambda within the enclosing function or callback. Native Python parsing and tests succeed. This upstream rule produces a false positive for these exact expressions."
+    },
+    {
+      "rule": "python.lang.security.use-defusedcsv.use-defusedcsv",
+      "path": "scripts/project_information.py",
+      "start": 173,
+      "end": 173,
+      "source_sha256": "750a532fba60aa9df76b91520a477a3067e9216f9ea8d9122894f1804efee61d",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "These exact frozen-model/evidence writers emit controlled numeric model results, source-register rows or internal evidence labels. They are not an unrestricted spreadsheet export endpoint. The clinical Excel companion also disables string-to-formula conversion."
+    },
+    {
+      "rule": "python.lang.security.use-defusedcsv.use-defusedcsv",
+      "path": "scripts/registry_billing.py",
+      "start": 46,
+      "end": 46,
+      "source_sha256": "af8f8f1ed212dfc5df2c21d0a65476b95d0f9bb06641dfbb5f5457a5f108837d",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "These exact frozen-model/evidence writers emit controlled numeric model results, source-register rows or internal evidence labels. They are not an unrestricted spreadsheet export endpoint. The clinical Excel companion also disables string-to-formula conversion."
+    },
+    {
+      "rule": "python.lang.security.use-defusedcsv.use-defusedcsv",
+      "path": "scripts/registry_design.py",
+      "start": 50,
+      "end": 50,
+      "source_sha256": "ccea9cea7dad2db0a1ec9f6160ea83df24f691ff8972954d04817f25a62d3ca9",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "These exact frozen-model/evidence writers emit controlled numeric model results, source-register rows or internal evidence labels. They are not an unrestricted spreadsheet export endpoint. The clinical Excel companion also disables string-to-formula conversion."
+    },
+    {
+      "rule": "python.lang.best-practice.manual-collections-create.manual-defaultdict-list-create",
+      "path": "scripts/registry_joint.py",
+      "start": 150,
+      "end": 168,
+      "source_sha256": "ad18e385a9d82ef307d35174bebabdedf25e796e420223c999ed3f724a6c4946",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "Explicit dictionary/list initialization is intentional and covered by retained registry parity and cache tests. This is a maintainability suggestion."
+    },
+    {
+      "rule": "python.lang.maintainability.useless-assign-keyed.useless-assignment-keyed",
+      "path": "src/statewide.py",
+      "start": 505,
+      "end": 506,
+      "source_sha256": "6cd572dbbe67d82b37ca3710947e912db3770f30784604c23445b366149516b4",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "The second assignment clips the newly sampled reliability values to their valid range. It consumes the first assignment and is required by the numerical model."
+    },
+    {
+      "rule": "python.lang.security.audit.non-literal-import.non-literal-import",
+      "path": "tests/test_doctest_examples.py",
+      "start": 51,
+      "end": 51,
+      "source_sha256": "01fd267dc5429215d7af556f772a9bd4d4f2db764aed865f0443f2c1647c6c11",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "Optional analysis dependencies and doctest modules come from fixed module-name lists in these exact source bytes. These calls do not import a name from a request or external data record."
+    },
+    {
+      "rule": "python.lang.security.audit.non-literal-import.non-literal-import",
+      "path": "tests/test_doctest_examples.py",
+      "start": 59,
+      "end": 59,
+      "source_sha256": "01fd267dc5429215d7af556f772a9bd4d4f2db764aed865f0443f2c1647c6c11",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "Optional analysis dependencies and doctest modules come from fixed module-name lists in these exact source bytes. These calls do not import a name from a request or external data record."
+    },
+    {
+      "rule": "python.lang.security.audit.dangerous-subprocess-use-audit.dangerous-subprocess-use-audit",
+      "path": "tests/test_v10_reconciliation.py",
+      "start": 28,
+      "end": 33,
+      "source_sha256": "66ccb3b50fa0b340b891b9ece203655ffbaaeed3b14825c84410c979edee5233",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "Reviewed argument-list subprocess execution with shell disabled. Executables and plans originate from the fixed assurance/build/test commands or the scanner module allowlist. No shell-string execution is present in these exact reviewed source bytes."
+    },
+    {
+      "rule": "python.lang.security.audit.dangerous-subprocess-use-audit.dangerous-subprocess-use-audit",
+      "path": "tests/test_v10_reconciliation.py",
+      "start": 45,
+      "end": 50,
+      "source_sha256": "66ccb3b50fa0b340b891b9ece203655ffbaaeed3b14825c84410c979edee5233",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "Reviewed argument-list subprocess execution with shell disabled. Executables and plans originate from the fixed assurance/build/test commands or the scanner module allowlist. No shell-string execution is present in these exact reviewed source bytes."
+    },
+    {
+      "rule": "python.lang.security.audit.dangerous-subprocess-use-audit.dangerous-subprocess-use-audit",
+      "path": "tests/test_v10_source_evidence.py",
+      "start": 39,
+      "end": 50,
+      "source_sha256": "f2b9a8caca65d004a199bbdda02ede85f51cf7aac18640116253d5bea0c8807a",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "Reviewed argument-list subprocess execution with shell disabled. Executables and plans originate from the fixed assurance/build/test commands or the scanner module allowlist. No shell-string execution is present in these exact reviewed source bytes."
+    },
+    {
+      "rule": "python.lang.security.audit.dangerous-subprocess-use-audit.dangerous-subprocess-use-audit",
+      "path": "tests/test_v11_manifest.py",
+      "start": 61,
+      "end": 71,
+      "source_sha256": "2aa5f8a683c6687fea9ca1ffabe0ed1977a00bd4f63f3f03b86e58778bdaebf7",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "Reviewed argument-list subprocess execution with shell disabled. Executables and plans originate from the fixed assurance/build/test commands or the scanner module allowlist. No shell-string execution is present in these exact reviewed source bytes."
+    },
+    {
+      "rule": "python.lang.security.audit.dangerous-subprocess-use-audit.dangerous-subprocess-use-audit",
+      "path": "tests/test_v12_pipeline.py",
+      "start": 48,
+      "end": 56,
+      "source_sha256": "998aff65910899095557ab489246861121405b3d5023af8b9963489c70035931",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "Reviewed argument-list subprocess execution with shell disabled. Executables and plans originate from the fixed assurance/build/test commands or the scanner module allowlist. No shell-string execution is present in these exact reviewed source bytes."
+    },
+    {
+      "rule": "python.lang.security.audit.dangerous-subprocess-use-audit.dangerous-subprocess-use-audit",
+      "path": "tests/test_v12_pipeline.py",
+      "start": 81,
+      "end": 88,
+      "source_sha256": "998aff65910899095557ab489246861121405b3d5023af8b9963489c70035931",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "Reviewed argument-list subprocess execution with shell disabled. Executables and plans originate from the fixed assurance/build/test commands or the scanner module allowlist. No shell-string execution is present in these exact reviewed source bytes."
+    },
+    {
+      "rule": "python.lang.security.audit.dangerous-subprocess-use-audit.dangerous-subprocess-use-audit",
+      "path": "tests/test_v13_pipeline.py",
+      "start": 76,
+      "end": 83,
+      "source_sha256": "b5460320bcfd8ef7eda3011bce055faf356ce9bda0edcfd2c22e387d30aa9d19",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "Reviewed argument-list subprocess execution with shell disabled. Executables and plans originate from the fixed assurance/build/test commands or the scanner module allowlist. No shell-string execution is present in these exact reviewed source bytes."
+    },
+    {
+      "rule": "python.lang.security.audit.dangerous-subprocess-use-audit.dangerous-subprocess-use-audit",
+      "path": "tests/test_v13_pipeline.py",
+      "start": 120,
+      "end": 127,
+      "source_sha256": "b5460320bcfd8ef7eda3011bce055faf356ce9bda0edcfd2c22e387d30aa9d19",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "Reviewed argument-list subprocess execution with shell disabled. Executables and plans originate from the fixed assurance/build/test commands or the scanner module allowlist. No shell-string execution is present in these exact reviewed source bytes."
+    },
+    {
+      "rule": "python.lang.security.use-defusedcsv.use-defusedcsv",
+      "path": "tests/test_v3_regressions.py",
+      "start": 41,
+      "end": 41,
+      "source_sha256": "8451c5c63eac4aa2a4c349b1ee43a009817cf93ce7b31d2f130af4d93aeb5771",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "These exact frozen-model/evidence writers emit controlled numeric model results, source-register rows or internal evidence labels. They are not an unrestricted spreadsheet export endpoint. The clinical Excel companion also disables string-to-formula conversion."
+    },
+    {
+      "rule": "python.lang.security.audit.dangerous-subprocess-use-audit.dangerous-subprocess-use-audit",
+      "path": "tools/security/check.py",
+      "start": 86,
+      "end": 86,
+      "source_sha256": "61467aec22730ea996d2e55e0e043310c5becc4ed6322776ad80b778e40c5d92",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "Reviewed argument-list subprocess execution with shell disabled. Executables and plans originate from the fixed assurance/build/test commands or the scanner module allowlist. No shell-string execution is present in these exact reviewed source bytes."
+    },
+    {
+      "rule": "python.lang.maintainability.is-function-without-parentheses.is-function-without-parentheses",
+      "path": "tools/security/check.py",
+      "start": 198,
+      "end": 198,
+      "source_sha256": "61467aec22730ea996d2e55e0e043310c5becc4ed6322776ad80b778e40c5d92",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "The reported expressions test values returned by isinstance or compare decoded AST/source structures. These exact statements do not use a function object as a boolean."
+    },
+    {
+      "rule": "python.lang.maintainability.is-function-without-parentheses.is-function-without-parentheses",
+      "path": "tools/security/check.py",
+      "start": 204,
+      "end": 204,
+      "source_sha256": "61467aec22730ea996d2e55e0e043310c5becc4ed6322776ad80b778e40c5d92",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "The reported expressions test values returned by isinstance or compare decoded AST/source structures. These exact statements do not use a function object as a boolean."
+    },
+    {
+      "rule": "python.lang.security.audit.dangerous-subprocess-use-audit.dangerous-subprocess-use-audit",
+      "path": "tools/security/check.py",
+      "start": 461,
+      "end": 461,
+      "source_sha256": "61467aec22730ea996d2e55e0e043310c5becc4ed6322776ad80b778e40c5d92",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "Reviewed argument-list subprocess execution with shell disabled. Executables and plans originate from the fixed assurance/build/test commands or the scanner module allowlist. No shell-string execution is present in these exact reviewed source bytes."
+    },
+    {
+      "rule": "python.lang.security.audit.dangerous-subprocess-use-audit.dangerous-subprocess-use-audit",
+      "path": "tests/test_privacy_scan.py",
+      "start": 116,
+      "end": 118,
+      "source_sha256": "faf1b37f38329f45401ec5d83f66ab9494a5daac73fe099cd876795bc2049b5b",
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "reason": "The test resolves the qualified Git executable, passes only fixed ls-files and -z arguments with a controlled repository cwd, and uses the default disabled shell. No shell string or untrusted command argument is present. This inventory oracle requires every tracked file to be accounted for by the privacy scan."
+    }
+  ]
+}

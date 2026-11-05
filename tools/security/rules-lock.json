@@ -1,0 +1,10 @@
+{
+  "repository": "semgrep/semgrep-rules",
+  "revision": "16b9e6d45f10649f6a531ec4838ed9924372c3bc",
+  "archive_sha256": "70b4e0adca0515de0a07c15341ce50ed76221ab2f7bc59baca25caebaa5664f6",
+  "python_rule_count": 378,
+  "compiled_rules_sha256": "90bee1056095bc554876652f51e13b7e3cecb848d5aa87e11c1095026675ae28",
+  "licence": "https://semgrep.dev/legal/rules-license/",
+  "use": "Download at execution for internal scanning. Do not redistribute upstream rules in the repository or evidence archives.",
+  "rule_ids_sha256": "6d72ff5fe0f4028948ce6d30971c14aa85c267408ffa8d01f88be6f5a8bea185"
+}

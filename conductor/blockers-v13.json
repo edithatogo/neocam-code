@@ -1,0 +1,113 @@
+{
+  "release_ready": false,
+  "blockers": [
+    {
+      "id": "environment-lock",
+      "category": "environment",
+      "status": "complete",
+      "attempted_in_v13": true,
+      "action": "UV_HTTP_TIMEOUT=8 UV_HTTP_RETRIES=0 uv lock",
+      "evidence": "verification/dependency-closeout-20261102/README.md",
+      "log_sha256": "9df83b5cf15c9a14e686ea0ed7e326765c14020296f2b0743c20097d25a820ac",
+      "acceptance": "Resolve a genuine lock, review transitive licences and banned dataframe engines, then uv sync --frozen; no fake lock.",
+      "detail": "Frozen lock qualified on CPython 3.15.1. All 95 lock records reviewed for licence scope. Source-use review and redistribution boundaries are recorded in the dated dependency closeout. Active pytest is patched."
+    },
+    {
+      "id": "native-tools",
+      "category": "security",
+      "status": "complete",
+      "attempted_in_v13": true,
+      "action": "python -m quality.bootstrap",
+      "evidence": "verification/v13/delivery-2026-10-30/native-tools.txt",
+      "log_sha256": "c4c54d8cc985f91f4e12d6eb8133e515f75faaca892d1e7bd040eb0d398634ae",
+      "acceptance": "Verified native downloads, pinned versions, Gitleaks history/tree and Vale/actionlint must actually pass.",
+      "detail": "2026-10-30: bootstrap installed checksum-verified gitleaks 8.30.1 (= manifest pin, = upstream latest), vale 3.25.1, actionlint 1.7.12 (= upstream latest). Gitleaks full history (109 commits) and tree scans clean; Vale 0 findings on sanctioned prose; actionlint and pedantic zizmor pass on both workflows. Original failed-attempt log retained at verification/v13/native-attempt.txt."
+    },
+    {
+      "id": "conductor-checkout",
+      "category": "environment",
+      "status": "complete",
+      "attempted_in_v13": true,
+      "action": "git submodule update --init --recursive",
+      "evidence": "verification/v13/delivery-2026-10-30/submodule.txt",
+      "log_sha256": "b3fa27811b30e7337aff3fa5d1c92315fdee0144f3bab06607e33f1d9e91d057",
+      "acceptance": "Actual pinned checkout exists; workflow adapters do not count as a checkout.",
+      "detail": "2026-10-30: extensions/conductor checked out at pinned 137c1e41ff9c1dc75ff277b9582460a0bd8c4768 (heads/main) from https://github.com/edithatogo/conductor-next.git."
+    },
+    {
+      "id": "core-fulltexts",
+      "category": "evidence",
+      "status": "complete",
+      "attempted_in_v13": false,
+      "action": "See completed DOI-matched appraisals and file hashes.",
+      "evidence": "evidence/v6/neonatal-full-text-appraisals.md",
+      "log_sha256": "dc8d6d8b6fb8aedffbc489cca48281f8f26f76589e04544d838a3dbff8c8de0a",
+      "acceptance": "Retrieve and critically verify Haynes2020, Armfield2012, Yoo2022, Thao2022 full article/supplement; abstracts are insufficient.",
+      "detail": "Four full articles appraised, including Yoo electronic Table IV. Independent review remains open."
+    },
+    {
+      "id": "public-originals",
+      "category": "evidence",
+      "status": "complete",
+      "attempted_in_v13": false,
+      "action": "python sources/retrieve_originals.py --fetch",
+      "evidence": "verification/v14/evidence-clinical/originals.json",
+      "log_sha256": "ddf43176566dafc3fabbb45100bdbd991814252d84f3a3a423330d57946223df",
+      "acceptance": "Archive actual PDF/XLSX bytes with retrieval date, rights, hashes and source mappings; a transcription is not the original.",
+      "detail": "Four registered originals acquired, mapped, hashed and read back in the local archive. Redistribution remains file-specific."
+    },
+    {
+      "id": "independent-review",
+      "category": "clinical",
+      "status": "open",
+      "attempted_in_v13": false,
+      "action": "Collect four independent reports against verification/reviewer-freeze-20261102/review_packet.json and validate the completed copy against its recorded snapshot_sha256.",
+      "evidence": "verification/v14/evidence-clinical/packet-check.json",
+      "log_sha256": "379462f36caa4b287c96ac1bc920118a3d0ae5d5352538f6b333a7a9cf08824a",
+      "acceptance": "Four review roles document external identity, conflicts, exact snapshot, findings and resolution. Current records deliberately pending; schema is not authentication."
+    },
+    {
+      "id": "complete-migration",
+      "category": "delivery",
+      "status": "complete",
+      "attempted_in_v13": true,
+      "action": "Compare remote recursive Git tree/ancestry with complete local source manifest",
+      "evidence": "verification/v14/delivery/restoration.json",
+      "log_sha256": "c7f4527dd98c0e0b72849b081836f7e211c8f7af4acc6293f12689e2c76961d8",
+      "acceptance": "All authorised code/data/artifacts/history accounted for, no omitted files silently treated as complete.",
+      "detail": "Main read back at 8180947. Same-commit local and hosted assurance passed 32/32. Archived delivery receipts at a6d8be8. Superseded draft PR #3 closed on 2 November 2026.",
+      "earlier_detail": "This session exposes only 48 read/search GitHub functions; create_tree/create_commit/update_ref/PR writes not available. GitHub plugin discovery confirms installed hybrid connector/CLI workflow, not missing installation. Actual CLI push failed DNS. No GitHub write performed."
+    },
+    {
+      "id": "hosted-assurance",
+      "category": "delivery",
+      "status": "complete",
+      "attempted_in_v13": true,
+      "action": "Run existing PR #3 workflow; inspect actual job steps/logs",
+      "evidence": "verification/v14/delivery/hosted-full.json",
+      "log_sha256": "f37a6c4faa31c0ca88559a6fc1728b4900d6f0f50d40c7000b193334cfacac10",
+      "acceptance": "Hosted runner allocated and all required checks execute against imported commit; runner allocation failure is not a test result.",
+      "detail": "Main read back at 8180947. Same-commit local and hosted assurance passed 32/32. Archived delivery receipts at a6d8be8. Superseded draft PR #3 closed on 2 November 2026."
+    },
+    {
+      "id": "site-eligibility",
+      "category": "clinical",
+      "status": "open",
+      "attempted_in_v13": false,
+      "action": "Review outputs/v13-refinements/eligibility.csv and policy_assignments.csv",
+      "evidence": null,
+      "log_sha256": null,
+      "acceptance": "Verify current site capability, neonatal scope, camera/device governance and service approval before using hypothetical expansion as a procurement recommendation."
+    },
+    {
+      "id": "policy-fiscal-allocation",
+      "category": "methods",
+      "status": "open",
+      "attempted_in_v13": false,
+      "action": "Document provider/hub/destination allocation for each mixed policy before extending VoP",
+      "evidence": null,
+      "log_sha256": null,
+      "acceptance": "Current mixed-policy module reports health-system/bounded-family resources, not invented provider/Commonwealth split. Existing uniform six-perspective model retained."
+    }
+  ]
+}

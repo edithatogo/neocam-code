@@ -1,0 +1,44 @@
+name: Dependency review
+on:
+  pull_request:
+permissions:
+  contents: read
+concurrency:
+  group: dependency-review-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  dependency-review:
+    name: Review dependency changes
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    permissions:
+      contents: read
+    steps:
+      - name: Harden the runner (audit egress)
+        uses: step-security/harden-runner@46b06cea07f9e64621fdf066ba77ac6915163d43 # v2.22.3
+        with:
+          egress-policy: audit
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Verify the pinned OSV scanner
+        working-directory: ${{ runner.temp }}
+        run: |
+          curl --fail --silent --show-error --location --retry 2 \
+            https://github.com/google/osv-scanner/releases/download/v2.7.0/osv-scanner_linux_amd64 -o osv-scanner
+          echo '160c6253e2922e9e0a6a9771c5c4c40a4b3c6090b34a3cdd5e80c96cc2e4218b  osv-scanner' | sha256sum --check
+          chmod 755 osv-scanner
+      - name: Scan the resolved lock and repository manifests for known vulnerabilities
+        run: |
+          test -s uv.lock
+          test -s tools/security/uv.lock
+          "$RUNNER_TEMP/osv-scanner" scan source --lockfile=uv.lock --lockfile=tools/security/uv.lock --recursive .
+      - name: Audit the pinned native scanner distribution
+        run: |
+          jq -n --arg commit "$(jq -er .source_commit tools/security/engine-lock.json)" \
+            '{commit:$commit}' > "$RUNNER_TEMP/native-query.json"
+          curl --fail --silent --show-error --location \
+            -H 'Content-Type: application/json' --data-binary "@$RUNNER_TEMP/native-query.json" \
+            https://api.osv.dev/v1/query -o "$RUNNER_TEMP/native-vulnerabilities.json"
+          cat "$RUNNER_TEMP/native-vulnerabilities.json"
+          jq -e 'type == "object" and (has("error") | not) and ((.vulns // []) | type == "array" and length == 0)' "$RUNNER_TEMP/native-vulnerabilities.json"

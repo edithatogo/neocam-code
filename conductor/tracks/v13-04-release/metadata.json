@@ -1,0 +1,11 @@
+{
+  "id": "v13-04-release",
+  "status": "archived",
+  "external_acceptance": false,
+  "tasks": [
+    "4.1",
+    "4.2",
+    "4.3"
+  ],
+  "archived_on": "2026-11-02"
+}

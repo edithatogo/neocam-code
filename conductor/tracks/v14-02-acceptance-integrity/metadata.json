@@ -1,0 +1,10 @@
+{
+  "id": "v14-02-acceptance-integrity",
+  "status": "archived",
+  "external_acceptance": false,
+  "tasks": [
+    "2.1",
+    "2.2"
+  ],
+  "archived_on": "2026-11-02"
+}

@@ -1,0 +1,48 @@
+name: Locked dependency snapshot
+on:
+  push:
+    branches: [main]
+    paths:
+      - uv.lock
+      - quality/dependency_snapshot.py
+      - .github/workflows/dependency-snapshot.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: dependency-snapshot-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  submit:
+    name: Submit all locked dependencies
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    permissions:
+      contents: write # GitHub dependency snapshot submission requires contents write.
+    steps:
+      - name: Harden runner
+        uses: step-security/harden-runner@46b06cea07f9e64621fdf066ba77ac6915163d43 # v2.22.3
+        with:
+          egress-policy: audit
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: astral-sh/setup-uv@68559e99cc807c1eb7e9238fd43a15bba460eec2 # v10.3.3
+        with:
+          version: '0.13.6'
+          python-version: '3.15.1'
+          enable-cache: false
+      - name: Export every locked dependency under Python 3.15
+        run: |
+          uv venv --python 3.15.1 .venv
+          .venv/bin/python --version
+          uv export --frozen --all-groups --all-extras --format cyclonedx1.5 --output-file "$RUNNER_TEMP/dependencies.cdx.json" --quiet
+          .venv/bin/python -m quality.dependency_snapshot "$RUNNER_TEMP/dependencies.cdx.json" "$RUNNER_TEMP/dependency-snapshot.json"
+      - name: Submit to private repository dependency graph
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh api --method POST "repos/$GITHUB_REPOSITORY/dependency-graph/snapshots" \
+            --input "$RUNNER_TEMP/dependency-snapshot.json" > "$RUNNER_TEMP/dependency-snapshot-receipt.json"
+          jq -e '.result == "SUCCESS"' "$RUNNER_TEMP/dependency-snapshot-receipt.json" > /dev/null

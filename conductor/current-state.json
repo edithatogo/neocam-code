@@ -1,0 +1,80 @@
+{
+  "version": 14,
+  "date": "2026-11-05",
+  "active_tracks": [
+    "mixed-policy-fiscal-allocation",
+    "code-release-preparation"
+  ],
+  "branch": "codex/clean-code-release",
+  "remote_branch": "codex/clean-code-release",
+  "remote": "edithatogo/neocam-code",
+  "remote_origin": "https://github.com/edithatogo/neocam-code.git",
+  "remote_visibility": "private",
+  "remote_visibility_decision": "Separate private code repository authorised; public visibility not authorised.",
+  "remote_pr": null,
+  "remote_pr_state": "not_opened",
+  "release_ready": false,
+  "public_visibility_authorised": false,
+  "independent_validation": false,
+  "independent_reviews_pending": 4,
+  "fiscal_evidence": "open",
+  "review": "Same-assistant software/source review; all four independent clinical reviews remain pending.",
+  "design_authority": "conductor/v14-design.md",
+  "analysis": "outputs/v13-primary/results.json",
+  "refinement_analysis": "outputs/v13-refinements/results.json",
+  "current_outputs": [
+    "outputs/v13-primary",
+    "outputs/v13-refinements"
+  ],
+  "source_manifest": "sources/manifest.json",
+  "public_original_archival_complete": false,
+  "acceptance_at_source_freeze": {
+    "state": "full_local_and_hosted_pending",
+    "expected_full_receipt": "verification/v41/full/receipt.json",
+    "full_local_assurance": false,
+    "hosted_main_assurance_verified": false,
+    "mutation_score": null,
+    "historical_acceptance_inherited": false,
+    "source_import_commit": "de0066ea3323cab8458ba45cb363bf05798104c9"
+  },
+  "source_and_security": {
+    "receipt": "verification/v41/security-receipt.json",
+    "python_files": 160,
+    "native_rules": 378,
+    "controls": 22,
+    "unreviewed_findings": 0,
+    "scanner_errors": 0,
+    "review_kind": "same-assistant exact-source software review; not independent clinical approval"
+  },
+  "voi_engine": {
+    "version": "3.1.0",
+    "runtime": "verified Python 3.15.1; NumPy and Polars; pandas/xarray absent",
+    "upstream_acceptance": "Historical release records remain in the private research repository; no hosted acceptance is inherited here."
+  },
+  "publication_boundary": {
+    "fresh_git_root": true,
+    "private_sources": "Withheld; stable L001 identifier and complete mapping retained privately.",
+    "numerical_parity": "49 active analysis artifacts numerically unchanged; 48 byte-identical; one source-label-only CSV change.",
+    "patient_files": "Outside repositories; not imported.",
+    "clinical_packet": "Outside this repository; original author Word edit preserved unchanged.",
+    "historical_receipts": "Original software logs remain private; retained scientific tables are numerical fixtures."
+  },
+  "prior_research_repository": {
+    "remote": "edithatogo/neocam",
+    "visibility": "private",
+    "pr": 3,
+    "state": "open_unmerged",
+    "head": "2d4c69e94ff13c8fb9255acedc7f68645a06e34f",
+    "retained_separately": true
+  },
+  "known_limitations": [
+    "artifact manifests and the source register pin calculation inputs (now excluding derived build artefacts), so any source edit invalidates a previous seal and the re-seal must be the last mutation before acceptance",
+    "historical/missing denominators and current capability/routing",
+    "Reference retains one contact per episode; 1/1.5/2 contact scenarios are explicit assumptions, not observed infant-level incidence",
+    "bounded societal/family costing and unknown provider contracts",
+    "clinical outcomes not causally quantified",
+    "Haynes measures transfer within 24 hours. Applying the association to eventual transfer is an extrapolation.",
+    "four government originals verified in a separate local archive; source bytes excluded from the public repository"
+  ],
+  "next_acceptance": "Complete full local assurance on the final sealed commit, guarded private upload, protected PR checks, then exact merged-main full receipt and attestation. Visibility requires a separate explicit approval."
+}
