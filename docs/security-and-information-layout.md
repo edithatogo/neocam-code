@@ -1,21 +1,30 @@
 # Security and information separation
 
-Neocam is a private repository. Its publication assets, numerical source and private
-clinical evidence have different storage locations and publication conditions.
+The owner approved publishing only `edithatogo/neocam-code` on 5 November 2026.
+The original `edithatogo/neocam` research repository remains private. No original
+research history was imported into the new code repository.
 
 | Material | Location | Control |
 |---|---|---|
-| Historical publication drafts and their figures | `docs/manuscript/` | Reviewed Git content with ordinary commit and push guards. |
-| Current clinical manuscript, supplement, checklist and workbook | External `ClinicalResearchEvidence/Neocam/candidates/` workspace | Kept outside every Git repository. The final packet is identified by hashes in verification records. |
-| Patient extracts and private source documents | External `ClinicalResearchEvidence` workspace | Separate private storage with restricted local access. No repository symlink or automatic upload. |
-| Numerical code | `src/` | Versioned source, model tests and numerical assurance. |
-| Analysis and developer automation | `scripts/`, `quality/`, `tools/` | Versioned source with separate dependency qualification for security tooling. |
-| Public model inputs and generated model results | `data/`, `config/`, `outputs/`, `verification/` | Provenance and integrity manifests. Model simulations are distinct from patient observations. |
+| Model and developer source | `src/`, `scripts/`, `quality/`, `tools/`, `.agents/` | Versioned source, exact-source security review and numerical assurance. |
+| Model inputs and simulation fixtures | `data/`, `config/`, `evidence/`, `sources/`, `outputs/`, `verification/` | Provenance manifests; withheld source identifiers; simulations distinguished from patient observations. |
+| Generic Word styles | `assets/neocam-document-styles.docx` | Reviewed generic template; institutional artwork and inherited staff metadata excluded. |
+| Current clinical manuscript, supplement, checklist and workbook | External clinical publication workspace | Current external publication copy excluded from this release; earlier drafts remain in the original private research history. |
+| Patient extracts and private source originals | External private evidence workspace | Outside repositories; no repository symlink or automatic upload. |
+| Original research history and author Word edit | Original private research workspace | Retained separately; author edit unchanged and uncommitted. |
 
-The canonical clinical packet stays in the external publication subfolder. Private
-source evidence stays in the external evidence subfolder. An ignored directory
-inside a checkout does not provide equivalent protection against an accidental
-forced add. Existing author Word edits retain their original owner and hashes.
+The code publication audit covered the complete selected history and all reviewed
+binary identities. The 31 NumPy archives contain 418 numeric arrays loaded without
+pickle. The 105 reviewed binary paths include generated plots, a generic style
+file and an unbranded model report. They contain simulation fixtures, not patient
+extracts. Private source locators and personal-communication identities are withheld;
+the complete source mapping remains private. Existing numerical results are unchanged.
+
+An ignored directory inside a checkout does not provide the protection of keeping
+patient files outside the repository. Local guards additionally reject known
+confidential paths, hashes, removed ancestry and links into private storage. Known
+private history backup hashes are registered too, so renaming a backup does not
+make it eligible for a commit. Private guard rules and findings stay outside Git.
 
 ## Privacy checks and their limits
 
@@ -33,16 +42,16 @@ visual inspection. Report actual scan scopes and unresolved findings explicitly.
 
 ## GitHub controls
 
-The owner account is the only listed collaborator. No deploy keys or repository
-webhooks were present at the 4 November 2026 audit. Main branch protection requires
-assurance, privacy, dependency review and static application security. It applies to
-administrators and rejects force pushes and deletion. Dependabot alerts are enabled.
-Actions use pinned action revisions, restricted token permissions and egress auditing.
+Main branch protection requires assurance, privacy, dependency review and static
+application security. It applies to administrators and rejects force pushes and
+deletion. Actions use a selected SHA-pinned allowlist, least-privilege token permissions
+and egress auditing. Dependency alerts are enabled.
 
-GitHub native secret scanning is disabled for this private repository. Local and CI
-secret scans provide separate evidence. GitHub CodeQL result publication is blocked
-by private-repository eligibility, so the replacement scanner must be qualified and
-must pass its own negative controls before the PR can merge.
+Native GitHub secret scanning and push protection were enabled and read back after
+the approved public visibility change. No native secret alerts were reported at the
+5 November 2026 readback. Local Gitleaks and identifier checks remain mandatory.
+The qualified OpenGrep/Bandit scanner remains required; making the repository public
+does not substitute a different, unqualified analysis engine.
 
 Four independent reviews remain pending. The fiscal evidence track remains open.
 
@@ -93,20 +102,21 @@ can exist.
 The upstream rule bundle is downloaded, digest-verified and used internally. Its
 licence prohibits redistribution, so the bundle is excluded from Git and retained
 reports. Native scans run locally without a cloud token or code upload. Original
-and projected source remain within the local checkout or private CI runner. Raw
-results and acceptance receipts are retained privately.
+and projected source are processed in the local checkout or GitHub CI without a
+Semgrep cloud token. The upstream rules are excluded from Git and retained reports.
+Software verification receipts and logs for this public code repository are public
+GitHub artifacts; private evidence and clinical files are not included.
 
-The privacy audit found no registered confidential source bytes or blocked paths in
-reachable Git history. It does not establish that historical public copies or
-provider caches have been erased. The local guard covers the current external
+The new code history audit found no registered confidential source bytes or blocked
+paths. The original research history remains private; this code audit does not
+establish that historical copies or provider caches of other repositories have been erased. The local guard covers the current external
 ClinicalResearchEvidence vault and registered private source files. Synthetic
 exact-hash and private-symlink controls were rejected. Current clinical publication
 drafts and original uncommitted author documents are protected by exact hash.
 
-The existing Amazon Q Developer GitHub App produced a PR check. Its installation
-permission inventory could not be read with the current CLI credential. Its access
-and data-handling terms remain a separate account-owner review item. GitHub rejected
-the private-fork setting update because that control applies to organization-owned
-repositories. No forks were listed at the audit.
+Installed GitHub Apps operate under account-level permissions. This repository audit
+does not certify their complete installation scope or data-handling terms. Automated
+syntax comments were checked against the required Python 3.15.1 compiler and executed
+tests; they were older-runtime false positives and required no source changes.
 
 All four independent reviews remain pending. The fiscal evidence track stays open.

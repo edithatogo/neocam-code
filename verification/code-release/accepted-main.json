@@ -1,0 +1,25 @@
+{
+  "repository": "edithatogo/neocam-code",
+  "commit": "3d69e04ea0d320ef7d2eb3143d20f0bdf1d06eb8",
+  "run": 41959741259,
+  "conclusion": "success",
+  "full_gates_passed": 32,
+  "all_log_digests_verified": true,
+  "receipt_sha256": "5ec76afb3bf25ae18d9e571529eec038b2192143c8668cef113b6bd01622d4e8",
+  "artifact_sha256": "e57cc5a22ec2951c79100401280500598b491a29a23eabf5d115e612d964dd36",
+  "artifact_id": 13386760657,
+  "source_fingerprint": "9a06b2ab8ef9879272c03199a5121f3b69829dbca23b164354257d4aa3f82b2b",
+  "artifact_fingerprint": "00dbf7f31e9f4baa7235ee37d387705adc9d09b1a0430c8e711419a92f2d671f",
+  "mutation": {
+    "total": 1248,
+    "zapped": 1241,
+    "survived": 7,
+    "timeout": 0,
+    "error": 0,
+    "pardoned": 0,
+    "percentage": 99.43910256410257
+  },
+  "attestation_verified": true,
+  "independent_reviews_pending": 4,
+  "fiscal_evidence": "open"
+}

@@ -2,19 +2,18 @@
   "version": 14,
   "date": "2026-11-05",
   "active_tracks": [
-    "mixed-policy-fiscal-allocation",
-    "code-release-preparation"
+    "mixed-policy-fiscal-allocation"
   ],
-  "branch": "codex/clean-code-release",
-  "remote_branch": "codex/clean-code-release",
+  "branch": "codex/code-release-closeout",
+  "remote_branch": "main",
   "remote": "edithatogo/neocam-code",
   "remote_origin": "https://github.com/edithatogo/neocam-code.git",
-  "remote_visibility": "private",
-  "remote_visibility_decision": "Separate private code repository authorised; public visibility not authorised.",
-  "remote_pr": null,
-  "remote_pr_state": "not_opened",
+  "remote_visibility": "public",
+  "remote_visibility_decision": "Owner explicitly approved only the code repository and reviewed simulation fixtures on 5 November 2026; original research repository remains private.",
+  "remote_pr": 1,
+  "remote_pr_state": "merged",
   "release_ready": false,
-  "public_visibility_authorised": false,
+  "public_visibility_authorised": true,
   "independent_validation": false,
   "independent_reviews_pending": 4,
   "fiscal_evidence": "open",
@@ -29,13 +28,15 @@
   "source_manifest": "sources/manifest.json",
   "public_original_archival_complete": false,
   "acceptance_at_source_freeze": {
-    "state": "full_local_and_hosted_pending",
+    "state": "full_local_and_hosted_verified",
     "expected_full_receipt": "verification/v41/full/receipt.json",
-    "full_local_assurance": false,
-    "hosted_main_assurance_verified": false,
-    "mutation_score": null,
+    "full_local_assurance": true,
+    "hosted_main_assurance_verified": true,
+    "mutation_score": 99.43910256410257,
     "historical_acceptance_inherited": false,
-    "source_import_commit": "de0066ea3323cab8458ba45cb363bf05798104c9"
+    "source_import_commit": "de0066ea3323cab8458ba45cb363bf05798104c9",
+    "accepted_source_commit": "3d69e04ea0d320ef7d2eb3143d20f0bdf1d06eb8",
+    "hosted_run": 41959741259
   },
   "source_and_security": {
     "receipt": "verification/v41/security-receipt.json",
@@ -76,5 +77,24 @@
     "Haynes measures transfer within 24 hours. Applying the association to eventual transfer is an extrapolation.",
     "four government originals verified in a separate local archive; source bytes excluded from the public repository"
   ],
-  "next_acceptance": "Complete full local assurance on the final sealed commit, guarded private upload, protected PR checks, then exact merged-main full receipt and attestation. Visibility requires a separate explicit approval."
+  "next_acceptance": "Code source delivery accepted at the recorded merged commit; documentation closeout requires its own protected PR and final exact-main receipt and attestation. Four independent clinical reviews and fiscal evidence remain open.",
+  "code_publication": {
+    "approved": "2026-11-05",
+    "repository": "edithatogo/neocam-code",
+    "source_commit": "47e44650f772e93cb1b94102939eb7d6c4dd890b",
+    "merged_commit": "3d69e04ea0d320ef7d2eb3143d20f0bdf1d06eb8",
+    "local_full_gates": 32,
+    "local_ordinary_tests": 1159,
+    "local_mutation_percentage": 99.43910256410257,
+    "local_mutation_errors": 0,
+    "local_mutation_timeouts": 0,
+    "local_mutation_pardoned": 0,
+    "hosted_full_run": 41959741259,
+    "hosted_full_state": "verified",
+    "attestation_verified": true,
+    "native_secret_scanning": "enabled",
+    "native_push_protection": "enabled",
+    "hosted_artifact_sha256": "e57cc5a22ec2951c79100401280500598b491a29a23eabf5d115e612d964dd36",
+    "hosted_receipt_sha256": "5ec76afb3bf25ae18d9e571529eec038b2192143c8668cef113b6bd01622d4e8"
+  }
 }

@@ -1,6 +1,6 @@
 # Code release contract
 
-The user selected a separate clean code repository on 5 November 2026. Both this repository and the original research repository remain private. Creating this repository is not publication approval.
+The user selected a separate clean code repository on 5 November 2026. The owner explicitly approved making only `edithatogo/neocam-code` public on 5 November 2026, including the reviewed code and simulation fixtures. The original `edithatogo/neocam` research repository remains private.
 
 ## Included material
 
@@ -16,6 +16,8 @@ This is a fresh Git history. Prior software run logs are excluded; retained scie
 
 ## Acceptance
 
-Verify Python 3.15.1 and pandas/xarray exclusion. Require complete tests, coverage, numerical and artifact checks, exact-source security review, mutation score with zero errors, timeouts or pardons, protected PR checks and exact merged-main assurance and attestation. Record local and hosted acceptance separately. Do not change visibility until explicitly authorised.
+Verify Python 3.15.1 and pandas/xarray exclusion. Require complete tests, coverage, numerical and artifact checks, exact-source security review, mutation score with zero errors, timeouts or pardons, protected PR checks and exact merged-main assurance and attestation. Record local and hosted acceptance separately. The completed visibility change applies only to the code repository; no original research history or clinical packet is published.
 
 Four independent clinical reviews remain pending. Fiscal evidence remains open. The original research repository's PR #3 remains a separate unmerged record.
+
+The imported source passed 32 local gates at `47e4465` and 32 hosted gates on merged main `3d69e04` (run 41959741259). The downloaded archive matches the GitHub API digest and a verified SLSA attestation constrained to this repository, workflow, main ref and source commit. Each receipt log digest was checked independently. This records software acceptance for that commit, not clinical publication approval.
