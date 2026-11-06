@@ -311,8 +311,11 @@ def bandit(targets: list[str], report: Path) -> dict:
     )
 
 
-def controls(rules: Path, output: Path) -> None:
+def controls(rules: Path, output: Path) -> int:
     """Require detection of seeded vulnerabilities and acceptance of safe variants.
+
+    Returns:
+        int: The number of fixtures that completed both scanner checks.
 
     Raises:
         RuntimeError: A vulnerability or safe-variant control behaves incorrectly.
@@ -321,6 +324,10 @@ def controls(rules: Path, output: Path) -> None:
         "generic_code_execution": (
             "def run[T](value: T):\n return eval(value)",
             "def run[T](value: T):\n return str(value)",
+        ),
+        "citation_regex": (
+            "import re\nre.findall(r'\\((\\d++(?:\\s*+(?:,|\u2013|-)\\s*+\\d++)*+)\\)', eval(input()))",
+            "import re\nre.findall(r'\\((\\d++(?:\\s*+(?:,|\u2013|-)\\s*+\\d++)*+)\\)', input())",
         ),
         "alias_code_execution": ("type Alias = eval(input())", "type Alias = str"),
         "exception_code_execution": (
@@ -360,6 +367,7 @@ def controls(rules: Path, output: Path) -> None:
     }
     required_bandit = {
         "generic_code_execution": "B307",
+        "citation_regex": "B307",
         "alias_code_execution": "B307",
         "exception_code_execution": "B307",
         "suppression_rejection": "B307",
@@ -396,6 +404,8 @@ def controls(rules: Path, output: Path) -> None:
             if label == "bad" and required_bandit[name] not in {item["test_id"] for item in bd_findings}:
                 message = f"The expected vulnerability rule did not trigger: {name}"
                 raise RuntimeError(message)
+
+    return len(fixtures)
 
 
 def verify_source_review(expected: dict[str, str], observed: dict[str, str]) -> None:
@@ -453,7 +463,7 @@ def main() -> None:
         raise RuntimeError(message)
     args.output.mkdir(parents=True, exist_ok=True)
     versions = verify_toolchain(args.rules)
-    controls(args.rules, args.output)
+    controls_passed = controls(args.rules, args.output)
     git_executable = shutil.which("git")
     if git_executable is None:
         message = "Git is required to identify the complete source inventory"
@@ -486,7 +496,7 @@ def main() -> None:
         "native_engine_sha256": hashlib.sha256(engine_path().read_bytes()).hexdigest(),
         "rules_executed": len(sg["rules_by_engine"]),
         "rules_sha256": hashlib.sha256(args.rules.read_bytes()).hexdigest(),
-        "controls_passed": 22,
+        "controls_passed": controls_passed,
         "configuration_sha256": {
             name: hashlib.sha256(Path(__file__).with_name(name).read_bytes()).hexdigest()
             for name in (

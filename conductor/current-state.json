@@ -1,10 +1,10 @@
 {
   "version": 14,
-  "date": "2026-11-05",
+  "date": "2026-11-06",
   "active_tracks": [
     "mixed-policy-fiscal-allocation"
   ],
-  "branch": "codex/code-release-closeout",
+  "branch": "codex/pr4-public-safe",
   "remote_branch": "main",
   "remote": "edithatogo/neocam-code",
   "remote_origin": "https://github.com/edithatogo/neocam-code.git",
@@ -42,7 +42,7 @@
     "receipt": "verification/v41/security-receipt.json",
     "python_files": 160,
     "native_rules": 378,
-    "controls": 22,
+    "controls": 24,
     "unreviewed_findings": 0,
     "scanner_errors": 0,
     "review_kind": "same-assistant exact-source software review; not independent clinical approval"
@@ -96,5 +96,13 @@
     "native_push_protection": "enabled",
     "hosted_artifact_sha256": "e57cc5a22ec2951c79100401280500598b491a29a23eabf5d115e612d964dd36",
     "hosted_receipt_sha256": "5ec76afb3bf25ae18d9e571529eec038b2192143c8668cef113b6bd01622d4e8"
+  },
+  "public_safe_port": {
+    "status": "local_checks_passed_hosted_pending",
+    "scope": "Citation-regex scanner compatibility control; other public-safe consolidation code already present",
+    "private_history_imported": false,
+    "manuscript_and_evidence": "withheld",
+    "author_Word_edit": "unchanged",
+    "fiscal_evidence": "open"
   }
 }
