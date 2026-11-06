@@ -42,7 +42,7 @@
     "receipt": "verification/v41/security-receipt.json",
     "python_files": 160,
     "native_rules": 378,
-    "controls": 22,
+    "controls": 24,
     "unreviewed_findings": 0,
     "scanner_errors": 0,
     "review_kind": "same-assistant exact-source software review; not independent clinical approval"

@@ -110,7 +110,7 @@
     "tests/test_registry_joint.py": "fe012a625053c8314b79b86cb7b087d163eb9d9ef0e8587a548c2d826201ff03",
     "tests/test_reportlab_document.py": "c3110ca2175c72c27ae538ae5d50ce295bc43ef00892b5461e3dde1c71d58d99",
     "tests/test_security_engine_archive.py": "748a52bc40c998c3ebb6a56c233c0897448b0b86ce963d5dec5d4545fac6ffe6",
-    "tests/test_security_positive_controls.py": "f340d25d6bb9a7925881466fd46cd7f85eef5c08b610e17ec92e954f702035ae",
+    "tests/test_security_positive_controls.py": "dfb6e087407014fde24300392a7304a39114ca25788b50bb4f82165bf6e7d804",
     "tests/test_security_python_projection.py": "358405711e3ebb76b13b416ffd1c5bfde74fa83b0487cf32620b4983a4b54579",
     "tests/test_security_rule_integrity.py": "860eee7c89c2947b2e815253c7ef06881333f689a1b0ea5a903e38b51fe59f95",
     "tests/test_security_rule_inventory.py": "53b53fcfd2e6a6cb23116495a1305afa20ba785064be397f6f49a76921a2e72c",
@@ -159,7 +159,7 @@
     "tests/test_v8_assurance.py": "ddd3d459193a9d672257d39f1388e78d8bb9a6d33dcc56e3a6f831486af77276",
     "tests/test_v9_contracts.py": "7b9472bb639d5ef246dcccf3a70b4ea1abcbbe50fae1c588d5ff336562a56bc3",
     "tests/test_word_heading_fonts.py": "e68c4ca481d67d0c817d36e89a7e9605c1efef2bc450365bf1a110e367511e71",
-    "tools/security/check.py": "b5a6df48d9ed881633aa6e958c6c0518775afb2583709852d425f926ebab99e7",
+    "tools/security/check.py": "d6aa0728bfcfddc0c6137d3aedc5fcf28d041a6d665e207ff874d6d634cc31f5",
     "tools/security/install_engine.py": "9e6f65f4ac4b620e4cfd27c5c3173e5382446836bdc411cfdca6e176adc5cb58",
     "tools/security/prepare_rules.py": "846fc7801ae9c8d5f1b1aedf2b2211f58d37793f468b89e15ed7918920660c3e"
   },
@@ -1556,7 +1556,7 @@
       "path": "tools/security/check.py",
       "start": 86,
       "end": 86,
-      "source_sha256": "b5a6df48d9ed881633aa6e958c6c0518775afb2583709852d425f926ebab99e7",
+      "source_sha256": "d6aa0728bfcfddc0c6137d3aedc5fcf28d041a6d665e207ff874d6d634cc31f5",
       "disposition": "reviewed_false_positive_or_style_suggestion",
       "reason": "Reviewed argument-list subprocess execution with shell disabled. Executables and plans originate from the fixed assurance/build/test commands or the scanner module allowlist. No shell-string execution is present in these exact reviewed source bytes."
     },
@@ -1565,7 +1565,7 @@
       "path": "tools/security/check.py",
       "start": 198,
       "end": 198,
-      "source_sha256": "b5a6df48d9ed881633aa6e958c6c0518775afb2583709852d425f926ebab99e7",
+      "source_sha256": "d6aa0728bfcfddc0c6137d3aedc5fcf28d041a6d665e207ff874d6d634cc31f5",
       "disposition": "reviewed_false_positive_or_style_suggestion",
       "reason": "The reported expressions test values returned by isinstance or compare decoded AST/source structures. These exact statements do not use a function object as a boolean."
     },
@@ -1574,16 +1574,16 @@
       "path": "tools/security/check.py",
       "start": 204,
       "end": 204,
-      "source_sha256": "b5a6df48d9ed881633aa6e958c6c0518775afb2583709852d425f926ebab99e7",
+      "source_sha256": "d6aa0728bfcfddc0c6137d3aedc5fcf28d041a6d665e207ff874d6d634cc31f5",
       "disposition": "reviewed_false_positive_or_style_suggestion",
       "reason": "The reported expressions test values returned by isinstance or compare decoded AST/source structures. These exact statements do not use a function object as a boolean."
     },
     {
       "rule": "python.lang.security.audit.dangerous-subprocess-use-audit.dangerous-subprocess-use-audit",
       "path": "tools/security/check.py",
-      "start": 466,
-      "end": 466,
-      "source_sha256": "b5a6df48d9ed881633aa6e958c6c0518775afb2583709852d425f926ebab99e7",
+      "start": 471,
+      "end": 471,
+      "source_sha256": "d6aa0728bfcfddc0c6137d3aedc5fcf28d041a6d665e207ff874d6d634cc31f5",
       "disposition": "reviewed_false_positive_or_style_suggestion",
       "reason": "Reviewed argument-list subprocess execution with shell disabled. Executables and plans originate from the fixed assurance/build/test commands or the scanner module allowlist. No shell-string execution is present in these exact reviewed source bytes."
     },

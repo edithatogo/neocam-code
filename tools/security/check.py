@@ -311,8 +311,11 @@ def bandit(targets: list[str], report: Path) -> dict:
     )
 
 
-def controls(rules: Path, output: Path) -> None:
+def controls(rules: Path, output: Path) -> int:
     """Require detection of seeded vulnerabilities and acceptance of safe variants.
+
+    Returns:
+        int: The number of fixtures that completed both scanner checks.
 
     Raises:
         RuntimeError: A vulnerability or safe-variant control behaves incorrectly.
@@ -402,6 +405,8 @@ def controls(rules: Path, output: Path) -> None:
                 message = f"The expected vulnerability rule did not trigger: {name}"
                 raise RuntimeError(message)
 
+    return len(fixtures)
+
 
 def verify_source_review(expected: dict[str, str], observed: dict[str, str]) -> None:
     """Require a fresh review for every added, changed or removed Python file.
@@ -458,7 +463,7 @@ def main() -> None:
         raise RuntimeError(message)
     args.output.mkdir(parents=True, exist_ok=True)
     versions = verify_toolchain(args.rules)
-    controls(args.rules, args.output)
+    controls_passed = controls(args.rules, args.output)
     git_executable = shutil.which("git")
     if git_executable is None:
         message = "Git is required to identify the complete source inventory"
@@ -491,7 +496,7 @@ def main() -> None:
         "native_engine_sha256": hashlib.sha256(engine_path().read_bytes()).hexdigest(),
         "rules_executed": len(sg["rules_by_engine"]),
         "rules_sha256": hashlib.sha256(args.rules.read_bytes()).hexdigest(),
-        "controls_passed": 24,
+        "controls_passed": controls_passed,
         "configuration_sha256": {
             name: hashlib.sha256(Path(__file__).with_name(name).read_bytes()).hexdigest()
             for name in (

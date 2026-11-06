@@ -15,4 +15,4 @@ def test_native_scanner_must_detect_its_own_positive_controls(tmp_path: Path, mo
 
     monkeypatch.setattr(check, "semgrep", uninformative)
     with pytest.raises(RuntimeError, match="Native rule control failed"):
-        check.controls(tmp_path / "rules.yaml", tmp_path)
+        _ = check.controls(tmp_path / "rules.yaml", tmp_path)
