@@ -47,3 +47,7 @@ Terminal local evidence is in `verification/v13/manuscript-preparation/terminal-
 ## Separate code release — 5 November 2026
 
 [x] Archived implementation: [code-release-preparation](tracks/code-release-preparation/plan.md). PR #1 merged as `3d69e04`; all 32 exact-main gates, receipt log digests, archive digest and cryptographic attestation verified (run 41959741259). The code repository is public with explicit owner approval; the original research repository and its open PR #3 remain private. Documentation closeout receives separate exact-main verification. Four independent reviews remain pending; fiscal evidence remains open.
+
+## Public-safe consolidation — 6 November 2026
+
+The scoped [public-safe port](../docs/public-safe-consolidation.md) preserves existing analysis code and adds a native security regression control. Protected PR delivery remains pending. Manuscript, original history, evidence and Word edits stay private. The fiscal allocation track remains open.

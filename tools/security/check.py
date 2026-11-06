@@ -322,6 +322,10 @@ def controls(rules: Path, output: Path) -> None:
             "def run[T](value: T):\n return eval(value)",
             "def run[T](value: T):\n return str(value)",
         ),
+        "citation_regex": (
+            "import re\nre.findall(r'\\((\\d++(?:\\s*+(?:,|\u2013|-)\\s*+\\d++)*+)\\)', eval(input()))",
+            "import re\nre.findall(r'\\((\\d++(?:\\s*+(?:,|\u2013|-)\\s*+\\d++)*+)\\)', input())",
+        ),
         "alias_code_execution": ("type Alias = eval(input())", "type Alias = str"),
         "exception_code_execution": (
             "try:\n pass\nexcept ValueError, TypeError:\n eval(input())",
@@ -360,6 +364,7 @@ def controls(rules: Path, output: Path) -> None:
     }
     required_bandit = {
         "generic_code_execution": "B307",
+        "citation_regex": "B307",
         "alias_code_execution": "B307",
         "exception_code_execution": "B307",
         "suppression_rejection": "B307",
@@ -486,7 +491,7 @@ def main() -> None:
         "native_engine_sha256": hashlib.sha256(engine_path().read_bytes()).hexdigest(),
         "rules_executed": len(sg["rules_by_engine"]),
         "rules_sha256": hashlib.sha256(args.rules.read_bytes()).hexdigest(),
-        "controls_passed": 22,
+        "controls_passed": 24,
         "configuration_sha256": {
             name: hashlib.sha256(Path(__file__).with_name(name).read_bytes()).hexdigest()
             for name in (
