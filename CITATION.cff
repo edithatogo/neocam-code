@@ -1,0 +1,6 @@
+cff-version: 1.2.0
+message: If you use this repository, please cite it using the metadata in this file.
+title: Neocam model code
+authors:
+- name: Neocam model code project
+repository-code: https://github.com/edithatogo/neocam-code
