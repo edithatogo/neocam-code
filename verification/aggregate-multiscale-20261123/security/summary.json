@@ -1,0 +1,57 @@
+{
+  "artifact_paths": [
+    "native/receipt.json",
+    "native/semgrep.json",
+    "native/bandit.json",
+    "native/control-semgrep.json",
+    "native/control-bandit.json",
+    "native-command.json",
+    "source-review-update-final.json"
+  ],
+  "bandit_low_findings": 1388,
+  "bandit_medium_high_findings": 0,
+  "baseline_files": 160,
+  "bootstrap_note": "Initial dependency installation used host uv0.13.9 with the unchanged frozen lock. All final delta and complete-pipeline commands used the already-installed pinned uv0.13.6. Qualified scanner package/native/rule versions and digests passed their existing validators.",
+  "controls_note": "The current unchanged security harness contains 12 bad/safe pairs, giving 24 controls; older prose referring to 22 does not describe this executed harness.",
+  "controls_passed": 24,
+  "elapsed_seconds": 35.213,
+  "hosted_acceptance": false,
+  "independent_human_review": false,
+  "native_existing_reviewed_audit_style_findings": 159,
+  "native_receipt_sha256": "cc9f9aff0d95d89de5efca3de20d1c8e9af5eec6a109653db6e6b2a522d39155",
+  "native_rules_executed": 378,
+  "new_unreviewed_findings": 0,
+  "not_claimed": "This receipt does not claim complete software assurance, full private-repository scanning or clinical validation.",
+  "passed": true,
+  "python": "3.15.1",
+  "reviewed_inventory_sha256": "aa6e0a318bac9574f5a90fd1e34199a4365b85692c279a970ff91b764e62b9c0",
+  "rules_redistributed": false,
+  "scanner_errors": 0,
+  "scope": "Complete public checkout native static-security pipeline on exact reviewed source bytes",
+  "source_delta": {
+    "quality/privacy.py": {
+      "after": "4f2fc12aa7cbbcc4cf7b63ce627b9cc5b211860687dc603f33887001eacfac87",
+      "before": "4744f6f0a7e802154d5653ddaab48886c4b024c11c3cfb2915e288dea319793e"
+    },
+    "scripts/analyse_aggregate.py": {
+      "after": "d38120ed01da505ec87d3f92125f87be18ca22c8318debd89f0faa9a125f986f",
+      "before": null
+    },
+    "tests/test_aggregate_analysis.py": {
+      "after": "207185674e6484e3140dae62ae6473a2cd13893742d86e6bc3072bff49e89fb7",
+      "before": null
+    },
+    "tests/test_privacy_scan.py": {
+      "after": "3469744c88c72998492799508693b09da1ef617a4a0a32f76b9123e2ffb99895",
+      "before": "faf1b37f38329f45401ec5d83f66ab9494a5daac73fe099cd876795bc2049b5b"
+    }
+  },
+  "source_files": 162,
+  "telemetry": false,
+  "tool_versions": {
+    "bandit": "1.9.4",
+    "opengrep-core": "1.33.1",
+    "pyyaml": "6.0.3"
+  },
+  "uv_version": "0.13.6"
+}

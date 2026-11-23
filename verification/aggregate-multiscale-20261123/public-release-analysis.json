@@ -1,0 +1,15 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "-m",
+    "scripts.analyse_aggregate",
+    "--config",
+    "config/aggregate-analysis.json",
+    "--output",
+    "outputs/aggregate-20261123-release"
+  ],
+  "elapsed_seconds": 13.089545,
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": ""
+}

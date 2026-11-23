@@ -1,0 +1,50 @@
+{
+  "all_setup_return_codes": 0,
+  "bandit_delta_low_assertion_findings": 15,
+  "commands_completed": [
+    "uv sync --frozen --project tools/security --python <existing-qualified-CPython-3.15.1>",
+    "uv run --frozen --project tools/security python -m tools.security.install_engine <scratch-native-archive>",
+    "uv run --frozen --project tools/security python tools/security/prepare_rules.py <scratch-rule-archive> <scratch-rules>",
+    "uv run --frozen --project tools/security python: verify_toolchain + semgrep + bandit on the two added Python files"
+  ],
+  "engine_version": "1.33.1",
+  "hosted_acceptance": false,
+  "independent_human_review": false,
+  "native_delta_findings": 0,
+  "python": "3.15.1",
+  "rule_revision": "16b9e6d45f10649f6a531ec4838ed9924372c3bc",
+  "rules_expected": 378,
+  "rules_redistributed": false,
+  "scanner_logs_retained": "delta/semgrep.json, delta/semgrep.log, delta/bandit.json, delta/bandit.log",
+  "scope": "Frozen isolated security setup and review of the new aggregate runner/test before final complete-source scan",
+  "separate_setup_stdout_logs_retained": false,
+  "sha256": {
+    "compiled_rules": "90bee1056095bc554876652f51e13b7e3cecb848d5aa87e11c1095026675ae28",
+    "engine_archive": "1a78593c369cd58a8545a1dfb2ce548139f028a1af4ea7d08bc5ce8385cde243",
+    "isolated_dependency_lock": "539256e38ea919868d164d448e9a56e99b0a632a8232c26664814fc72949d314",
+    "native_engine": "76aedaf02c5757fea4e6a0b257cb8e79cd9d04589b2b8fb9c808b2a77ad046bf",
+    "rules_archive": "70b4e0adca0515de0a07c15341ce50ed76221ab2f7bc59baca25caebaa5664f6"
+  },
+  "source_delta_at_preflight": {
+    "added": [
+      "scripts/analyse_aggregate.py",
+      "tests/test_aggregate_analysis.py"
+    ],
+    "changed": [],
+    "removed": [],
+    "reviewed_baseline_files": 160,
+    "tracked_files": 162
+  },
+  "source_review": [
+    "Runner accepts repository-bounded validated JSON sources, resolves output below outputs, rejects existing output paths, and uses fixed existing numerical functions without eval, shell execution, network requests or new dependencies.",
+    "Tests use temporary directories, fixed repository fixture paths and assertions; the 15 Bandit LOW B101 results are test assertions, not application access controls.",
+    "No native finding was raised for either new file; all 378 pinned native rules ran.",
+    "Final complete-source inventory review is pending the separately authorised privacy grammar correction."
+  ],
+  "uv": "uv 0.13.9 (x86_64-unknown-linux-gnu)",
+  "uv_note": "Local package-manager executable is 0.13.9; hosted workflow bootstrap pins 0.13.6. Frozen lock and scanner/runtime/archive verifiers are unchanged; this is local scanner evidence, not a hosted workflow-equivalence claim.",
+  "versions": {
+    "bandit": "1.9.4",
+    "pyyaml": "6.0.3"
+  }
+}

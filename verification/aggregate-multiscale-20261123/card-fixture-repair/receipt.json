@@ -1,0 +1,57 @@
+{
+  "change": "Reuse the existing generated FAKE_PAYMENT and FAKE_NOT_A_CARD constants in Luhn parametrization; preserve valid, invalid-checksum, insufficient-length and empty-input cases.",
+  "checks": [
+    {
+      "arguments": [
+        "-m",
+        "pytest",
+        "tests/test_privacy_scan.py",
+        "-q",
+        "-k",
+        "luhn_check_decides_card_shapes or card_context_requires_the_luhn_checksum"
+      ],
+      "elapsed_seconds": 0.843,
+      "return_code": 0,
+      "stdout": ".....                                                                    [100%]\n5 passed, 55 deselected in 0.19s",
+      "tool": "pytest"
+    },
+    {
+      "arguments": [
+        "-m",
+        "ruff",
+        "check",
+        "tests/test_privacy_scan.py",
+        "--output-format",
+        "concise"
+      ],
+      "elapsed_seconds": 0.07,
+      "return_code": 0,
+      "stdout": "All checks passed!",
+      "tool": "ruff"
+    }
+  ],
+  "existing_native_findings_for_path": 1,
+  "full_native_pipeline_rerun": false,
+  "full_test_suite_rerun": false,
+  "hosted_acceptance": false,
+  "prior_native_receipt_note": "The earlier full local native-security receipt binds the pre-fixture source hash. This focused exact-path review records the subsequent fixture-only delta; it is not presented as a new full scan.",
+  "review_inventory_count": 162,
+  "review_note": "Only two expression replacements; line count, assertion logic, fixture values and the public Git tracked-file coverage oracle are preserved. The existing fixed-argument Git subprocess audit retains its rule, lines117\u2013119 and rationale; only its whole-file source hash changes. No native rule, scanner policy or exemption changed.",
+  "reviewed_inventory_sha256": "a743e18fdc42f15c97a3d40ba2930e729087fb6f590e8f67ce3b89dda07e48ec",
+  "scope": "Public synthetic card-fixture repair after the same private repair and checks; exact-path source review only",
+  "source_path": "tests/test_privacy_scan.py",
+  "source_sha256_after": "5746c4bfef6cb453fe4ba8b2e29c30d2cebf194fde9b3132ae04e269af5e58b6",
+  "source_sha256_before": "3469744c88c72998492799508693b09da1ef617a4a0a32f76b9123e2ffb99895",
+  "trigger": "Hosted Privacy-and-secrets run45110074854 flagged a preexisting complete synthetic card literal in changed-file scope.",
+  "updated_existing_findings": [
+    {
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "end": 119,
+      "path": "tests/test_privacy_scan.py",
+      "reason": "The test resolves the qualified Git executable, passes only fixed ls-files and -z arguments with a controlled repository cwd, and uses the default disabled shell. No shell string or untrusted command argument is present. This inventory oracle requires every tracked file to be accounted for by the privacy scan.",
+      "rule": "python.lang.security.audit.dangerous-subprocess-use-audit.dangerous-subprocess-use-audit",
+      "source_sha256": "5746c4bfef6cb453fe4ba8b2e29c30d2cebf194fde9b3132ae04e269af5e58b6",
+      "start": 117
+    }
+  ]
+}

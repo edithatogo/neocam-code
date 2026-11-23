@@ -1,0 +1,13 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "-m",
+    "pytest",
+    "-q",
+    "tests/test_v13_pipeline.py::test_artifact_cli_checks_declared_supplement_not_old_hardcoded_release"
+  ],
+  "elapsed_seconds": 0.824,
+  "return_code": 0,
+  "observed_stdout": ".                                                                        [100%]\n1 passed in 0.17s",
+  "scope": "The single remaining configured-supplement test from the private26-test selection; the25 passing module tests were not repeated."
+}

@@ -1,0 +1,70 @@
+{
+  "bandit_delta_medium_high_findings": 0,
+  "baseline_source_count": 160,
+  "final_review_inventory_sha256": "aa6e0a318bac9574f5a90fd1e34199a4365b85692c279a970ff91b764e62b9c0",
+  "hosted_acceptance": false,
+  "independent_human_review": false,
+  "new_native_findings": 0,
+  "original_public_source_commit": "6abe7be099a55531fc388221937dda583343cf03",
+  "original_review_inventory_sha256": "fb6707c5823a39394cff9554384760d48470241fe2420f1a03f129ce79d05cf5",
+  "previous_draft_inventory_sha256": "66553440d24b832d4cd61c98a2ccaca765d625fc96e33c0cf8bc166052ac62d0",
+  "private_propagation": "Preserve the private inventory and its own test coverage oracle. This record identifies public source bytes and finding spans only.",
+  "review_notes": [
+    "Reviewed the final source diff from the original public snapshot, including matching percent-encoded single/double quote delimiters around complete UUIDs.",
+    "Encoded quotes must match. Truncated, extended, nonhex, mismatched or unterminated tokens and nearby actual phones remain checked by the generated controls. No source value, file or identifier is allowlisted.",
+    "Aggregate runner/test are unchanged from the earlier delta scan; all other 158 previously reviewed Python files retain exact bytes.",
+    "The two retained email-regex audit findings and the retained fixed-argument Git subprocess audit have updated exact source digests and line positions. No scanner rule or severity gate was weakened.",
+    "No complete-source acceptance scan ran on the preliminary UUID revision; the earlier review record is a preflight record, superseded by this final source inventory."
+  ],
+  "reviewed_native_finding_count": 159,
+  "reviewed_source_count": 162,
+  "scope": "Final public exact-source review before the complete native pipeline",
+  "source_delta": {
+    "quality/privacy.py": {
+      "after": "4f2fc12aa7cbbcc4cf7b63ce627b9cc5b211860687dc603f33887001eacfac87",
+      "before": "4744f6f0a7e802154d5653ddaab48886c4b024c11c3cfb2915e288dea319793e"
+    },
+    "scripts/analyse_aggregate.py": {
+      "after": "d38120ed01da505ec87d3f92125f87be18ca22c8318debd89f0faa9a125f986f",
+      "before": null
+    },
+    "tests/test_aggregate_analysis.py": {
+      "after": "207185674e6484e3140dae62ae6473a2cd13893742d86e6bc3072bff49e89fb7",
+      "before": null
+    },
+    "tests/test_privacy_scan.py": {
+      "after": "3469744c88c72998492799508693b09da1ef617a4a0a32f76b9123e2ffb99895",
+      "before": "faf1b37f38329f45401ec5d83f66ab9494a5daac73fe099cd876795bc2049b5b"
+    }
+  },
+  "unchanged_source_count": 158,
+  "updated_existing_findings": [
+    {
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "end": 464,
+      "path": "quality/privacy.py",
+      "reason": "The retained email recognizer is unchanged: local and label lengths are bounded and dot-delimited labels disambiguate the repeated group. The new UUID recognizer has fixed-width hexadecimal groups with whole-token or matching encoded-quote delimiters and a bounded search window; only fully enclosed phone fragments are classified as UUID text. No source/value allowance or scanner suppression was added.",
+      "rule": "python.lang.security.audit.regex-dos.regex_dos",
+      "source_sha256": "4f2fc12aa7cbbcc4cf7b63ce627b9cc5b211860687dc603f33887001eacfac87",
+      "start": 158
+    },
+    {
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "end": 619,
+      "path": "quality/privacy.py",
+      "reason": "The retained email recognizer is unchanged: local and label lengths are bounded and dot-delimited labels disambiguate the repeated group. The new UUID recognizer has fixed-width hexadecimal groups with whole-token or matching encoded-quote delimiters and a bounded search window; only fully enclosed phone fragments are classified as UUID text. No source/value allowance or scanner suppression was added.",
+      "rule": "python.lang.security.audit.regex-dos.regex_dos",
+      "source_sha256": "4f2fc12aa7cbbcc4cf7b63ce627b9cc5b211860687dc603f33887001eacfac87",
+      "start": 158
+    },
+    {
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "end": 119,
+      "path": "tests/test_privacy_scan.py",
+      "reason": "The test resolves the qualified Git executable, passes only fixed ls-files and -z arguments with a controlled repository cwd, and uses the default disabled shell. No shell string or untrusted command argument is present. This inventory oracle requires every tracked file to be accounted for by the privacy scan.",
+      "rule": "python.lang.security.audit.dangerous-subprocess-use-audit.dangerous-subprocess-use-audit",
+      "source_sha256": "3469744c88c72998492799508693b09da1ef617a4a0a32f76b9123e2ffb99895",
+      "start": 117
+    }
+  ]
+}

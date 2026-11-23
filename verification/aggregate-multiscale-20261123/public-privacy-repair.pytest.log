@@ -1,0 +1,27 @@
+...........................................F.......                      [100%]
+=================================== FAILURES ===================================
+___________ test_the_real_repository_tree_passes_without_exemptions ____________
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7fdfddadd150>
+
+    def test_the_real_repository_tree_passes_without_exemptions(monkeypatch: pytest.MonkeyPatch) -> None:
+        visited: set[str] = set()
+        original_files = privacy.repository_files
+    
+        def observed_files(root: Path) -> Iterator[Path]:
+            for path in original_files(root):
+                visited.add(path.relative_to(root).as_posix())
+                yield path
+    
+        monkeypatch.setattr(privacy, "repository_files", observed_files)
+        report = privacy.scan_repository(privacy.ROOT)
+>       assert report.findings == ()
+E       AssertionError: assert (Finding(rule...7, detail='')) == ()
+E         
+E         Left contains 3 more items, first extra item: Finding(rule='au_phone', path='data/aggregate/public-inputs.json', line=401, detail='')
+E         Use -v to get more diff
+
+tests/test_privacy_scan.py:110: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_privacy_scan.py::test_the_real_repository_tree_passes_without_exemptions
+1 failed, 50 passed in 2.33s

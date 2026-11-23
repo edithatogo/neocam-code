@@ -1,0 +1,590 @@
+{
+  "schema_version": 1,
+  "audited_on": "2026-11-23",
+  "public_safe": true,
+  "description": "Small source ledger for aggregate planning; all values are public aggregates or explicitly missing. No private or patient-level observations.",
+  "model_integration": {
+    "automatically_applied": false,
+    "model_use_meaning": "Intended use after explicit mapping: parameter, scenario or context. Missing values remain missing. This ledger itself does not change model inputs or run calculations.",
+    "configuration": "config/aggregate-analysis.json",
+    "baseline_update_claimed": false
+  },
+  "sources": [
+    {
+      "id": "qld-pdc-2022-ch8",
+      "title": "Queensland Perinatal Statistics 2022, chapter 8",
+      "publisher": "Queensland Health",
+      "period": "2022",
+      "published": "2024-09",
+      "url": "https://www.health.qld.gov.au/__data/assets/pdf_file/0020/1378010/8-fac2022x.pdf",
+      "machine_readable_url": "https://www.health.qld.gov.au/__data/assets/excel_doc/0022/1378012/8-fac2022x.xlsx",
+      "index_url": "https://www.health.qld.gov.au/dsb/peri",
+      "verification": "PDF tables checked; table 8.06 orientation checked visually. XLSX is officially linked but returned HTTP 403 when downloaded in this session."
+    },
+    {
+      "id": "rsq-activity-fy2024-25",
+      "title": "Retrieval Services Queensland Activity FY2024/2025",
+      "publisher": "Queensland Health",
+      "period": "2024-07-01/2025-06-30",
+      "updated": "2025-08-20",
+      "url": "https://www.data.qld.gov.au/dataset/retrieval-services-queensland-rsq-activity/resource/51a298ce-0323-4381-80e9-8beb07f509c9",
+      "resource_id": "51a298ce-0323-4381-80e9-8beb07f509c9",
+      "license": "CC BY 4.0",
+      "verification": "Official CKAN server-side aggregate SQL; no patient-level records retrieved. Datastore metadata reports all source records present. Original XLSX returned a web challenge."
+    },
+    {
+      "id": "qh-hsd-005-2026",
+      "title": "Retrieval Services Queensland: Use by Hospital and Health Services",
+      "publisher": "Queensland Health",
+      "effective": "2026-06-19",
+      "version": "4.0",
+      "url": "https://www.health.qld.gov.au/system-governance/policies-standards/health-service-directives/retrieval-services"
+    },
+    {
+      "id": "weipa-births-2025",
+      "title": "Weipa maternity service celebrates 50th baby birth",
+      "publisher": "Torres and Cape Hospital and Health Service",
+      "period": "2024/2025",
+      "url": "https://www.torres-cape.health.qld.gov.au/about-us/news/weipa-maternity-service-celebrates-50th-baby-birth"
+    },
+    {
+      "id": "weipa-video-2026",
+      "title": "New virtual care technology to support birthing mums in Weipa",
+      "publisher": "Torres and Cape Hospital and Health Service",
+      "published": "2026-07-16",
+      "url": "https://www.torres-cape.health.qld.gov.au/about-us/news/new-virtual-care-technology-to-support-birthing-mums-in-weipa"
+    },
+    {
+      "id": "cooktown-reopening-2026",
+      "title": "Maternity services return to Biloela and Cooktown",
+      "publisher": "Queensland Health",
+      "published": "2026-09-15",
+      "url": "https://www.health.qld.gov.au/newsroom/news/maternity-services-return-to-biloela-and-cooktown",
+      "corroborating_url": "https://www.health.qld.gov.au/newsroom/news/cooktown-welcomes-first-baby-following-return-of-birthing-services"
+    },
+    {
+      "id": "haynes-transfer-24h",
+      "title": "The Impact of Telemedicine on Transfer Rates of Newborns at Rural Community Hospitals",
+      "authors": "Haynes et al.",
+      "published": "2020",
+      "pmid": "32081766",
+      "doi": "10.1016/j.acap.2020.02.013",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32081766/",
+      "verification": "Primary indexed abstract verifies adjusted OR and CI; the 24-hour endpoint follows the existing project full-text appraisal."
+    },
+    {
+      "id": "albritton-transfers-2018",
+      "title": "The Effect Of A Newborn Telehealth Program On Transfers Avoided: A Multiple-Baseline Study",
+      "authors": "Albritton et al.",
+      "published": "2018-12-03",
+      "pmid": "30633672",
+      "doi": "10.1377/hlthaff.2018.05133",
+      "url": "https://www.healthaffairs.org/doi/full/10.1377/hlthaff.2018.05133",
+      "verification": "Primary full text, exhibit 2, verifies marginal difference and CI; individual-level result is a reduction in odds, not risk."
+    },
+    {
+      "id": "maddox-transfer-risk-2021",
+      "title": "Implementation and Outcomes of a Telehealth Neonatology Program in a Single Healthcare System",
+      "authors": "Maddox et al.",
+      "published": "2021-04-23",
+      "pmid": "33968852",
+      "doi": "10.3389/fped.2021.648536",
+      "url": "https://www.frontiersin.org/journals/pediatrics/articles/10.3389/fped.2021.648536/full",
+      "verification": "Primary full text, table 4 and Results, verify average marginal effect -0.12 and standard error 0.05."
+    },
+    {
+      "id": "haynes-stabilisation-2021",
+      "title": "The Use of Telemedicine for Stabilization of Neonates Transferred from Rural Community Hospitals",
+      "authors": "Haynes et al.",
+      "published": "2021",
+      "pmid": "33691080",
+      "doi": "10.1089/tmj.2020.0503",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33691080/",
+      "verification": "Primary indexed abstract verifies adjusted mean difference and confidence interval."
+    }
+  ],
+  "inputs": [
+    {
+      "id": "chhhs-maternal-flow",
+      "source_ids": [
+        "qld-pdc-2022-ch8"
+      ],
+      "table": "8.05",
+      "status": "observed",
+      "model_use": "context",
+      "period": "2022",
+      "unit": "mothers",
+      "cohort": "Mothers birthing in Queensland, usual residence CHHHS; facility total is a separate cohort",
+      "denominator": "2852 CHHHS-resident mothers for residence-based flows; 3066 mothers for CHHHS-facility activity",
+      "values": {
+        "resident_mothers": 2852,
+        "resident_delivered_in_chhhs": 2775,
+        "resident_delivered_in_townsville": 51,
+        "all_mothers_delivered_in_chhhs": 3066
+      },
+      "interpretation": "Catchment and cross-HHS flows; not babies or neonatal consultations. Published table percentages are column percentages."
+    },
+    {
+      "id": "tchhs-maternal-flow",
+      "source_ids": [
+        "qld-pdc-2022-ch8"
+      ],
+      "table": "8.05",
+      "status": "observed",
+      "model_use": "context",
+      "period": "2022",
+      "unit": "mothers",
+      "cohort": "Mothers birthing in Queensland, usual residence TCHHS",
+      "denominator": "389 TCHHS-resident mothers",
+      "values": {
+        "resident_mothers": 389,
+        "resident_delivered_in_chhhs": 255,
+        "resident_delivered_in_tchhs": 99,
+        "resident_delivered_in_townsville": 19
+      },
+      "interpretation": "Regional catchment baseline. Reopening scenarios redistribute births instead of adding the same births to regional totals."
+    },
+    {
+      "id": "qld-facility-birth-inventory",
+      "source_ids": [
+        "qld-pdc-2022-ch8"
+      ],
+      "table": "8.09",
+      "status": "observed",
+      "model_use": "context",
+      "period": "2022",
+      "unit": "babies born",
+      "cohort": "Queensland births, including stillbirths, home/freebirths and born before arrival",
+      "denominator": "61404 babies across the listed settings",
+      "values": {
+        "public_facilities": 46711,
+        "private_facilities": 13741,
+        "home_or_freebirth": 350,
+        "born_before_arrival": 602,
+        "all_settings": 61404
+      },
+      "existing_input": "data/births_queensland_2022.csv",
+      "interpretation": "Existing facility inventory remains usable. This ledger does not refresh or overwrite it. The total is not a matched denominator for livebirth transfers excluding BBA."
+    },
+    {
+      "id": "qld-nursery-transfer-matrix",
+      "source_ids": [
+        "qld-pdc-2022-ch8"
+      ],
+      "table": "8.06",
+      "status": "observed",
+      "model_use": "context",
+      "period": "2022",
+      "unit": "livebirths transferred",
+      "cohort": "Queensland livebirth transfers; excludes born before arrival",
+      "denominator": "1508 recorded transferred livebirths; not all births or eligible consultation episodes",
+      "values": {
+        "row_dimension": "nursery at birth",
+        "column_dimension": "nursery at transfer",
+        "levels": [
+          "L1 basic nursery",
+          "L2 nursery and special care nursery",
+          "L3 nursery, special care nursery and NICU",
+          "Other"
+        ],
+        "counts": [
+          [
+            12,
+            127,
+            142,
+            6
+          ],
+          [
+            113,
+            39,
+            322,
+            65
+          ],
+          [
+            4,
+            344,
+            37,
+            179
+          ],
+          [
+            5,
+            73,
+            38,
+            2
+          ]
+        ],
+        "row_totals": [
+          287,
+          539,
+          564,
+          118
+        ],
+        "column_totals": [
+          134,
+          583,
+          539,
+          252
+        ],
+        "total": 1508
+      },
+      "interpretation": "These are three nursery categories, not CSCF levels 1-6. Birth Other includes home/facilities without approved maternity services; transfer Other includes facilities without approved maternity services, interstate and unstated facilities. Transfers are not all escalation or avoidable."
+    },
+    {
+      "id": "rsq-observation-unit-audit",
+      "source_ids": [
+        "rsq-activity-fy2024-25"
+      ],
+      "status": "context",
+      "model_use": "context",
+      "period": "2024-07-01/2025-06-30",
+      "unit": "published records and distinct published Unique IDs",
+      "cohort": "All records in the latest resource",
+      "denominator": "31345 published records",
+      "values": {
+        "records": 31345,
+        "distinct_unique_ids": 30752,
+        "age_na_records": 31345,
+        "source_brolga_records": 31345,
+        "missing_referring_hhs_records": 8
+      },
+      "query_ids": [
+        "whole_file_audit",
+        "age_coverage",
+        "source_coverage"
+      ],
+      "interpretation": "Records exceed distinct IDs by 593. Meaning of repeated IDs is unresolved. All ages are N/A. Do not equate rows or distinct IDs with neonatal episodes or silently deduplicate."
+    },
+    {
+      "id": "rsq-perinatal-diagnosis-records",
+      "source_ids": [
+        "rsq-activity-fy2024-25"
+      ],
+      "status": "observed",
+      "model_use": "context",
+      "period": "2024-07-01/2025-06-30",
+      "unit": "records classified by illness category",
+      "cohort": "Illness Assessment = Certain conditions originating in the perinatal period; includes interstate referrals",
+      "denominator": "1136 records in that diagnostic subgroup",
+      "values": {
+        "records": 1136,
+        "distinct_unique_ids": 1112,
+        "referring_chhhs_records": 76,
+        "referring_tchhs_records": 12,
+        "referring_townsville_records": 117
+      },
+      "query_ids": [
+        "perinatal_hhs",
+        "perinatal_unique_ids"
+      ],
+      "interpretation": "Diagnostic subgroup is not an age-defined neonatal cohort. Neonates can occur in other diagnostic categories. Not an eligible-contact count or neonatal incidence estimate."
+    },
+    {
+      "id": "rsq-perinatal-retrieval-mode",
+      "source_ids": [
+        "rsq-activity-fy2024-25"
+      ],
+      "status": "observed",
+      "model_use": "context",
+      "period": "2024-07-01/2025-06-30",
+      "unit": "records by grouped transport mode",
+      "cohort": "Perinatal illness category AND Outcome = Transferred with Retrieval personnel",
+      "denominator": "736 records; 711 with known grouped mode",
+      "values": {
+        "road": 271,
+        "fixed_wing": 319,
+        "rotary_wing": 121,
+        "unknown_grouped_mode": 25,
+        "all_modes": 736,
+        "known_modes": 711
+      },
+      "query_ids": [
+        "perinatal_mode_outcome"
+      ],
+      "interpretation": "Conditional descriptive mix. Duplicate-record meaning, missing modes and diagnostic rather than age-defined cohort prevent automatic replacement of neonatal mode parameters."
+    },
+    {
+      "id": "rsq-cost-responsibility",
+      "source_ids": [
+        "qh-hsd-005-2026"
+      ],
+      "status": "context",
+      "model_use": "context",
+      "period": "effective 2026-06-19",
+      "unit": "policy rule",
+      "cohort": "Relevant HHS transfers coordinated by RSQ under the directive",
+      "denominator": null,
+      "values": {
+        "fixed_wing_payment_trigger": "RSQ accepted referral and asset tasked",
+        "hhs_excluded_costs": [
+          "RSQ clinical coordination",
+          "retrieval medical staff provided by RSQ"
+        ],
+        "mandatory_coordination": "Aeromedical transfers and emergency paediatric, neonatal and high-risk obstetric road transfers requiring a retrieval team"
+      },
+      "interpretation": "Defines scope and responsibility. Does not provide unit tariffs, cancellation charges or the fraction of cost saved when a transfer is avoided."
+    },
+    {
+      "id": "weipa-births-and-video",
+      "source_ids": [
+        "weipa-births-2025",
+        "weipa-video-2026"
+      ],
+      "status": "observed",
+      "model_use": "scenario",
+      "period": "births 2024 and 2025; installed video reported 2026-07-16",
+      "unit": "births per stated calendar year; installed capability",
+      "cohort": "Weipa maternity service",
+      "denominator": "Annual births, not consultation episodes",
+      "values": {
+        "births_2024": 14,
+        "births_2025": 32,
+        "birthing_resumed": "2024-05-22",
+        "video_installation_publicly_reported": true
+      },
+      "interpretation": "Candidate current-estate/volume scenario. Announcement reports video capability, not audited uptime or uptake. Existing model baseline has not been changed by adding this ledger."
+    },
+    {
+      "id": "cooktown-reopening-volume",
+      "source_ids": [
+        "cooktown-reopening-2026"
+      ],
+      "status": "planning",
+      "model_use": "scenario",
+      "period": "service resumed 2026-09-14; prospective annual activity",
+      "unit": "planned births per year",
+      "cohort": "Cooktown maternity service",
+      "denominator": "Prospective full year; not observed annual births",
+      "values": {
+        "birthing_resumed": "2026-09-14",
+        "planned_annual_births_approximately": 40
+      },
+      "interpretation": "Scenario anchor, not an observed count or fitted distribution. Redistribute relevant regional births. Existing model baseline has not been changed by adding this ledger."
+    },
+    {
+      "id": "transport-marginal-costs",
+      "source_ids": [
+        "qh-hsd-005-2026"
+      ],
+      "status": "missing",
+      "model_use": "parameter",
+      "period": "current contract and costing year required",
+      "unit": "AUD per relevant journey, tasking, cancellation or variable resource use",
+      "cohort": "CHHHS-relevant neonatal transfers by mode and route class",
+      "denominator": "Completed journeys and cancellations, clearly separated from infants and legs",
+      "values": null,
+      "interpretation": "No current neonatal per-journey tariffs or cancellable fractions verified in the public sources. Request a small aggregate contract/invoice summary; distinguish HHS financial and health-system resource perspectives."
+    },
+    {
+      "id": "chhhs-eligible-consultations",
+      "source_ids": [],
+      "status": "missing",
+      "model_use": "parameter",
+      "period": "Latest complete 12 months first; up to three complete years if readily available",
+      "unit": "eligible distinct infant episodes and consultation contacts, separately",
+      "cohort": "CHHHS urgent postnatal neonatal consultations in the agreed target population",
+      "denominator": "Covered facilities and period, eligible distinct episodes, contact counts, missing follow-up",
+      "values": null,
+      "interpretation": "Request aggregate counts for telephone/video availability and use, immediate transfer decision, subsequent transfer and transport mode. No unit-level records are required to populate these parameters."
+    }
+  ],
+  "uncertainty_rules": [
+    "Published annual census counts are observed for their period. Future-year variation is distinct from uncertainty about those counts.",
+    "Use beta/binomial or Dirichlet models only with a matched cohort, denominator and explicit predictive or parameter interpretation.",
+    "Reported effect-estimate uncertainty, observational bias and setting transportability are separate dimensions; changing transportability does not rewrite the reported estimate.",
+    "Unknown tariff and avoidable-cost fractions require explicit assumptions or sourced ranges; do not create observations or intervals.",
+    "RSQ repeated IDs and missing age are classification and observation-unit limitations, not problems solved by a narrower probability distribution."
+  ],
+  "rsq_query_metadata": [
+    {
+      "id": "whole_file_audit",
+      "query": "SELECT count(*) AS records, count(DISTINCT \"Unique ID\") AS unique_episode_ids, min(\"Request Date\") AS first_request, max(\"Request Date\") AS last_request, count(*) FILTER (WHERE \"Referring HHS\" IS NULL OR \"Referring HHS\" IN ('','N/A','NULL')) AS missing_referring_hhs FROM \"51a298ce-0323-4381-80e9-8beb07f509c9\"",
+      "url": "https://www.data.qld.gov.au/api/3/action/datastore_search_sql?sql=SELECT+count%28%2A%29+AS+records%2C+count%28DISTINCT+%22Unique+ID%22%29+AS+unique_episode_ids%2C+min%28%22Request+Date%22%29+AS+first_request%2C+max%28%22Request+Date%22%29+AS+last_request%2C+count%28%2A%29+FILTER+%28WHERE+%22Referring+HHS%22+IS+NULL+OR+%22Referring+HHS%22+IN+%28%27%27%2C%27N%2FA%27%2C%27NULL%27%29%29+AS+missing_referring_hhs+FROM+%2251a298ce-0323-4381-80e9-8beb07f509c9%22",
+      "retrieved_utc": "2026-11-23T03:18:43.730188+00:00",
+      "resource_id": "51a298ce-0323-4381-80e9-8beb07f509c9",
+      "response_sha256": "f81c2aca8492822a9b805deb466994a4ddccaae334f1c4d23a09bdc503e0b0bc"
+    },
+    {
+      "id": "perinatal_hhs",
+      "query": "SELECT \"Referring HHS\", count(*) AS n FROM \"51a298ce-0323-4381-80e9-8beb07f509c9\" WHERE \"Illness Assessment\" = 'Certain conditions originating in the perinatal period' GROUP BY \"Referring HHS\" ORDER BY n DESC",
+      "url": "https://www.data.qld.gov.au/api/3/action/datastore_search_sql?sql=SELECT+%22Referring+HHS%22%2C+count%28%2A%29+AS+n+FROM+%2251a298ce-0323-4381-80e9-8beb07f509c9%22+WHERE+%22Illness+Assessment%22+%3D+%27Certain+conditions+originating+in+the+perinatal+period%27+GROUP+BY+%22Referring+HHS%22+ORDER+BY+n+DESC",
+      "retrieved_utc": "2026-11-23T03:18:44.024161+00:00",
+      "resource_id": "51a298ce-0323-4381-80e9-8beb07f509c9",
+      "response_sha256": "3075dcf3fffa3f6059899fbd29e1246ad924aff3d9506f17859c00992f61f72f"
+    },
+    {
+      "id": "perinatal_mode_outcome",
+      "query": "SELECT \"Grouped Mode of Transport\", \"Outcome\", count(*) AS n FROM \"51a298ce-0323-4381-80e9-8beb07f509c9\" WHERE \"Illness Assessment\" = 'Certain conditions originating in the perinatal period' GROUP BY \"Grouped Mode of Transport\", \"Outcome\" ORDER BY n DESC",
+      "url": "https://www.data.qld.gov.au/api/3/action/datastore_search_sql?sql=SELECT+%22Grouped+Mode+of+Transport%22%2C+%22Outcome%22%2C+count%28%2A%29+AS+n+FROM+%2251a298ce-0323-4381-80e9-8beb07f509c9%22+WHERE+%22Illness+Assessment%22+%3D+%27Certain+conditions+originating+in+the+perinatal+period%27+GROUP+BY+%22Grouped+Mode+of+Transport%22%2C+%22Outcome%22+ORDER+BY+n+DESC",
+      "retrieved_utc": "2026-11-23T03:18:44.026266+00:00",
+      "resource_id": "51a298ce-0323-4381-80e9-8beb07f509c9",
+      "response_sha256": "a455488262a587132af1d4f0bdd2e0b5df58a0a8fec4bb9bfa07155d282c4920"
+    },
+    {
+      "id": "age_coverage",
+      "query": "SELECT \"Age\", count(*) AS n FROM \"51a298ce-0323-4381-80e9-8beb07f509c9\" GROUP BY \"Age\"",
+      "endpoint": "https://www.data.qld.gov.au/api/3/action/datastore_search_sql",
+      "resource_id": "51a298ce-0323-4381-80e9-8beb07f509c9",
+      "retrieved_on": "2026-11-23",
+      "response_sha256": null,
+      "verification": "Aggregate result observed in tool response; raw response bytes not retained."
+    },
+    {
+      "id": "source_coverage",
+      "query": "SELECT \"Source\", count(*) AS n FROM \"51a298ce-0323-4381-80e9-8beb07f509c9\" GROUP BY \"Source\"",
+      "endpoint": "https://www.data.qld.gov.au/api/3/action/datastore_search_sql",
+      "resource_id": "51a298ce-0323-4381-80e9-8beb07f509c9",
+      "retrieved_on": "2026-11-23",
+      "response_sha256": null,
+      "verification": "Aggregate result observed in tool response; raw response bytes not retained."
+    },
+    {
+      "id": "perinatal_unique_ids",
+      "query": "SELECT count(*) AS perinatal_records, count(DISTINCT \"Unique ID\") AS perinatal_unique_ids FROM \"51a298ce-0323-4381-80e9-8beb07f509c9\" WHERE \"Illness Assessment\" = 'Certain conditions originating in the perinatal period'",
+      "endpoint": "https://www.data.qld.gov.au/api/3/action/datastore_search_sql",
+      "resource_id": "51a298ce-0323-4381-80e9-8beb07f509c9",
+      "retrieved_on": "2026-11-23",
+      "response_sha256": null,
+      "verification": "Aggregate result observed in tool response; raw response bytes not retained."
+    }
+  ],
+  "rsq_query_notes": [
+    "The whole_file_audit query alias unique_episode_ids counts distinct published Unique IDs; it does not validate that an ID represents an episode.",
+    "Only server-side aggregate counts were retrieved.",
+    "Do not infer trends from other datastore years without completeness checks: FY2023/24 returned 2000 records; FY2022/23 included many blank records."
+  ],
+  "recommended_chhhs_request": {
+    "priority": "First obtain a bounded annual aggregate; extend only where the current uncertainty changes a decision.",
+    "period": "Latest complete 12 months; up to three annual totals if already available",
+    "minimum": [
+      "Covered facilities, inclusion criteria, period and missingness; separate contacts, distinct infants, journeys and legs.",
+      "Eligible urgent postnatal infant episodes and total consultations; telephone, attempted video, successful video and unknown.",
+      "Immediate transfer decision, subsequent transfer within 24 hours, later transfer, completed locally and unknown follow-up; distinguish urgent escalation from planned repatriation.",
+      "Completed transports and cancellations before/after tasking by road, fixed wing, rotary wing and mixed/unknown mode.",
+      "Actual attributable charges and cancellation rules, separately from average fully allocated service costs; existing equipment, implementation and recurring support cost."
+    ],
+    "optional_if_readily_available": [
+      "Broad acuity or gestation bands if they would change eligibility or transportability assumptions.",
+      "Aggregate receiving bed-days and broad family travel/accommodation cost if a societal scenario is decision-relevant.",
+      "Monthly/site subdivisions only when counts, coverage and disclosure rules support them; annual CHHHS totals are a sufficient starting point."
+    ],
+    "release": "Use the existing approved aggregate process; distinguish suppressed, unknown and zero cells. No identifiers, exact patient dates or free text.",
+    "existing_request": "conductor/tracks/project-information/aggregate-transfer-request.md"
+  },
+  "clinical_parameters": [
+    {
+      "id": "haynes-2020-transfer-or",
+      "source_ids": [
+        "haynes-transfer-24h"
+      ],
+      "status": "reported_estimate",
+      "model_use": "parameter",
+      "mapping_status": "primary_reported_OR_in_config_aggregate_analysis",
+      "cohort": "317 term/late-preterm newborns receiving neonatal telephone or video consultation at six rural California hospitals, August 2014-June 2018",
+      "endpoint": "Transfer within 24 hours; applying the association to eventual transfer is a model extrapolation",
+      "native_unit": "adjusted odds ratio, video versus telephone",
+      "estimate": 0.48,
+      "ci95": [
+        0.26,
+        0.9
+      ],
+      "distribution": {
+        "family": "lognormal",
+        "log_mean": -0.7339691750802004,
+        "log_sd": 0.3167635541604038,
+        "sd_basis": "(ln upper CI - ln lower CI) / (2 * 1.96)",
+        "interpretation": "Approximate uncertainty distribution for the reported adjusted association, centred on reported log OR; rounded CI endpoints need not reconstruct exactly."
+      },
+      "dependence_group": "california-2014-2018",
+      "causal_effect_claimed": false,
+      "notes": "Retain the reported estimate. Evaluate observational bias and transportability in separate named scenarios; do not recenter the evidence silently."
+    },
+    {
+      "id": "albritton-2018-monthly-transfer-difference",
+      "source_ids": [
+        "albritton-transfers-2018"
+      ],
+      "status": "reported_estimate",
+      "model_use": "scenario",
+      "mapping_status": "distribution_defined_native_units_not_active_in_OR_kernel",
+      "cohort": "Eight Intermountain community hospitals, 2013-2017; 44643 births aggregated into 394 facility-month observations",
+      "endpoint": "Transfers from community hospital to level 3 NICU per facility-month",
+      "native_unit": "adjusted difference in transfers per facility-month",
+      "estimate": -0.7,
+      "ci95": [
+        -1.236,
+        -0.157
+      ],
+      "distribution": {
+        "family": "normal",
+        "mean": -0.7,
+        "sd": 0.2752551020408163,
+        "sd_basis": "(upper CI - lower CI) / (2 * 1.96)",
+        "interpretation": "Approximate uncertainty in the native reported average marginal difference; not an absolute count draw."
+      },
+      "separate_reported_result": {
+        "reduction_in_odds_percent": 29.4,
+        "interpretation": "Reduction in odds, not a percentage reduction in risk. No unreported odds-ratio CI is created."
+      },
+      "dependence_group": "intermountain-2013-2017",
+      "causal_effect_claimed": false,
+      "notes": "Requires explicit facility-month activity and population mapping before use. Overlaps the Intermountain program and period evaluated by Maddox; do not pool as independent evidence."
+    },
+    {
+      "id": "maddox-2021-transfer-risk-difference",
+      "source_ids": [
+        "maddox-transfer-risk-2021"
+      ],
+      "status": "reported_estimate",
+      "model_use": "scenario",
+      "mapping_status": "distribution_defined_native_units_not_active_in_OR_kernel",
+      "cohort": "Intermountain infants born 2013-2017, at least 34 weeks, oxygen within 15 minutes; selected mandatory-transfer conditions excluded; transfer model 639 observations",
+      "endpoint": "Transfer to NICU in the selected study population",
+      "native_unit": "adjusted absolute risk difference, probability scale",
+      "estimate": -0.12,
+      "reported_se": 0.05,
+      "distribution": {
+        "family": "normal",
+        "mean": -0.12,
+        "sd": 0.05,
+        "sd_basis": "Reported standard error",
+        "interpretation": "Approximate uncertainty in the reported average marginal risk difference: -12 percentage points, not a 12 percent relative reduction."
+      },
+      "dependence_group": "intermountain-2013-2017",
+      "causal_effect_claimed": false,
+      "notes": "Map baseline risk and population before applying as a probability change, retaining valid probability bounds. Do not convert this marginal difference into an OR or pool independently with Albritton."
+    },
+    {
+      "id": "haynes-2021-stabilisation-minutes",
+      "source_ids": [
+        "haynes-stabilisation-2021"
+      ],
+      "status": "reported_estimate",
+      "model_use": "scenario",
+      "mapping_status": "distribution_defined_native_units_not_active_in_OR_kernel",
+      "cohort": "209 transferred neonates at six rural California hospitals, April 2014-June 2018; 47 video and 162 telephone consultations",
+      "endpoint": "Adjusted mean difference in stabilisation time among transferred infants",
+      "native_unit": "minutes, video minus telephone",
+      "estimate": -1.8,
+      "ci95": [
+        -16.0,
+        12.4
+      ],
+      "distribution": {
+        "family": "normal",
+        "mean": -1.8,
+        "sd": 7.244897959183673,
+        "sd_basis": "(upper CI - lower CI) / (2 * 1.96)",
+        "interpretation": "Uncertainty in a mean time difference, including shorter and longer stabilisation; not a distribution of individual stabilisation times."
+      },
+      "dependence_group": "california-2014-2018",
+      "causal_effect_claimed": false,
+      "notes": "Requires a time outcome and relevant cost/resource mapping before use. The interval includes zero; no survival, safety or mortality effect is inferred."
+    }
+  ],
+  "clinical_parameter_rules": [
+    "These native-unit distributions make the reported estimates usable and explicit; they do not manufacture additional observations.",
+    "Only the Haynes transfer odds ratio maps directly to the current OR kernel. Other outcomes require explicit outcome, cohort and unit mapping before economic aggregation.",
+    "Albritton and Maddox evaluate overlapping Intermountain program periods; do not combine them as independent estimates.",
+    "Normal approximations describe uncertainty in reported mean or marginal differences. They are not predictive distributions of individual patients, event counts or durations."
+  ]
+}

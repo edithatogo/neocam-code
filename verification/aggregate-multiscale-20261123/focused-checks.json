@@ -1,0 +1,67 @@
+{
+  "analysis": {
+    "analysis_function_elapsed_seconds": 12.803,
+    "artifact_manifest_verified": true,
+    "draws_per_effect": 20000,
+    "output": "outputs/aggregate-20261123",
+    "python_call": "run(Path('config/aggregate-analysis.json'), Path('outputs/aggregate-20261123'))",
+    "return_code": 0,
+    "row_counts": {
+      "budgets": 840,
+      "decisions": 2240,
+      "deterministic": 30,
+      "scenarios": 3120,
+      "sensitivity": 570
+    }
+  },
+  "checks": [
+    {
+      "command": "OAI_IS_JUPYTER_KERNEL=false python -m pytest tests/test_aggregate_analysis.py -q",
+      "observed_summary": "13 passed in 2.49s",
+      "passed": 13,
+      "pytest_reported_seconds": 2.49,
+      "return_code": 0,
+      "tool_wall_seconds": 3.575719988
+    },
+    {
+      "command": "python -m ruff check scripts/analyse_aggregate.py tests/test_aggregate_analysis.py --output-format concise",
+      "observed_summary": "All checks passed!",
+      "return_code": 0,
+      "tool_wall_seconds": 0.053915109
+    },
+    {
+      "command": "python -m ty check scripts/analyse_aggregate.py tests/test_aggregate_analysis.py --error-on-warning",
+      "observed_summary": "All checks passed!",
+      "return_code": 0,
+      "tool_wall_seconds": 0.383769157
+    },
+    {
+      "command": "python -m basedpyright scripts/analyse_aggregate.py tests/test_aggregate_analysis.py --pythonpath <same-qualified-python>",
+      "observed_summary": "0 errors, 0 warnings, 0 notes",
+      "return_code": 0,
+      "tool_wall_seconds": 2.960594983
+    }
+  ],
+  "command_notation": "Commands below normalize only the qualified Python executable location to python; the run used the existing public-clone CPython 3.15.1 environment from the private staging working directory.",
+  "environment": {
+    "basedpyright": "1.40.2",
+    "numpy": "2.5.4",
+    "pytest": "9.2.0",
+    "python": "3.15.1",
+    "ruff": "0.17.3",
+    "ty": "0.0.95",
+    "voiage": "3.1.0"
+  },
+  "hosted_acceptance": false,
+  "independent_validation": false,
+  "log_note": "Commands and observed result summaries were returned in the tool session; separate command-output log files were not retained.",
+  "output_logs_retained": false,
+  "schema_version": 1,
+  "scope": "Focused aggregate implementation checks and one retained 20000-draw analysis; not full assurance or hosted acceptance",
+  "source_hashes_at_receipt": {
+    "config/aggregate-analysis.json": "5d9f4cc95fad647f27f92eba1b714d69d76459944b836d2b2a6b44cbc446bf7f",
+    "scripts/analyse_aggregate.py": "d38120ed01da505ec87d3f92125f87be18ca22c8318debd89f0faa9a125f986f",
+    "tests/test_aggregate_analysis.py": "207185674e6484e3140dae62ae6473a2cd13893742d86e6bc3072bff49e89fb7"
+  },
+  "source_timing_note": "The 13-test/Ruff/ty pass preceded a final test-only annotation correction: the manifest JSON binding was changed from untyped json.loads to strict_json plus typed casts. Production runner and configuration were unchanged. The final basedpyright pass checked that correction. No passing test run was repeated solely to create this receipt; final public-suite evidence is recorded separately."
+}

@@ -18,6 +18,8 @@ SHA256_HEX_LENGTH = 64
 SOURCE_DIRECTORIES = ("src", "data", "config")
 SOURCE_FILES = (
     "scripts/analyse_refinements.py",
+    "scripts/analyse_aggregate.py",
+    "scripts/information_provenance.py",
     "scripts/plot_refinements.py",
     "quality/clinical_review.py",
     "scripts/reproduce.py",
@@ -25,6 +27,7 @@ SOURCE_FILES = (
     "scripts/build_current_report.py",
     "scripts/plot_current.py",
     "quality/artifacts.py",
+    "uv.lock",
     "assets/Briefing_note.docx",
     "assets/chhhs-powerpoint-template.pptx",
     "assets/chhhs-content-v2-background.png",

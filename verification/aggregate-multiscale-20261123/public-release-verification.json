@@ -1,0 +1,9 @@
+{
+  "inner_manifest_verified_before_standard_seal": true,
+  "input_count": 44,
+  "private_public_equal_numerical_input_files": 6,
+  "unchanged_retained_artifacts": 58,
+  "final_release_artifacts": 7,
+  "release_verification_errors": [],
+  "release_manifest_sha256": "fa79b79c7caa67b162aec15adeaf427e7e7d776450e15a7e7c617059554a8c81"
+}

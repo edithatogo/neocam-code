@@ -10,6 +10,7 @@ import pytest
 
 from quality import artifacts
 from quality.assurance import input_fingerprint
+from scripts.information_provenance import seal_result, verify_result
 
 if TYPE_CHECKING:
     from collections.abc import Callable
@@ -36,6 +37,31 @@ def test_valid_artifacts_and_nonrecursive_manifest(tmp_path: Path) -> None:
     first = (target / "release_manifest.json").read_bytes()
     _ = seal(tmp_path, target)
     assert first == (target / "release_manifest.json").read_bytes()
+
+
+def test_standard_release_seal_binds_aggregate_provenance(tmp_path: Path) -> None:
+    target = release(tmp_path)
+    seal_result(target, {"inputs": artifacts.calculation_inputs(tmp_path)})
+    verify_result(target)
+    _ = seal(tmp_path, target)
+    assert artifacts.verify(tmp_path, target) == []
+    # The outer release seal owns the final directory, including the inner provenance.
+    with pytest.raises(ValueError, match="Incomplete or changed analysis artifact inventory"):
+        verify_result(target)
+    _ = (target / "manifest.json").write_text("{}")
+    assert artifacts.verify(tmp_path, target) == ["Artifact files or inventory changed"]
+
+
+@pytest.mark.parametrize("name", ["scripts/analyse_aggregate.py", "scripts/information_provenance.py", "uv.lock"])
+def test_aggregate_runtime_inputs_invalidate_release(tmp_path: Path, name: str) -> None:
+    target = release(tmp_path)
+    source = tmp_path / name
+    source.parent.mkdir(exist_ok=True)
+    _ = source.write_text("before")
+    _ = seal(tmp_path, target)
+    assert artifacts.verify(tmp_path, target) == []
+    _ = source.write_text("after")
+    assert artifacts.verify(tmp_path, target) == ["Calculation dependencies changed"]
 
 
 @pytest.mark.parametrize("change", ["table", "source", "missing", "extra"])

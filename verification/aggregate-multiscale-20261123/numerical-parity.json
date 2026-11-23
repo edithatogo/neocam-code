@@ -1,0 +1,31 @@
+{
+  "private_source_commit": "064c2059d61bce9835af4393277b8a7eed2956d4",
+  "files": {
+    "budgets.csv": {
+      "identical": true,
+      "sha256": "765796d905b200f3b3ee2ef62b6729ab17cf3e4e2cf4cd5215ec6e1ae2349f3f"
+    },
+    "decisions.csv": {
+      "identical": true,
+      "sha256": "2eda419ed45d954a58de0b77075fbc25fddbb06edf1b06ecdb38f4afaa4b38f5"
+    },
+    "deterministic.csv": {
+      "identical": true,
+      "sha256": "f08f5340907092001c47fb62d123015061092e7729d805e87b0a8af126621c49"
+    },
+    "resolved_inputs.json": {
+      "identical": true,
+      "sha256": "abc2093f3367708878d13486fc5b5709cb70a434fb69b79244c53f929890e084"
+    },
+    "scenarios.csv": {
+      "identical": true,
+      "sha256": "f4862fd2fa9580d6042fb851a160157e60f553c865e3c75a32c454c8203870ec"
+    },
+    "sensitivity.csv": {
+      "identical": true,
+      "sha256": "18a050d2ad2354e821062ae83922d1ce5263ab8b23b4448a9dc4d9132bdc4edb"
+    }
+  },
+  "manifest_projection": "Regenerated on public source labels; not copied from private",
+  "private_history_imported": false
+}

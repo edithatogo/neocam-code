@@ -1,7 +1,10 @@
 {
-  "evidence_version": "v13",
-  "current_output": "outputs/v13-primary",
-  "additional_outputs": [
+  "evidence_version": "v42",
+  "current_output": "outputs/aggregate-20261123-release",
+  "additional_outputs": [],
+  "historical_report_output": "outputs/v13-primary",
+  "historical_outputs": [
+    "outputs/v13-primary",
     "outputs/v13-refinements"
   ]
 }

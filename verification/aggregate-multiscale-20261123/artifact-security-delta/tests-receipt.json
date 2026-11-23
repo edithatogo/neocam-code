@@ -1,0 +1,14 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "-m",
+    "pytest",
+    "tests/test_v12_artifacts.py",
+    "tests/test_reportlab_document.py",
+    "-q"
+  ],
+  "elapsed_seconds": 1.214,
+  "return_code": 0,
+  "observed_stdout": ".........................                                                [100%]\n25 passed in 0.47s",
+  "scope": "Two affected public artifact/report fixture modules only; no broad suite rerun"
+}

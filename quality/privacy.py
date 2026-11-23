@@ -23,7 +23,7 @@ What is detected
 ----------------
 * ``email``: a mailbox other than an RFC 2606/6761 reserved domain or URL userinfo.
 * ``au_phone``: an Australian number written in a conventional grouped form, so a bare
-  ten-digit run is never treated as a phone number.
+  ten-digit run or a fragment wholly inside a complete UUID is not a phone number.
 * ``medicare_number``, ``tfn``, ``card_number``: a numeric identifier next to the words
   that name it, with a length or Luhn check on the captured value.
 * ``identifier_column``, ``identifier_key``: a CSV header or JSON key named after a
@@ -146,6 +146,8 @@ MAX_CONTAINER_PART_BYTES = 2 * 1024 * 1024
 MAX_INFLATED_BYTES = 2 * 1024 * 1024
 MINIMUM_TABLE_ROWS = 2
 AU_PHONE_DIGITS = 10
+# A canonical UUID has 36 characters; two percent-encoded quotes add six.
+UUID_TOKEN_MAX_LENGTH = 42
 CARD_MIN_DIGITS = 13
 CARD_MAX_DIGITS = 19
 MEDICARE_DIGITS = frozenset({10, 11})
@@ -173,6 +175,17 @@ DATACLASS_FRAME_PATTERN = re.compile(r"<exec" + chr(64) + r"dataclasses\.py:[1-9
 
 PHONE_PATTERN = re.compile(r"(?<![\d.])(?:\+?61[ \-]?|0)\d[\d ()\-]{5,17}\d(?![\d.])")
 AU_PHONE_PREFIXES = frozenset({"02", "03", "04", "07", "08"})
+# Complete canonical UUID tokens can contain grouped digits. Only an enclosed match
+# is classified as UUID text; neighbouring phones and incomplete tokens still count.
+# Matching encoded quotes also delimit complete UUIDs in URL-encoded SQL queries.
+UUID_BODY_PATTERN = r"[A-Fa-f0-9]{8}(?:-[A-Fa-f0-9]{4}){3}-[A-Fa-f0-9]{12}"
+UUID_TOKEN_PATTERN = re.compile(
+    "|".join((
+        rf"(?<![A-Za-z0-9_-]){UUID_BODY_PATTERN}(?![A-Za-z0-9_-])",
+        rf"%22{UUID_BODY_PATTERN}%22",
+        rf"%27{UUID_BODY_PATTERN}%27",
+    ))
+)
 
 MEDICARE_PATTERN = re.compile(
     r"(?i)\b(?:medicare|ihi|individual healthcare identifier)\b[^\d\n]{0,40}?(\d[\d \-]{8,13}\d)"
@@ -641,7 +654,12 @@ def _inspect_phone(scan: _Scan, relative: str, text: str) -> None:
         return
     for match, line in _iter_located_matches(PHONE_PATTERN, text):
         value = match.group(0)
-        if _is_australian_phone(value):
+        if _is_australian_phone(value) and not any(
+            token.start() <= match.start() and match.end() <= token.end()
+            for token in UUID_TOKEN_PATTERN.finditer(
+                text, max(0, match.start() - UUID_TOKEN_MAX_LENGTH), match.end() + UUID_TOKEN_MAX_LENGTH
+            )
+        ):
             scan.record("au_phone", relative, line, value)
 
 

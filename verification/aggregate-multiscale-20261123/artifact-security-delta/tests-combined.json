@@ -1,0 +1,16 @@
+{
+  "scope": "Public26-test release integration selection, each case executed once",
+  "passed": 26,
+  "runs": [
+    {
+      "receipt": "tests-receipt.json",
+      "passed": 25
+    },
+    {
+      "receipt": "supplement-test-receipt.json",
+      "passed": 1
+    }
+  ],
+  "broad_suite_rerun": false,
+  "hosted_acceptance": false
+}

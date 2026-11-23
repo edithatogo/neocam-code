@@ -1,0 +1,116 @@
+{
+  "seconds": 2.431,
+  "versions": {
+    "bandit": "1.9.4",
+    "pyyaml": "6.0.3",
+    "opengrep-core": "1.33.1"
+  },
+  "native_findings": [],
+  "bandit_findings": [
+    {
+      "rule": "B101",
+      "path": "./tests/test_aggregate_analysis.py",
+      "line": 46,
+      "severity": "LOW",
+      "confidence": "HIGH"
+    },
+    {
+      "rule": "B101",
+      "path": "./tests/test_aggregate_analysis.py",
+      "line": 47,
+      "severity": "LOW",
+      "confidence": "HIGH"
+    },
+    {
+      "rule": "B101",
+      "path": "./tests/test_aggregate_analysis.py",
+      "line": 50,
+      "severity": "LOW",
+      "confidence": "HIGH"
+    },
+    {
+      "rule": "B101",
+      "path": "./tests/test_aggregate_analysis.py",
+      "line": 80,
+      "severity": "LOW",
+      "confidence": "HIGH"
+    },
+    {
+      "rule": "B101",
+      "path": "./tests/test_aggregate_analysis.py",
+      "line": 81,
+      "severity": "LOW",
+      "confidence": "HIGH"
+    },
+    {
+      "rule": "B101",
+      "path": "./tests/test_aggregate_analysis.py",
+      "line": 104,
+      "severity": "LOW",
+      "confidence": "HIGH"
+    },
+    {
+      "rule": "B101",
+      "path": "./tests/test_aggregate_analysis.py",
+      "line": 148,
+      "severity": "LOW",
+      "confidence": "HIGH"
+    },
+    {
+      "rule": "B101",
+      "path": "./tests/test_aggregate_analysis.py",
+      "line": 153,
+      "severity": "LOW",
+      "confidence": "HIGH"
+    },
+    {
+      "rule": "B101",
+      "path": "./tests/test_aggregate_analysis.py",
+      "line": 154,
+      "severity": "LOW",
+      "confidence": "HIGH"
+    },
+    {
+      "rule": "B101",
+      "path": "./tests/test_aggregate_analysis.py",
+      "line": 159,
+      "severity": "LOW",
+      "confidence": "HIGH"
+    },
+    {
+      "rule": "B101",
+      "path": "./tests/test_aggregate_analysis.py",
+      "line": 161,
+      "severity": "LOW",
+      "confidence": "HIGH"
+    },
+    {
+      "rule": "B101",
+      "path": "./tests/test_aggregate_analysis.py",
+      "line": 169,
+      "severity": "LOW",
+      "confidence": "HIGH"
+    },
+    {
+      "rule": "B101",
+      "path": "./tests/test_aggregate_analysis.py",
+      "line": 170,
+      "severity": "LOW",
+      "confidence": "HIGH"
+    },
+    {
+      "rule": "B101",
+      "path": "./tests/test_aggregate_analysis.py",
+      "line": 172,
+      "severity": "LOW",
+      "confidence": "HIGH"
+    },
+    {
+      "rule": "B101",
+      "path": "./tests/test_aggregate_analysis.py",
+      "line": 175,
+      "severity": "LOW",
+      "confidence": "HIGH"
+    }
+  ]
+}

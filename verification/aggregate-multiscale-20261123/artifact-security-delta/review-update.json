@@ -1,0 +1,38 @@
+{
+  "bandit_low_findings": 34,
+  "bandit_medium_high_findings": 0,
+  "complete_tracked_inventory_matches": true,
+  "elapsed_seconds": 2.552,
+  "focused_tests_receipt": "tests-combined.json",
+  "full_pipeline_rerun": false,
+  "full_suite_rerun": false,
+  "hosted_acceptance": false,
+  "inventory_sha256_after": "d97d4edb228cc8e2f410f8b469e2a294fe6829fd04af7e370ef2fa6b699b36d9",
+  "inventory_sha256_before": "a743e18fdc42f15c97a3d40ba2930e729087fb6f590e8f67ce3b89dda07e48ec",
+  "native_findings": 0,
+  "native_rules_executed": 378,
+  "private_public_source_parity": true,
+  "review_inventory_count": 162,
+  "review_notes": [
+    "The three public files are byte-identical to their separately reviewed and scanned private counterparts.",
+    "quality/artifacts.py only adds fixed aggregate runner, provenance helper and lockfile names to the existing source digest inventory.",
+    "The artifact tests bind the inner aggregate provenance through the existing outer release seal and verify invalidation after newly declared runtime inputs change.",
+    "The ReportLab test explicitly uses the retained historical report fixture with its previous current-output fallback.",
+    "All other source hashes and existing finding records, including the public Git-oracle audit and generated-card fixture review, remain preserved."
+  ],
+  "scope": "Public exact-source review of three artifact release integration paths after private-first propagation",
+  "source_delta": {
+    "quality/artifacts.py": {
+      "after": "e55f3258a6a56d84a5b0c24d3778505e789530f45bb269cc423f6b4f70eb80ca",
+      "before": "917a3362b4a601830294d37bce04b1f21894814017004007ab5845630ec7e801"
+    },
+    "tests/test_reportlab_document.py": {
+      "after": "1f878ae4bd8f43f0a6b112116aa2edee12f2f04f265e461bcf20a9fad1f122a7",
+      "before": "c3110ca2175c72c27ae538ae5d50ce295bc43ef00892b5461e3dde1c71d58d99"
+    },
+    "tests/test_v12_artifacts.py": {
+      "after": "91310fa5ee8e26c5fe9f251fc2f13ce50b863ae5a89e167f8bad99a13573bd77",
+      "before": "a3eb23d537ef5bc6ce3866ff6873a9c840fc569e0e2c06757f802d4257c67b26"
+    }
+  }
+}

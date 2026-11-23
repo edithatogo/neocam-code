@@ -1,0 +1,12 @@
+Name                     Stmts   Miss Branch BrPart   Cover   Missing
+---------------------------------------------------------------------
+src/activity.py             30      0     10      0 100.00%
+src/audit_v7.py             57      0     20      0 100.00%
+src/configuration.py       160      0     32      0 100.00%
+src/deployment.py          149      6     64      3  95.77%   91-92, 209-210, 219-220
+src/equipment.py            69      0     22      0 100.00%
+src/pathways_v6.py         254      0     68      0 100.00%
+src/perspectives_v7.py      42      0      6      0 100.00%
+src/portfolios_v7.py        39      0     16      0 100.00%
+---------------------------------------------------------------------
+TOTAL                      800      6    238      3  99.13%

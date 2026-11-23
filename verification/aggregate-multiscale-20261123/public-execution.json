@@ -1,0 +1,12 @@
+{
+  "elapsed_seconds": 13.141513221999048,
+  "row_counts": {
+    "deterministic": 30,
+    "scenarios": 3120,
+    "decisions": 2240,
+    "sensitivity": 570,
+    "budgets": 840
+  },
+  "draws": 20000,
+  "artifact_manifest_verified": true
+}
