@@ -44,12 +44,12 @@ inputs that actually alter a calculation.
 ```sh
 uv run --frozen --group assurance --extra research python -m pytest -q tests/test_aggregate_analysis.py
 uv run --frozen --extra research python -m scripts.analyse_aggregate \
-  --config config/aggregate-analysis.json --output outputs/aggregate-20261123
+  --config config/aggregate-analysis.json --output outputs/aggregate-NEXT
 ```
 
 Use a fresh output directory on later runs. Expected outputs: `deterministic.csv`,
 `scenarios.csv`, `decisions.csv`, `sensitivity.csv`, `budgets.csv` and
-`resolved_inputs.json`. The 20,000-draw run completed in 12.803 seconds. Actual checks and source identities
+`resolved_inputs.json`. The initial 20,000-draw run took 12.803 seconds; the fresh release run took 15.451 seconds. Actual checks and source identities
 are in `verification/aggregate-multiscale-20261123/focused-checks.json`; results are
 summarised in `docs/aggregate-results-20261123.md`. Full release acceptance is separate.
 
@@ -78,7 +78,9 @@ reviewed delta on separate history. Nineteen shared files, including six analysi
 artifacts, are byte-identical at promotion. Source code, declared parameters and
 numerical outputs are verified within the retained local-check scope.
 
-- [ ] Reconcile the historical v13 current-release contract for the new analysis format
-  and obtain passing protected hosted checks before merge. Keep this release work
-  distinct from completed implementation, the verified new manifest and the open
-  fiscal evidence track.
+- [x] Reconcile the current release using the existing artifact checker, a fresh
+  aggregate output directory and an explicit historical ReportLab fixture. Preserve
+  all retained v13 artifacts and seals. Validate the inner analysis manifest before
+  the final standard release seal, which includes that inner manifest as an artifact.
+- [ ] Obtain passing protected hosted checks before merge. Record exact workflow
+  outcomes separately from local checks; the fiscal evidence track remains open.

@@ -40,8 +40,13 @@ _PAGE: re.Pattern[bytes] = re.compile(rb"/Type\s*/Page\b")
 
 
 def _current_output() -> Path:
+    """Select the retained report fixture independently of current analysis.
+
+    Returns:
+        Path: Historical fixture, with the legacy current-output fallback.
+    """
     assurance = cast("dict[str, object]", json.loads((ROOT / "config/assurance.json").read_text(encoding="utf-8")))
-    return ROOT / cast("str", assurance["current_output"])
+    return ROOT / cast("str", assurance.get("historical_report_output", assurance["current_output"]))
 
 
 def _render(tmp_path: Path) -> bytes:

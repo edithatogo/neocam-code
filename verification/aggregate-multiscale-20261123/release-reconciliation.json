@@ -1,0 +1,238 @@
+{
+  "date": "2026-11-23",
+  "scope": "Public aggregate release reconciliation; exact-source numerical parity, artifact contract and bounded post-suite fixes.",
+  "private_source_commit": "bd5506a6b28ba3311ebe547dc399cd4e5414cc9f",
+  "private_pr": 12,
+  "public_pr": 11,
+  "public_parent_before_release": "f15f475f34d96a3d0824de3fa5d06a70d665eaf3",
+  "prior_hosted": {
+    "commit": "f15f475f34d96a3d0824de3fa5d06a70d665eaf3",
+    "lean_run": 45110074892,
+    "gates": [
+      {
+        "name": "pytest",
+        "status": "passed"
+      },
+      {
+        "name": "inputs",
+        "status": "passed"
+      },
+      {
+        "name": "context",
+        "status": "passed"
+      },
+      {
+        "name": "current_release",
+        "status": "failed"
+      },
+      {
+        "name": "source_integrity",
+        "status": "passed"
+      },
+      {
+        "name": "coverage",
+        "status": "passed"
+      },
+      {
+        "name": "coverage_threshold",
+        "status": "passed"
+      },
+      {
+        "name": "core_coverage",
+        "status": "passed"
+      },
+      {
+        "name": "ruff_lint",
+        "status": "passed"
+      },
+      {
+        "name": "ruff_format",
+        "status": "passed"
+      },
+      {
+        "name": "ty",
+        "status": "passed"
+      },
+      {
+        "name": "basedpyright",
+        "status": "passed"
+      },
+      {
+        "name": "hypothesis",
+        "status": "passed"
+      },
+      {
+        "name": "gitleaks_tree",
+        "status": "passed"
+      },
+      {
+        "name": "vale",
+        "status": "passed"
+      },
+      {
+        "name": "privacy",
+        "status": "passed"
+      },
+      {
+        "name": "dependency_consistency",
+        "status": "passed"
+      },
+      {
+        "name": "dependency_lock",
+        "status": "passed"
+      },
+      {
+        "name": "native_versions",
+        "status": "passed"
+      },
+      {
+        "name": "locked_versions",
+        "status": "passed"
+      },
+      {
+        "name": "pip_audit",
+        "status": "passed"
+      },
+      {
+        "name": "sbom",
+        "status": "passed"
+      },
+      {
+        "name": "conductor_checkout",
+        "status": "passed"
+      },
+      {
+        "name": "polars_consistency",
+        "status": "passed"
+      },
+      {
+        "name": "actionlint",
+        "status": "passed"
+      },
+      {
+        "name": "zizmor",
+        "status": "passed"
+      },
+      {
+        "name": "prek_config",
+        "status": "passed"
+      }
+    ],
+    "privacy_run": 45110074854,
+    "gitleaks_commit_range": "clean",
+    "blocking_privacy_findings": 1,
+    "blocking_path": "tests/test_privacy_scan.py",
+    "blocking_fixture": "Generated-fixture replacement resolves a preexisting literal exposed by changed-file scanning."
+  },
+  "contract": {
+    "current_output": "outputs/aggregate-20261123-release",
+    "historical_report_output": "outputs/v13-primary",
+    "evidence_version": "v42",
+    "verifier": "quality.artifacts verify",
+    "inner_manifest": "Verified before final seal; final standard seal pins manifest.json as an artifact.",
+    "historical_seals_rewritten": false
+  },
+  "validation": {
+    "targeted_contract_tests": 26,
+    "affected_fixture_tests": 5,
+    "broad_local_suite_repeated": false,
+    "source_security": "3 changed artifact paths; 378 rules; 0 native findings; 0 Bandit medium/high",
+    "inventory_python_files": 162
+  },
+  "private_public_boundary": "Public source labels and independent public manifests retained; private Git history, originals and corporate assets excluded.",
+  "limitations": [
+    "Final hosted acceptance requires the new exact-commit workflow result; the earlier hosted pytest/static passes are retained under their own commit.",
+    "The standard source_commit_at_generation is the local checkout parent; bound input hashes and the PR commit identify the authored snapshot.",
+    "Private hosted jobs previously failed without execution steps; no full private assurance is claimed."
+  ],
+  "analysis_run": {
+    "command": [
+      ".venv/bin/python",
+      "-m",
+      "scripts.analyse_aggregate",
+      "--config",
+      "config/aggregate-analysis.json",
+      "--output",
+      "outputs/aggregate-20261123-release"
+    ],
+    "elapsed_seconds": 13.089545,
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "release_verification": {
+    "inner_manifest_verified_before_standard_seal": true,
+    "input_count": 44,
+    "private_public_equal_numerical_input_files": 6,
+    "unchanged_retained_artifacts": 58,
+    "final_release_artifacts": 7,
+    "release_verification_errors": [],
+    "release_manifest_sha256": "fa79b79c7caa67b162aec15adeaf427e7e7d776450e15a7e7c617059554a8c81"
+  },
+  "targeted_public_tests": {
+    "scope": "Public26-test release integration selection, each case executed once",
+    "passed": 26,
+    "runs": [
+      {
+        "receipt": "tests-receipt.json",
+        "passed": 25
+      },
+      {
+        "receipt": "supplement-test-receipt.json",
+        "passed": 1
+      }
+    ],
+    "broad_suite_rerun": false,
+    "hosted_acceptance": false
+  },
+  "artifact_sha256": {
+    "sensitivity.csv": "18a050d2ad2354e821062ae83922d1ce5263ab8b23b4448a9dc4d9132bdc4edb",
+    "release_manifest.json": "fa79b79c7caa67b162aec15adeaf427e7e7d776450e15a7e7c617059554a8c81",
+    "manifest.json": "2c1341f77cebee7cd2995706dce26107babe910b69fbe0cdd3b7aa02dd5fd3fd",
+    "decisions.csv": "2eda419ed45d954a58de0b77075fbc25fddbb06edf1b06ecdb38f4afaa4b38f5",
+    "budgets.csv": "765796d905b200f3b3ee2ef62b6729ab17cf3e4e2cf4cd5215ec6e1ae2349f3f",
+    "resolved_inputs.json": "abc2093f3367708878d13486fc5b5709cb70a434fb69b79244c53f929890e084",
+    "deterministic.csv": "f08f5340907092001c47fb62d123015061092e7729d805e87b0a8af126621c49",
+    "scenarios.csv": "f4862fd2fa9580d6042fb851a160157e60f553c865e3c75a32c454c8203870ec"
+  },
+  "final_checks": [
+    {
+      "name": "context",
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "quality.checks",
+        "context"
+      ],
+      "exit_code": 0,
+      "output": "{\n  \"check\": \"context\",\n  \"errors\": []\n}\n"
+    },
+    {
+      "name": "vale",
+      "command": [
+        ".tools/bin/vale",
+        "--minAlertLevel=warning",
+        "conductor/runbook.md",
+        "conductor/tracks.md",
+        "conductor/v14-design.md",
+        "conductor/tracks/aggregate-multiscale-update/plan.md",
+        "docs/aggregate-results-20261123.md",
+        "docs/aggregate-multiscale-analysis.md"
+      ],
+      "exit_code": 0,
+      "output": "\u2714 0 errors, 0 warnings and 0 suggestions in 6 files.\n"
+    },
+    {
+      "name": "privacy",
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "quality.privacy",
+        "--output",
+        "verification/aggregate-multiscale-20261123/public-release-privacy.json"
+      ],
+      "exit_code": 0,
+      "output": "Scanned 860 files (858 text, 2 containers); 0 finding(s); 103 file(s) without text coverage\n"
+    }
+  ]
+}

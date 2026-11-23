@@ -271,8 +271,8 @@ def test_complete_uuid_syntax_preserves_phone_detection(tmp_path: Path, text: st
 @pytest.mark.parametrize(
     ("value", "expected"),
     [
-        ("4111 1111 1111 1111", True),
-        ("4111 1111 1111 1112", False),
+        (FAKE_PAYMENT, True),
+        (FAKE_NOT_A_CARD, False),
         ("1234 5678 9012", False),
         ("", False),
     ],

@@ -1,0 +1,20 @@
+{
+  "scope": "Public artifact integration source delta only; not a full pipeline run",
+  "elapsed_seconds": 2.552,
+  "uv_version": "0.13.6",
+  "versions": {
+    "bandit": "1.9.4",
+    "pyyaml": "6.0.3",
+    "opengrep-core": "1.33.1"
+  },
+  "source_sha256": {
+    "quality/artifacts.py": "e55f3258a6a56d84a5b0c24d3778505e789530f45bb269cc423f6b4f70eb80ca",
+    "tests/test_v12_artifacts.py": "91310fa5ee8e26c5fe9f251fc2f13ce50b863ae5a89e167f8bad99a13573bd77",
+    "tests/test_reportlab_document.py": "1f878ae4bd8f43f0a6b112116aa2edee12f2f04f265e461bcf20a9fad1f122a7"
+  },
+  "native_findings": [],
+  "native_rules_executed": 378,
+  "bandit_findings": 34,
+  "bandit_medium_high": [],
+  "hosted_acceptance": false
+}

@@ -28,18 +28,18 @@ CHHHS, regional, Queensland, Australian and international decision scenarios.
 Patient-level data and a prospective registry are optional refinements, not execution
 prerequisites. No new framework, learned surrogate or orchestration layer is required.
 
-Once the reviewed private implementation is promoted, update
+The reviewed private implementation has been promoted. To refresh it, update
 `data/aggregate/public-inputs.json` and `config/aggregate-analysis.json`, then use a
 **new** output directory:
 
 ```sh
 uv run --frozen --group assurance --extra research python -m pytest -q tests/test_aggregate_analysis.py
 uv run --frozen --extra research python -m scripts.analyse_aggregate \
-  --config config/aggregate-analysis.json --output outputs/aggregate-20261123
+  --config config/aggregate-analysis.json --output outputs/aggregate-NEXT
 ```
 
-Promotion and execution are pending; these are planned interfaces, not recorded
-passes. See [the update guide](../docs/aggregate-multiscale-analysis.md).
+Private PR #12 and public PR #11 contain the executed increment and its recorded
+checks. Later runs must use a fresh output directory and a new source-bound seal. See [the update guide](../docs/aggregate-multiscale-analysis.md).
 
 ## Strictness and quality settings
 ruff `select = ["ALL"]` with preview rules; ty `all = "error"` plus `--error-on-warning`; basedpyright `all` with experimental features, blanket `# type: ignore` banned, ignore comments must name their rule; pytest strict markers/config, warnings-as-errors and `xfail_strict`. No global lint ignore beyond the two documented formatter conflicts, no type-checker baseline file, no lowered threshold. The mutation floor is 90%. Read the mutation result from the exact-commit full receipt; historical scores do not qualify this separate code snapshot.
@@ -52,11 +52,14 @@ uv run --frozen --group assurance --extra tabular --extra research --extra repor
 ```
 Ordering rule — the artifact re-seal must be the **last** mutation before acceptance:
 ```
-python -m quality.artifacts seal --output outputs/v13-primary
-python -m quality.artifacts seal --output outputs/v13-refinements
+python -m quality.artifacts seal --output outputs/aggregate-NEXT
 python -m quality.artifacts verify
 # then immediately: full profile, and nothing else edits source afterwards
 ```
+Retained v13 artifacts and their manifests are historical; do not reseal them.
+Set `config/assurance.json` to the new output directory before running the analysis.
+The final `release_manifest.json` pins the analysis manifest as an artifact; it is the
+authoritative final-directory check. Validate the inner manifest before this final seal.
 Both `sources/manifest.json` (which pins the retrieval tool's own bytes) and the artifact manifests (which pin every calculation input) are invalidated by any later source edit. A mid-wave seal is therefore always stale. Use new output paths for reruns; never overwrite retained analyses. `OAI_IS_JUPYTER_KERNEL=false` avoids irrelevant host initialisation; `PYTEST_DISABLE_PLUGIN_AUTOLOAD=1` is ordinary-suite control only, never a substitute for a required gate.
 
 ## Boundaries
@@ -73,15 +76,17 @@ reviewed public-safe delta onto this repository's own history. Do not merge or
 cherry-pick private commits. Record the allowed paths, hashes and any source-withheld
 projection; verify shared-input numerical parity. Private manuscripts, source
 originals, records, locators and unreleased local aggregates remain withheld.
-`neocam-public` is a historical snapshot, not a third active copy. Promotion and new
-validation remain pending until their actual receipts are recorded. Existing receipts
+`neocam-public` is a historical snapshot, not a third active copy. Promotion and local checks are recorded in the current track; hosted acceptance
+retains its exact commit and workflow identity. Existing receipts
 qualify only their original commits; no refreshed manuscript or Word/PDF is claimed.
 
 ## Executed aggregate increment
 
-The 23 November 2026 reported-evidence analysis is at `outputs/aggregate-20261123`.
-The public 20,000-draw rerun took 13.142 seconds and reproduced all six private
-numerical/input artifacts byte-for-byte. See [the results](../docs/aggregate-results-20261123.md)
+The 23 November 2026 reported-evidence analysis is at `outputs/aggregate-20261123-release`.
+The fresh public 20,000-draw release run took 13.090 seconds and reproduced all
+six private numerical/input artifacts byte-for-byte. See [the results](../docs/aggregate-results-20261123.md)
 and `verification/aggregate-multiscale-20261123/public-checks.json`. One broad suite
 was followed by targeted privacy repairs; historical failures and successful checks
-are retained. The expanded dependency set leaves the old v13 release contract open.
+are retained. The existing release checker now targets a fresh aggregate release. Historical
+v13 output bytes and seals remain unchanged; the ReportLab fixture explicitly uses
+its retained historical schema. See `verification/aggregate-multiscale-20261123/release-reconciliation.json`.

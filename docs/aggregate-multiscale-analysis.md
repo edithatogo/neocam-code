@@ -11,14 +11,22 @@ unit-level data or a new registry.
    scenario in `config/aggregate-analysis.json`. Record the population, unit, period,
    estimate/interval and whether uncertainty is reported or assumed. Context-only
    evidence must not be described as an executed model input.
-2. Run the focused check and analysis in the frozen environment, choosing a new output
-   directory each time:
+2. Choose a fresh output directory and set `current_output` in
+   `config/assurance.json` to it before running. Keep `historical_report_output` fixed
+   for the retained report schema. Run the focused check and analysis in the frozen
+   environment, then create the standard release seal as the last source-bound step:
 
    ```sh
    uv run --frozen --group assurance --extra research python -m pytest -q tests/test_aggregate_analysis.py
    uv run --frozen --extra research python -m scripts.analyse_aggregate \
-     --config config/aggregate-analysis.json --output outputs/aggregate-20261123
+     --config config/aggregate-analysis.json --output outputs/aggregate-NEXT
+   uv run --frozen python -m quality.artifacts seal --output outputs/aggregate-NEXT
+   uv run --frozen python -m quality.artifacts verify
    ```
+
+The runner writes an analysis manifest. If using its standalone verifier, run it
+   before the final seal: the final `release_manifest.json` is the authoritative
+   directory check and pins the inner manifest too. Do not reseal historical outputs.
 
 3. Read deterministic results, sensitivity, PSA, decisions and budget schedules together.
    Reconcile the exact output/source identities and applicable assurance before delivery.

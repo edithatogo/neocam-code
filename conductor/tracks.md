@@ -21,11 +21,14 @@ Link: [./tracks/v13-03-review/](./tracks/v13-03-review/)
 ---
 ## Active work
 
-## [~] Track: Aggregate multiscale update
-Link: [track plan](tracks/aggregate-multiscale-update/plan.md). Prepare the public-safe
-projection of the private-first aggregate analysis: reported evidence with uncertainty,
-deterministic and probabilistic sensitivity, geographic scenarios and optional local
-aggregate refinement. Promotion, execution and current acceptance remain pending.
+## [x] Track: Aggregate multiscale implementation
+
+Link: [track plan](tracks/aggregate-multiscale-update/plan.md). Private PR #12 and
+public PR #11 contain the reported-evidence analysis, deterministic and probabilistic
+sensitivity, geographic scenarios and optional CHHHS aggregate refinement.
+Implementation, execution and reviewed promotion are complete. The existing
+artifact checker supports the new release; hosted acceptance is recorded
+separately and remains a merge prerequisite. Unit-level data are optional.
 
 ## [~] Track: Mixed-policy fiscal allocation
 Link: [track plan](tracks/mixed-policy-fiscal-allocation/). Fiscal shares await payment, routing and subsidy evidence.
