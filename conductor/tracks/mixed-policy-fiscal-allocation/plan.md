@@ -52,3 +52,13 @@ custodian functions. No messages or record requests were sent. Numerical inputs
 remain frozen. Full local assurance for this evidence update is to be retained
 under `verification/v21/`; a running or failed run is not acceptance. Fiscal track
 open, archive ineligible, four independent reviews pending.
+
+## Aggregate-update cross-reference — 23 November 2026
+
+[neocam #14](https://github.com/edithatogo/neocam/issues/14) records the targeted
+aggregate/fiscal evidence return and its decision-based acceptance criteria.
+This track and its existing owner remain active; the aggregate implementation
+round is closed for now. Earlier dated human-review statements are historical.
+The 5 November owner-authorised agent-advice policy governs current advisory
+work and does not assert returned human attestations. See the
+[closeout index](../../../docs/aggregate-closeout-20261123.md).

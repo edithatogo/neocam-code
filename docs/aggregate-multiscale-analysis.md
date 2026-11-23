@@ -24,7 +24,7 @@ unit-level data or a new registry.
    uv run --frozen python -m quality.artifacts verify
    ```
 
-The runner writes an analysis manifest. If using its standalone verifier, run it
+   The runner writes an analysis manifest. If using its standalone verifier, run it
    before the final seal: the final `release_manifest.json` is the authoritative
    directory check and pins the inner manifest too. Do not reseal historical outputs.
 
@@ -82,3 +82,10 @@ inherit historical acceptance as acceptance of new bytes.
 
 Manuscript/report regeneration is a deliberate follow-up after the new results are
 verified. This update does not claim refreshed Word/PDF files or empirical validation.
+
+## Closeout and issue references
+
+This implementation round is closed for now. The
+[complete recommendation/issue index](aggregate-closeout-20261123.md)
+maps delivered work and the four open follow-ups. Future data additions,
+manuscript work and private hosted qualification remain explicitly tracked.

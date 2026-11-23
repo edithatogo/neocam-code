@@ -1,8 +1,11 @@
 # Aggregate multiscale update
 
-Authority: owner direction, 23 November 2026. Status: implementation and the new analysis are complete;
-focused checks and agent review passed. Private source is committed in PR #12; public PR #11 is delivered with verified numerical parity and recorded local checks. Preserve existing fiscal-track
-ownership and historical outputs.
+Authority: owner direction, 23 November 2026. This implementation round is closed
+for now. The analysis, release-format reconciliation and private-first public
+promotion are complete. Public PR #11 passed all five workflows at its recorded
+release snapshot. Private execution, optional data calibration and manuscript
+refresh remain separately tracked. Preserve existing fiscal ownership and
+historical outputs. See the [complete recommendation/issue index](../../../docs/aggregate-closeout-20261123.md).
 
 ## Scope
 
@@ -74,13 +77,28 @@ Follow the [update guide](../../../docs/aggregate-multiscale-analysis.md).
 ## Delivered state
 
 Private PR #12 supplies the reviewed implementation; public PR #11 receives the
-reviewed delta on separate history. Nineteen shared files, including six analysis
-artifacts, are byte-identical at promotion. Source code, declared parameters and
+reviewed delta on separate history. The release promotion verified 23 shared files, including six numerical/input
+artifacts. Subsequent documentation changes have separate closeout checks. Source code, declared parameters and
 numerical outputs are verified within the retained local-check scope.
 
 - [x] Reconcile the current release using the existing artifact checker, a fresh
   aggregate output directory and an explicit historical ReportLab fixture. Preserve
   all retained v13 artifacts and seals. Validate the inner analysis manifest before
   the final standard release seal, which includes that inner manifest as an artifact.
-- [ ] Obtain passing protected hosted checks before merge. Record exact workflow
-  outcomes separately from local checks; the fiscal evidence track remains open.
+- [x] Record public PR-scope success at `60205a54a01f456543b0af826f2b0b62f623ab80`;
+  this does not claim a merged-main full-release attestation.
+- [x] Close the implementation round and cross-reference every recommendation.
+- [ ] Resolve private hosted execution through [neocam #13](https://github.com/edithatogo/neocam/issues/13) before private merge.
+
+## Follow-ups retained outside active implementation
+
+| Issue | Acceptance boundary |
+|---|---|
+| [neocam #13](https://github.com/edithatogo/neocam/issues/13) | Diagnose the actual execution failure and obtain executed, passing private required checks. |
+| [neocam #14](https://github.com/edithatogo/neocam/issues/14) | Map targeted CHHHS/fiscal aggregates to named inputs and report their decision impact; preserve the fiscal owner. |
+| [neocam #15](https://github.com/edithatogo/neocam/issues/15) | Refresh manuscript/briefs from the verified release, preserving author originals and checking tables, citations and rendering. |
+| [neocam-code #12](https://github.com/edithatogo/neocam-code/issues/12) | Calibrate a named regional/state/country decision with useful aggregates, uncertainty and a fresh verified result. |
+
+The closeout index contains the full five-level scope, reported-evidence activation
+rules, data priorities, source boundaries and restart instructions. The fiscal
+evidence track remains open. No further work is scheduled by this closeout.

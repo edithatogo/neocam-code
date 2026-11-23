@@ -1,6 +1,6 @@
 {
   "id": "aggregate-multiscale-update",
-  "status": "implemented_and_delivered_as_draft",
+  "status": "closed_for_now",
   "authority_date": "2026-11-23",
   "implementation": "complete",
   "public_projection": "complete_reviewed_file_promotion",
@@ -26,8 +26,21 @@
   "manuscript_refresh": "queued_after_verified_results",
   "result_summary": "docs/aggregate-results-20261123.md",
   "promotion_receipt": "verification/aggregate-multiscale-20261123/release-promotion.json",
-  "commit_fields_scope": "Immutable reviewed implementation snapshots retained for traceability; PR links resolve current branch heads. Release-manifest hashes bind each analysis.",
+  "commit_fields_scope": "Immutable reviewed source snapshots; current heads resolve through the linked PRs.",
   "release_contract": "Existing quality.artifacts verifier and complete input scope; fresh aggregate release; historical v13 bytes and seals retained; historical ReportLab schema explicitly named.",
   "next_command": "uv run --frozen python -m quality.artifacts verify",
-  "analysis_elapsed_seconds": 13.089545
+  "analysis_elapsed_seconds": 13.089545,
+  "closeout_date": "2026-11-23",
+  "closeout_index": "docs/aggregate-closeout-20261123.md",
+  "github_issues": {
+    "private_hosted_execution": "https://github.com/edithatogo/neocam/issues/13",
+    "chhhs_aggregate_fiscal_refinement": "https://github.com/edithatogo/neocam/issues/14",
+    "private_manuscript_refresh": "https://github.com/edithatogo/neocam/issues/15",
+    "geographic_evidence_calibration": "https://github.com/edithatogo/neocam-code/issues/12"
+  },
+  "public_verified_commit": "60205a54a01f456543b0af826f2b0b62f623ab80",
+  "public_hosted_pr_acceptance": "all_five_workflows_passed_at_recorded_snapshot",
+  "private_hosted_pr_acceptance": "unresolved_execution_gap_tracked_in_neocam_13",
+  "automatic_followup_scheduled": false,
+  "private_closeout_commit": "03229b9f7d252f9ee665e26670bdbced516afe76"
 }

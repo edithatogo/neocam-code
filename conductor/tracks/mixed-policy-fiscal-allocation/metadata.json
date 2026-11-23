@@ -7,7 +7,12 @@
   "archive_eligible": false,
   "worktree": "/Volumes/PortableSSD/Neocam-manuscript-recovery.G9575o/fiscal",
   "branch": "codex/fiscal-evidence-reconciliation",
-  "independent_reviews_pending": 4,
   "evidence_search": "bounded_sharepoint_and_local_search_2026-11-03",
-  "assurance_target": "verification/v21/full/receipt.json"
+  "assurance_target": "verification/v21/full/receipt.json",
+  "historical_independent_reviews_pending": 4,
+  "current_review_policy": "Owner-authorised agent advice of 5 November 2026; historical human forms are retained, not mandatory advisory prerequisites.",
+  "independent_human_validation": false,
+  "github_issue": "https://github.com/edithatogo/neocam/issues/14",
+  "owner_preserved": true,
+  "closeout_cross_reference_date": "2026-11-23"
 }

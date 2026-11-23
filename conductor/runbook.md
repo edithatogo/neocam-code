@@ -17,7 +17,7 @@ Use CPython 3.15.1 for qualification. NumPy handles model draws. Voiage 3.1.0 su
 
 ### Authorised aggregate update — 23 November 2026
 
-The active [aggregate multiscale track](tracks/aggregate-multiscale-update/plan.md)
+The delivered [aggregate multiscale track](tracks/aggregate-multiscale-update/plan.md)
 adds reported-evidence parameters, aggregate scenarios and new outputs through the
 existing model. This narrowly supersedes the assurance-era parameter/output freeze
 and the original release's no-new-parameter scope; retained v13 inputs and results
@@ -48,7 +48,7 @@ ruff `select = ["ALL"]` with preview rules; ty `all = "error"` plus `--error-on-
 ```
 python -m quality.cli --profile quick
 uv run --frozen --group assurance --extra tabular --extra research --extra reporting \
-  python -m quality.cli --profile full --evidence-version v41
+  python -m quality.cli --profile full --evidence-version v42
 ```
 Ordering rule — the artifact re-seal must be the **last** mutation before acceptance:
 ```
@@ -60,7 +60,7 @@ Retained v13 artifacts and their manifests are historical; do not reseal them.
 Set `config/assurance.json` to the new output directory before running the analysis.
 The final `release_manifest.json` pins the analysis manifest as an artifact; it is the
 authoritative final-directory check. Validate the inner manifest before this final seal.
-Both `sources/manifest.json` (which pins the retrieval tool's own bytes) and the artifact manifests (which pin every calculation input) are invalidated by any later source edit. A mid-wave seal is therefore always stale. Use new output paths for reruns; never overwrite retained analyses. `OAI_IS_JUPYTER_KERNEL=false` avoids irrelevant host initialisation; `PYTEST_DISABLE_PLUGIN_AUTOLOAD=1` is ordinary-suite control only, never a substitute for a required gate.
+Both `sources/manifest.json` (which pins the retrieval tool's own bytes) and the artifact manifests (which pin every calculation input) are invalidated by any later source edit. A mid-wave seal is therefore always stale. Use new output paths for reruns; never overwrite retained analyses. `OAI_IS_JUPYTER_KERNEL=false` avoids irrelevant host initialisation; Qualification uses the declared pytest plugins. Select the configured evidence version (`v42` for this increment); choose a new evidence location for later qualification and preserve historical receipts.
 
 ## Boundaries
 Read `blockers-v13.json` and `validation-v12.md`. Claim a lock, external tool, gitleaks scan, populated submodule, independent validation or hosted run only when its evidence actually passes. No patient records or fabricated observations enter this project. The active track may parameterise reported estimates and documented aggregate scenarios. Preserve the public source-withheld identifiers and their interpretation. The owner-authorised agent advisory policy of 5 November 2026 supersedes mandatory human advisory returns; historical pending forms do not establish human approval. Append execution records only under `verification/` and `handoff/`.
@@ -80,13 +80,17 @@ originals, records, locators and unreleased local aggregates remain withheld.
 retains its exact commit and workflow identity. Existing receipts
 qualify only their original commits; no refreshed manuscript or Word/PDF is claimed.
 
-## Executed aggregate increment
+## Executed aggregate increment and closeout
 
-The 23 November 2026 reported-evidence analysis is at `outputs/aggregate-20261123-release`.
-The fresh public 20,000-draw release run took 13.090 seconds and reproduced all
-six private numerical/input artifacts byte-for-byte. See [the results](../docs/aggregate-results-20261123.md)
-and `verification/aggregate-multiscale-20261123/public-checks.json`. One broad suite
-was followed by targeted privacy repairs; historical failures and successful checks
-are retained. The existing release checker now targets a fresh aggregate release. Historical
-v13 output bytes and seals remain unchanged; the ReportLab fixture explicitly uses
-its retained historical schema. See `verification/aggregate-multiscale-20261123/release-reconciliation.json`.
+The 23 November 2026 analysis is at `outputs/aggregate-20261123-release`.
+Fresh 20,000-draw runs took 15.451 seconds privately and 13.090 seconds publicly;
+the six numerical/input files match. The initial private run took 12.803 seconds
+and remains separately recorded. The existing artifact checker verifies the
+current release; historical v13 files and seals remain unchanged.
+
+This implementation round is closed for now. Read the
+[recommendation/issue index](../docs/aggregate-closeout-20261123.md) before
+resuming. Public PR-scope checks passed at the recorded release snapshot; private
+execution is tracked in [neocam #13](https://github.com/edithatogo/neocam/issues/13).
+Data refinement, geographic calibration and manuscript refresh have separate
+issues. Preserve the existing fiscal owner and the private-first promotion route.

@@ -1,5 +1,10 @@
 # v14 design authority — engineering rigour, acceptance integrity and ecosystem integration
 
+Current aggregate implementation: closed for now on 23 November 2026. The
+[recommendation/issue index](../docs/aggregate-closeout-20261123.md) records
+delivered scope, exact evidence and open follow-ups. Historical design and
+acceptance statements below retain their original scope.
+
 Date: 2026-10-31. Owner decisions supersede earlier drafts in this file.
 Status: implementation begun; external acceptance remains a separate gate.
 

@@ -2,7 +2,6 @@
   "version": 14,
   "date": "2026-11-23",
   "active_tracks": [
-    "aggregate-multiscale-update",
     "mixed-policy-fiscal-allocation"
   ],
   "branch": "codex/aggregate-multiscale-20261123",
@@ -56,7 +55,8 @@
     "controls": 24,
     "unreviewed_findings": 0,
     "scanner_errors": 0,
-    "review_kind": "same-assistant exact-source software review; not independent clinical approval"
+    "review_kind": "same-assistant exact-source software review; not independent clinical approval",
+    "scope": "Historical source-freeze receipt; current increment reviews are recorded under aggregate_multiscale_update."
   },
   "voi_engine": {
     "version": "3.1.0",
@@ -69,7 +69,8 @@
     "numerical_parity": "49 active analysis artifacts numerically unchanged; 48 byte-identical; one source-label-only CSV change.",
     "patient_files": "Outside repositories; not imported.",
     "clinical_packet": "Outside this repository; original author Word edit preserved unchanged.",
-    "historical_receipts": "Original software logs remain private; retained scientific tables are numerical fixtures."
+    "historical_receipts": "Original software logs remain private; retained scientific tables are numerical fixtures.",
+    "numerical_parity_scope": "The 49-artifact description is historical publication evidence. The current aggregate release reproduces six numerical/input files."
   },
   "prior_research_repository": {
     "remote": "edithatogo/neocam",
@@ -92,7 +93,7 @@
     "Haynes measures transfer within 24 hours. Applying the association to eventual transfer is an extrapolation.",
     "four government originals verified in a separate local archive; source bytes excluded from the public repository"
   ],
-  "next_acceptance": "Implementation, private-first promotion and the release-format reconciliation are complete in linked draft PRs. Require passing protected hosted checks before merge. Fiscal evidence remains open; refine CHHHS with targeted aggregates as available.",
+  "next_acceptance": "This implementation round is closed for now. Public PR-scope checks passed at the recorded public release snapshot. Private execution qualification remains in neocam#13; CHHHS/fiscal refinement in neocam#14, manuscript refresh in neocam#15, and wider calibration in neocam-code#12. Preserve the existing fiscal owner. Both PRs remain drafts and unmerged.",
   "code_publication": {
     "approved": "2026-11-05",
     "repository": "edithatogo/neocam-code",
@@ -122,7 +123,7 @@
   },
   "aggregate_multiscale_update": {
     "authority_date": "2026-11-23",
-    "status": "implemented_and_delivered_as_draft",
+    "status": "closed_for_now",
     "implementation": "complete",
     "promotion": "complete_explicit_file_promotion_with_separate_history",
     "verification": "focused_analysis_privacy_release_contract_and_exact_source_security_checks_passed",
@@ -148,15 +149,45 @@
     "agent_review": "verification/aggregate-multiscale-20261123/agent-review.md",
     "result_summary": "docs/aggregate-results-20261123.md",
     "promotion_receipt": "verification/aggregate-multiscale-20261123/release-promotion.json",
-    "commit_fields_scope": "Immutable reviewed implementation snapshots retained for traceability; PR links resolve current branch heads. Release-manifest hashes bind each analysis.",
+    "commit_fields_scope": "Immutable reviewed source snapshots. PR links resolve current heads; later documentation commits require their own recorded checks.",
     "release_contract": "Existing quality.artifacts verifier and complete input scope; fresh aggregate release; historical v13 bytes and seals retained; historical ReportLab schema explicitly named.",
     "next_command": "uv run --frozen python -m quality.artifacts verify",
-    "analysis_elapsed_seconds": 13.089545
+    "analysis_elapsed_seconds": 13.089545,
+    "closeout_date": "2026-11-23",
+    "closeout_index": "docs/aggregate-closeout-20261123.md",
+    "github_issues": {
+      "private_hosted_execution": "https://github.com/edithatogo/neocam/issues/13",
+      "chhhs_aggregate_fiscal_refinement": "https://github.com/edithatogo/neocam/issues/14",
+      "private_manuscript_refresh": "https://github.com/edithatogo/neocam/issues/15",
+      "geographic_evidence_calibration": "https://github.com/edithatogo/neocam-code/issues/12"
+    },
+    "public_verified_commit": "60205a54a01f456543b0af826f2b0b62f623ab80",
+    "public_hosted_pr_acceptance": "all_five_workflows_passed_at_recorded_snapshot",
+    "private_hosted_pr_acceptance": "unresolved_execution_gap_tracked_in_neocam_13",
+    "resume_rule": "Resume a named issue when requested or when its decision-relevant data are available; no automatic follow-up scheduled.",
+    "private_closeout_commit": "03229b9f7d252f9ee665e26670bdbced516afe76"
   },
   "historical_reference_analysis": "outputs/v13-primary/results.json",
   "historical_outputs": [
     "outputs/v13-primary",
     "outputs/v13-refinements",
     "outputs/aggregate-20261123"
-  ]
+  ],
+  "closed_for_now_tracks": [
+    "aggregate-multiscale-update"
+  ],
+  "closeout_index": "docs/aggregate-closeout-20261123.md",
+  "followup_issues": {
+    "private_hosted_execution": "https://github.com/edithatogo/neocam/issues/13",
+    "chhhs_aggregate_fiscal_refinement": "https://github.com/edithatogo/neocam/issues/14",
+    "private_manuscript_refresh": "https://github.com/edithatogo/neocam/issues/15",
+    "geographic_evidence_calibration": "https://github.com/edithatogo/neocam-code/issues/12"
+  },
+  "public_hosted_pr_snapshot": {
+    "commit": "60205a54a01f456543b0af826f2b0b62f623ab80",
+    "all_five_workflows_passed": true,
+    "assurance_run": 45112506022,
+    "scope": "PR profile, not merged-main full release or clinical validation"
+  },
+  "current_documentation_check_receipt": "verification/aggregate-multiscale-20261123/closeout-20261123.json"
 }

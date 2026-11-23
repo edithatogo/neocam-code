@@ -1,0 +1,73 @@
+{
+  "date": "2026-11-23",
+  "scope": "Documentation and issue-linked closeout only; no model, parameter, lock or generated-output changes.",
+  "repository": "edithatogo/neocam-code",
+  "closeout_state": "closed_for_now",
+  "model_rerun": false,
+  "broad_local_suite_rerun": false,
+  "followup_issues": [
+    "https://github.com/edithatogo/neocam/issues/13",
+    "https://github.com/edithatogo/neocam/issues/14",
+    "https://github.com/edithatogo/neocam/issues/15",
+    "https://github.com/edithatogo/neocam-code/issues/12"
+  ],
+  "checks": [
+    {
+      "name": "context",
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "quality.checks",
+        "context"
+      ],
+      "elapsed_seconds": 0.1164,
+      "exit_code": 0,
+      "output": "{\n  \"check\": \"context\",\n  \"errors\": []\n}\n"
+    },
+    {
+      "name": "current_release",
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "quality.artifacts",
+        "verify"
+      ],
+      "elapsed_seconds": 0.4519,
+      "exit_code": 0,
+      "output": "{\n  \"reports\": [\n    {\n      \"scope\": \"outputs/aggregate-20261123-release\",\n      \"errors\": []\n    }\n  ],\n  \"errors\": []\n}\n"
+    },
+    {
+      "name": "prose",
+      "command": [
+        ".tools/bin/vale",
+        "--minAlertLevel=warning",
+        "docs/aggregate-closeout-20261123.md",
+        "docs/aggregate-multiscale-analysis.md",
+        "docs/aggregate-results-20261123.md",
+        "conductor/runbook.md",
+        "conductor/tracks.md",
+        "conductor/v14-design.md",
+        "conductor/tracks/aggregate-multiscale-update/plan.md",
+        "conductor/tracks/mixed-policy-fiscal-allocation/plan.md"
+      ],
+      "elapsed_seconds": 0.1241,
+      "exit_code": 0,
+      "output": "\u2714 0 errors, 0 warnings and 0 suggestions in 8 files.\n"
+    },
+    {
+      "name": "privacy",
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "quality.privacy"
+      ],
+      "elapsed_seconds": 2.5912,
+      "exit_code": 0,
+      "output": "Scanned 863 files (861 text, 2 containers); 0 finding(s); 103 file(s) without text coverage\n"
+    }
+  ],
+  "passed": true,
+  "historical_and_current_seals_unchanged": true,
+  "current_release_manifest_sha256": "fa79b79c7caa67b162aec15adeaf427e7e7d776450e15a7e7c617059554a8c81",
+  "limitation": "The public release PR passed all five workflows at60205a54; a later documentation commit has separate hosted checks."
+}

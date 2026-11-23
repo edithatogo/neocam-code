@@ -19,16 +19,21 @@ Link: [./tracks/v13-02-policies/](./tracks/v13-02-policies/)
 Link: [./tracks/v13-03-review/](./tracks/v13-03-review/)
 
 ---
+## Closed implementation — 23 November 2026
+
+## [x] Track: Aggregate multiscale update — closed for now
+
+The [track plan](tracks/aggregate-multiscale-update/plan.md) and
+[recommendation/issue index](../docs/aggregate-closeout-20261123.md) record the
+completed private-first implementation, current results and public promotion.
+Public PR-scope checks passed at the recorded release snapshot. Follow-ups are
+[private execution](https://github.com/edithatogo/neocam/issues/13),
+[CHHHS/fiscal aggregates](https://github.com/edithatogo/neocam/issues/14),
+[manuscript/briefs](https://github.com/edithatogo/neocam/issues/15) and
+[wider calibration](https://github.com/edithatogo/neocam-code/issues/12).
+Unit-level data are optional. Closure is not a merge or full release acceptance.
+
 ## Active work
-
-## [x] Track: Aggregate multiscale implementation
-
-Link: [track plan](tracks/aggregate-multiscale-update/plan.md). Private PR #12 and
-public PR #11 contain the reported-evidence analysis, deterministic and probabilistic
-sensitivity, geographic scenarios and optional CHHHS aggregate refinement.
-Implementation, execution and reviewed promotion are complete. The existing
-artifact checker supports the new release; hosted acceptance is recorded
-separately and remains a merge prerequisite. Unit-level data are optional.
 
 ## [~] Track: Mixed-policy fiscal allocation
 Link: [track plan](tracks/mixed-policy-fiscal-allocation/). Fiscal shares await payment, routing and subsidy evidence.

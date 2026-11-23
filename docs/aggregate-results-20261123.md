@@ -100,3 +100,10 @@ v13 artifacts and their historical manifests are unchanged; report rendering tes
 explicitly use the historical report schema. The final release manifest includes
 the analysis manifest as an artifact. Exact local and hosted outcomes are recorded
 in the release reconciliation; no historical acceptance is inherited.
+
+## Closeout and issue references
+
+This implementation round is closed for now. The
+[complete recommendation/issue index](aggregate-closeout-20261123.md)
+maps delivered work and the four open follow-ups. Future data additions,
+manuscript work and private hosted qualification remain explicitly tracked.
