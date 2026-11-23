@@ -1,11 +1,11 @@
 # Aggregate multiscale update
 
-Authority: owner direction, 23 November 2026. This implementation round is closed
-for now. The analysis, release-format reconciliation and private-first public
-promotion are complete. Public PR #11 passed all five workflows at its recorded
-release snapshot. Private execution, optional data calibration and manuscript
-refresh remain separately tracked. Preserve existing fiscal ownership and
-historical outputs. See the [complete recommendation/issue index](../../../docs/aggregate-closeout-20261123.md).
+Authority: owner direction on 23 November 2026, resumed with implementation and
+merge authority on 24 November 2026. Public aggregate PR #11 is merged. The private
+citation type defect is repaired; protected private delivery remains blocked by
+hosted execution. The versioned private editorial packet and service mappings are
+delivered in this increment. Read the [current implementation record](../../../docs/aggregate-implementation-20261124.md).
+The historical closeout and tasks below retain their original scope and date.
 
 ## Scope
 
@@ -102,3 +102,18 @@ numerical outputs are verified within the retained local-check scope.
 The closeout index contains the full five-level scope, reported-evidence activation
 rules, data priorities, source boundaries and restart instructions. The fiscal
 evidence track remains open. No further work is scheduled by this closeout.
+
+## Implementation and merge follow-through — 24 November 2026
+
+- [x] Recheck live PRs, exact-head checks and corresponding issues.
+- [x] Reproduce and repair the private citation type-checking defect without weakening gates.
+- [x] Merge public analysis PR #11 after all five exact-head workflows passed.
+- [x] Deliver a private versioned editorial/decision packet from verified aggregate cells.
+- [x] Record actionable Weipa/Cooktown mappings and reuse existing input helpers.
+- [x] Reconcile Conductor and issue boundaries; preserve the fiscal owner and historical results.
+- [ ] Restore executed private hosted checks before protected private merge (#13).
+- [ ] Complete author manuscript/figures/protocol/checklist integration (#15).
+- [ ] Add material local or wider calibration inputs when available (#14; public #12).
+
+No new data, numerical run, full-release acceptance or completed journal submission
+is inferred from this documentation and targeted repair increment.

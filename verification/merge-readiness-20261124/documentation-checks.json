@@ -1,0 +1,25 @@
+{
+  "date": "2026-11-24",
+  "scope": "Public documentation follow-through on merged aggregate PR #11; no calculation/runtime/source-code change",
+  "context": "passed",
+  "current_release_manifest": "passed unchanged",
+  "git_diff_check": "passed",
+  "vale": {
+    "files": 6,
+    "errors": 0,
+    "warnings": 0
+  },
+  "privacy": {
+    "files": 865,
+    "text_files": 863,
+    "containers": 2,
+    "findings": 0,
+    "without_text_coverage": 103
+  },
+  "gitleaks_findings": 0,
+  "model_rerun": false,
+  "broad_local_suite_repeated": false,
+  "private_source_commit": "a3cf3b2f36cfe7a9c4576fcf63193766325f74b9",
+  "public_primary_merge": "37283deaccce6ac6e90e405d12ad08708395da0d",
+  "hosted_followup_pr": "Required exact-head checks remain separate; consult live PR and Actions."
+}

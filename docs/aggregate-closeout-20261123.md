@@ -1,5 +1,7 @@
 # Aggregate analysis: recommendations and closeout
 
+**Dated record:** the owner resumed implementation and authorised merge on 24 November 2026. Read the [current implementation and delivery record](aggregate-implementation-20261124.md). The closeout statements below describe 23 November.
+
 Closed for now on 23 November 2026 at the owner's request. The aggregate
 implementation, analysis, release-format reconciliation and reviewed public
 promotion are complete. The remaining evidence, editorial and private hosted

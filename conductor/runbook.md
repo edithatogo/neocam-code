@@ -78,7 +78,7 @@ projection; verify shared-input numerical parity. Private manuscripts, source
 originals, records, locators and unreleased local aggregates remain withheld.
 `neocam-public` is a historical snapshot, not a third active copy. Promotion and local checks are recorded in the current track; hosted acceptance
 retains its exact commit and workflow identity. Existing receipts
-qualify only their original commits; no refreshed manuscript or Word/PDF is claimed.
+qualify only their original commits. The versioned private editorial packet has its own document checks; it is not a refreshed submission manuscript and is not published here.
 
 ## Executed aggregate increment and closeout
 
@@ -88,9 +88,11 @@ the six numerical/input files match. The initial private run took 12.803 seconds
 and remains separately recorded. The existing artifact checker verifies the
 current release; historical v13 files and seals remain unchanged.
 
-This implementation round is closed for now. Read the
-[recommendation/issue index](../docs/aggregate-closeout-20261123.md) before
-resuming. Public PR-scope checks passed at the recorded release snapshot; private
-execution is tracked in [neocam #13](https://github.com/edithatogo/neocam/issues/13).
-Data refinement, geographic calibration and manuscript refresh have separate
-issues. Preserve the existing fiscal owner and the private-first promotion route.
+The owner resumed implementation and authorised merges on 24 November 2026.
+The public aggregate analysis is merged through PR #11. The private citation type
+defect is repaired; private hosted execution remains blocked under
+[neocam #13](https://github.com/edithatogo/neocam/issues/13). A versioned private
+editorial packet is delivered; full manuscript integration remains in #15.
+Read the [current implementation record](../docs/aggregate-implementation-20261124.md)
+and live PR/Actions status. The dated closeout index retains the full recommendation
+matrix. Preserve existing fiscal ownership and the private-first promotion route.

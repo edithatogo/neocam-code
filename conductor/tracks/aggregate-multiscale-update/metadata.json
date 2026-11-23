@@ -1,6 +1,6 @@
 {
   "id": "aggregate-multiscale-update",
-  "status": "closed_for_now",
+  "status": "implemented_public_analysis_merged_private_delivery_blocked",
   "authority_date": "2026-11-23",
   "implementation": "complete",
   "public_projection": "complete_reviewed_file_promotion",
@@ -11,7 +11,7 @@
   "private_research_parent_pr": 4,
   "private_commit": "bd5506a6b28ba3311ebe547dc399cd4e5414cc9f",
   "private_pr": 12,
-  "working_branch": "codex/aggregate-multiscale-20261123",
+  "working_branch": "codex/aggregate-implementation-20261124",
   "public_target_repository": "edithatogo/neocam-code",
   "public_parent": "6abe7be099a55531fc388221937dda583343cf03",
   "public_commit": "486339fb4f2a4bfab6d7bd41925479c2c5cf9649",
@@ -23,7 +23,7 @@
   "unit_level_data_required": false,
   "outputs": "outputs/aggregate-20261123-release",
   "validation_receipt": "verification/aggregate-multiscale-20261123/release-reconciliation.json",
-  "manuscript_refresh": "queued_after_verified_results",
+  "manuscript_refresh": "Versioned private editorial and decision packet delivered; complete journal packet integration remains in neocam#15.",
   "result_summary": "docs/aggregate-results-20261123.md",
   "promotion_receipt": "verification/aggregate-multiscale-20261123/release-promotion.json",
   "commit_fields_scope": "Immutable reviewed source snapshots; current heads resolve through the linked PRs.",
@@ -38,9 +38,18 @@
     "private_manuscript_refresh": "https://github.com/edithatogo/neocam/issues/15",
     "geographic_evidence_calibration": "https://github.com/edithatogo/neocam-code/issues/12"
   },
-  "public_verified_commit": "60205a54a01f456543b0af826f2b0b62f623ab80",
+  "public_verified_commit": "205b846ca8926db7e303d319ba1e1c69f594abf6",
   "public_hosted_pr_acceptance": "all_five_workflows_passed_at_recorded_snapshot",
-  "private_hosted_pr_acceptance": "unresolved_execution_gap_tracked_in_neocam_13",
+  "private_hosted_pr_acceptance": "blocked_latest_identifier_retry_failed_before_execution; source_type_defect_repaired_locally",
   "automatic_followup_scheduled": false,
-  "private_closeout_commit": "03229b9f7d252f9ee665e26670bdbced516afe76"
+  "private_closeout_commit": "03229b9f7d252f9ee665e26670bdbced516afe76",
+  "resumed_on": "2026-11-24",
+  "implementation_record": "docs/aggregate-implementation-20261124.md",
+  "public_merge_commit": "37283deaccce6ac6e90e405d12ad08708395da0d",
+  "private_parent_typing_fix": "48b47c544b5e1a692543989be090cabdbf3ab223",
+  "merge_authority_date": "2026-11-24",
+  "full_release_acceptance_scope": "No new full-release claim; inspect exact-main hosted evidence separately.",
+  "working_branch_scope": "24 November documentation follow-through; primary analysis PR #11 is merged",
+  "private_parent_security_commit": "b77db7bf3d1caee09c23900ba2fac1d660ed2be6",
+  "implementation_private_commit": "a3cf3b2f36cfe7a9c4576fcf63193766325f74b9"
 }
