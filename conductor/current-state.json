@@ -1,19 +1,19 @@
 {
   "version": 14,
-  "date": "2026-11-23",
+  "date": "2026-11-24",
   "active_tracks": [
     "mixed-policy-fiscal-allocation"
   ],
-  "branch": "codex/aggregate-multiscale-20261123",
+  "branch": "codex/aggregate-implementation-20261124",
   "parent_commit": "6abe7be099a55531fc388221937dda583343cf03",
-  "remote_branch": "codex/aggregate-multiscale-20261123",
+  "remote_branch": "codex/aggregate-implementation-20261124",
   "default_branch": "main",
   "remote": "edithatogo/neocam-code",
   "remote_origin": "https://github.com/edithatogo/neocam-code.git",
   "remote_visibility": "public",
   "remote_visibility_decision": "Owner explicitly approved only the code repository and reviewed simulation fixtures on 5 November 2026; original research repository remains private.",
   "remote_pr": 11,
-  "remote_pr_state": "draft",
+  "remote_pr_state": "merged",
   "release_ready": false,
   "public_visibility_authorised": true,
   "independent_validation": false,
@@ -76,14 +76,15 @@
     "remote": "edithatogo/neocam",
     "visibility": "private",
     "pr": 4,
-    "state": "retained_private_research_parent_for_aggregate_increment",
-    "head": "5b5af0502f7a11a544c7a1960e7e8c0437db8529",
+    "state": "open_private_parent_with_reviewed_typing_repair_hosted_blocked",
+    "head": "b77db7bf3d1caee09c23900ba2fac1d660ed2be6",
     "previous_reference": {
       "pr": 3,
       "head": "2d4c69e94ff13c8fb9255acedc7f68645a06e34f",
       "state_at_previous_record": "open_unmerged"
     },
-    "retained_separately": true
+    "retained_separately": true,
+    "head_at_aggregate_base": "5b5af0502f7a11a544c7a1960e7e8c0437db8529"
   },
   "known_limitations": [
     "historical/missing denominators and current capability/routing",
@@ -93,7 +94,7 @@
     "Haynes measures transfer within 24 hours. Applying the association to eventual transfer is an extrapolation.",
     "four government originals verified in a separate local archive; source bytes excluded from the public repository"
   ],
-  "next_acceptance": "This implementation round is closed for now. Public PR-scope checks passed at the recorded public release snapshot. Private execution qualification remains in neocam#13; CHHHS/fiscal refinement in neocam#14, manuscript refresh in neocam#15, and wider calibration in neocam-code#12. Preserve the existing fiscal owner. Both PRs remain drafts and unmerged.",
+  "next_acceptance": "Public aggregate PR #11 is merged. Private protected delivery remains blocked in neocam#13 despite the repaired citation type check. Editorial packet delivered under neocam#15; full journal integration remains open. CHHHS/fiscal data and broader calibration remain in neocam#14 and neocam-code#12. Read docs/aggregate-implementation-20261124.md and live PR/Actions status.",
   "code_publication": {
     "approved": "2026-11-05",
     "repository": "edithatogo/neocam-code",
@@ -123,7 +124,7 @@
   },
   "aggregate_multiscale_update": {
     "authority_date": "2026-11-23",
-    "status": "closed_for_now",
+    "status": "implemented_public_analysis_merged_private_delivery_blocked",
     "implementation": "complete",
     "promotion": "complete_explicit_file_promotion_with_separate_history",
     "verification": "focused_analysis_privacy_release_contract_and_exact_source_security_checks_passed",
@@ -145,7 +146,7 @@
     "outputs": "outputs/aggregate-20261123-release",
     "validation_receipt": "verification/aggregate-multiscale-20261123/release-reconciliation.json",
     "fiscal_evidence": "Open with existing mixed-policy-fiscal-allocation owner.",
-    "manuscript_refresh": "Deliberate follow-up after verified results; no new Word/PDF claimed.",
+    "manuscript_refresh": "Versioned private editorial and decision packet delivered; complete journal packet integration remains in neocam#15.",
     "agent_review": "verification/aggregate-multiscale-20261123/agent-review.md",
     "result_summary": "docs/aggregate-results-20261123.md",
     "promotion_receipt": "verification/aggregate-multiscale-20261123/release-promotion.json",
@@ -161,11 +162,15 @@
       "private_manuscript_refresh": "https://github.com/edithatogo/neocam/issues/15",
       "geographic_evidence_calibration": "https://github.com/edithatogo/neocam-code/issues/12"
     },
-    "public_verified_commit": "60205a54a01f456543b0af826f2b0b62f623ab80",
+    "public_verified_commit": "205b846ca8926db7e303d319ba1e1c69f594abf6",
     "public_hosted_pr_acceptance": "all_five_workflows_passed_at_recorded_snapshot",
-    "private_hosted_pr_acceptance": "unresolved_execution_gap_tracked_in_neocam_13",
+    "private_hosted_pr_acceptance": "blocked_latest_identifier_retry_failed_before_execution; source_type_defect_repaired_locally",
     "resume_rule": "Resume a named issue when requested or when its decision-relevant data are available; no automatic follow-up scheduled.",
-    "private_closeout_commit": "03229b9f7d252f9ee665e26670bdbced516afe76"
+    "private_closeout_commit": "03229b9f7d252f9ee665e26670bdbced516afe76",
+    "resumed_on": "2026-11-24",
+    "implementation_record": "docs/aggregate-implementation-20261124.md",
+    "public_merge_commit": "37283deaccce6ac6e90e405d12ad08708395da0d",
+    "private_parent_typing_fix": "48b47c544b5e1a692543989be090cabdbf3ab223"
   },
   "historical_reference_analysis": "outputs/v13-primary/results.json",
   "historical_outputs": [
@@ -173,9 +178,7 @@
     "outputs/v13-refinements",
     "outputs/aggregate-20261123"
   ],
-  "closed_for_now_tracks": [
-    "aggregate-multiscale-update"
-  ],
+  "closed_for_now_tracks": [],
   "closeout_index": "docs/aggregate-closeout-20261123.md",
   "followup_issues": {
     "private_hosted_execution": "https://github.com/edithatogo/neocam/issues/13",
@@ -184,10 +187,31 @@
     "geographic_evidence_calibration": "https://github.com/edithatogo/neocam-code/issues/12"
   },
   "public_hosted_pr_snapshot": {
-    "commit": "60205a54a01f456543b0af826f2b0b62f623ab80",
+    "commit": "205b846ca8926db7e303d319ba1e1c69f594abf6",
     "all_five_workflows_passed": true,
-    "assurance_run": 45112506022,
-    "scope": "PR profile, not merged-main full release or clinical validation"
+    "assurance_run": 45119081667,
+    "scope": "PR profile qualified before merge37283de; post-merge full acceptance is separate"
   },
-  "current_documentation_check_receipt": "verification/aggregate-multiscale-20261123/closeout-20261123.json"
+  "current_documentation_check_receipt": "verification/merge-readiness-20261124/documentation-checks.json",
+  "implementation_round_status": "implemented_public_analysis_merged_private_delivery_blocked",
+  "merge_authority": {
+    "date": "2026-11-24",
+    "instruction": "Implement and merge what you can",
+    "protection_bypass": false
+  },
+  "completed_implementation_tracks": [
+    "aggregate-multiscale-update"
+  ],
+  "current_implementation_record": "docs/aggregate-implementation-20261124.md",
+  "public_aggregate_delivery": {
+    "pr": 11,
+    "reviewed_head": "205b846ca8926db7e303d319ba1e1c69f594abf6",
+    "merge_commit": "37283deaccce6ac6e90e405d12ad08708395da0d",
+    "merged": true,
+    "pre_merge_workflows_passed": 5,
+    "scope": "Exact-head PR acceptance; post-merge full acceptance has its own live Actions result."
+  },
+  "remote_pr_scope": "Primary aggregate delivery PR #11; follow-up documentation is tracked by the working branch and linked issues.",
+  "private_parent_security_commit": "b77db7bf3d1caee09c23900ba2fac1d660ed2be6",
+  "implementation_private_commit": "a3cf3b2f36cfe7a9c4576fcf63193766325f74b9"
 }

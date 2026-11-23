@@ -54,6 +54,38 @@ Sources are the [Queensland PDC chapter 8 tables][pdc], [RSQ activity resource][
 [Weipa video announcement][weipa-video] and [Cooktown reopening announcement][cooktown].
 The ledger binds each row to its source and preserves narrower cohort definitions.
 
+## Service-to-model mapping checked on 24 November 2026
+
+The [Weipa announcement][weipa-video] identifies an installed mobile Remote
+Patient Monitoring device with two video streams, staff training and cameras that
+can be mounted on a Panda resuscitaire. This supports **existing video capability**.
+It does not identify the device as the model's `panda`, `mobile` or `obsbot` cost
+configuration. A Panda resuscitaire is not evidence that the attached video system
+is Panda Vision. Record its actual equipment class, usable availability, remaining
+life and recurring support before assigning it in `config/equipment_estate.json`.
+The regional comparison must then retain usable equipment in its current-care
+comparator, so expansion does not charge for an unnecessary replacement.
+
+The [Cooktown announcement][cooktown] supports resumed birthing from 14 September
+2026 and approximately 40 **planned** births per year. It provides no annual
+eligible-consultation count. The existing `src.portfolios_v7.consultation_overrides`
+already accepts `cooktown_annual_births`; pass `40` in a separately labelled
+reopening scenario rather than changing its retained historical default of `50`.
+That helper assumes a birth-to-contact conversion and uptake; these assumptions
+remain uncertain even when the birth-volume anchor is public.
+
+For the aggregate runner, actual or explicitly assumed annual contacts can enter
+the existing `contacts_by_site` field for `Cooktown` and `Weipa`. Birth counts
+must first be converted with a declared contact-rate assumption; they are not
+contacts themselves. Do not add reopened-service births to an unchanged regional
+birth total. Reuse the existing roster, activity and equipment functions; no new
+data service or dependency is needed.
+
+This mapping review completes the interpretation of the available announcements.
+It does not activate a new scenario or change the sealed 23 November results.
+Equipment-class confirmation and contact-rate calibration remain in
+[neocam-code #12](https://github.com/edithatogo/neocam-code/issues/12).
+
 ## Transfer matrix and denominators
 
 PDC table 8.06 has birth-nursery level as columns and destination-nursery level as

@@ -1,0 +1,66 @@
+{
+  "date": "2026-11-24",
+  "private_source_commit": "a3cf3b2f36cfe7a9c4576fcf63193766325f74b9",
+  "public_parent": "37283deaccce6ac6e90e405d12ad08708395da0d",
+  "allowlist": [
+    {
+      "path": "conductor/current-state.json",
+      "private_sha256": "662a79e98b500f2303249463f963fa612b95cd537cfbfe029df7853209affe72",
+      "public_sha256": "aff9138a9d8890daa3c4929aeeff7543ce97a7f535cb040607af0070898b978a",
+      "identical": false,
+      "projection": "repository-specific Conductor state and established publication boundary preserved"
+    },
+    {
+      "path": "conductor/runbook.md",
+      "private_sha256": "78fba596374a612b706737d1cd0f3cd668b5b2476298995c2b4c55a556c617b4",
+      "public_sha256": "c127332688850b42a7b3fbc4799919f432d37baa317d147ddaed0be46939a9d8",
+      "identical": false,
+      "projection": "repository-specific Conductor state and established publication boundary preserved"
+    },
+    {
+      "path": "conductor/tracks.md",
+      "private_sha256": "6e1e9c045c44f402fdd4979e5ee3115deb4b952162d9bf0965d3609592a81f9a",
+      "public_sha256": "530c7ae688ed1c911a36e9daff73f4a45e613817be1cc57d43dbed6bd1d2d211",
+      "identical": false,
+      "projection": "repository-specific Conductor state and established publication boundary preserved"
+    },
+    {
+      "path": "conductor/tracks/aggregate-multiscale-update/metadata.json",
+      "private_sha256": "ea6223dc8df6a7e56bac6701b046222512277d023389db828173d5c59129d59a",
+      "public_sha256": "9423fe1d826e3c8a464fce8a864ac5b1ee9a818735a24bcb1533625d00328ca3",
+      "identical": false,
+      "projection": "repository-specific Conductor state and established publication boundary preserved"
+    },
+    {
+      "path": "conductor/tracks/aggregate-multiscale-update/plan.md",
+      "private_sha256": "ae7e632e36a875e64a16ea88ff0b572e38c92b2a27bdd71fba255a655e629ea0",
+      "public_sha256": "ae7e632e36a875e64a16ea88ff0b572e38c92b2a27bdd71fba255a655e629ea0",
+      "identical": true,
+      "projection": "identical reviewed document"
+    },
+    {
+      "path": "docs/aggregate-closeout-20261123.md",
+      "private_sha256": "4db979e592a9f5b5aec45845580d209556ee97d8dd3f3dab499d20a1f7ae0cfe",
+      "public_sha256": "4db979e592a9f5b5aec45845580d209556ee97d8dd3f3dab499d20a1f7ae0cfe",
+      "identical": true,
+      "projection": "identical reviewed document"
+    },
+    {
+      "path": "docs/aggregate-implementation-20261124.md",
+      "private_sha256": "862e5164aad7ad049547249fb517cb0ba8d37fd9637528b839aa61415ce54a43",
+      "public_sha256": "862e5164aad7ad049547249fb517cb0ba8d37fd9637528b839aa61415ce54a43",
+      "identical": true,
+      "projection": "identical reviewed document"
+    },
+    {
+      "path": "docs/public-inputs-20261123.md",
+      "private_sha256": "864dd803b06c298af9da64497a209b56830cd715a735a51eb631daf4b0770728",
+      "public_sha256": "864dd803b06c298af9da64497a209b56830cd715a735a51eb631daf4b0770728",
+      "identical": true,
+      "projection": "identical reviewed document"
+    }
+  ],
+  "private_history_imported": false,
+  "private_manuscript_or_source_originals_promoted": false,
+  "calculation_inputs_or_results_changed": false
+}

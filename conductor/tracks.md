@@ -19,9 +19,9 @@ Link: [./tracks/v13-02-policies/](./tracks/v13-02-policies/)
 Link: [./tracks/v13-03-review/](./tracks/v13-03-review/)
 
 ---
-## Closed implementation — 23 November 2026
+## Completed implementation — updated 24 November 2026
 
-## [x] Track: Aggregate multiscale update — closed for now
+## [x] Track: Aggregate multiscale update — public analysis merged
 
 The [track plan](tracks/aggregate-multiscale-update/plan.md) and
 [recommendation/issue index](../docs/aggregate-closeout-20261123.md) record the
@@ -31,7 +31,7 @@ Public PR-scope checks passed at the recorded release snapshot. Follow-ups are
 [CHHHS/fiscal aggregates](https://github.com/edithatogo/neocam/issues/14),
 [manuscript/briefs](https://github.com/edithatogo/neocam/issues/15) and
 [wider calibration](https://github.com/edithatogo/neocam-code/issues/12).
-Unit-level data are optional. Closure is not a merge or full release acceptance.
+Unit-level data are optional. Public PR #11 is now merged; the private type defect is repaired, but private hosted delivery remains blocked. The versioned editorial packet and remaining issues are reconciled in the [24 November record](../docs/aggregate-implementation-20261124.md). Full release acceptance retains its own evidence.
 
 ## Active work
 
