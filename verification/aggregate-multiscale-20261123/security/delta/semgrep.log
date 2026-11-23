@@ -1,0 +1,4 @@
+[00.09][[34mINFO[0m]: Executed as: /workspace/scratch/0934df305bd5/neocam-code/.tools/opengrep/opengrep-core -rules /workspace/scratch/0934df305bd5/security-runtime/rules.yaml -targets /tmp/neocam-sast-source-9n2fgetv/targets.json -json_nodots -strict -fast -j 1
+[00.09][[34mINFO[0m]: Version: 1.33.1
+[00.09][[34mINFO[0m]: Parsing rules in /workspace/scratch/0934df305bd5/security-runtime/rules.yaml
+[00.26][[34mINFO[0m]: scan: processing 6 files (skipping 0), with 378 rules (skipping 0 )

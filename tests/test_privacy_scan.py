@@ -33,6 +33,7 @@ FAKE_USERINFO = "https://user:" + "hunter2" + AT + "github.com/binary"
 FAKE_PHONE = "(07) " + "3138 " + "5521"
 FAKE_INTERNATIONAL = "+61 " + "412 345 " + "678"
 FAKE_MOBILE = "04" + "12 345 " + "678"
+FAKE_UUID = "abcdefab-" + "0323-" + "4381-" + "80e9-" + "abcdefabcdef"
 FAKE_SUBSCRIBER = "2123 45670 " + "1"
 FAKE_TAX = "123 456 " + "782"
 FAKE_PAYMENT = "4111 1111 1111 " + "1111"
@@ -205,6 +206,66 @@ def test_grouped_numbers_are_read_as_australian_telephone_numbers(tmp_path: Path
     assert rules_of(found) == {"au_phone"}
     assert len(found.findings) == 3
     assert ignored.findings == ()
+
+
+@pytest.mark.parametrize(
+    ("text", "expected"),
+    [
+        (FAKE_UUID, 0),
+        (FAKE_UUID.upper(), 0),
+        ("https://example.com/resource/" + FAKE_UUID, 0),
+        ("%22" + FAKE_UUID + "%22", 0),
+        ("https://example.com/query?sql=FROM+%22" + FAKE_UUID + "%22", 0),
+        ("%27" + FAKE_UUID + "%27", 0),
+        ("%22" + FAKE_UUID + "%27", 1),
+        ("%22" + FAKE_UUID[:-1] + "%22", 1),
+        ("%22" + FAKE_UUID, 1),
+        ("%22" + FAKE_UUID + "%22 " + FAKE_PHONE, 1),
+        ("%22" + FAKE_UUID + "x%22", 1),
+        ("%22" + FAKE_PHONE + "%22", 1),
+        (FAKE_PHONE, 1),
+        (FAKE_UUID + " " + FAKE_PHONE, 1),
+        (FAKE_PHONE + "; " + FAKE_UUID, 1),
+        (FAKE_UUID[:-1], 1),
+        (FAKE_UUID[1:], 1),
+        (FAKE_UUID[:-1] + "g", 1),
+        ("x" + FAKE_UUID, 1),
+        (FAKE_UUID + "x", 1),
+        (FAKE_UUID + "-extra", 1),
+        ("prefix_" + FAKE_UUID, 1),
+        (FAKE_UUID + " " + FAKE_UUID[:-1], 1),
+    ],
+    ids=(
+        "complete",
+        "uppercase",
+        "url",
+        "encoded-double-quotes",
+        "encoded-sql-query",
+        "encoded-single-quotes",
+        "mismatched-encoded-quotes",
+        "encoded-truncated-token",
+        "unterminated-encoded-quote",
+        "encoded-nearby-phone",
+        "encoded-extended-token",
+        "encoded-phone-still-detected",
+        "standalone-phone",
+        "nearby-phone-after",
+        "nearby-phone-before",
+        "truncated-tail",
+        "truncated-head",
+        "nonhex-tail",
+        "attached-prefix",
+        "attached-suffix",
+        "extended-token",
+        "underscore-prefix",
+        "nearby-truncated-token",
+    ),
+)
+def test_complete_uuid_syntax_preserves_phone_detection(tmp_path: Path, text: str, expected: int) -> None:
+    _ = (tmp_path / "source.json").write_text(json.dumps({"source": text}), encoding="utf-8")
+    report = privacy.scan_repository(tmp_path)
+    assert len([finding for finding in report.findings if finding.rule == "au_phone"]) == expected
+    assert report.exemptions == ()
 
 
 @pytest.mark.parametrize(

@@ -1,0 +1,4 @@
+FINDING au_phone: data/aggregate/public-inputs.json:401
+FINDING au_phone: data/aggregate/public-inputs.json:409
+FINDING au_phone: data/aggregate/public-inputs.json:417
+Scanned 800 files (798 text, 2 containers); 3 finding(s); 103 file(s) without text coverage

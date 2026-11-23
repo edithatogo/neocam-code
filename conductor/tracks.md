@@ -21,8 +21,30 @@ Link: [./tracks/v13-03-review/](./tracks/v13-03-review/)
 ---
 ## Active work
 
+## [~] Track: Aggregate multiscale update
+Link: [track plan](tracks/aggregate-multiscale-update/plan.md). Prepare the public-safe
+projection of the private-first aggregate analysis: reported evidence with uncertainty,
+deterministic and probabilistic sensitivity, geographic scenarios and optional local
+aggregate refinement. Promotion, execution and current acceptance remain pending.
+
 ## [~] Track: Mixed-policy fiscal allocation
 Link: [track plan](tracks/mixed-policy-fiscal-allocation/). Fiscal shares await payment, routing and subsidy evidence.
+
+## Current-state reconciliation — 23 November 2026
+
+The retained private research parent is PR #4; the aggregate increment is developed
+there before an explicit file promotion to `neocam-code`. The public parent is
+`6abe7be099a55531fc388221937dda583343cf03`. No private Git history, unpublished
+manuscript, source original or unreleased local aggregate is imported. Preserve public
+source-withheld identities and use `neocam-public` only as a historical snapshot.
+
+Historical dispositions below retain their dates and acceptance identities. References
+to PR #3 and mandatory human advisory returns describe earlier states. The owner's
+5 November agent advisory policy governs current work; it does not establish human
+validation. Existing sensitivity, VoI, registry, fiscal and geographic implementations
+are reused. The fiscal track and its owner remain active for empirical charging and
+cash-capture evidence. New outputs, review and promotion require their own receipts;
+historical passes are not acceptance of this increment.
 
 ## Archived tracks, 2 November 2026
 

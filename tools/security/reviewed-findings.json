@@ -1,6 +1,6 @@
 {
-  "review": "same-assistant source review; withheld citation labels, preserved AST/numerics and excluded legacy drivers",
-  "date": "2026-11-05",
+  "review": "Agent exact-source review; historical public review retained. Aggregate runner/test and complete UUID grammar/control delta reviewed without exemptions; no independent human review claimed.",
+  "date": "2026-11-23",
   "source_sha256": {
     ".agents/skills/maintaining-lean-ci/scripts/__init__.py": "aff7817058e53e53d1287da0b3217c09b6f4ddf6c3650cf62092fa2643f981c5",
     ".agents/skills/maintaining-lean-ci/scripts/audit_evidence.py": "ed6f0e22415f0f30826296f4aebad6d0639585f3816bac989845fcb860d8684d",
@@ -19,9 +19,10 @@
     "quality/hooks.py": "1254f7b57244d1e9114f7715b42ce3c15252616a6b604e73f029b9e38da0b038",
     "quality/hypothesis_properties.py": "3046bc83d6fca2f75c8f02253bb0f775d423764e6674023c236ebc6d655b046a",
     "quality/polars_probe.py": "99bd8250ee3a061299d18aae0b3b227eeb2912d2bd6b876c3f3bfa2b17d369d5",
-    "quality/privacy.py": "4744f6f0a7e802154d5653ddaab48886c4b024c11c3cfb2915e288dea319793e",
+    "quality/privacy.py": "4f2fc12aa7cbbcc4cf7b63ce627b9cc5b211860687dc603f33887001eacfac87",
     "quality/profile_workload.py": "c51273848ac49498b2a286b230385fc746d1f9929ae06b470b06203a29fb09e2",
     "quality/source_archive.py": "c070e0d940d6c860c2f99f5fe802ba6f876c9cdfa19515f83f86aef234f257cb",
+    "scripts/analyse_aggregate.py": "d38120ed01da505ec87d3f92125f87be18ca22c8318debd89f0faa9a125f986f",
     "scripts/analyse_refinements.py": "0377877847171cc1ddebd18fa7637c2155b1380185dbe688b86388155965beb4",
     "scripts/analyse_v5.py": "ca4afed14649096ee6dda1aaa6922a0a074b4c27c511827e0556bc9d11dbadb3",
     "scripts/analyse_v6.py": "27ca85e53f461a8da4bdb4715d5d78ee440dabda8f9835e6dc881f48e409f3f4",
@@ -82,6 +83,7 @@
     "src/statewide.py": "6cd572dbbe67d82b37ca3710947e912db3770f30784604c23445b366149516b4",
     "src/strategies.py": "56df5a9e1b25d6b0c642671c765342457ef02a2bdd10b082a159c5cd4c8d13f1",
     "tests/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "tests/test_aggregate_analysis.py": "207185674e6484e3140dae62ae6473a2cd13893742d86e6bc3072bff49e89fb7",
     "tests/test_assurance_scope.py": "2cfeb6009c21ee040409f9ae814737aae0907715a9219f80826dbff39cb46116",
     "tests/test_assurance_v3.py": "4b873e8eca5068863ad6351a10934f62e03cbbad39b10a45ba32f4349957af75",
     "tests/test_contract_adversaries.py": "c4d0859c14be15ee19293e82384ea65534995da4d75fbb8bb2a91a9b8ac8df59",
@@ -100,7 +102,7 @@
     "tests/test_mutation_pathways_sensitivity.py": "618a670303caa081f2cf38a8ab9828c90a9824b290264c212520ab186532df5f",
     "tests/test_mutation_statewide.py": "07b398318e4fd42000e2bb098d21a9827ba45582bb56bc8706c4a6f0af44ffc1",
     "tests/test_native_integrity.py": "22c8f129169968a51e9ee828bfce3d774f746c1d2c9dacefccb1438abccb9bd0",
-    "tests/test_privacy_scan.py": "faf1b37f38329f45401ec5d83f66ab9494a5daac73fe099cd876795bc2049b5b",
+    "tests/test_privacy_scan.py": "3469744c88c72998492799508693b09da1ef617a4a0a32f76b9123e2ffb99895",
     "tests/test_quality_gates.py": "e45b867db14798f3611108369615afdb605c1bdf29d613d98f8704de46c866d0",
     "tests/test_quality_integration.py": "c36ddeef35befa19df6599b69b72d65eb81f455c51074b0a8ed839e3b91588ed",
     "tests/test_receipt_clock.py": "923dbd4b3bf14cd32ed6e10437ec7955931a34a3f2e4e780d28107b2d9e0658a",
@@ -213,20 +215,20 @@
     {
       "rule": "python.lang.security.audit.regex-dos.regex_dos",
       "path": "quality/privacy.py",
-      "start": 156,
-      "end": 451,
-      "source_sha256": "4744f6f0a7e802154d5653ddaab48886c4b024c11c3cfb2915e288dea319793e",
+      "start": 158,
+      "end": 464,
+      "source_sha256": "4f2fc12aa7cbbcc4cf7b63ce627b9cc5b211860687dc603f33887001eacfac87",
       "disposition": "reviewed_false_positive_or_style_suggestion",
-      "reason": "The email recognizer bounds local and label lengths. Dot-delimited labels disambiguate the repeated group. Adversarial malformed-address timings are retained in the privacy qualification receipt."
+      "reason": "The retained email recognizer is unchanged: local and label lengths are bounded and dot-delimited labels disambiguate the repeated group. The new UUID recognizer has fixed-width hexadecimal groups with whole-token or matching encoded-quote delimiters and a bounded search window; only fully enclosed phone fragments are classified as UUID text. No source/value allowance or scanner suppression was added."
     },
     {
       "rule": "python.lang.security.audit.regex-dos.regex_dos",
       "path": "quality/privacy.py",
-      "start": 156,
-      "end": 606,
-      "source_sha256": "4744f6f0a7e802154d5653ddaab48886c4b024c11c3cfb2915e288dea319793e",
+      "start": 158,
+      "end": 619,
+      "source_sha256": "4f2fc12aa7cbbcc4cf7b63ce627b9cc5b211860687dc603f33887001eacfac87",
       "disposition": "reviewed_false_positive_or_style_suggestion",
-      "reason": "The email recognizer bounds local and label lengths. Dot-delimited labels disambiguate the repeated group. Adversarial malformed-address timings are retained in the privacy qualification receipt."
+      "reason": "The retained email recognizer is unchanged: local and label lengths are bounded and dot-delimited labels disambiguate the repeated group. The new UUID recognizer has fixed-width hexadecimal groups with whole-token or matching encoded-quote delimiters and a bounded search window; only fully enclosed phone fragments are classified as UUID text. No source/value allowance or scanner suppression was added."
     },
     {
       "rule": "python.lang.security.audit.non-literal-import.non-literal-import",
@@ -1590,9 +1592,9 @@
     {
       "rule": "python.lang.security.audit.dangerous-subprocess-use-audit.dangerous-subprocess-use-audit",
       "path": "tests/test_privacy_scan.py",
-      "start": 116,
-      "end": 118,
-      "source_sha256": "faf1b37f38329f45401ec5d83f66ab9494a5daac73fe099cd876795bc2049b5b",
+      "start": 117,
+      "end": 119,
+      "source_sha256": "3469744c88c72998492799508693b09da1ef617a4a0a32f76b9123e2ffb99895",
       "disposition": "reviewed_false_positive_or_style_suggestion",
       "reason": "The test resolves the qualified Git executable, passes only fixed ls-files and -z arguments with a controlled repository cwd, and uses the default disabled shell. No shell string or untrusted command argument is present. This inventory oracle requires every tracked file to be accounted for by the privacy scan."
     }

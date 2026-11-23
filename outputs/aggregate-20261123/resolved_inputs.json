@@ -1,0 +1,449 @@
+{
+  "analysis": {
+    "budget_years": 7,
+    "draws": 20000,
+    "effect": {
+      "lower": 0.26,
+      "odds_ratio": 0.48,
+      "outcome": "Transfer within 24 hours after consultation; not neonatal mortality or eventual transfer",
+      "source": "haynes-transfer-24h; https://pubmed.ncbi.nlm.nih.gov/32081766/; doi:10.1016/j.acap.2020.02.013",
+      "upper": 0.9
+    },
+    "effect_scenarios": [
+      {
+        "id": "reported",
+        "log_effect_fraction": 1,
+        "transport_sd": 0
+      },
+      {
+        "id": "transportability",
+        "log_effect_fraction": 1,
+        "transport_sd": 0.35
+      },
+      {
+        "id": "attenuated",
+        "log_effect_fraction": 0.5,
+        "transport_sd": 0.35
+      },
+      {
+        "id": "skeptical",
+        "log_effect_fraction": 0,
+        "transport_sd": 0.35
+      },
+      {
+        "id": "null",
+        "log_effect_fraction": 0,
+        "transport_sd": 0
+      }
+    ],
+    "interpretation": "Aggregate-first conditional decision model. Reported association is the primary effect distribution; transportability, attenuation and null are explicit alternatives. All other uncertain inputs retain labelled researcher distributions. Source birth/mother and all-age RSQ counts are context and do not replace eligible neonatal contact denominators. Eventual-transfer mapping is an extrapolation; initial-endpoint scenario is explicit. No mortality/QALY benefit, national calibrated total, independent validation or fiscal settlement is inferred. Parameter overrides are absolute; parameter_factors multiply each setting baseline after overrides.",
+    "reference_config": "config/reference.json",
+    "schema_version": 1,
+    "seed": 202611,
+    "sensitivity": [
+      {
+        "contacts_per_episode": null,
+        "demand_multiplier": 1,
+        "id": "effect_lower",
+        "parameter_factors": {},
+        "parameters": {
+          "odds_ratio": 0.26
+        },
+        "pathways": {},
+        "probabilistic": false
+      },
+      {
+        "contacts_per_episode": null,
+        "demand_multiplier": 1,
+        "id": "effect_upper",
+        "parameter_factors": {},
+        "parameters": {
+          "odds_ratio": 0.9
+        },
+        "pathways": {},
+        "probabilistic": false
+      },
+      {
+        "contacts_per_episode": null,
+        "demand_multiplier": 1,
+        "id": "effect_null",
+        "parameter_factors": {},
+        "parameters": {
+          "odds_ratio": 1
+        },
+        "pathways": {},
+        "probabilistic": false
+      },
+      {
+        "contacts_per_episode": null,
+        "demand_multiplier": 0.5,
+        "id": "demand_half",
+        "parameter_factors": {},
+        "parameters": {},
+        "pathways": {},
+        "probabilistic": false
+      },
+      {
+        "contacts_per_episode": null,
+        "demand_multiplier": 2,
+        "id": "demand_double",
+        "parameter_factors": {},
+        "parameters": {},
+        "pathways": {},
+        "probabilistic": false
+      },
+      {
+        "contacts_per_episode": 1.5,
+        "demand_multiplier": 1,
+        "id": "repeat_1_5",
+        "parameter_factors": {},
+        "parameters": {},
+        "pathways": {},
+        "probabilistic": false
+      },
+      {
+        "contacts_per_episode": 2,
+        "demand_multiplier": 1,
+        "id": "repeat_2",
+        "parameter_factors": {},
+        "parameters": {},
+        "pathways": {},
+        "probabilistic": true
+      },
+      {
+        "contacts_per_episode": null,
+        "demand_multiplier": 1,
+        "id": "initial_endpoint",
+        "parameter_factors": {},
+        "parameters": {},
+        "pathways": {
+          "endpoint": "initial"
+        },
+        "probabilistic": true
+      },
+      {
+        "contacts_per_episode": null,
+        "demand_multiplier": 1,
+        "id": "extra_rescue_2pct",
+        "parameter_factors": {},
+        "parameters": {},
+        "pathways": {
+          "extra_rescue": 0.02
+        },
+        "probabilistic": false
+      },
+      {
+        "contacts_per_episode": null,
+        "demand_multiplier": 1,
+        "id": "extra_rescue_5pct",
+        "parameter_factors": {},
+        "parameters": {},
+        "pathways": {
+          "extra_rescue": 0.05
+        },
+        "probabilistic": true
+      },
+      {
+        "contacts_per_episode": null,
+        "demand_multiplier": 1,
+        "id": "air_cost_half",
+        "parameter_factors": {
+          "air_multiplier": 0.5
+        },
+        "parameters": {},
+        "pathways": {},
+        "probabilistic": false
+      },
+      {
+        "contacts_per_episode": null,
+        "demand_multiplier": 1,
+        "id": "air_cost_double",
+        "parameter_factors": {
+          "air_multiplier": 2
+        },
+        "parameters": {},
+        "pathways": {},
+        "probabilistic": false
+      },
+      {
+        "contacts_per_episode": null,
+        "demand_multiplier": 1,
+        "id": "retrieval_avoidable_low",
+        "parameter_factors": {},
+        "parameters": {
+          "marginal_fraction": 0.1
+        },
+        "pathways": {},
+        "probabilistic": false
+      },
+      {
+        "contacts_per_episode": null,
+        "demand_multiplier": 1,
+        "id": "retrieval_avoidable_high",
+        "parameter_factors": {},
+        "parameters": {
+          "marginal_fraction": 1
+        },
+        "pathways": {},
+        "probabilistic": false
+      },
+      {
+        "contacts_per_episode": null,
+        "demand_multiplier": 1,
+        "id": "hospital_avoidable_low",
+        "parameter_factors": {},
+        "parameters": {},
+        "pathways": {
+          "hospital_marginal_fraction": 0.25
+        },
+        "probabilistic": false
+      },
+      {
+        "contacts_per_episode": null,
+        "demand_multiplier": 1,
+        "id": "hospital_avoidable_high",
+        "parameter_factors": {},
+        "parameters": {},
+        "pathways": {
+          "hospital_marginal_fraction": 0.75
+        },
+        "probabilistic": false
+      },
+      {
+        "contacts_per_episode": null,
+        "demand_multiplier": 1,
+        "id": "capital_double",
+        "parameter_factors": {
+          "equipment_cost": 2
+        },
+        "parameters": {},
+        "pathways": {},
+        "probabilistic": false
+      },
+      {
+        "contacts_per_episode": null,
+        "demand_multiplier": 1,
+        "id": "no_spare_hub_capacity",
+        "parameter_factors": {},
+        "parameters": {},
+        "pathways": {
+          "hub_spare_hours": 0
+        },
+        "probabilistic": false
+      },
+      {
+        "contacts_per_episode": 2,
+        "demand_multiplier": 0.5,
+        "id": "joint_low_demand_extra_rescue",
+        "parameter_factors": {},
+        "parameters": {
+          "equipment_cost": 20000
+        },
+        "pathways": {
+          "extra_rescue": 0.05,
+          "hub_spare_hours": 0
+        },
+        "probabilistic": false
+      }
+    ],
+    "settings": [
+      {
+        "annual_contacts_per_facility": null,
+        "contacts_by_site": {},
+        "contacts_per_episode": 1,
+        "facility_count": 3,
+        "geography": "regional",
+        "id": "pilot",
+        "interpretation": "Existing three-site portfolio; activity is a model assumption, not an audited episode denominator.",
+        "level": "district",
+        "parameters": {},
+        "pathways": {},
+        "portfolio": "pilot"
+      },
+      {
+        "annual_contacts_per_facility": null,
+        "contacts_by_site": {},
+        "contacts_per_episode": 1,
+        "facility_count": 10,
+        "geography": "regional",
+        "id": "chhhs",
+        "interpretation": "CHHHS decision scenarios; local aggregate eligible contacts and transfer denominators can replace current priors.",
+        "level": "district",
+        "parameters": {},
+        "pathways": {},
+        "portfolio": "chhhs"
+      },
+      {
+        "annual_contacts_per_facility": null,
+        "contacts_by_site": {},
+        "contacts_per_episode": 1,
+        "facility_count": 14,
+        "geography": "remote",
+        "id": "chhhs_tchhs",
+        "interpretation": "Existing combined regional portfolio; overlaps CHHHS and must not be added to it.",
+        "level": "regional",
+        "parameters": {},
+        "pathways": {},
+        "portfolio": "chhhs_tchhs"
+      },
+      {
+        "annual_contacts_per_facility": null,
+        "contacts_by_site": {},
+        "contacts_per_episode": 1,
+        "facility_count": 33,
+        "geography": "regional",
+        "id": "spokes",
+        "interpretation": "Illustrative Queensland spoke portfolio; not a calibrated statewide deployment total.",
+        "level": "state",
+        "parameters": {},
+        "pathways": {},
+        "portfolio": "spokes"
+      },
+      {
+        "annual_contacts_per_facility": 25,
+        "contacts_by_site": {},
+        "contacts_per_episode": 1,
+        "facility_count": 10,
+        "geography": "regional",
+        "id": "national_transferability",
+        "interpretation": "Hypothetical ten-facility network for Australian transferability; 250 annual contacts are assumed, not a national estimate.",
+        "level": "national",
+        "parameters": {},
+        "pathways": {},
+        "portfolio": null
+      },
+      {
+        "annual_contacts_per_facility": 25,
+        "contacts_by_site": {},
+        "contacts_per_episode": 1,
+        "facility_count": 10,
+        "geography": "remote",
+        "id": "international_transferability",
+        "interpretation": "Hypothetical lower-cost remote network in reference AUD; all cost adjustments are scenarios, not country estimates or currency conversions.",
+        "level": "international",
+        "parameters": {
+          "air_multiplier": 0.5,
+          "equipment_cost": 5000,
+          "loaded_hour": 50,
+          "road_cost": 2000
+        },
+        "pathways": {
+          "hospital_resource_multiplier": 0.5,
+          "hub_block_cost": 20000,
+          "hub_hourly_rate": 100
+        },
+        "portfolio": null
+      }
+    ],
+    "source_ledger": "data/aggregate/public-inputs.json",
+    "transport_cash_capture_fractions": [
+      0,
+      0.25,
+      0.5,
+      1
+    ]
+  },
+  "clinical_validation": false,
+  "endpoint": "Published transfer within 24 hours; eventual mapping is extrapolation; initial is a structural scenario",
+  "primary_effect": "reported",
+  "reference": {
+    "configuration_sha256": "ca704e84aa88f8c333eaef1ff45670936600a9b461e207a01d1057ffefebb0e6",
+    "owned_assets": [
+      {
+        "remaining_life_years": 2,
+        "site": "Atherton",
+        "strategy": "panda"
+      },
+      {
+        "remaining_life_years": 2,
+        "site": "Mareeba",
+        "strategy": "panda"
+      },
+      {
+        "remaining_life_years": 2,
+        "site": "Innisfail",
+        "strategy": "panda"
+      }
+    ],
+    "parameters": {
+      "air_multiplier": 1.0,
+      "baseline_transfer": [
+        0.3,
+        0.65,
+        0.98
+      ],
+      "birth_growth": 1.0,
+      "calls_per_pilot_site": 12.5,
+      "capacity_step_cost": 30000.0,
+      "capacity_threshold": 500.0,
+      "case_mix": [
+        0.35,
+        0.5,
+        0.15
+      ],
+      "check_minutes": 10.0,
+      "discount": 0.05,
+      "downstream_delta": 2000.0,
+      "equipment_cost": 10000.0,
+      "family_delta": 1500.0,
+      "hub_annual_cost": 60000.0,
+      "include_capital": true,
+      "life_years": 5.0,
+      "loaded_hour": 85.0,
+      "marginal_fraction": 0.5,
+      "mode_air_shift": 0.0,
+      "odds_ratio": 0.6928203230275509,
+      "reliability": 0.95,
+      "rescue_premium": 10000.0,
+      "rescue_rate": 0.05,
+      "road_cost": 4000.0,
+      "state_uptake": 0.8,
+      "support": 300.0,
+      "training": 400.0,
+      "workflow_per_call": 75.0
+    },
+    "pathways": {
+      "endpoint": "eventual",
+      "extra_pre_rescue_cost": 2000.0,
+      "extra_rescue": 0.0,
+      "hospital_marginal_fraction": 0.5,
+      "hospital_resource_multiplier": 1.0,
+      "hub_block_cost": 40000.0,
+      "hub_block_hours": 200.0,
+      "hub_hourly_rate": 200.0,
+      "hub_minutes_per_call": 15.0,
+      "hub_spare_hours": 100.0,
+      "local_care_multiplier": 1.0,
+      "local_coordination_per_call": 25.0,
+      "phone_delay_share": 0.05,
+      "rescue_receiving_premium": 0.0,
+      "video_delay_share": 0.05
+    },
+    "run": {
+      "draws": 20000,
+      "portfolios": [
+        "pilot",
+        "chhhs",
+        "chhhs_tchhs",
+        "spokes"
+      ],
+      "seed": 20261028
+    },
+    "source_hashes": {
+      "config/equipment_estate.json": "c6a3e26071c8a8f25a2512a08a169f4a93cc8c0cf5e21db3dbb19b11eebd2a33",
+      "config/pathways.json": "b0625409296c0120b3d74d6a7019df4967d82ff26f09eacabe7b42bdea502feb",
+      "config/reference.json": "c9d30c4ca62ace030808c56703dfffcd7442e6e22d4c3fb27a649b9714cdc687",
+      "data/parameters.json": "9c1e4608532268e537c9b1956451142b5de396e2c46fd0454bace7735716780d"
+    }
+  },
+  "reported_log_or_se": 0.3167635541604038,
+  "row_counts": {
+    "budgets": 840,
+    "decisions": 2240,
+    "deterministic": 30,
+    "scenarios": 3120,
+    "sensitivity": 570
+  },
+  "uncertainty": "Reported association CI plus labelled researcher priors; not a fitted local posterior",
+  "units": "annual network; money in reference AUD; overlapping networks are not additive"
+}

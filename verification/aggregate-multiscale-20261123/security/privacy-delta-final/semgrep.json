@@ -1,0 +1,1768 @@
+{
+  "version": "1.33.1",
+  "results": [
+    {
+      "check_id": "python.lang.security.audit.regex-dos.regex_dos",
+      "path": "quality/privacy.py",
+      "start": {
+        "line": 158,
+        "col": 1,
+        "offset": 5602
+      },
+      "end": {
+        "line": 464,
+        "col": 62,
+        "offset": 16366
+      },
+      "extra": {
+        "metavars": {
+          "$B": {
+            "start": {
+              "line": 156,
+              "col": 23,
+              "offset": 5458
+            },
+            "end": {
+              "line": 156,
+              "col": 71,
+              "offset": 5506
+            },
+            "abstract_content": "r\"(?<![A-Za-z0-9._%+\\-])[A-Za-z0-9._%+\\-]{1,64}\""
+          },
+          "$A": {
+            "start": {
+              "line": 158,
+              "col": 1,
+              "offset": 5602
+            },
+            "end": {
+              "line": 158,
+              "col": 14,
+              "offset": 5615
+            },
+            "abstract_content": "EMAIL_PATTERN"
+          },
+          "$METHOD": {
+            "start": {
+              "line": 464,
+              "col": 26,
+              "offset": 16330
+            },
+            "end": {
+              "line": 464,
+              "col": 35,
+              "offset": 16339
+            },
+            "abstract_content": "fullmatch"
+          }
+        },
+        "engine_kind": "OSS",
+        "is_ignored": false,
+        "message": "Detected usage of re.compile with an inefficient regular expression. This can lead to regular expression denial of service, which can result in service down time. Instead, check all regexes or use safer alternatives such as pyre2.",
+        "metadata": {
+          "likelihood": "LOW",
+          "impact": "MEDIUM",
+          "confidence": "LOW",
+          "subcategory": [
+            "vuln"
+          ],
+          "owasp": "A06:2017 - Security Misconfiguration",
+          "cwe": "CWE-1333: Inefficient Regular Expression Complexity",
+          "category": "security",
+          "technology": [
+            "python"
+          ],
+          "references": [
+            "https://docs.python.org/3/library/re.html"
+          ]
+        },
+        "validation_state": "NO_VALIDATOR"
+      }
+    },
+    {
+      "check_id": "python.lang.security.audit.regex-dos.regex_dos",
+      "path": "quality/privacy.py",
+      "start": {
+        "line": 158,
+        "col": 1,
+        "offset": 5602
+      },
+      "end": {
+        "line": 619,
+        "col": 16,
+        "offset": 22111
+      },
+      "extra": {
+        "metavars": {
+          "$B": {
+            "start": {
+              "line": 156,
+              "col": 23,
+              "offset": 5458
+            },
+            "end": {
+              "line": 156,
+              "col": 71,
+              "offset": 5506
+            },
+            "abstract_content": "r\"(?<![A-Za-z0-9._%+\\-])[A-Za-z0-9._%+\\-]{1,64}\""
+          },
+          "$A": {
+            "start": {
+              "line": 158,
+              "col": 1,
+              "offset": 5602
+            },
+            "end": {
+              "line": 158,
+              "col": 14,
+              "offset": 5615
+            },
+            "abstract_content": "EMAIL_PATTERN"
+          },
+          "$METHOD": {
+            "start": {
+              "line": 616,
+              "col": 31,
+              "offset": 22001
+            },
+            "end": {
+              "line": 616,
+              "col": 36,
+              "offset": 22006
+            },
+            "abstract_content": "match"
+          }
+        },
+        "engine_kind": "OSS",
+        "is_ignored": false,
+        "message": "Detected usage of re.compile with an inefficient regular expression. This can lead to regular expression denial of service, which can result in service down time. Instead, check all regexes or use safer alternatives such as pyre2.",
+        "metadata": {
+          "likelihood": "LOW",
+          "impact": "MEDIUM",
+          "confidence": "LOW",
+          "subcategory": [
+            "vuln"
+          ],
+          "owasp": "A06:2017 - Security Misconfiguration",
+          "cwe": "CWE-1333: Inefficient Regular Expression Complexity",
+          "category": "security",
+          "technology": [
+            "python"
+          ],
+          "references": [
+            "https://docs.python.org/3/library/re.html"
+          ]
+        },
+        "validation_state": "NO_VALIDATOR"
+      }
+    },
+    {
+      "check_id": "python.lang.security.audit.dangerous-subprocess-use-audit.dangerous-subprocess-use-audit",
+      "path": "tests/test_privacy_scan.py",
+      "start": {
+        "line": 117,
+        "col": 22,
+        "offset": 4569
+      },
+      "end": {
+        "line": 119,
+        "col": 6,
+        "offset": 4787
+      },
+      "extra": {
+        "metavars": {
+          "$FUNC": {
+            "start": {
+              "line": 117,
+              "col": 33,
+              "offset": 4580
+            },
+            "end": {
+              "line": 117,
+              "col": 45,
+              "offset": 4592
+            },
+            "abstract_content": "check_output"
+          }
+        },
+        "engine_kind": "OSS",
+        "is_ignored": false,
+        "message": "Detected subprocess function 'check_output' without a static string. If this data can be controlled by a malicious actor, it may be an instance of command injection. Audit the use of this call to ensure it is not controllable by an external resource. You may consider using 'shlex.escape()'.",
+        "metadata": {
+          "owasp": [
+            "A01:2017 - Injection",
+            "A03:2021 - Injection",
+            "A05:2025 - Injection"
+          ],
+          "cwe": [
+            "CWE-78: Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+          ],
+          "asvs": {
+            "section": "V5: Validation, Sanitization and Encoding Verification Requirements",
+            "control_id": "5.3.8 OS Command Injection",
+            "control_url": "https://github.com/OWASP/ASVS/blob/master/4.0/en/0x13-V5-Validation-Sanitization-Encoding.md#v53-output-encoding-and-injection-prevention-requirements",
+            "version": "4"
+          },
+          "references": [
+            "https://stackoverflow.com/questions/3172470/actual-meaning-of-shell-true-in-subprocess",
+            "https://docs.python.org/3/library/subprocess.html",
+            "https://docs.python.org/3/library/shlex.html",
+            "https://semgrep.dev/docs/cheat-sheets/python-command-injection/"
+          ],
+          "category": "security",
+          "technology": [
+            "python"
+          ],
+          "confidence": "LOW",
+          "cwe2022-top25": true,
+          "cwe2021-top25": true,
+          "subcategory": [
+            "audit"
+          ],
+          "likelihood": "LOW",
+          "impact": "HIGH"
+        },
+        "validation_state": "NO_VALIDATOR"
+      }
+    }
+  ],
+  "errors": [],
+  "paths": {
+    "scanned": [
+      "quality/privacy.py",
+      "quality/privacy.py",
+      "tests/test_privacy_scan.py",
+      "tests/test_privacy_scan.py"
+    ]
+  },
+  "rules_by_engine": [
+    [
+      "python.airflow.security.audit.formatted-string-bashoperator.formatted-string-bashoperator",
+      "OSS"
+    ],
+    [
+      "python.attr.correctness.mutable-initializer.attr-mutable-initializer",
+      "OSS"
+    ],
+    [
+      "python.aws-lambda.security.dangerous-asyncio-create-exec.dangerous-asyncio-create-exec",
+      "OSS"
+    ],
+    [
+      "python.aws-lambda.security.dangerous-asyncio-exec.dangerous-asyncio-exec",
+      "OSS"
+    ],
+    [
+      "python.aws-lambda.security.dangerous-asyncio-shell.dangerous-asyncio-shell",
+      "OSS"
+    ],
+    [
+      "python.aws-lambda.security.dangerous-spawn-process.dangerous-spawn-process",
+      "OSS"
+    ],
+    [
+      "python.aws-lambda.security.dangerous-subprocess-use.dangerous-subprocess-use",
+      "OSS"
+    ],
+    [
+      "python.aws-lambda.security.dangerous-system-call.dangerous-system-call",
+      "OSS"
+    ],
+    [
+      "python.aws-lambda.security.dynamodb-filter-injection.dynamodb-filter-injection",
+      "OSS"
+    ],
+    [
+      "python.aws-lambda.security.mysql-sqli.mysql-sqli",
+      "OSS"
+    ],
+    [
+      "python.aws-lambda.security.psycopg-sqli.psycopg-sqli",
+      "OSS"
+    ],
+    [
+      "python.aws-lambda.security.pymssql-sqli.pymssql-sqli",
+      "OSS"
+    ],
+    [
+      "python.aws-lambda.security.pymysql-sqli.pymysql-sqli",
+      "OSS"
+    ],
+    [
+      "python.aws-lambda.security.sqlalchemy-sqli.sqlalchemy-sqli",
+      "OSS"
+    ],
+    [
+      "python.aws-lambda.security.tainted-code-exec.tainted-code-exec",
+      "OSS"
+    ],
+    [
+      "python.aws-lambda.security.tainted-html-response.tainted-html-response",
+      "OSS"
+    ],
+    [
+      "python.aws-lambda.security.tainted-html-string.tainted-html-string",
+      "OSS"
+    ],
+    [
+      "python.aws-lambda.security.tainted-pickle-deserialization.tainted-pickle-deserialization",
+      "OSS"
+    ],
+    [
+      "python.aws-lambda.security.tainted-sql-string.tainted-sql-string",
+      "OSS"
+    ],
+    [
+      "python.bokeh.maintainability.deprecated.deprecated_apis.bokeh-deprecated-apis",
+      "OSS"
+    ],
+    [
+      "python.boto3.security.hardcoded-token.hardcoded-token",
+      "OSS"
+    ],
+    [
+      "python.click.best-practice.echo-style.use-click-secho",
+      "OSS"
+    ],
+    [
+      "python.correctness.check-is-none-explicitly.check-is-none-explicitly",
+      "OSS"
+    ],
+    [
+      "python.correctness.socket-shutdown-close.socket-shutdown-close",
+      "OSS"
+    ],
+    [
+      "python.correctness.suppressed-exception-handling-finally-break.suppressed-exception-handling-finally-break",
+      "OSS"
+    ],
+    [
+      "python.cryptography.security.empty-aes-key.empty-aes-key",
+      "OSS"
+    ],
+    [
+      "python.cryptography.security.insecure-cipher-algorithms-arc4.insecure-cipher-algorithm-arc4",
+      "OSS"
+    ],
+    [
+      "python.cryptography.security.insecure-cipher-algorithms-blowfish.insecure-cipher-algorithm-blowfish",
+      "OSS"
+    ],
+    [
+      "python.cryptography.security.insecure-cipher-algorithms.insecure-cipher-algorithm-idea",
+      "OSS"
+    ],
+    [
+      "python.cryptography.security.insecure-cipher-mode-ecb.insecure-cipher-mode-ecb",
+      "OSS"
+    ],
+    [
+      "python.cryptography.security.insecure-hash-algorithms-md5.insecure-hash-algorithm-md5",
+      "OSS"
+    ],
+    [
+      "python.cryptography.security.insecure-hash-algorithms.insecure-hash-algorithm-sha1",
+      "OSS"
+    ],
+    [
+      "python.cryptography.security.insufficient-dsa-key-size.insufficient-dsa-key-size",
+      "OSS"
+    ],
+    [
+      "python.cryptography.security.insufficient-ec-key-size.insufficient-ec-key-size",
+      "OSS"
+    ],
+    [
+      "python.cryptography.security.insufficient-rsa-key-size.insufficient-rsa-key-size",
+      "OSS"
+    ],
+    [
+      "python.cryptography.security.mode-without-authentication.crypto-mode-without-authentication",
+      "OSS"
+    ],
+    [
+      "python.distributed.security.require-encryption",
+      "OSS"
+    ],
+    [
+      "python.django.best-practice.json_response.use-json-response",
+      "OSS"
+    ],
+    [
+      "python.django.best-practice.upsell_django_environ.use-django-environ",
+      "OSS"
+    ],
+    [
+      "python.django.best-practice.use-onetoonefield.use-onetoonefield",
+      "OSS"
+    ],
+    [
+      "python.django.compatibility.django-2_0-compat.django-compat-2_0-signals-weak",
+      "OSS"
+    ],
+    [
+      "python.django.compatibility.django-2_0-compat.django-compat-2_0-check-aggregate-support",
+      "OSS"
+    ],
+    [
+      "python.django.compatibility.django-2_0-compat.django-compat-2_0-extra-forms",
+      "OSS"
+    ],
+    [
+      "python.django.compatibility.django-2_0-compat.django-compat-2_0-assignment-tag",
+      "OSS"
+    ],
+    [
+      "python.django.compatibility.django-2_0-compat.django-compat-2_0-assert-redirects-helper",
+      "OSS"
+    ],
+    [
+      "python.django.correctness.model-save.django-db-model-save-super",
+      "OSS"
+    ],
+    [
+      "python.django.correctness.nontext-field-must-set-null-true.nontext-field-must-set-null-true",
+      "OSS"
+    ],
+    [
+      "python.django.correctness.string-field-null-checks.no-null-string-field",
+      "OSS"
+    ],
+    [
+      "python.django.correctness.string-field-null-checks.string-field-must-set-null-true",
+      "OSS"
+    ],
+    [
+      "python.django.correctness.use-decimalfield-for-money.use-decimalfield-for-money",
+      "OSS"
+    ],
+    [
+      "python.django.maintainability.duplicate-path-assignment.duplicate-path-assignment",
+      "OSS"
+    ],
+    [
+      "python.django.maintainability.duplicate-path-assignment.conflicting-path-assignment",
+      "OSS"
+    ],
+    [
+      "python.django.maintainability.duplicate-path-assignment.duplicate-path-assignment-different-names",
+      "OSS"
+    ],
+    [
+      "python.django.maintainability.duplicate-path-assignment.duplicate-name-assignment",
+      "OSS"
+    ],
+    [
+      "python.django.performance.access-foreign-keys.access-foreign-keys",
+      "OSS"
+    ],
+    [
+      "python.django.performance.upsell-count.use-count-method",
+      "OSS"
+    ],
+    [
+      "python.django.performance.upsell_earliest_latest.use-earliest-or-latest",
+      "OSS"
+    ],
+    [
+      "python.django.security.audit.avoid-insecure-deserialization.avoid-insecure-deserialization",
+      "OSS"
+    ],
+    [
+      "python.django.security.audit.avoid-mark-safe.avoid-mark-safe",
+      "OSS"
+    ],
+    [
+      "python.django.security.audit.csrf-exempt.no-csrf-exempt",
+      "OSS"
+    ],
+    [
+      "python.django.security.audit.custom-expression-as-sql.custom-expression-as-sql",
+      "OSS"
+    ],
+    [
+      "python.django.security.audit.django-rest-framework.missing-throttle-config.missing-throttle-config",
+      "OSS"
+    ],
+    [
+      "python.django.security.audit.extends-custom-expression.extends-custom-expression",
+      "OSS"
+    ],
+    [
+      "python.django.security.audit.query-set-extra.avoid-query-set-extra",
+      "OSS"
+    ],
+    [
+      "python.django.security.audit.raw-query.avoid-raw-sql",
+      "OSS"
+    ],
+    [
+      "python.django.security.audit.secure-cookies.django-secure-set-cookie",
+      "OSS"
+    ],
+    [
+      "python.django.security.audit.templates.debug-template-tag.debug-template-tag",
+      "OSS"
+    ],
+    [
+      "python.django.security.audit.unvalidated-password.unvalidated-password",
+      "OSS"
+    ],
+    [
+      "python.django.security.audit.xss.class-extends-safestring.class-extends-safestring",
+      "OSS"
+    ],
+    [
+      "python.django.security.audit.xss.context-autoescape-off.context-autoescape-off",
+      "OSS"
+    ],
+    [
+      "python.django.security.audit.xss.direct-use-of-httpresponse.direct-use-of-httpresponse",
+      "OSS"
+    ],
+    [
+      "python.django.security.audit.xss.filter-with-is-safe.filter-with-is-safe",
+      "OSS"
+    ],
+    [
+      "python.django.security.audit.xss.formathtml-fstring-parameter.formathtml-fstring-parameter",
+      "OSS"
+    ],
+    [
+      "python.django.security.audit.xss.global-autoescape-off.global-autoescape-off",
+      "OSS"
+    ],
+    [
+      "python.django.security.audit.xss.html-magic-method.html-magic-method",
+      "OSS"
+    ],
+    [
+      "python.django.security.audit.xss.html-safe.html-safe",
+      "OSS"
+    ],
+    [
+      "python.django.security.audit.xss.template-autoescape-off.template-autoescape-off",
+      "OSS"
+    ],
+    [
+      "python.django.security.audit.xss.template-blocktranslate-no-escape.template-blocktranslate-no-escape",
+      "OSS"
+    ],
+    [
+      "python.django.security.audit.xss.template-translate-as-no-escape.template-translate-as-no-escape",
+      "OSS"
+    ],
+    [
+      "python.django.security.audit.xss.template-var-unescaped-with-safeseq.template-var-unescaped-with-safeseq",
+      "OSS"
+    ],
+    [
+      "python.django.security.django-no-csrf-token.django-no-csrf-token",
+      "OSS"
+    ],
+    [
+      "python.django.security.django-using-request-post-after-is-valid.django-using-request-post-after-is-valid",
+      "OSS"
+    ],
+    [
+      "python.django.security.globals-as-template-context.globals-as-template-context",
+      "OSS"
+    ],
+    [
+      "python.django.security.hashids-with-django-secret.hashids-with-django-secret",
+      "OSS"
+    ],
+    [
+      "python.django.security.injection.code.globals-misuse-code-execution.globals-misuse-code-execution",
+      "OSS"
+    ],
+    [
+      "python.django.security.injection.code.user-eval-format-string.user-eval-format-string",
+      "OSS"
+    ],
+    [
+      "python.django.security.injection.code.user-eval.user-eval",
+      "OSS"
+    ],
+    [
+      "python.django.security.injection.code.user-exec-format-string.user-exec-format-string",
+      "OSS"
+    ],
+    [
+      "python.django.security.injection.code.user-exec.user-exec",
+      "OSS"
+    ],
+    [
+      "python.django.security.injection.command.command-injection-os-system.command-injection-os-system",
+      "OSS"
+    ],
+    [
+      "python.django.security.injection.command.subprocess-injection.subprocess-injection",
+      "OSS"
+    ],
+    [
+      "python.django.security.injection.csv-writer-injection.csv-writer-injection",
+      "OSS"
+    ],
+    [
+      "python.django.security.injection.email.xss-html-email-body.xss-html-email-body",
+      "OSS"
+    ],
+    [
+      "python.django.security.injection.email.xss-send-mail-html-message.xss-send-mail-html-message",
+      "OSS"
+    ],
+    [
+      "python.django.security.injection.mass-assignment.mass-assignment",
+      "OSS"
+    ],
+    [
+      "python.django.security.injection.open-redirect.open-redirect",
+      "OSS"
+    ],
+    [
+      "python.django.security.injection.path-traversal.path-traversal-file-name.path-traversal-file-name",
+      "OSS"
+    ],
+    [
+      "python.django.security.injection.path-traversal.path-traversal-join.path-traversal-join",
+      "OSS"
+    ],
+    [
+      "python.django.security.injection.path-traversal.path-traversal-open.path-traversal-open",
+      "OSS"
+    ],
+    [
+      "python.django.security.injection.raw-html-format.raw-html-format",
+      "OSS"
+    ],
+    [
+      "python.django.security.injection.reflected-data-httpresponse.reflected-data-httpresponse",
+      "OSS"
+    ],
+    [
+      "python.django.security.injection.reflected-data-httpresponsebadrequest.reflected-data-httpresponsebadrequest",
+      "OSS"
+    ],
+    [
+      "python.django.security.injection.request-data-fileresponse.request-data-fileresponse",
+      "OSS"
+    ],
+    [
+      "python.django.security.injection.request-data-write.request-data-write",
+      "OSS"
+    ],
+    [
+      "python.django.security.injection.sql.sql-injection-extra.sql-injection-using-extra-where",
+      "OSS"
+    ],
+    [
+      "python.django.security.injection.sql.sql-injection-rawsql.sql-injection-using-rawsql",
+      "OSS"
+    ],
+    [
+      "python.django.security.injection.sql.sql-injection-using-db-cursor-execute.sql-injection-db-cursor-execute",
+      "OSS"
+    ],
+    [
+      "python.django.security.injection.sql.sql-injection-using-raw.sql-injection-using-raw",
+      "OSS"
+    ],
+    [
+      "python.django.security.injection.ssrf.ssrf-injection-requests.ssrf-injection-requests",
+      "OSS"
+    ],
+    [
+      "python.django.security.injection.ssrf.ssrf-injection-urllib.ssrf-injection-urllib",
+      "OSS"
+    ],
+    [
+      "python.django.security.injection.tainted-sql-string.tainted-sql-string",
+      "OSS"
+    ],
+    [
+      "python.django.security.injection.tainted-url-host.tainted-url-host",
+      "OSS"
+    ],
+    [
+      "python.django.security.locals-as-template-context.locals-as-template-context",
+      "OSS"
+    ],
+    [
+      "python.django.security.nan-injection.nan-injection",
+      "OSS"
+    ],
+    [
+      "python.django.security.passwords.password-empty-string.password-empty-string",
+      "OSS"
+    ],
+    [
+      "python.django.security.passwords.use-none-for-password-default.use-none-for-password-default",
+      "OSS"
+    ],
+    [
+      "python.docker.security.audit.docker-arbitrary-container-run.docker-arbitrary-container-run",
+      "OSS"
+    ],
+    [
+      "python.fastapi.security.wildcard-cors.wildcard-cors",
+      "OSS"
+    ],
+    [
+      "python.flask.best-practice.get-class-method-with-side-effects.flask-class-method-get-side-effects",
+      "OSS"
+    ],
+    [
+      "python.flask.best-practice.use-jsonify.use-jsonify",
+      "OSS"
+    ],
+    [
+      "python.flask.caching.query-string.flask-cache-query-string",
+      "OSS"
+    ],
+    [
+      "python.flask.correctness.access-request-in-wrong-handler.avoid-accessing-request-in-wrong-handler",
+      "OSS"
+    ],
+    [
+      "python.flask.correctness.same-handler-name.flask-duplicate-handler-name",
+      "OSS"
+    ],
+    [
+      "python.flask.maintainability.deprecated.deprecated-apis.flask-deprecated-apis",
+      "OSS"
+    ],
+    [
+      "python.flask.security.audit.app-run-param-config.avoid_app_run_with_bad_host",
+      "OSS"
+    ],
+    [
+      "python.flask.security.audit.app-run-security-config.avoid_using_app_run_directly",
+      "OSS"
+    ],
+    [
+      "python.flask.security.audit.debug-enabled.debug-enabled",
+      "OSS"
+    ],
+    [
+      "python.flask.security.audit.directly-returned-format-string.directly-returned-format-string",
+      "OSS"
+    ],
+    [
+      "python.flask.security.audit.flask-cors-misconfiguration.flask-cors-misconfiguration",
+      "OSS"
+    ],
+    [
+      "python.flask.security.audit.flask-url-for-external-true.flask-url-for-external-true",
+      "OSS"
+    ],
+    [
+      "python.flask.security.audit.hardcoded-config.avoid_hardcoded_config_TESTING",
+      "OSS"
+    ],
+    [
+      "python.flask.security.audit.hardcoded-config.avoid_hardcoded_config_SECRET_KEY",
+      "OSS"
+    ],
+    [
+      "python.flask.security.audit.hardcoded-config.avoid_hardcoded_config_ENV",
+      "OSS"
+    ],
+    [
+      "python.flask.security.audit.hardcoded-config.avoid_hardcoded_config_DEBUG",
+      "OSS"
+    ],
+    [
+      "python.flask.security.audit.host-header-injection-python.host-header-injection-python",
+      "OSS"
+    ],
+    [
+      "python.flask.security.audit.render-template-string.render-template-string",
+      "OSS"
+    ],
+    [
+      "python.flask.security.audit.secure-set-cookie.secure-set-cookie",
+      "OSS"
+    ],
+    [
+      "python.flask.security.audit.wtf-csrf-disabled.flask-wtf-csrf-disabled",
+      "OSS"
+    ],
+    [
+      "python.flask.security.audit.xss.make-response-with-unknown-content.make-response-with-unknown-content",
+      "OSS"
+    ],
+    [
+      "python.flask.security.dangerous-template-string.dangerous-template-string",
+      "OSS"
+    ],
+    [
+      "python.flask.security.flask-api-method-string-format.flask-api-method-string-format",
+      "OSS"
+    ],
+    [
+      "python.flask.security.hashids-with-flask-secret.hashids-with-flask-secret",
+      "OSS"
+    ],
+    [
+      "python.flask.security.injection.csv-writer-injection.csv-writer-injection",
+      "OSS"
+    ],
+    [
+      "python.flask.security.injection.nan-injection.nan-injection",
+      "OSS"
+    ],
+    [
+      "python.flask.security.injection.os-system-injection.os-system-injection",
+      "OSS"
+    ],
+    [
+      "python.flask.security.injection.path-traversal-open.path-traversal-open",
+      "OSS"
+    ],
+    [
+      "python.flask.security.injection.raw-html-concat.raw-html-format",
+      "OSS"
+    ],
+    [
+      "python.flask.security.injection.ssrf-requests.ssrf-requests",
+      "OSS"
+    ],
+    [
+      "python.flask.security.injection.subprocess-injection.subprocess-injection",
+      "OSS"
+    ],
+    [
+      "python.flask.security.injection.tainted-sql-string.tainted-sql-string",
+      "OSS"
+    ],
+    [
+      "python.flask.security.injection.tainted-url-host.tainted-url-host",
+      "OSS"
+    ],
+    [
+      "python.flask.security.injection.user-eval.eval-injection",
+      "OSS"
+    ],
+    [
+      "python.flask.security.injection.user-exec.exec-injection",
+      "OSS"
+    ],
+    [
+      "python.flask.security.insecure-deserialization.insecure-deserialization",
+      "OSS"
+    ],
+    [
+      "python.flask.security.open-redirect.open-redirect",
+      "OSS"
+    ],
+    [
+      "python.flask.security.secure-static-file-serve.avoid_send_file_without_path_sanitization",
+      "OSS"
+    ],
+    [
+      "python.flask.security.unescaped-template-extension.unescaped-template-extension",
+      "OSS"
+    ],
+    [
+      "python.flask.security.unsanitized-input.response-contains-unsanitized-input",
+      "OSS"
+    ],
+    [
+      "python.flask.security.xss.audit.direct-use-of-jinja2.direct-use-of-jinja2",
+      "OSS"
+    ],
+    [
+      "python.flask.security.xss.audit.explicit-unescape-with-markup.explicit-unescape-with-markup",
+      "OSS"
+    ],
+    [
+      "python.flask.security.xss.audit.template-autoescape-off.template-autoescape-off",
+      "OSS"
+    ],
+    [
+      "python.flask.security.xss.audit.template-unescaped-with-safe.template-unescaped-with-safe",
+      "OSS"
+    ],
+    [
+      "python.flask.security.xss.audit.template-unquoted-attribute-var.template-unquoted-attribute-var",
+      "OSS"
+    ],
+    [
+      "python.jinja2.security.audit.autoescape-disabled-false.incorrect-autoescape-disabled",
+      "OSS"
+    ],
+    [
+      "python.jinja2.security.audit.missing-autoescape-disabled.missing-autoescape-disabled",
+      "OSS"
+    ],
+    [
+      "python.jwt.security.audit.jwt-exposed-data.jwt-python-exposed-data",
+      "OSS"
+    ],
+    [
+      "python.jwt.security.jwt-exposed-credentials.jwt-python-exposed-credentials",
+      "OSS"
+    ],
+    [
+      "python.jwt.security.jwt-hardcode.jwt-python-hardcoded-secret",
+      "OSS"
+    ],
+    [
+      "python.jwt.security.jwt-none-alg.jwt-python-none-alg",
+      "OSS"
+    ],
+    [
+      "python.jwt.security.unverified-jwt-decode.unverified-jwt-decode",
+      "OSS"
+    ],
+    [
+      "python.lang.best-practice.hardcoded-tmp-path.hardcoded-tmp-path",
+      "OSS"
+    ],
+    [
+      "python.lang.best-practice.logging-error-without-handling.logging-error-without-handling",
+      "OSS"
+    ],
+    [
+      "python.lang.best-practice.manual-collections-create.manual-defaultdict-dict-create",
+      "OSS"
+    ],
+    [
+      "python.lang.best-practice.manual-collections-create.manual-defaultdict-set-create",
+      "OSS"
+    ],
+    [
+      "python.lang.best-practice.manual-collections-create.manual-defaultdict-list-create",
+      "OSS"
+    ],
+    [
+      "python.lang.best-practice.manual-collections-create.manual-counter-create",
+      "OSS"
+    ],
+    [
+      "python.lang.best-practice.missing-hash-with-eq.missing-hash-with-eq",
+      "OSS"
+    ],
+    [
+      "python.lang.best-practice.open-never-closed.open-never-closed",
+      "OSS"
+    ],
+    [
+      "python.lang.best-practice.pass-body.pass-body-fn",
+      "OSS"
+    ],
+    [
+      "python.lang.best-practice.pass-body.pass-body-range",
+      "OSS"
+    ],
+    [
+      "python.lang.best-practice.pdb.python-debugger-found",
+      "OSS"
+    ],
+    [
+      "python.lang.best-practice.sleep.arbitrary-sleep",
+      "OSS"
+    ],
+    [
+      "python.lang.best-practice.unspecified-open-encoding.unspecified-open-encoding",
+      "OSS"
+    ],
+    [
+      "python.lang.compatibility.python36.python36-compatibility-ssl",
+      "OSS"
+    ],
+    [
+      "python.lang.compatibility.python36.python36-compatibility-Popen1",
+      "OSS"
+    ],
+    [
+      "python.lang.compatibility.python36.python36-compatibility-Popen2",
+      "OSS"
+    ],
+    [
+      "python.lang.compatibility.python37.python37-compatibility-importlib",
+      "OSS"
+    ],
+    [
+      "python.lang.compatibility.python37.python37-compatibility-importlib2",
+      "OSS"
+    ],
+    [
+      "python.lang.compatibility.python37.python37-compatibility-httpconn",
+      "OSS"
+    ],
+    [
+      "python.lang.compatibility.python37.python37-compatibility-httpsconn",
+      "OSS"
+    ],
+    [
+      "python.lang.compatibility.python37.python37-compatibility-importlib3",
+      "OSS"
+    ],
+    [
+      "python.lang.compatibility.python37.python37-compatibility-textiowrapper",
+      "OSS"
+    ],
+    [
+      "python.lang.compatibility.python37.python37-compatibility-ipv6network1",
+      "OSS"
+    ],
+    [
+      "python.lang.compatibility.python37.python37-compatibility-ipv6network2",
+      "OSS"
+    ],
+    [
+      "python.lang.compatibility.python37.python37-compatibility-ipv4network1",
+      "OSS"
+    ],
+    [
+      "python.lang.compatibility.python37.python37-compatibility-ipv4network2",
+      "OSS"
+    ],
+    [
+      "python.lang.compatibility.python37.python37-compatibility-locale1",
+      "OSS"
+    ],
+    [
+      "python.lang.compatibility.python37.python37-compatibility-math1",
+      "OSS"
+    ],
+    [
+      "python.lang.compatibility.python37.python37-compatibility-multiprocess1",
+      "OSS"
+    ],
+    [
+      "python.lang.compatibility.python37.python37-compatibility-multiprocess2",
+      "OSS"
+    ],
+    [
+      "python.lang.compatibility.python37.python37-compatibility-os1",
+      "OSS"
+    ],
+    [
+      "python.lang.compatibility.python37.python37-compatibility-os2-ok2",
+      "OSS"
+    ],
+    [
+      "python.lang.compatibility.python37.python37-compatibility-pdb",
+      "OSS"
+    ],
+    [
+      "python.lang.correctness.baseclass-attribute-override.baseclass-attribute-override",
+      "OSS"
+    ],
+    [
+      "python.lang.correctness.cannot-cache-generators.cannot-cache-generators",
+      "OSS"
+    ],
+    [
+      "python.lang.correctness.common-mistakes.default-mutable-dict.default-mutable-dict",
+      "OSS"
+    ],
+    [
+      "python.lang.correctness.common-mistakes.default-mutable-list.default-mutable-list",
+      "OSS"
+    ],
+    [
+      "python.lang.correctness.common-mistakes.is-comparison-string.identical-is-comparison",
+      "OSS"
+    ],
+    [
+      "python.lang.correctness.common-mistakes.is-comparison-string.string-is-comparison",
+      "OSS"
+    ],
+    [
+      "python.lang.correctness.common-mistakes.is-not-is-not.is-not-is-not",
+      "OSS"
+    ],
+    [
+      "python.lang.correctness.common-mistakes.string-concat-in-list.string-concat-in-list",
+      "OSS"
+    ],
+    [
+      "python.lang.correctness.concurrent.uncaught-executor-exceptions",
+      "OSS"
+    ],
+    [
+      "python.lang.correctness.dict-modify-iterating.dict-del-while-iterate",
+      "OSS"
+    ],
+    [
+      "python.lang.correctness.exceptions.exceptions.raise-not-base-exception",
+      "OSS"
+    ],
+    [
+      "python.lang.correctness.exit.use-sys-exit",
+      "OSS"
+    ],
+    [
+      "python.lang.correctness.file-object-redefined-before-close.file-object-redefined-before-close",
+      "OSS"
+    ],
+    [
+      "python.lang.correctness.list-modify-iterating.list-modify-while-iterate",
+      "OSS"
+    ],
+    [
+      "python.lang.correctness.pdb.pdb-remove",
+      "OSS"
+    ],
+    [
+      "python.lang.correctness.pytest-assert_match-after-path-patch.pytest-assert_match-after-path-patch",
+      "OSS"
+    ],
+    [
+      "python.lang.correctness.return-in-init.return-in-init",
+      "OSS"
+    ],
+    [
+      "python.lang.correctness.return-in-init.yield-in-init",
+      "OSS"
+    ],
+    [
+      "python.lang.correctness.sync-sleep-in-async-code.sync-sleep-in-async-code",
+      "OSS"
+    ],
+    [
+      "python.lang.correctness.tempfile.flush.tempfile-without-flush",
+      "OSS"
+    ],
+    [
+      "python.lang.correctness.tempfile.mktemp.tempfile-insecure",
+      "OSS"
+    ],
+    [
+      "python.lang.correctness.test-is-missing-assert.test-is-missing-assert",
+      "OSS"
+    ],
+    [
+      "python.lang.correctness.unchecked-returns.unchecked-subprocess-call",
+      "OSS"
+    ],
+    [
+      "python.lang.correctness.useless-comparison.no-strings-as-booleans",
+      "OSS"
+    ],
+    [
+      "python.lang.correctness.useless-eqeq.useless-eqeq",
+      "OSS"
+    ],
+    [
+      "python.lang.correctness.writing-to-file-in-read-mode.writing-to-file-in-read-mode",
+      "OSS"
+    ],
+    [
+      "python.lang.maintainability.improper-list-concat.improper-list-concat",
+      "OSS"
+    ],
+    [
+      "python.lang.maintainability.is-function-without-parentheses.is-function-without-parentheses",
+      "OSS"
+    ],
+    [
+      "python.lang.maintainability.return.code-after-unconditional-return",
+      "OSS"
+    ],
+    [
+      "python.lang.maintainability.return.return-not-in-function",
+      "OSS"
+    ],
+    [
+      "python.lang.maintainability.useless-assign-keyed.useless-assignment-keyed",
+      "OSS"
+    ],
+    [
+      "python.lang.maintainability.useless-ifelse.useless-if-conditional",
+      "OSS"
+    ],
+    [
+      "python.lang.maintainability.useless-ifelse.useless-if-body",
+      "OSS"
+    ],
+    [
+      "python.lang.maintainability.useless-innerfunction.useless-inner-function",
+      "OSS"
+    ],
+    [
+      "python.lang.maintainability.useless-literal-set.useless-literal-set",
+      "OSS"
+    ],
+    [
+      "python.lang.maintainability.useless-literal.useless-literal",
+      "OSS"
+    ],
+    [
+      "python.lang.security.audit.conn_recv.multiprocessing-recv",
+      "OSS"
+    ],
+    [
+      "python.lang.security.audit.dangerous-annotations-usage.dangerous-annotations-usage",
+      "OSS"
+    ],
+    [
+      "python.lang.security.audit.dangerous-asyncio-create-exec-audit.dangerous-asyncio-create-exec-audit",
+      "OSS"
+    ],
+    [
+      "python.lang.security.audit.dangerous-asyncio-create-exec-tainted-env-args.dangerous-asyncio-create-exec-tainted-env-args",
+      "OSS"
+    ],
+    [
+      "python.lang.security.audit.dangerous-asyncio-exec-audit.dangerous-asyncio-exec-audit",
+      "OSS"
+    ],
+    [
+      "python.lang.security.audit.dangerous-asyncio-exec-tainted-env-args.dangerous-asyncio-exec-tainted-env-args",
+      "OSS"
+    ],
+    [
+      "python.lang.security.audit.dangerous-asyncio-shell-audit.dangerous-asyncio-shell-audit",
+      "OSS"
+    ],
+    [
+      "python.lang.security.audit.dangerous-asyncio-shell-tainted-env-args.dangerous-asyncio-shell-tainted-env-args",
+      "OSS"
+    ],
+    [
+      "python.lang.security.audit.dangerous-code-run-audit.dangerous-interactive-code-run-audit",
+      "OSS"
+    ],
+    [
+      "python.lang.security.audit.dangerous-code-run-tainted-env-args.dangerous-interactive-code-run-tainted-env-args",
+      "OSS"
+    ],
+    [
+      "python.lang.security.audit.dangerous-os-exec-audit.dangerous-os-exec-audit",
+      "OSS"
+    ],
+    [
+      "python.lang.security.audit.dangerous-os-exec-tainted-env-args.dangerous-os-exec-tainted-env-args",
+      "OSS"
+    ],
+    [
+      "python.lang.security.audit.dangerous-spawn-process-audit.dangerous-spawn-process-audit",
+      "OSS"
+    ],
+    [
+      "python.lang.security.audit.dangerous-spawn-process-tainted-env-args.dangerous-spawn-process-tainted-env-args",
+      "OSS"
+    ],
+    [
+      "python.lang.security.audit.dangerous-subinterpreters-run-string-audit.dangerous-subinterpreters-run-string-audit",
+      "OSS"
+    ],
+    [
+      "python.lang.security.audit.dangerous-subinterpreters-run-string-tainted-env-args.dangerous-subinterpreters-run-string-tainted-env-args",
+      "OSS"
+    ],
+    [
+      "python.lang.security.audit.dangerous-subprocess-use-audit.dangerous-subprocess-use-audit",
+      "OSS"
+    ],
+    [
+      "python.lang.security.audit.dangerous-subprocess-use-tainted-env-args.dangerous-subprocess-use-tainted-env-args",
+      "OSS"
+    ],
+    [
+      "python.lang.security.audit.dangerous-system-call-audit.dangerous-system-call-audit",
+      "OSS"
+    ],
+    [
+      "python.lang.security.audit.dangerous-system-call-tainted-env-args.dangerous-system-call-tainted-env-args",
+      "OSS"
+    ],
+    [
+      "python.lang.security.audit.dangerous-testcapi-run-in-subinterp-audit.dangerous-testcapi-run-in-subinterp-audit",
+      "OSS"
+    ],
+    [
+      "python.lang.security.audit.dangerous-testcapi-run-in-subinterp-tainted-env-args.dangerous-testcapi-run-in-subinterp-tainted-env-args",
+      "OSS"
+    ],
+    [
+      "python.lang.security.audit.dynamic-urllib-use-detected.dynamic-urllib-use-detected",
+      "OSS"
+    ],
+    [
+      "python.lang.security.audit.eval-detected.eval-detected",
+      "OSS"
+    ],
+    [
+      "python.lang.security.audit.exec-detected.exec-detected",
+      "OSS"
+    ],
+    [
+      "python.lang.security.audit.formatted-sql-query.formatted-sql-query",
+      "OSS"
+    ],
+    [
+      "python.lang.security.audit.hardcoded-password-default-argument.hardcoded-password-default-argument",
+      "OSS"
+    ],
+    [
+      "python.lang.security.audit.httpsconnection-detected.httpsconnection-detected",
+      "OSS"
+    ],
+    [
+      "python.lang.security.audit.insecure-file-permissions.insecure-file-permissions",
+      "OSS"
+    ],
+    [
+      "python.lang.security.audit.insecure-transport.ftplib.use-ftp-tls.use-ftp-tls",
+      "OSS"
+    ],
+    [
+      "python.lang.security.audit.insecure-transport.requests.request-session-http-in-with-context.request-session-http-in-with-context",
+      "OSS"
+    ],
+    [
+      "python.lang.security.audit.insecure-transport.requests.request-session-with-http.request-session-with-http",
+      "OSS"
+    ],
+    [
+      "python.lang.security.audit.insecure-transport.requests.request-with-http.request-with-http",
+      "OSS"
+    ],
+    [
+      "python.lang.security.audit.insecure-transport.ssl.no-set-ciphers.no-set-ciphers",
+      "OSS"
+    ],
+    [
+      "python.lang.security.audit.insecure-transport.urllib.insecure-openerdirector-open-ftp.insecure-openerdirector-open-ftp",
+      "OSS"
+    ],
+    [
+      "python.lang.security.audit.insecure-transport.urllib.insecure-openerdirector-open.insecure-openerdirector-open",
+      "OSS"
+    ],
+    [
+      "python.lang.security.audit.insecure-transport.urllib.insecure-request-object-ftp.insecure-request-object-ftp",
+      "OSS"
+    ],
+    [
+      "python.lang.security.audit.insecure-transport.urllib.insecure-request-object.insecure-request-object",
+      "OSS"
+    ],
+    [
+      "python.lang.security.audit.insecure-transport.urllib.insecure-urlopen-ftp.insecure-urlopen-ftp",
+      "OSS"
+    ],
+    [
+      "python.lang.security.audit.insecure-transport.urllib.insecure-urlopen.insecure-urlopen",
+      "OSS"
+    ],
+    [
+      "python.lang.security.audit.insecure-transport.urllib.insecure-urlopener-open-ftp.insecure-urlopener-open-ftp",
+      "OSS"
+    ],
+    [
+      "python.lang.security.audit.insecure-transport.urllib.insecure-urlopener-open.insecure-urlopener-open",
+      "OSS"
+    ],
+    [
+      "python.lang.security.audit.insecure-transport.urllib.insecure-urlopener-retrieve-ftp.insecure-urlopener-retrieve-ftp",
+      "OSS"
+    ],
+    [
+      "python.lang.security.audit.insecure-transport.urllib.insecure-urlopener-retrieve.insecure-urlopener-retrieve",
+      "OSS"
+    ],
+    [
+      "python.lang.security.audit.insecure-transport.urllib.insecure-urlretrieve-ftp.insecure-urlretrieve-ftp",
+      "OSS"
+    ],
+    [
+      "python.lang.security.audit.insecure-transport.urllib.insecure-urlretrieve.insecure-urlretrieve",
+      "OSS"
+    ],
+    [
+      "python.lang.security.audit.logging.listeneval.listen-eval",
+      "OSS"
+    ],
+    [
+      "python.lang.security.audit.logging.logger-credential-leak.python-logger-credential-disclosure",
+      "OSS"
+    ],
+    [
+      "python.lang.security.audit.mako-templates-detected.mako-templates-detected",
+      "OSS"
+    ],
+    [
+      "python.lang.security.audit.marshal.marshal-usage",
+      "OSS"
+    ],
+    [
+      "python.lang.security.audit.md5-used-as-password.md5-used-as-password",
+      "OSS"
+    ],
+    [
+      "python.lang.security.audit.network.bind.avoid-bind-to-all-interfaces",
+      "OSS"
+    ],
+    [
+      "python.lang.security.audit.network.disabled-cert-validation.disabled-cert-validation",
+      "OSS"
+    ],
+    [
+      "python.lang.security.audit.network.http-not-https-connection.http-not-https-connection",
+      "OSS"
+    ],
+    [
+      "python.lang.security.audit.non-literal-import.non-literal-import",
+      "OSS"
+    ],
+    [
+      "python.lang.security.audit.paramiko.paramiko-exec-command.paramiko-exec-command",
+      "OSS"
+    ],
+    [
+      "python.lang.security.audit.paramiko-implicit-trust-host-key.paramiko-implicit-trust-host-key",
+      "OSS"
+    ],
+    [
+      "python.lang.security.audit.python-reverse-shell.python-reverse-shell",
+      "OSS"
+    ],
+    [
+      "python.lang.security.audit.regex-dos.regex_dos",
+      "OSS"
+    ],
+    [
+      "python.lang.security.audit.sha224-hash.sha224-hash",
+      "OSS"
+    ],
+    [
+      "python.lang.security.audit.sqli.aiopg-sqli.aiopg-sqli",
+      "OSS"
+    ],
+    [
+      "python.lang.security.audit.sqli.asyncpg-sqli.asyncpg-sqli",
+      "OSS"
+    ],
+    [
+      "python.lang.security.audit.sqli.pg8000-sqli.pg8000-sqli",
+      "OSS"
+    ],
+    [
+      "python.lang.security.audit.sqli.psycopg-sqli.psycopg-sqli",
+      "OSS"
+    ],
+    [
+      "python.lang.security.audit.ssl-wrap-socket-is-deprecated.ssl-wrap-socket-is-deprecated",
+      "OSS"
+    ],
+    [
+      "python.lang.security.audit.subprocess-list-passed-as-string.subprocess-list-passed-as-string",
+      "OSS"
+    ],
+    [
+      "python.lang.security.audit.subprocess-shell-true.subprocess-shell-true",
+      "OSS"
+    ],
+    [
+      "python.lang.security.audit.system-wildcard-detected.system-wildcard-detected",
+      "OSS"
+    ],
+    [
+      "python.lang.security.audit.telnetlib.telnetlib",
+      "OSS"
+    ],
+    [
+      "python.lang.security.audit.weak-ssl-version.weak-ssl-version",
+      "OSS"
+    ],
+    [
+      "python.lang.security.dangerous-code-run.dangerous-interactive-code-run",
+      "OSS"
+    ],
+    [
+      "python.lang.security.dangerous-globals-use.dangerous-globals-use",
+      "OSS"
+    ],
+    [
+      "python.lang.security.dangerous-os-exec.dangerous-os-exec",
+      "OSS"
+    ],
+    [
+      "python.lang.security.dangerous-spawn-process.dangerous-spawn-process",
+      "OSS"
+    ],
+    [
+      "python.lang.security.dangerous-subinterpreters-run-string.dangerous-subinterpreters-run-string",
+      "OSS"
+    ],
+    [
+      "python.lang.security.dangerous-subprocess-use.dangerous-subprocess-use",
+      "OSS"
+    ],
+    [
+      "python.lang.security.dangerous-system-call.dangerous-system-call",
+      "OSS"
+    ],
+    [
+      "python.lang.security.dangerous-testcapi-run-in-subinterp.dangerous-testcapi-run-in-subinterp",
+      "OSS"
+    ],
+    [
+      "python.lang.security.deserialization.avoid-jsonpickle.avoid-jsonpickle",
+      "OSS"
+    ],
+    [
+      "python.lang.security.deserialization.avoid-pyyaml-load.avoid-pyyaml-load",
+      "OSS"
+    ],
+    [
+      "python.lang.security.deserialization.avoid-unsafe-ruamel.avoid-unsafe-ruamel",
+      "OSS"
+    ],
+    [
+      "python.lang.security.deserialization.pickle.avoid-pickle",
+      "OSS"
+    ],
+    [
+      "python.lang.security.deserialization.pickle.avoid-cPickle",
+      "OSS"
+    ],
+    [
+      "python.lang.security.deserialization.pickle.avoid-dill",
+      "OSS"
+    ],
+    [
+      "python.lang.security.deserialization.pickle.avoid-shelve",
+      "OSS"
+    ],
+    [
+      "python.lang.security.insecure-hash-algorithms-md5.insecure-hash-algorithm-md5",
+      "OSS"
+    ],
+    [
+      "python.lang.security.insecure-hash-algorithms.insecure-hash-algorithm-sha1",
+      "OSS"
+    ],
+    [
+      "python.lang.security.insecure-hash-function.insecure-hash-function",
+      "OSS"
+    ],
+    [
+      "python.lang.security.insecure-uuid-version.insecure-uuid-version",
+      "OSS"
+    ],
+    [
+      "python.lang.security.unverified-ssl-context.unverified-ssl-context",
+      "OSS"
+    ],
+    [
+      "python.lang.security.use-defused-xml-parse.use-defused-xml-parse",
+      "OSS"
+    ],
+    [
+      "python.lang.security.use-defused-xml.use-defused-xml",
+      "OSS"
+    ],
+    [
+      "python.lang.security.use-defused-xmlrpc.use-defused-xmlrpc",
+      "OSS"
+    ],
+    [
+      "python.lang.security.use-defusedcsv.use-defusedcsv",
+      "OSS"
+    ],
+    [
+      "python.pycryptodome.security.insecure-cipher-algorithm-blowfish.insecure-cipher-algorithm-blowfish",
+      "OSS"
+    ],
+    [
+      "python.pycryptodome.security.insecure-cipher-algorithm-des.insecure-cipher-algorithm-des",
+      "OSS"
+    ],
+    [
+      "python.pycryptodome.security.insecure-cipher-algorithm-rc2.insecure-cipher-algorithm-rc2",
+      "OSS"
+    ],
+    [
+      "python.pycryptodome.security.insecure-cipher-algorithm-rc4.insecure-cipher-algorithm-rc4",
+      "OSS"
+    ],
+    [
+      "python.pycryptodome.security.insecure-cipher-algorithm.insecure-cipher-algorithm-xor",
+      "OSS"
+    ],
+    [
+      "python.pycryptodome.security.insecure-hash-algorithm-md2.insecure-hash-algorithm-md2",
+      "OSS"
+    ],
+    [
+      "python.pycryptodome.security.insecure-hash-algorithm-md4.insecure-hash-algorithm-md4",
+      "OSS"
+    ],
+    [
+      "python.pycryptodome.security.insecure-hash-algorithm-md5.insecure-hash-algorithm-md5",
+      "OSS"
+    ],
+    [
+      "python.pycryptodome.security.insecure-hash-algorithm.insecure-hash-algorithm-sha1",
+      "OSS"
+    ],
+    [
+      "python.pycryptodome.security.insufficient-dsa-key-size.insufficient-dsa-key-size",
+      "OSS"
+    ],
+    [
+      "python.pycryptodome.security.insufficient-rsa-key-size.insufficient-rsa-key-size",
+      "OSS"
+    ],
+    [
+      "python.pycryptodome.security.mode-without-authentication.crypto-mode-without-authentication",
+      "OSS"
+    ],
+    [
+      "python.pymongo.security.mongodb.mongo-client-bad-auth",
+      "OSS"
+    ],
+    [
+      "python.pyramid.audit.authtkt-cookie-httponly-unsafe-default.pyramid-authtkt-cookie-httponly-unsafe-default",
+      "OSS"
+    ],
+    [
+      "python.pyramid.audit.authtkt-cookie-httponly-unsafe-value.pyramid-authtkt-cookie-httponly-unsafe-value",
+      "OSS"
+    ],
+    [
+      "python.pyramid.audit.authtkt-cookie-samesite.pyramid-authtkt-cookie-samesite",
+      "OSS"
+    ],
+    [
+      "python.pyramid.audit.authtkt-cookie-secure-unsafe-default.pyramid-authtkt-cookie-secure-unsafe-default",
+      "OSS"
+    ],
+    [
+      "python.pyramid.audit.authtkt-cookie-secure-unsafe-value.pyramid-authtkt-cookie-secure-unsafe-value",
+      "OSS"
+    ],
+    [
+      "python.pyramid.audit.csrf-check-disabled.pyramid-csrf-check-disabled",
+      "OSS"
+    ],
+    [
+      "python.pyramid.audit.csrf-origin-check-disabled-globally.pyramid-csrf-origin-check-disabled-globally",
+      "OSS"
+    ],
+    [
+      "python.pyramid.audit.csrf-origin-check-disabled.pyramid-csrf-origin-check-disabled",
+      "OSS"
+    ],
+    [
+      "python.pyramid.audit.set-cookie-httponly-unsafe-default.pyramid-set-cookie-httponly-unsafe-default",
+      "OSS"
+    ],
+    [
+      "python.pyramid.audit.set-cookie-httponly-unsafe-value.pyramid-set-cookie-httponly-unsafe-value",
+      "OSS"
+    ],
+    [
+      "python.pyramid.audit.set-cookie-samesite-unsafe-default.pyramid-set-cookie-samesite-unsafe-default",
+      "OSS"
+    ],
+    [
+      "python.pyramid.audit.set-cookie-samesite-unsafe-value.pyramid-set-cookie-samesite-unsafe-value",
+      "OSS"
+    ],
+    [
+      "python.pyramid.audit.set-cookie-secure-unsafe-default.pyramid-set-cookie-secure-unsafe-default",
+      "OSS"
+    ],
+    [
+      "python.pyramid.audit.set-cookie-secure-unsafe-value.pyramid-set-cookie-secure-unsafe-value",
+      "OSS"
+    ],
+    [
+      "python.pyramid.security.csrf-check-disabled-globally.pyramid-csrf-check-disabled-globally",
+      "OSS"
+    ],
+    [
+      "python.pyramid.security.direct-use-of-response.pyramid-direct-use-of-response",
+      "OSS"
+    ],
+    [
+      "python.pyramid.security.sqlalchemy-sql-injection.pyramid-sqlalchemy-sql-injection",
+      "OSS"
+    ],
+    [
+      "python.requests.best-practice.use-raise-for-status.use-raise-for-status",
+      "OSS"
+    ],
+    [
+      "python.requests.best-practice.use-request-json-shortcut.python.requests.best-practice.use-request-json-shortcut",
+      "OSS"
+    ],
+    [
+      "python.requests.best-practice.use-response-json-shortcut.python.requests.best-practice.use-response-json-shortcut",
+      "OSS"
+    ],
+    [
+      "python.requests.best-practice.use-timeout.use-timeout",
+      "OSS"
+    ],
+    [
+      "python.requests.security.disabled-cert-validation.disabled-cert-validation",
+      "OSS"
+    ],
+    [
+      "python.requests.security.no-auth-over-http.no-auth-over-http",
+      "OSS"
+    ],
+    [
+      "python.sh.security.string-concat.string-concat",
+      "OSS"
+    ],
+    [
+      "python.sqlalchemy.correctness.bad-operator-in-filter.bad-operator-in-filter",
+      "OSS"
+    ],
+    [
+      "python.sqlalchemy.correctness.delete-where.delete-where-no-execute",
+      "OSS"
+    ],
+    [
+      "python.sqlalchemy.performance.performance-improvements.len-all-count",
+      "OSS"
+    ],
+    [
+      "python.sqlalchemy.performance.performance-improvements.batch-import",
+      "OSS"
+    ],
+    [
+      "python.sqlalchemy.security.audit.avoid-sqlalchemy-text.avoid-sqlalchemy-text",
+      "OSS"
+    ],
+    [
+      "python.sqlalchemy.security.sqlalchemy-execute-raw-query.sqlalchemy-execute-raw-query",
+      "OSS"
+    ],
+    [
+      "python.sqlalchemy.security.sqlalchemy-sql-injection.sqlalchemy-sql-injection",
+      "OSS"
+    ],
+    [
+      "python.twilio.security.twiml-injection.twiml-injection",
+      "OSS"
+    ]
+  ],
+  "engine_requested": "OSS",
+  "interfile_languages_used": [],
+  "skipped_rules": [],
+  "source_projection": [
+    {
+      "path": "quality/privacy.py",
+      "syntax_edits": 6,
+      "scan_sha256": "f4570d53f0d4d13a8a97e3c573bf8ebb4ad630c4e5a6e63b0c925f38b5c9e13b"
+    },
+    {
+      "path": "tests/test_privacy_scan.py",
+      "syntax_edits": 0,
+      "scan_sha256": "3469744c88c72998492799508693b09da1ef617a4a0a32f76b9123e2ffb99895"
+    }
+  ]
+}

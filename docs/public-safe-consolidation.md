@@ -4,6 +4,39 @@ The owner authorised a scoped port from the private research consolidation on
 6 November 2026. The public repository retains its clean history. No private
 commits are merged or cherry-picked.
 
+## Aggregate update amendment — 23 November 2026
+
+The owner authorised one private-first aggregate analysis increment, followed by an
+explicit public-safe file promotion. The private research parent is PR #4; public
+work starts from `6abe7be099a55531fc388221937dda583343cf03` on this repository's own
+history. Promotion, new outputs and current validation are pending. The dispositions
+and acceptance statements dated 6 November below remain historical.
+
+The new scope includes public-source parameters, a small configuration and runner,
+focused tests, reviewed aggregate outputs and current Conductor documentation.
+Use the published effect and reported interval as the primary new scenario; keep
+transportability and structural uncertainty explicit. Existing numerical, sampling,
+VoI and fiscal code is reused. This narrowly supersedes the original no-new-estimate
+release scope without changing retained v13 numbers or old acceptance identities.
+
+The current advisory policy is the owner's 5 November agent-review decision.
+Historical records of four outstanding human returns are not mandatory current
+advisory gates and do not imply independent validation. The fiscal evidence track
+and its owner remain active for actual charging and cash capture.
+
+Commit the reviewed private source first. Record an explicit allowed-path list and
+hashes; copy only those files onto public history and verify shared-input numerical
+parity. Preserve the source-withheld identifiers, privacy coverage oracle and public
+source projection. Do not merge or cherry-pick private history or copy unpublished
+manuscripts, private publication decisions, source originals, private locators,
+records or unreleased local aggregates. Record any projection and its reason.
+`neocam-public` remains a historical snapshot rather than a third active copy.
+
+New acceptance needs actual local and hosted receipts for the new bytes. Manuscript
+regeneration is a deliberate later step; this increment claims no new Word/PDF.
+See [the aggregate update guide](aggregate-multiscale-analysis.md) and
+[the active track](../conductor/tracks/aggregate-multiscale-update/plan.md).
+
 ## Disposition
 
 | Change group | Public disposition |

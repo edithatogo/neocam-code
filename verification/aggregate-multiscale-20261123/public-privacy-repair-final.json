@@ -1,0 +1,120 @@
+{
+  "scope": "One broad ordinary-suite run plus targeted privacy repairs; not a fresh wholly passing full-suite run.",
+  "private_source_commit": "a8520493cce179a7fc2512519c62404b9774ed8c",
+  "started_at": "2026-11-23T03:55:37.993424+00:00",
+  "finished_at": "2026-11-23T03:55:43.681614+00:00",
+  "python": "3.15.1",
+  "original_suite_receipt": "verification/aggregate-multiscale-20261123/public-suite.json",
+  "original_suite_receipt_sha256": "be8355ecb88af738e2b04c8f2bd70799125485213cc48efe4ce6aebc7f298110",
+  "original_suite_unchanged": true,
+  "original_test_counts": {
+    "failed": 1,
+    "passed": 1171
+  },
+  "prior_repair_receipt": "verification/aggregate-multiscale-20261123/public-privacy-repair.json",
+  "prior_repair_receipt_sha256": "d49cbb2a6e8edc592a6433358416ef1c4576c3ce8c28855cdf2422be6a81bf58",
+  "prior_repair_unchanged": true,
+  "repair": "Classify phone-shaped substrings only when fully enclosed by complete canonical UUID tokens or complete UUIDs inside matching percent-encoded quotes; no exemptions or source-data/URL changes.",
+  "source_sha256": {
+    "quality/privacy.py": "4f2fc12aa7cbbcc4cf7b63ce627b9cc5b211860687dc603f33887001eacfac87",
+    "tests/test_privacy_scan.py": "3469744c88c72998492799508693b09da1ef617a4a0a32f76b9123e2ffb99895"
+  },
+  "public_git_coverage_oracle_preserved": true,
+  "shared_guide_sha256": "0be1974b0c7b5fe89cc1afac91fe4a07828b78b96e389cd3b8a5797e174da828",
+  "coverage_reset": {
+    "api": "coverage.CoverageData.purge_files",
+    "removed_old_module": "/workspace/scratch/0934df305bd5/neocam-code/quality/privacy.py",
+    "unchanged_module_entries_retained": 27,
+    "baseline_data_sha256": "b457837d012efb5ac36cd42797b4fd86e6185811e58afe85f2b4fb73fef6450b",
+    "reason": "Discard old line numbers only for the edited module, retain unchanged-module coverage, and rebuild this module by appending its entire test module."
+  },
+  "commands": [
+    {
+      "name": "pytest",
+      "command": [
+        "/workspace/scratch/0934df305bd5/neocam-code/.venv/bin/python",
+        "-m",
+        "coverage",
+        "run",
+        "--append",
+        "-m",
+        "pytest",
+        "-q",
+        "tests/test_privacy_scan.py"
+      ],
+      "exit_code": 0,
+      "seconds": 3.271,
+      "log": "verification/aggregate-multiscale-20261123/public-privacy-repair-final.pytest.log",
+      "log_sha256": "24f8d25eae234c295570b08760b5cb6731afcd052b9c545c8e178d89f62c2eed"
+    },
+    {
+      "name": "total",
+      "command": [
+        "/workspace/scratch/0934df305bd5/neocam-code/.venv/bin/python",
+        "-m",
+        "coverage",
+        "report",
+        "--fail-under=90"
+      ],
+      "exit_code": 0,
+      "seconds": 0.353,
+      "log": "verification/aggregate-multiscale-20261123/public-privacy-repair-final.total.log",
+      "log_sha256": "e76106c4275172964c98991174d9efb038c6caf4eb07d09e734d55f5d71b9104"
+    },
+    {
+      "name": "core",
+      "command": [
+        "/workspace/scratch/0934df305bd5/neocam-code/.venv/bin/python",
+        "-m",
+        "coverage",
+        "report",
+        "--include=src/activity.py,src/deployment.py,src/configuration.py,src/equipment.py,src/pathways_v6.py,src/perspectives_v7.py,src/portfolios_v7.py,src/audit_v7.py",
+        "--fail-under=95"
+      ],
+      "exit_code": 0,
+      "seconds": 0.158,
+      "log": "verification/aggregate-multiscale-20261123/public-privacy-repair-final.core.log",
+      "log_sha256": "aa5a2bf7b4501f67c1de7357bb97e893471d1c454a3a8f642d1267553798a6d6"
+    },
+    {
+      "name": "privacy",
+      "command": [
+        "/workspace/scratch/0934df305bd5/neocam-code/.venv/bin/python",
+        "-m",
+        "quality.privacy",
+        "--output",
+        "verification/aggregate-multiscale-20261123/public-privacy-repair-final.privacy.json"
+      ],
+      "exit_code": 0,
+      "seconds": 1.878,
+      "log": "verification/aggregate-multiscale-20261123/public-privacy-repair-final.privacy.log",
+      "log_sha256": "a065cf2f597c5bd980dedef1f42c593b0c4a99f381adb36ff536c03fca4d5e40"
+    }
+  ],
+  "pytest_summary": "60 passed in 2.54s",
+  "targeted_test_counts": {
+    "passed": 60
+  },
+  "coverage_totals": {
+    "total": "TOTAL                             3251    200   1024     54  93.45%",
+    "core": "TOTAL                      800      6    238      3  99.13%"
+  },
+  "privacy_passed": true,
+  "privacy_findings_count": 0,
+  "scientific_input_fingerprint_before": "411df7f359e796fb3b75050af0c48949f6b8d9156de534cc4441b25e7cf60e5c",
+  "scientific_input_fingerprint_after": "411df7f359e796fb3b75050af0c48949f6b8d9156de534cc4441b25e7cf60e5c",
+  "scientific_inputs_unchanged_since_broad_run": true,
+  "passed": true,
+  "full_assurance_claimed": false,
+  "hosted_acceptance_claimed": false,
+  "known_separate_gate": "Historical v13 current_release input bindings remain stale against the expanded current input inventory. Historical manifests were not resealed.",
+  "scientific_artifacts": {
+    "directory": "outputs/aggregate-20261123",
+    "manifest_sha256": "01e5786947d86f9dc16b182dca8a93a54a0b1a910f9f1fe04f52a18726010772",
+    "artifact_count": 6,
+    "artifact_inventory_verified": true,
+    "bound_input_count": 44,
+    "bound_inputs_match_current_bytes": true,
+    "numerical_data_or_config_mutations_by_repair": false
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-23",
+  "scope": "Local validation of the public aggregate increment; one broad covered run plus targeted repair, not full release acceptance.",
+  "private_implementation_commit": "064c2059d61bce9835af4393277b8a7eed2956d4",
+  "private_qualified_privacy_commit": "a8520493cce179a7fc2512519c62404b9774ed8c",
+  "static_checks": [
+    {
+      "command": "python -m ruff check src scripts quality tests",
+      "return_code": 0,
+      "result": "All checks passed"
+    },
+    {
+      "command": "python -m ruff format --check src scripts quality tests",
+      "return_code": 0,
+      "result": "156 files already formatted"
+    },
+    {
+      "command": "python -m ty check --error-on-warning",
+      "return_code": 0,
+      "result": "All checks passed"
+    },
+    {
+      "command": "python -m basedpyright",
+      "return_code": 0,
+      "result": "0 errors, 0 warnings, 0 notes"
+    }
+  ],
+  "static_log_note": "Final command output observed in tool session; separate raw static logs were not retained.",
+  "ordinary_suite": {
+    "receipt": "verification/aggregate-multiscale-20261123/public-suite.json",
+    "passed": 1171,
+    "failed": 1,
+    "failure": "Public CKAN UUID was classified as a phone; corrected with targeted qualification."
+  },
+  "targeted_repair": {
+    "receipt": "verification/aggregate-multiscale-20261123/public-privacy-repair-final.json",
+    "privacy_tests_passed": 60,
+    "privacy_findings": 0,
+    "total_coverage_percent": 93.45,
+    "core_coverage_percent": 99.13,
+    "coverage_method": "Preserve unchanged-module coverage; replace coverage for changed privacy.py with the complete affected module run."
+  },
+  "security": {
+    "receipt": "verification/aggregate-multiscale-20261123/security/native/receipt.json",
+    "python_files": 162,
+    "native_rules": 378,
+    "controls": 24,
+    "unreviewed_findings": 0,
+    "scanner_errors": 0,
+    "passed": true
+  },
+  "gitleaks_working_tree": {
+    "command": "gitleaks dir --redact=100 --no-banner --exit-code 1 .",
+    "return_code": 0,
+    "observed_result": "No leaks found; approximately 46.69 MB scanned in 1.65 seconds.",
+    "scope": "Working tree, not a new all-history acceptance claim."
+  },
+  "analysis": {
+    "receipt": "verification/aggregate-multiscale-20261123/public-execution.json",
+    "manifest": "outputs/aggregate-20261123/manifest.json",
+    "artifact_hashes_verified": 6,
+    "input_hashes_verified": 44,
+    "numerical_parity_receipt": "verification/aggregate-multiscale-20261123/numerical-parity.json",
+    "private_public_identical_artifacts": 6
+  },
+  "current_release_gate": {
+    "return_code": 1,
+    "errors": [
+      "outputs/v13-primary: Calculation dependencies changed",
+      "outputs/v13-refinements: Calculation dependencies changed"
+    ],
+    "artifact_inventory_errors": [],
+    "disposition": "Retain historical manifests. New analysis has its own verified source/output manifest. Release-contract reconciliation remains open."
+  },
+  "full_assurance_claimed": false,
+  "hosted_acceptance_claimed": false,
+  "source_hashes": {
+    "scripts/analyse_aggregate.py": "d38120ed01da505ec87d3f92125f87be18ca22c8318debd89f0faa9a125f986f",
+    "tests/test_aggregate_analysis.py": "207185674e6484e3140dae62ae6473a2cd13893742d86e6bc3072bff49e89fb7",
+    "quality/privacy.py": "4f2fc12aa7cbbcc4cf7b63ce627b9cc5b211860687dc603f33887001eacfac87",
+    "tests/test_privacy_scan.py": "3469744c88c72998492799508693b09da1ef617a4a0a32f76b9123e2ffb99895",
+    "config/aggregate-analysis.json": "5d9f4cc95fad647f27f92eba1b714d69d76459944b836d2b2a6b44cbc446bf7f",
+    "data/aggregate/public-inputs.json": "7fe5017e09aa4d16dd4d74b7f87288e3eea34db47b70c2be8621c0c82599e590",
+    "tools/security/reviewed-findings.json": "aa6e0a318bac9574f5a90fd1e34199a4365b85692c279a970ff91b764e62b9c0"
+  },
+  "post_security_privacy_scan": {
+    "receipt": "verification/aggregate-multiscale-20261123/public-final-privacy.json",
+    "return_code": 0,
+    "findings": 0
+  },
+  "conductor_context": {
+    "return_code": 0,
+    "errors": []
+  },
+  "changed_prose": {
+    "return_code": 0,
+    "errors": 0,
+    "warnings": 0,
+    "files": 9
+  }
+}

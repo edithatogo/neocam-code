@@ -1,0 +1,347 @@
+{
+  "errors": [],
+  "generated_at": "2026-11-23T03:43:52Z",
+  "metrics": {
+    "./scripts/analyse_aggregate.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 527,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./tests/test_aggregate_analysis.py": {
+      "CONFIDENCE.HIGH": 15,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 15,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 174,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "_totals": {
+      "CONFIDENCE.HIGH": 15,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 15,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 701,
+      "nosec": 0,
+      "skipped_tests": 0
+    }
+  },
+  "results": [
+    {
+      "code": "45     np.testing.assert_allclose(effects[\"reported\"], np.exp(math.log(0.48) + se * z))\n46     assert effects[\"reported\"][0] == pytest.approx(0.26, abs=0.01)\n47     assert effects[\"reported\"][-1] == pytest.approx(0.90, abs=0.01)\n",
+      "col_offset": 4,
+      "end_col_offset": 66,
+      "filename": "./tests/test_aggregate_analysis.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 46,
+      "line_range": [
+        46
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.4/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "46     assert effects[\"reported\"][0] == pytest.approx(0.26, abs=0.01)\n47     assert effects[\"reported\"][-1] == pytest.approx(0.90, abs=0.01)\n48     np.testing.assert_allclose(np.log(effects[\"transportability\"] / 0.48) / math.hypot(se, 0.35), z)\n",
+      "col_offset": 4,
+      "end_col_offset": 67,
+      "filename": "./tests/test_aggregate_analysis.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 47,
+      "line_range": [
+        47
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.4/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "49     np.testing.assert_array_equal(effects[\"null\"], np.ones(3))\n50     assert effects[\"skeptical\"][-1] > 1  # Possible harm is retained, not truncated.\n51 \n",
+      "col_offset": 4,
+      "end_col_offset": 39,
+      "filename": "./tests/test_aggregate_analysis.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 50,
+      "line_range": [
+        50
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.4/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "79             np.testing.assert_allclose(video[\"avoided_transfers\"], 0, atol=1e-10)\n80             assert video[\"net_saving\"][0] < 0  # Video programme costs persist without a transfer effect.\n81     assert outputs[0] < outputs[1] < outputs[2]\n",
+      "col_offset": 12,
+      "end_col_offset": 45,
+      "filename": "./tests/test_aggregate_analysis.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 80,
+      "line_range": [
+        80
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.4/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "80             assert video[\"net_saving\"][0] < 0  # Video programme costs persist without a transfer effect.\n81     assert outputs[0] < outputs[1] < outputs[2]\n82 \n",
+      "col_offset": 4,
+      "end_col_offset": 47,
+      "filename": "./tests/test_aggregate_analysis.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 81,
+      "line_range": [
+        81
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.4/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "103     np.testing.assert_allclose(two[\"incremental_purchase_capital\"], 2 * one[\"incremental_purchase_capital\"])\n104     assert two[\"incremental_purchase_capital\"][0] == 9000\n105     np.testing.assert_array_equal(two[\"contacts\"], [0])\n",
+      "col_offset": 4,
+      "end_col_offset": 57,
+      "filename": "./tests/test_aggregate_analysis.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 104,
+      "line_range": [
+        104
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.4/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "147     result = aggregate.run(path, output, small_repository)\n148     assert result[\"primary_effect\"] == \"reported\"\n149     verify_result(output)\n",
+      "col_offset": 4,
+      "end_col_offset": 49,
+      "filename": "./tests/test_aggregate_analysis.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 148,
+      "line_range": [
+        148
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.4/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "152     inputs = cast(\"dict[str, str]\", provenance[\"inputs\"])\n153     assert \"scripts/analyse_aggregate.py\" in inputs\n154     assert \"uv.lock\" in inputs\n",
+      "col_offset": 4,
+      "end_col_offset": 51,
+      "filename": "./tests/test_aggregate_analysis.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 153,
+      "line_range": [
+        153
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.4/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "153     assert \"scripts/analyse_aggregate.py\" in inputs\n154     assert \"uv.lock\" in inputs\n155     with (output / \"budgets.csv\").open(encoding=\"utf-8\", newline=\"\") as stream:\n",
+      "col_offset": 4,
+      "end_col_offset": 30,
+      "filename": "./tests/test_aggregate_analysis.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 154,
+      "line_range": [
+        154
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.4/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "158             capture = float(row[\"transport_cash_capture_fraction\"])\n159             assert float(row[\"net_cash_expenditure\"]) == pytest.approx(cash - capture * saving)\n160             if saving > 0:\n",
+      "col_offset": 12,
+      "end_col_offset": 95,
+      "filename": "./tests/test_aggregate_analysis.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 159,
+      "line_range": [
+        159
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.4/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "160             if saving > 0:\n161                 assert float(row[\"break_even_capture_fraction\"]) == pytest.approx(cash / saving)\n162     with (output / \"decisions.csv\").open(encoding=\"utf-8\", newline=\"\") as stream:\n",
+      "col_offset": 16,
+      "end_col_offset": 96,
+      "filename": "./tests/test_aggregate_analysis.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 161,
+      "line_range": [
+        161
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.4/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "168     for group in groups.values():\n169         assert sum(float(row[\"probability_optimal\"]) for row in group) == pytest.approx(1)\n170         assert any(row[\"mean_optimal\"] == \"True\" for row in group)\n",
+      "col_offset": 8,
+      "end_col_offset": 90,
+      "filename": "./tests/test_aggregate_analysis.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 169,
+      "line_range": [
+        169
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.4/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "169         assert sum(float(row[\"probability_optimal\"]) for row in group) == pytest.approx(1)\n170         assert any(row[\"mean_optimal\"] == \"True\" for row in group)\n171         evpi = float(group[0][\"annual_cost_only_evpi\"])\n",
+      "col_offset": 8,
+      "end_col_offset": 66,
+      "filename": "./tests/test_aggregate_analysis.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 170,
+      "line_range": [
+        170
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.4/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "171         evpi = float(group[0][\"annual_cost_only_evpi\"])\n172         assert evpi >= 0\n173         best = max(float(row[\"expected_net_saving\"]) for row in group)\n",
+      "col_offset": 8,
+      "end_col_offset": 24,
+      "filename": "./tests/test_aggregate_analysis.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 172,
+      "line_range": [
+        172
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.4/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "174         for row in group:\n175             assert float(row[\"expected_loss\"]) == pytest.approx(evpi + best - float(row[\"expected_net_saving\"]))\n176     with pytest.raises(ValueError, match=\"new output\"):\n",
+      "col_offset": 12,
+      "end_col_offset": 112,
+      "filename": "./tests/test_aggregate_analysis.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 175,
+      "line_range": [
+        175
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.4/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    }
+  ]
+}

@@ -7,6 +7,24 @@ This document is the design authority for the v14 tracks. It records the measure
 dependency audit, the "foot in two camps" findings with options and tradeoffs, and the
 decisions taken, so later work does not have to re-derive them.
 
+## Current amendment — 23 November 2026
+
+The owner authorised the [aggregate multiscale update](tracks/aggregate-multiscale-update/plan.md).
+Reuse the existing numerical model, NumPy sampling and installed voiage 3.1.0;
+keep Polars as the only DataFrame engine. Reported evidence with its reported
+uncertainty is the primary new scenario. Aggregate public data can parameterise
+each geographic level; suitable CHHHS aggregates may refine it without requiring
+unit-level records. Keep transportability and structural assumptions explicit.
+
+This scientific increment may add parameter/configuration inputs and new output
+directories. It supersedes the earlier no-model-change boundary only within this
+track; retained results, historical acceptance identities and strict gates remain.
+Develop once in the private repository, then promote an explicit public-safe file
+delta onto this repository's own history. Preserve source-withheld identifiers.
+No new framework, dependency stack or third active repository is required.
+The older voiage deferral and approval gate below are historical: integration was
+completed in v14-04 and voiage 3.1.0 is already pinned and used by this project.
+
 ## Owner decisions already taken
 
 1. **One interpreter.** Python 3.15 only (`requires-python >=3.15,<3.16`); no 3.13/3.14
@@ -91,7 +109,9 @@ conflict; coverage is used directly (no pytest-cov).
 | `v14-02-acceptance-integrity` | source-register and artifact-manifest governance (including the re-seal-last rule), full-profile green, hosted CI evidence |
 | `v14-03-ecosystem-integration` | sibling-repository incorporation: provenance, privacy patterns, citation verification, CI alignment |
 
-## Boundary
+## Historical engineering boundary
+
+The current amendment authorises a separate aggregate scientific update.
 
 No clinical parameter, model behaviour, published number or output path changes in v14.
 The clinical/evidence/publication gates in `conductor/blockers-v13.json` remain open and
@@ -222,7 +242,7 @@ third-party forks (upstream projects tracked for convenience) and 75 author-owne
 repositories outside health-economic modelling, provenance or this project's CI. They are
 recorded in the enumeration artifact of this task, not here.
 
-### VoI gate
+### Historical VoI gate — superseded by completed integration
 
 `voiage` and `vop_poc_nz` already run a canonical specialist synchronisation between them —
 `.github/workflows/canonical-specialized-voi-sync.yml` in `voiage` and

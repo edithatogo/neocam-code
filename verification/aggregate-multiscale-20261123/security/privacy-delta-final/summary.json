@@ -1,0 +1,98 @@
+{
+  "seconds": 3.599,
+  "versions": {
+    "bandit": "1.9.4",
+    "pyyaml": "6.0.3",
+    "opengrep-core": "1.33.1"
+  },
+  "native_findings": [
+    {
+      "rule": "python.lang.security.audit.regex-dos.regex_dos",
+      "path": "quality/privacy.py",
+      "start": 158,
+      "end": 464,
+      "metadata": {
+        "likelihood": "LOW",
+        "impact": "MEDIUM",
+        "confidence": "LOW",
+        "subcategory": [
+          "vuln"
+        ],
+        "owasp": "A06:2017 - Security Misconfiguration",
+        "cwe": "CWE-1333: Inefficient Regular Expression Complexity",
+        "category": "security",
+        "technology": [
+          "python"
+        ],
+        "references": [
+          "https://docs.python.org/3/library/re.html"
+        ]
+      }
+    },
+    {
+      "rule": "python.lang.security.audit.regex-dos.regex_dos",
+      "path": "quality/privacy.py",
+      "start": 158,
+      "end": 619,
+      "metadata": {
+        "likelihood": "LOW",
+        "impact": "MEDIUM",
+        "confidence": "LOW",
+        "subcategory": [
+          "vuln"
+        ],
+        "owasp": "A06:2017 - Security Misconfiguration",
+        "cwe": "CWE-1333: Inefficient Regular Expression Complexity",
+        "category": "security",
+        "technology": [
+          "python"
+        ],
+        "references": [
+          "https://docs.python.org/3/library/re.html"
+        ]
+      }
+    },
+    {
+      "rule": "python.lang.security.audit.dangerous-subprocess-use-audit.dangerous-subprocess-use-audit",
+      "path": "tests/test_privacy_scan.py",
+      "start": 117,
+      "end": 119,
+      "metadata": {
+        "owasp": [
+          "A01:2017 - Injection",
+          "A03:2021 - Injection",
+          "A05:2025 - Injection"
+        ],
+        "cwe": [
+          "CWE-78: Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+        ],
+        "asvs": {
+          "section": "V5: Validation, Sanitization and Encoding Verification Requirements",
+          "control_id": "5.3.8 OS Command Injection",
+          "control_url": "https://github.com/OWASP/ASVS/blob/master/4.0/en/0x13-V5-Validation-Sanitization-Encoding.md#v53-output-encoding-and-injection-prevention-requirements",
+          "version": "4"
+        },
+        "references": [
+          "https://stackoverflow.com/questions/3172470/actual-meaning-of-shell-true-in-subprocess",
+          "https://docs.python.org/3/library/subprocess.html",
+          "https://docs.python.org/3/library/shlex.html",
+          "https://semgrep.dev/docs/cheat-sheets/python-command-injection/"
+        ],
+        "category": "security",
+        "technology": [
+          "python"
+        ],
+        "confidence": "LOW",
+        "cwe2022-top25": true,
+        "cwe2021-top25": true,
+        "subcategory": [
+          "audit"
+        ],
+        "likelihood": "LOW",
+        "impact": "HIGH"
+      }
+    }
+  ],
+  "bandit_count": 73,
+  "bandit_medium_high": []
+}

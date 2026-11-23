@@ -1,0 +1,67 @@
+{
+  "baseline_source_count": 160,
+  "independent_human_review": false,
+  "new_native_findings": 0,
+  "previous_inventory_sha256": "fb6707c5823a39394cff9554384760d48470241fe2420f1a03f129ce79d05cf5",
+  "private_propagation": "Preserve the private inventory and its private test oracle. These source hashes and finding spans identify this public checkout only.",
+  "review_notes": [
+    "New aggregate runner/test: no native findings; Bandit flags only test assertions.",
+    "Privacy change: complete canonical UUID grammar with hexadecimal lengths 8-4-4-4-12 and token boundaries; only wholly enclosed candidate phone matches are classified as UUID fragments.",
+    "Standalone and neighbouring phones, truncated/extended/nonhex tokens and adjoining identifier text remain covered by generated controls. The public tracked-file Git coverage oracle is preserved.",
+    "Existing email-regex audits and fixed argument-list Git subprocess audit were reviewed at their new source positions; no scanner rule, severity gate, source exemption or suppression was changed.",
+    "Only the four declared source paths changed. All other 158 reviewed Python files retain their exact hashes."
+  ],
+  "reviewed_finding_count_after": 159,
+  "reviewed_finding_count_before": 159,
+  "reviewed_source_count": 162,
+  "scope": "Public exact-source review update before full native-security pipeline",
+  "source_delta": {
+    "quality/privacy.py": {
+      "after": "1f5a6893e4ec5a3611ff24a4bea338ed838c599bdc51c8b57ed206a4d7c38cf7",
+      "before": "4744f6f0a7e802154d5653ddaab48886c4b024c11c3cfb2915e288dea319793e"
+    },
+    "scripts/analyse_aggregate.py": {
+      "after": "d38120ed01da505ec87d3f92125f87be18ca22c8318debd89f0faa9a125f986f",
+      "before": null
+    },
+    "tests/test_aggregate_analysis.py": {
+      "after": "207185674e6484e3140dae62ae6473a2cd13893742d86e6bc3072bff49e89fb7",
+      "before": null
+    },
+    "tests/test_privacy_scan.py": {
+      "after": "7d8902f2642b43e7a1b631bc1805b09dc1c06b0cb17d1817fb32349d8352d9c9",
+      "before": "faf1b37f38329f45401ec5d83f66ab9494a5daac73fe099cd876795bc2049b5b"
+    }
+  },
+  "unchanged_source_count": 158,
+  "updated_existing_findings": [
+    {
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "end": 457,
+      "path": "quality/privacy.py",
+      "reason": "The retained email recognizer is unchanged: local and label lengths are bounded and dot-delimited labels disambiguate the repeated group. The new UUID recognizer has fixed-width hexadecimal groups, whole-token boundaries and a bounded search window; it only classifies fully enclosed phone fragments. No source/value allowance or scanner suppression was added.",
+      "rule": "python.lang.security.audit.regex-dos.regex_dos",
+      "source_sha256": "1f5a6893e4ec5a3611ff24a4bea338ed838c599bdc51c8b57ed206a4d7c38cf7",
+      "start": 157
+    },
+    {
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "end": 612,
+      "path": "quality/privacy.py",
+      "reason": "The retained email recognizer is unchanged: local and label lengths are bounded and dot-delimited labels disambiguate the repeated group. The new UUID recognizer has fixed-width hexadecimal groups, whole-token boundaries and a bounded search window; it only classifies fully enclosed phone fragments. No source/value allowance or scanner suppression was added.",
+      "rule": "python.lang.security.audit.regex-dos.regex_dos",
+      "source_sha256": "1f5a6893e4ec5a3611ff24a4bea338ed838c599bdc51c8b57ed206a4d7c38cf7",
+      "start": 157
+    },
+    {
+      "disposition": "reviewed_false_positive_or_style_suggestion",
+      "end": 119,
+      "path": "tests/test_privacy_scan.py",
+      "reason": "The test resolves the qualified Git executable, passes only fixed ls-files and -z arguments with a controlled repository cwd, and uses the default disabled shell. No shell string or untrusted command argument is present. This inventory oracle requires every tracked file to be accounted for by the privacy scan.",
+      "rule": "python.lang.security.audit.dangerous-subprocess-use-audit.dangerous-subprocess-use-audit",
+      "source_sha256": "7d8902f2642b43e7a1b631bc1805b09dc1c06b0cb17d1817fb32349d8352d9c9",
+      "start": 117
+    }
+  ],
+  "updated_inventory_sha256": "66553440d24b832d4cd61c98a2ccaca765d625fc96e33c0cf8bc166052ac62d0"
+}

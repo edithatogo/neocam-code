@@ -1,30 +1,40 @@
 {
   "version": 14,
-  "date": "2026-11-06",
+  "date": "2026-11-23",
   "active_tracks": [
+    "aggregate-multiscale-update",
     "mixed-policy-fiscal-allocation"
   ],
-  "branch": "codex/pr4-public-safe",
-  "remote_branch": "main",
+  "branch": "codex/aggregate-multiscale-20261123",
+  "parent_commit": "6abe7be099a55531fc388221937dda583343cf03",
+  "remote_branch": "codex/aggregate-multiscale-20261123",
+  "default_branch": "main",
   "remote": "edithatogo/neocam-code",
   "remote_origin": "https://github.com/edithatogo/neocam-code.git",
   "remote_visibility": "public",
   "remote_visibility_decision": "Owner explicitly approved only the code repository and reviewed simulation fixtures on 5 November 2026; original research repository remains private.",
-  "remote_pr": 1,
-  "remote_pr_state": "merged",
+  "remote_pr": null,
+  "remote_pr_state": "pending",
   "release_ready": false,
   "public_visibility_authorised": true,
   "independent_validation": false,
-  "independent_reviews_pending": 4,
+  "historical_independent_reviews_pending": 4,
+  "review_policy": {
+    "authority_date": "2026-11-05",
+    "current": "owner-authorised agent advisory review",
+    "mandatory_human_advisory_returns": false,
+    "independent_human_validation_claimed": false,
+    "historical_forms": "Retained as historical evidence; not current advisory prerequisites."
+  },
   "fiscal_evidence": "open",
-  "review": "Same-assistant software/source review; all four independent clinical reviews remain pending.",
+  "review": "Agent advisory review is authorised; current increment review and verification are pending. Historical software review is not independent clinical validation.",
   "design_authority": "conductor/v14-design.md",
-  "analysis": "outputs/v13-primary/results.json",
+  "analysis": "outputs/aggregate-20261123/resolved_inputs.json",
   "refinement_analysis": "outputs/v13-refinements/results.json",
   "current_outputs": [
-    "outputs/v13-primary",
-    "outputs/v13-refinements"
+    "outputs/aggregate-20261123"
   ],
+  "analysis_scope": "Retained v13 reference outputs. New aggregate outputs have not yet been promoted or accepted.",
   "source_manifest": "sources/manifest.json",
   "public_original_archival_complete": false,
   "acceptance_at_source_freeze": {
@@ -38,6 +48,7 @@
     "accepted_source_commit": "3d69e04ea0d320ef7d2eb3143d20f0bdf1d06eb8",
     "hosted_run": 41959741259
   },
+  "historical_acceptance_scope": "Recorded source-freeze and code-publication receipts retain their original commit identities; none qualifies the current aggregate increment.",
   "source_and_security": {
     "receipt": "verification/v41/security-receipt.json",
     "python_files": 160,
@@ -63,9 +74,14 @@
   "prior_research_repository": {
     "remote": "edithatogo/neocam",
     "visibility": "private",
-    "pr": 3,
-    "state": "open_unmerged",
-    "head": "2d4c69e94ff13c8fb9255acedc7f68645a06e34f",
+    "pr": 4,
+    "state": "retained_private_research_parent_for_aggregate_increment",
+    "head": "5b5af0502f7a11a544c7a1960e7e8c0437db8529",
+    "previous_reference": {
+      "pr": 3,
+      "head": "2d4c69e94ff13c8fb9255acedc7f68645a06e34f",
+      "state_at_previous_record": "open_unmerged"
+    },
     "retained_separately": true
   },
   "known_limitations": [
@@ -77,7 +93,7 @@
     "Haynes measures transfer within 24 hours. Applying the association to eventual transfer is an extrapolation.",
     "four government originals verified in a separate local archive; source bytes excluded from the public repository"
   ],
-  "next_acceptance": "Code source delivery accepted at the recorded merged commit; documentation closeout requires its own protected PR and final exact-main receipt and attestation. Four independent clinical reviews and fiscal evidence remain open.",
+  "next_acceptance": "Local aggregate analysis, numerical parity, recorded static/coverage/privacy/security checks are complete. Publish the reviewed public delta as a draft PR. The retained v13 current-release contract needs explicit reconciliation; protected hosted and merged-main acceptance are not claimed.",
   "code_publication": {
     "approved": "2026-11-05",
     "repository": "edithatogo/neocam-code",
@@ -97,12 +113,47 @@
     "hosted_artifact_sha256": "e57cc5a22ec2951c79100401280500598b491a29a23eabf5d115e612d964dd36",
     "hosted_receipt_sha256": "5ec76afb3bf25ae18d9e571529eec038b2192143c8668cef113b6bd01622d4e8"
   },
-  "public_safe_port": {
+  "historical_public_safe_port": {
     "status": "local_checks_passed_hosted_pending",
     "scope": "Citation-regex scanner compatibility control; other public-safe consolidation code already present",
     "private_history_imported": false,
     "manuscript_and_evidence": "withheld",
     "author_Word_edit": "unchanged",
     "fiscal_evidence": "open"
-  }
+  },
+  "aggregate_multiscale_update": {
+    "authority_date": "2026-11-23",
+    "status": "public_delta_prepared",
+    "implementation": "complete",
+    "promotion": "reviewed_private_source_and_public_projection_ready_for_commit",
+    "verification": "recorded_local_checks_passed_after_targeted_privacy_repair",
+    "plan": "conductor/tracks/aggregate-multiscale-update/plan.md",
+    "config": "config/aggregate-analysis.json",
+    "public_inputs": "data/aggregate/public-inputs.json",
+    "runner": "scripts/analyse_aggregate.py",
+    "planned_command": "uv run --frozen --extra research python -m scripts.analyse_aggregate --config config/aggregate-analysis.json --output outputs/aggregate-20261123",
+    "primary_evidence": "Reported estimate and confidence interval; separate explicit transportability and structural scenarios.",
+    "data_basis": "Aggregate-first at each geographic level; optional local aggregate refinement; no unit-level prerequisite.",
+    "private_research_parent_pr": 4,
+    "private_commit": "3d3deb9957cad6027cf093726165487f242f3cd8",
+    "private_pr": 12,
+    "public_parent": "6abe7be099a55531fc388221937dda583343cf03",
+    "public_commit": null,
+    "public_pr": null,
+    "promotion_contract": "Explicit reviewed file allowlist and hashes; preserve separate history, source-withheld identities and shared-input numerical parity.",
+    "private_history_imported": false,
+    "historical_snapshot_repository": "edithatogo/neocam-public; no third active copy",
+    "outputs": "outputs/aggregate-20261123",
+    "validation_receipt": "verification/aggregate-multiscale-20261123/public-checks.json",
+    "fiscal_evidence": "Open with existing mixed-policy-fiscal-allocation owner.",
+    "manuscript_refresh": "Deliberate follow-up after verified results; no new Word/PDF claimed.",
+    "agent_review": "verification/aggregate-multiscale-20261123/agent-review.md",
+    "result_summary": "docs/aggregate-results-20261123.md",
+    "promotion_receipt": "verification/aggregate-multiscale-20261123/promotion.json"
+  },
+  "historical_reference_analysis": "outputs/v13-primary/results.json",
+  "historical_outputs": [
+    "outputs/v13-primary",
+    "outputs/v13-refinements"
+  ]
 }

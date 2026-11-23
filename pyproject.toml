@@ -154,13 +154,13 @@ quote-style = "double"
 python-version = "3.15"
 
 [tool.ty.src]
-include = ["src", "quality", "tests", "scripts/run_v2.py", "scripts/verify.py", "scripts/analyse_v5.py", "scripts/analyse_v6.py", "scripts/analyse_v7.py", "scripts/build_current_report.py", "scripts/plot_current.py", "scripts/analyse_refinements.py", "scripts/plot_refinements.py", "scripts/registry_joint.py", "scripts/information_provenance.py", "scripts/information_geography.py", "scripts/information_summary.py", "scripts/fiscal_information.py", "scripts/registry_cache.py"]
+include = ["src", "quality", "tests", "scripts/run_v2.py", "scripts/verify.py", "scripts/analyse_v5.py", "scripts/analyse_v6.py", "scripts/analyse_v7.py", "scripts/build_current_report.py", "scripts/plot_current.py", "scripts/analyse_refinements.py", "scripts/analyse_aggregate.py", "scripts/plot_refinements.py", "scripts/registry_joint.py", "scripts/information_provenance.py", "scripts/information_geography.py", "scripts/information_summary.py", "scripts/fiscal_information.py", "scripts/registry_cache.py"]
 
 [tool.ty.rules]
 all = "error"
 
 [tool.basedpyright]
-include = ["src", "quality", "tests", "scripts/run_v2.py", "scripts/verify.py", "scripts/analyse_v5.py", "scripts/analyse_v6.py", "scripts/analyse_v7.py", "scripts/build_current_report.py", "scripts/plot_current.py", "scripts/analyse_refinements.py", "scripts/plot_refinements.py", "scripts/registry_joint.py", "scripts/information_provenance.py", "scripts/information_geography.py", "scripts/information_summary.py", "scripts/fiscal_information.py", "scripts/registry_cache.py"]
+include = ["src", "quality", "tests", "scripts/run_v2.py", "scripts/verify.py", "scripts/analyse_v5.py", "scripts/analyse_v6.py", "scripts/analyse_v7.py", "scripts/build_current_report.py", "scripts/plot_current.py", "scripts/analyse_refinements.py", "scripts/analyse_aggregate.py", "scripts/plot_refinements.py", "scripts/registry_joint.py", "scripts/information_provenance.py", "scripts/information_geography.py", "scripts/information_summary.py", "scripts/fiscal_information.py", "scripts/registry_cache.py"]
 pythonVersion = "3.15"
 pythonPlatform = "All"
 typeCheckingMode = "all"

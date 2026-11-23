@@ -1,0 +1,75 @@
+{
+  "scope": "Public working-tree ordinary tests once under coverage, with total and core thresholds derived from the same run.",
+  "started_at": "2026-11-23T03:42:34.913966+00:00",
+  "finished_at": "2026-11-23T03:42:54.110415+00:00",
+  "python": "3.15.1",
+  "executable": "/workspace/scratch/0934df305bd5/neocam-code/.venv/bin/python",
+  "cwd": "/workspace/scratch/0934df305bd5/neocam-code",
+  "git_parent": "6abe7be099a55531fc388221937dda583343cf03",
+  "uncommitted_increment": true,
+  "ordinary_suite_runs": 1,
+  "commands": [
+    {
+      "name": "pytest",
+      "command": [
+        "/workspace/scratch/0934df305bd5/neocam-code/.venv/bin/python",
+        "-m",
+        "coverage",
+        "run",
+        "-m",
+        "pytest",
+        "-q"
+      ],
+      "exit_code": 1,
+      "seconds": 18.708,
+      "log": "verification/aggregate-multiscale-20261123/public-suite.pytest.log",
+      "log_sha256": "3ed65a5baaa04cbd666081558bb3af4d978a05ae06a6b86c0919790e0f3b88d0"
+    },
+    {
+      "name": "total",
+      "command": [
+        "/workspace/scratch/0934df305bd5/neocam-code/.venv/bin/python",
+        "-m",
+        "coverage",
+        "report",
+        "--fail-under=90"
+      ],
+      "exit_code": 0,
+      "seconds": 0.301,
+      "log": "verification/aggregate-multiscale-20261123/public-suite.total.log",
+      "log_sha256": "d5ea36db01eb2cc1080cfdd2df75a6fb879b8ce465bf681acf65a9bd874c9ac8"
+    },
+    {
+      "name": "core",
+      "command": [
+        "/workspace/scratch/0934df305bd5/neocam-code/.venv/bin/python",
+        "-m",
+        "coverage",
+        "report",
+        "--include=src/activity.py,src/deployment.py,src/configuration.py,src/equipment.py,src/pathways_v6.py,src/perspectives_v7.py,src/portfolios_v7.py,src/audit_v7.py",
+        "--fail-under=95"
+      ],
+      "exit_code": 0,
+      "seconds": 0.179,
+      "log": "verification/aggregate-multiscale-20261123/public-suite.core.log",
+      "log_sha256": "aa5a2bf7b4501f67c1de7357bb97e893471d1c454a3a8f642d1267553798a6d6"
+    }
+  ],
+  "pytest_summary": "1 failed, 1171 passed in 16.93s",
+  "test_counts": {
+    "failed": 1,
+    "passed": 1171
+  },
+  "coverage_totals": {
+    "total": "TOTAL                             3248    200   1024     54  93.45%",
+    "core": "TOTAL                      800      6    238      3  99.13%"
+  },
+  "scientific_input_fingerprint_before": "411df7f359e796fb3b75050af0c48949f6b8d9156de534cc4441b25e7cf60e5c",
+  "scientific_input_fingerprint_after": "411df7f359e796fb3b75050af0c48949f6b8d9156de534cc4441b25e7cf60e5c",
+  "scientific_inputs_unchanged": true,
+  "passed": false,
+  "full_assurance_claimed": false,
+  "hosted_acceptance_claimed": false,
+  "known_separate_gate": "Historical v13 release manifests retain their original source bindings; expanded current inputs make current_release fail. No historical reseal performed.",
+  "parallel_work": "Security review inventory and security receipts are maintained separately; this is not a native-security receipt."
+}
