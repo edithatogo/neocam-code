@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
   "date": "2026-11-23",
-  "status": "validated_public_delta_ready_for_commit",
-  "private_source_commit": "3d3deb9957cad6027cf093726165487f242f3cd8",
+  "status": "delivered_in_linked_draft_pull_requests",
+  "private_source_commit": "9559e9c375f940c818f7423cbe987e84b1567e9b",
   "private_analysis_commit": "064c2059d61bce9835af4393277b8a7eed2956d4",
   "private_pr": "https://github.com/edithatogo/neocam/pull/12",
   "public_parent": "6abe7be099a55531fc388221937dda583343cf03",
-  "public_commit": null,
-  "public_pr": null,
+  "public_commit": "486339fb4f2a4bfab6d7bd41925479c2c5cf9649",
+  "public_pr": "https://github.com/edithatogo/neocam-code/pull/11",
   "shared_files": {
     "conductor/tracks/aggregate-multiscale-update/spec.md": "d314646c5676c6029c70058316e643b9550d9c460fcde1b4509c6815c87cc568",
-    "conductor/tracks/aggregate-multiscale-update/plan.md": "1e89e55b28a792738e2c8e0a9c062d2a10828608a8bdfcf1327c454e40f87696",
+    "conductor/tracks/aggregate-multiscale-update/plan.md": "4d8e7a4bbbe6d849dc02073670c9f0dc06c5cd0bb7a22522584fe3a4f4cf81b9",
     "docs/aggregate-multiscale-analysis.md": "0be1974b0c7b5fe89cc1afac91fe4a07828b78b96e389cd3b8a5797e174da828",
     "docs/public-inputs-20261123.md": "7d41dba99edc0a5f3f866a540a9e3062e093a1bab80a095d4ab110326a443be8",
     "docs/aggregate-results-20261123.md": "6c6666260ac862180371f56a82c0c632b30a442531e07d5f24598a755ea81089",
@@ -45,5 +45,8 @@
   "validation": "verification/aggregate-multiscale-20261123/public-checks.json",
   "numerical_parity": "verification/aggregate-multiscale-20261123/numerical-parity.json",
   "release_ready": false,
-  "release_contract": "Historical v13 manifests are unchanged; current dependency comparison fails after new inputs. New aggregate manifest independently verifies. Protected hosted and merged-main acceptance are not claimed."
+  "release_contract": "Historical v13 manifests are unchanged; current dependency comparison fails after new inputs. New aggregate manifest independently verifies. Protected hosted and merged-main acceptance are not claimed.",
+  "private_commit": "9559e9c375f940c818f7423cbe987e84b1567e9b",
+  "current_release_acceptance": false,
+  "commit_fields_scope": "Private source commit includes the completed Conductor closeout. Public commit identifies the reviewed implementation; later documentation-only closeout does not change numerical or Python sources."
 }

@@ -13,8 +13,8 @@
   "remote_origin": "https://github.com/edithatogo/neocam-code.git",
   "remote_visibility": "public",
   "remote_visibility_decision": "Owner explicitly approved only the code repository and reviewed simulation fixtures on 5 November 2026; original research repository remains private.",
-  "remote_pr": null,
-  "remote_pr_state": "pending",
+  "remote_pr": 11,
+  "remote_pr_state": "draft",
   "release_ready": false,
   "public_visibility_authorised": true,
   "independent_validation": false,
@@ -85,7 +85,7 @@
     "retained_separately": true
   },
   "known_limitations": [
-    "artifact manifests and the source register pin calculation inputs (now excluding derived build artefacts), so any source edit invalidates a previous seal and the re-seal must be the last mutation before acceptance",
+    "Retained v13 manifests bind their historical dependency set. New config/data expand that set, so the current-release comparison fails; the new aggregate run has a separately verified manifest. Historical output bytes and seals are unchanged.",
     "historical/missing denominators and current capability/routing",
     "Reference retains one contact per episode; 1/1.5/2 contact scenarios are explicit assumptions, not observed infant-level incidence",
     "bounded societal/family costing and unknown provider contracts",
@@ -93,7 +93,7 @@
     "Haynes measures transfer within 24 hours. Applying the association to eventual transfer is an extrapolation.",
     "four government originals verified in a separate local archive; source bytes excluded from the public repository"
   ],
-  "next_acceptance": "Local aggregate analysis, numerical parity, recorded static/coverage/privacy/security checks are complete. Publish the reviewed public delta as a draft PR. The retained v13 current-release contract needs explicit reconciliation; protected hosted and merged-main acceptance are not claimed.",
+  "next_acceptance": "The aggregate implementation and private-to-public delivery are complete as linked draft PRs. Resolve the retained v13 current-release contract against the new analysis format and obtain passing protected hosted checks before merge. Fiscal evidence remains open; CHHHS aggregate refinement is optional and targeted.",
   "code_publication": {
     "approved": "2026-11-05",
     "repository": "edithatogo/neocam-code",
@@ -123,9 +123,9 @@
   },
   "aggregate_multiscale_update": {
     "authority_date": "2026-11-23",
-    "status": "public_delta_prepared",
+    "status": "implemented_and_delivered_as_draft",
     "implementation": "complete",
-    "promotion": "reviewed_private_source_and_public_projection_ready_for_commit",
+    "promotion": "complete_explicit_file_promotion_with_separate_history",
     "verification": "recorded_local_checks_passed_after_targeted_privacy_repair",
     "plan": "conductor/tracks/aggregate-multiscale-update/plan.md",
     "config": "config/aggregate-analysis.json",
@@ -135,11 +135,11 @@
     "primary_evidence": "Reported estimate and confidence interval; separate explicit transportability and structural scenarios.",
     "data_basis": "Aggregate-first at each geographic level; optional local aggregate refinement; no unit-level prerequisite.",
     "private_research_parent_pr": 4,
-    "private_commit": "3d3deb9957cad6027cf093726165487f242f3cd8",
+    "private_commit": "9559e9c375f940c818f7423cbe987e84b1567e9b",
     "private_pr": 12,
     "public_parent": "6abe7be099a55531fc388221937dda583343cf03",
-    "public_commit": null,
-    "public_pr": null,
+    "public_commit": "486339fb4f2a4bfab6d7bd41925479c2c5cf9649",
+    "public_pr": 11,
     "promotion_contract": "Explicit reviewed file allowlist and hashes; preserve separate history, source-withheld identities and shared-input numerical parity.",
     "private_history_imported": false,
     "historical_snapshot_repository": "edithatogo/neocam-public; no third active copy",
@@ -149,7 +149,8 @@
     "manuscript_refresh": "Deliberate follow-up after verified results; no new Word/PDF claimed.",
     "agent_review": "verification/aggregate-multiscale-20261123/agent-review.md",
     "result_summary": "docs/aggregate-results-20261123.md",
-    "promotion_receipt": "verification/aggregate-multiscale-20261123/promotion.json"
+    "promotion_receipt": "verification/aggregate-multiscale-20261123/promotion.json",
+    "commit_fields_scope": "Reviewed implementation snapshots; later documentation-only closeout commits are not self-referentially recorded here."
   },
   "historical_reference_analysis": "outputs/v13-primary/results.json",
   "historical_outputs": [

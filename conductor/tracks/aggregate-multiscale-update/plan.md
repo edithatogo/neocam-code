@@ -1,7 +1,7 @@
 # Aggregate multiscale update
 
 Authority: owner direction, 23 November 2026. Status: implementation and the new analysis are complete;
-focused checks and agent review passed. Private source is committed in PR #12; public validation is complete and its draft PR is pending. Preserve existing fiscal-track
+focused checks and agent review passed. Private source is committed in PR #12; public PR #11 is delivered with verified numerical parity and recorded local checks. Preserve existing fiscal-track
 ownership and historical outputs.
 
 ## Scope
@@ -34,9 +34,9 @@ inputs that actually alter a calculation.
   repository assurance and retain actual command/results without inheriting old passes.
 - [x] Review and commit the private increment; open a dependent private PR against
   `codex/consolidated-private-packet`.
-- [ ] Promote the explicit reviewed file delta onto the current `neocam-code` branch
+- [x] Promote the explicit reviewed file delta onto the current `neocam-code` branch
   history; verify hashes/numerical parity and record public PR checks separately.
-- [ ] Reconcile actual outputs, checks and remote identities. Queue deliberate manuscript
+- [x] Reconcile actual outputs, checks and remote identities. Queue deliberate manuscript
   table/report refresh from verified new results; do not claim new Word/PDF delivery.
 
 ## Executable next actions
@@ -70,3 +70,15 @@ Private authoring and public promotion use one reviewed delta. No private Git hi
 manuscript, patient record, source original, private locator or unreleased local
 aggregate is carried to public code. `neocam-public` is not maintained as a third copy.
 Follow the [update guide](../../../docs/aggregate-multiscale-analysis.md).
+
+## Delivered state
+
+Private PR #12 supplies the reviewed implementation; public PR #11 receives the
+reviewed delta on separate history. Nineteen shared files, including six analysis
+artifacts, are byte-identical at promotion. Source code, declared parameters and
+numerical outputs are verified within the retained local-check scope.
+
+- [ ] Reconcile the historical v13 current-release contract for the new analysis format
+  and obtain passing protected hosted checks before merge. Keep this release work
+  distinct from completed implementation, the verified new manifest and the open
+  fiscal evidence track.
